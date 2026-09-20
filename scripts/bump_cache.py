@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Actualiza el parámetro ?v= de index.html con un hash del contenido actual
-de app.js, styles.css y data/*.json, para forzar que el navegador los vuelva
-a pedir cuando cambian (evita tener que hacer Ctrl+Shift+R).
+de app.js, styles.css, data/*.json y figures/*.svg, para forzar que el
+navegador los vuelva a pedir cuando cambian (evita tener que hacer Ctrl+Shift+R).
 
 Uso:  python3 scripts/bump_cache.py
-Corre esto después de tocar app.js, styles.css o cualquier data/*.json,
+Corre esto después de tocar app.js, styles.css, data/*.json o figures/*.svg,
 antes de subir los cambios.
 """
 import hashlib
@@ -15,7 +15,12 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 INDEX = RAIZ / "index.html"
 
-ARCHIVOS = [RAIZ / "app.js", RAIZ / "styles.css", *sorted((RAIZ / "data").glob("*.json"))]
+ARCHIVOS = [
+    RAIZ / "app.js",
+    RAIZ / "styles.css",
+    *sorted((RAIZ / "data").glob("*.json")),
+    *sorted((RAIZ / "figures").glob("*.svg")),
+]
 
 
 def calcular_version():

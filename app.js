@@ -18,17 +18,17 @@ async function cargarDatos(){
     ({ figuras: FIGURAS, temas: TEMAS, pistas: PISTAS, preguntas: PREGUNTAS } = window.__DATOS__);
     return;
   }
-  // scripts/bump_cache.py lo fija en index.html con un hash del contenido de
-  // app.js, styles.css y data/*.json; así cada versión publicada obliga a
-  // recargar los JSON en vez de servir una copia vieja desde el caché del navegador.
-  const v = window.__CACHEBUST__ ? ("?v=" + encodeURIComponent(window.__CACHEBUST__)) : "";
-  const traer = async f => { const r = await fetch(f + v); if(!r.ok) throw new Error(f + ": " + r.status); return r.json(); };
+  const traer = async f => { const r = await fetch(conVersion(f)); if(!r.ok) throw new Error(f + ": " + r.status); return r.json(); };
   [FIGURAS, TEMAS, PISTAS, PREGUNTAS] = await Promise.all(
     ["data/figuras.json","data/temas.json","data/pistas.json","data/preguntas.json"].map(traer));
 }
 
 /* ---------------------- utilidades ---------------------- */
 const $app = document.getElementById("app");
+// scripts/bump_cache.py fija window.__CACHEBUST__ en index.html con un hash del
+// contenido de app.js, styles.css, data/*.json y figures/*.svg; así cada versión
+// publicada obliga a recargar esos archivos en vez de servir una copia vieja del caché.
+const conVersion = ruta => window.__CACHEBUST__ ? (ruta + "?v=" + encodeURIComponent(window.__CACHEBUST__)) : ruta;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mezclar = arr => { const a = arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
 const fmt = s => { s = Math.max(0, Math.round(s)); return Math.floor(s/60) + ":" + String(s%60).padStart(2,"0"); };
@@ -52,7 +52,7 @@ function figurasHTML(ids){
   return '<div class="figs">' + ids.map(id => {
     const f = FIGURAS[id];
     if(!f) return "";
-    const img = `<img src="${f.src || f.archivo}" width="${f.ancho}" alt="${esc(f.alt)}">`;
+    const img = `<img src="${f.src || conVersion(f.archivo)}" width="${f.ancho}" alt="${esc(f.alt)}">`;
     return f.pie ? `<figure>${img}<figcaption>${esc(f.pie)}</figcaption></figure>` : img;
   }).join("") + "</div>";
 }
