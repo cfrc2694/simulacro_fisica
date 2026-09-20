@@ -6,7 +6,7 @@ cual). Sirve para abrir la app con doble clic o para compartirla como un archivo
 
 Uso:  python3 scripts/build.py
 """
-import base64, json, subprocess, sys
+import base64, json, re, subprocess, sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -22,9 +22,13 @@ for fig in datos["figuras"].values():
 
 carga = json.dumps(datos, ensure_ascii=False).replace("</", "<\\/")
 html = leer("index.html")
-html = html.replace('<link rel="stylesheet" href="styles.css">', "<style>\n" + leer("styles.css") + "</style>")
+# index.html trae styles.css y app.js con "?v=<hash>" (ver scripts/bump_cache.py);
+# el patrón acepta ese parámetro opcional y lo descarta al incrustar los archivos.
+html = re.sub(r'<link rel="stylesheet" href="styles\.css(?:\?[^"]*)?">',
+              lambda _: "<style>\n" + leer("styles.css") + "</style>", html, count=1)
 html = html.replace("<!-- DATOS -->", f"<script>window.__DATOS__ = {carga};</script>")
-html = html.replace('<script src="app.js"></script>', "<script>\n" + leer("app.js") + "</script>")
+html = re.sub(r'<script src="app\.js(?:\?[^"]*)?"></script>',
+              lambda _: "<script>\n" + leer("app.js") + "</script>", html, count=1)
 
 salida = RAIZ / "dist" / "index.html"
 salida.parent.mkdir(exist_ok=True)
