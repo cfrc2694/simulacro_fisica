@@ -5,7 +5,7 @@
    scripts/build.py) se usan esos datos y no se hace fetch.
    ============================================================ */
 
-const TAMANO_ENSAYO = 20;          // preguntas por ensayo
+const TAMANO_ENSAYO = 30;          // preguntas por ensayo
 const VALOR_CON_PISTA = 0.5;       // cuánto vale un acierto después de ver la pista
 const SEGUNDOS_POR_PREGUNTA = 100; // ritmo de referencia que muestra el cronómetro
 const MEZCLA_ESTANDAR = { facil: 0.30, media: 0.45, dificil: 0.25 };
@@ -76,9 +76,13 @@ function disponibles(tema){
   return tema === "todos" ? PREGUNTAS : PREGUNTAS.filter(p => p.tema === tema);
 }
 
-function elegirPreguntas(tema, modo, n){
-  const pool = disponibles(tema);
-  if(modo !== "estandar") return mezclar(pool.filter(p => p.dificultad === modo)).slice(0, n);
+/* Elige de un solo grupo (pool ya filtrado) respetando la mezcla de dificultad.
+   Devuelve también lo que no se usó, para poder rellenar cuotas de otros grupos. */
+function elegirDeGrupo(pool, modo, n){
+  if(modo !== "estandar"){
+    const filtrado = mezclar(pool.filter(p => p.dificultad === modo));
+    return { elegidas: filtrado.slice(0, n), resto: filtrado.slice(n) };
+  }
   const porNivel = {};
   Object.keys(MEZCLA_ESTANDAR).forEach(d => porNivel[d] = mezclar(pool.filter(p => p.dificultad === d)));
   const elegidas = [];
@@ -86,6 +90,31 @@ function elegirPreguntas(tema, modo, n){
     elegidas.push(...porNivel[d].splice(0, Math.round(n * frac)));
   });
   const resto = mezclar([].concat(...Object.values(porNivel)));
+  while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
+  return { elegidas, resto };
+}
+
+/* Reparte n cupos entre k grupos lo más parejo posible (diferencia máxima de 1). */
+function repartirCuota(n, k){
+  const base = Math.floor(n / k), extra = n - base * k;
+  return Array.from({ length: k }, (_, i) => base + (i < extra ? 1 : 0));
+}
+
+function elegirPreguntas(tema, modo, n){
+  if(tema !== "todos") return elegirDeGrupo(disponibles(tema), modo, n).elegidas;
+
+  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas,
+     y dentro de cada área se respeta la mezcla de dificultad. Si a un área le
+     faltan preguntas para su cuota, el resto se rellena con las demás. */
+  const temas = mezclar([...new Set(PREGUNTAS.map(p => p.tema))]);
+  const cuotas = repartirCuota(n, temas.length);
+  const elegidas = [], sobrantes = [];
+  temas.forEach((t, i) => {
+    const { elegidas: e, resto } = elegirDeGrupo(PREGUNTAS.filter(p => p.tema === t), modo, cuotas[i]);
+    elegidas.push(...e);
+    sobrantes.push(...resto);
+  });
+  const resto = mezclar(sobrantes);
   while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
   return mezclar(elegidas).slice(0, n);
 }
@@ -156,7 +185,8 @@ function renderInicio(aviso){
         ${Object.entries(DIFICULTADES).map(([k,v]) =>
           `<button data-modo="${k}" aria-pressed="${opciones.modo===k}">${v} (${cuenta(k)})</button>`).join("")}
       </div>
-      <p class="nota">El ensayo estándar mezcla los tres niveles: 30 % fáciles, 45 % medias y 25 % difíciles.</p>
+      <p class="nota">El ensayo estándar mezcla los tres niveles: 30 % fáciles, 45 % medias y 25 % difíciles.
+      Con el tema "Todos" además reparte las preguntas por área lo más parejo posible.</p>
     </div>
 
     <button class="btn primary" id="empezar">Empezar ensayo de ${n} ${n === 1 ? "pregunta" : "preguntas"}</button>
