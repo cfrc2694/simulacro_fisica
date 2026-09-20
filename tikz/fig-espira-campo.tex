@@ -1,0 +1,22 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{circuitikz}[scale=1.05, transform shape]
+  \draw[hilo] (0,0) to[R, l=$R$] (3.6,0);
+  \draw[hilo] (3.6,0) -- (3.6,-1.1) to[rmeter, t=A] (3.6,-2.3) -- (3.6,-3.6);
+  % batería dibujada a mano para que la polaridad quede explícita
+  \draw[hilo] (3.6,-3.6) -- (2.15,-3.6);
+  \draw[hilo] (1.55,-3.6) -- (0,-3.6);
+  \draw[very thick] (2.15,-4.05) -- (2.15,-3.15);
+  \draw[very thick] (1.55,-3.87) -- (1.55,-3.33);
+  \node[above, font=\small] at (2.15,-3.12) {$+$};
+  \node[above, font=\small] at (1.55,-3.3) {$-$};
+  \node[below, font=\small] at (1.85,-4.05) {$\mathcal{E}_0$};
+  \draw[hilo] (0,-3.6) -- (0,0);
+  \foreach \x in {0.8,1.8,2.8} \foreach \y in {-0.9,-1.8,-2.7}
+    \node[font=\small] at (\x,\y) {$\times$};
+  \draw[|<->|, thin] (0,1.0) -- node[above, font=\small]{$L$} (3.6,1.0);
+  \draw[|<->|, thin] (-0.6,0) -- node[left, font=\small]{$L$} (-0.6,-3.6);
+  \node[font=\small] at (5.0,-1.8) {$\vec{B}$ entrante};
+\end{circuitikz}
+\end{document}

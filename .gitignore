@@ -1,0 +1,15 @@
+# Contexto interno: se queda en local
+CONTEXTO.md
+CLAUDE.md
+AGENTS.md
+
+# Generados
+dist/
+__pycache__/
+.DS_Store
+
+# Artefactos de LaTeX
+*.aux
+*.log
+*.out
+*.synctex.gz

@@ -1,0 +1,30 @@
+{
+  "fig-rc-descarga": {
+    "archivo": "figures/fig-rc-descarga.svg",
+    "fuente": "tikz/fig-rc-descarga.tex",
+    "ancho": 300,
+    "pie": "Figura 1",
+    "alt": "Circuito con una fuente de fem V y resistencia interna r a la izquierda, un interruptor S que puede tocar el contacto a o el contacto b, un capacitor C en la rama central y un resistor R en la rama derecha."
+  },
+  "fig-curvas-corriente": {
+    "archivo": "figures/fig-curvas-corriente.svg",
+    "fuente": "tikz/fig-curvas-corriente.tex",
+    "ancho": 330,
+    "pie": "Figura 2",
+    "alt": "Cinco curvas de corriente contra tiempo etiquetadas de A a E, con los niveles V dividido R y V dividido R más r marcados en el eje vertical."
+  },
+  "fig-espira-campo": {
+    "archivo": "figures/fig-espira-campo.svg",
+    "fuente": "tikz/fig-espira-campo.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Espira cuadrada de lado L con un resistor R arriba, un amperímetro en el lado derecho y una batería en el lado inferior con su terminal positiva a la derecha. El interior de la espira está marcado con cruces que indican un campo magnético entrante."
+  },
+  "fig-anillo-eje": {
+    "archivo": "figures/fig-anillo-eje.svg",
+    "fuente": "tikz/fig-anillo-eje.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Anillo de radio R con carga Q en el plano yz, centrado en el origen. El punto P está sobre el eje x a una distancia x del centro, y un elemento de carga dq del anillo está a una distancia igual a la raíz de x al cuadrado más R al cuadrado."
+  }
+}

@@ -1,0 +1,12 @@
+% Preámbulo común de las figuras. Cada figura es un documento standalone
+% que se compila a SVG con scripts/build_figures.sh
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[american, siunitx]{circuitikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing,patterns}
+\tikzset{
+  >={Stealth[length=2.2mm]},
+  eje/.style={->, thin},
+  hilo/.style={thick},
+}

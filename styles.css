@@ -1,0 +1,120 @@
+:root{
+  color-scheme: light;
+  --papel:#F4F6F5; --hoja:#FFFFFF; --tinta:#17212B; --gris:#5B6770; --regla:#D5DDDA;
+  --lapiz:#2446A8; --lapiz-suave:#E8EDFA;
+  --ok:#1F7A4D; --ok-suave:#E5F3EA; --ok-pista:#8FC4A6;
+  --mal:#B42318; --mal-suave:#FBEAE8;
+  --pista:#8A5A00; --pista-suave:#FFF6DF; --pista-borde:#EFDCA6;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lapiz);outline-offset:3px}
+
+.wrap{max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.top h1{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:0;letter-spacing:-.01em}
+.meta{color:var(--gris);font-size:.9rem;font-variant-numeric:tabular-nums}
+.meta strong{color:var(--tinta);font-weight:600}
+.nota{color:var(--gris);font-size:.84rem}
+.aviso{background:var(--pista-suave);border:1px solid var(--pista-borde);border-radius:6px;padding:.6rem .8rem}
+kbd{font-family:var(--sans);font-size:.75rem;border:1px solid var(--regla);border-bottom-width:2px;border-radius:4px;padding:0 .3rem;background:var(--hoja)}
+
+/* inicio */
+.intro{font-family:var(--serif);font-size:1.1rem;line-height:1.65;max-width:60ch;margin:0 0 1.5rem}
+.grupo{margin-bottom:1.5rem}
+.etiqueta{display:block;font-size:.85rem;color:var(--gris);margin-bottom:.4rem}
+.segmentado{display:flex;flex-wrap:wrap;gap:.4rem}
+.segmentado button{border:1.5px solid var(--regla);background:var(--hoja);border-radius:999px;padding:.4rem .9rem;cursor:pointer;font-size:.92rem}
+.segmentado button[aria-pressed="true"]{border-color:var(--tinta);background:var(--tinta);color:#fff}
+.descargo{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--regla);color:var(--gris);font-size:.82rem;max-width:66ch}
+
+/* mapa de preguntas */
+.mapa{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.mapa button{position:relative;width:2.1rem;height:1.5rem;border-radius:999px;border:1.5px solid var(--regla);background:var(--hoja);font-size:.78rem;cursor:pointer;font-variant-numeric:tabular-nums;color:var(--gris)}
+.mapa button.hecha{background:var(--lapiz);border-color:var(--lapiz);color:#fff}
+.mapa button.aqui{border-color:var(--tinta);color:var(--tinta);font-weight:600}
+.mapa button.hecha.aqui{box-shadow:0 0 0 2px var(--hoja),0 0 0 3.5px var(--tinta)}
+.mapa button.conpista::after{content:"";position:absolute;top:-3px;right:-3px;width:.5rem;height:.5rem;border-radius:50%;background:#E0A92E;border:1.5px solid var(--papel)}
+
+/* hoja de pregunta */
+.hoja{background:var(--hoja);border:1px solid var(--regla);border-radius:6px;padding:1.5rem 1.5rem 1.25rem}
+.cabecera{display:flex;justify-content:space-between;gap:1rem;color:var(--gris);font-size:.85rem;margin-bottom:1rem}
+.nivel{white-space:nowrap;border:1px solid var(--regla);border-radius:999px;padding:0 .55rem}
+.nivel-facil{color:var(--ok);border-color:#BFE0CC}
+.nivel-media{color:var(--pista);border-color:var(--pista-borde)}
+.nivel-dificil{color:var(--mal);border-color:#F0C4BF}
+.figs{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:flex-end;margin:0 0 1.25rem}
+.figs img{display:block;height:auto}
+.figs figure{margin:0}
+.figs figcaption{text-align:center;font-family:var(--serif);font-size:.95rem;margin-top:.35rem}
+.enunciado{font-family:var(--serif);font-size:1.1rem;line-height:1.6;margin:0 0 1.25rem;max-width:68ch}
+
+/* opciones tipo hoja de respuestas */
+.opciones{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.opcion{display:flex;align-items:center;gap:.9rem;width:100%;text-align:left;background:none;border:1px solid transparent;border-radius:6px;padding:.55rem .7rem;cursor:pointer;font-family:var(--serif);font-size:1.05rem}
+.opcion:hover{background:var(--papel)}
+.burbuja{flex:none;width:2.2rem;height:1.35rem;border-radius:999px;border:1.5px solid var(--gris);display:grid;place-items:center;font-family:var(--sans);font-size:.72rem;color:var(--gris);transition:background .15s,border-color .15s,color .15s}
+.opcion[aria-checked="true"]{background:var(--lapiz-suave);border-color:#C9D4F2}
+.opcion[aria-checked="true"] .burbuja{background:var(--lapiz);border-color:var(--lapiz);color:#fff}
+
+/* pistas */
+.pistacta{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin-top:1.1rem;padding-top:1rem;border-top:1px dashed var(--regla)}
+.btnpista{border-color:#E3C77A;background:var(--pista-suave);color:var(--pista)}
+.btnpista::before{content:"";display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:#E0A92E;margin-right:.5rem;vertical-align:.05rem}
+.cajapista{margin-top:1.1rem;display:grid;gap:.6rem}
+.cajapista:focus{outline:none}
+.pista{background:var(--pista-suave);border:1px solid var(--pista-borde);border-radius:6px;padding:.8rem 1rem;font-family:var(--serif);line-height:1.6}
+.pista b{display:block;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--pista);margin-bottom:.2rem}
+
+.nav{display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.btn{border:1.5px solid var(--tinta);background:var(--hoja);border-radius:6px;padding:.55rem 1.1rem;cursor:pointer;font-weight:500}
+.btn:disabled{opacity:.35;cursor:default}
+.btn.primary{background:var(--tinta);color:#fff}
+.btn.quiet{border-color:var(--regla)}
+
+/* reporte */
+.puntaje{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;margin:.25rem 0 1rem}
+.puntaje b{font-family:var(--serif);font-size:3rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.puntaje span{color:var(--gris)}
+.barra{display:flex;height:.6rem;border-radius:999px;overflow:hidden;background:var(--regla);margin-bottom:.6rem}
+.barra i{display:block}
+.leyenda{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.88rem;color:var(--gris);margin-bottom:1.75rem}
+.leyenda span::before{content:"";display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.4rem;vertical-align:-.05rem;background:var(--c)}
+h2{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:2rem 0 .75rem}
+.tabla{overflow-x:auto}
+.tabla table{width:100%;border-collapse:collapse;font-size:.92rem}
+.tabla th,.tabla td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--regla)}
+.tabla th{font-weight:500;color:var(--gris)}
+.tabla td.n{font-variant-numeric:tabular-nums;text-align:right}
+.revision{margin-top:1rem}
+.revision .hoja{margin-bottom:1rem;border-left-width:4px}
+.revision .hoja.ok{border-left-color:var(--ok)}
+.revision .hoja.okp{border-left-color:var(--ok-pista)}
+.revision .hoja.mal{border-left-color:var(--mal)}
+.revision .hoja.blanco{border-left-color:var(--gris)}
+.veredicto{font-weight:600}
+.ok .veredicto{color:var(--ok)} .mal .veredicto{color:var(--mal)} .blanco .veredicto{color:var(--gris)}
+.ropcion{display:flex;align-items:center;gap:.9rem;padding:.4rem .7rem;border-radius:6px;font-family:var(--serif)}
+.ropcion.es-correcta{background:var(--ok-suave)}
+.ropcion.es-mala{background:var(--mal-suave)}
+.ropcion .tag{margin-left:auto;font-family:var(--sans);font-size:.8rem;font-weight:500}
+.es-correcta .tag{color:var(--ok)} .es-mala .tag{color:var(--mal)}
+.es-correcta .burbuja{background:var(--ok);border-color:var(--ok);color:#fff}
+.es-mala .burbuja{background:var(--mal);border-color:var(--mal);color:#fff}
+.expl{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--regla);font-family:var(--serif);line-height:1.6;max-width:68ch}
+.expl b{font-family:var(--sans);font-weight:600;font-size:.85rem;display:block;margin-bottom:.2rem;color:var(--gris)}
+
+@media (max-width:520px){
+  .hoja{padding:1.1rem 1rem}
+  .enunciado{font-size:1.02rem}
+  .puntaje b{font-size:2.4rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

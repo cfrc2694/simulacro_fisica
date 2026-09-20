@@ -1,0 +1,67 @@
+{
+  "potencial-integral": {
+    "nodo": "2.1.2",
+    "titulo": "Potencial de una distribución continua",
+    "texto": "El potencial eléctrico es un escalar y se obtiene integrando sobre la distribución: $V(\\mathbf{r}) = K_e\\displaystyle\\int \\frac{dq}{|\\mathbf{r}-\\mathbf{r}'|}$. No hay que descomponer en componentes: basta con la distancia de cada $dq$ al punto, y cuando esa distancia es la misma para toda la carga la integral es inmediata. Comprueba el límite lejano: la distribución debe verse como una carga puntual, $V \\to K_eQ/r$."
+  },
+  "campo-desde-potencial": {
+    "nodo": "2.1.2",
+    "titulo": "Campo a partir del potencial",
+    "texto": "Con el potencial ya calculado, el campo sale de $\\mathbf{E} = -\\nabla V$. Sobre un eje de simetría basta derivar en una variable, $E_x = -dV/dx$, porque las otras componentes se anulan por simetría. Casi siempre es más rápido que integrar el campo como vector."
+  },
+  "potencial-desde-campo": {
+    "nodo": "2.1.2",
+    "titulo": "Potencial a partir del campo",
+    "texto": "Cuando el campo se obtiene fácil (por ejemplo con la ley de Gauss), el potencial se calcula integrándolo: $V(a)-V(b) = \\displaystyle\\int_a^b \\mathbf{E}\\cdot d\\mathbf{l}$. Escoge un camino que siga las líneas de campo y fija con cuidado la referencia $V=0$: si la carga se extiende hasta el infinito, la referencia no puede estar allí."
+  },
+  "trabajo-energia-potencial": {
+    "nodo": "2.1.8",
+    "titulo": "Trabajo, energía y diferencia de potencial",
+    "texto": "Para una carga que se mueve solo bajo la fuerza eléctrica, $\\Delta K = -q\\,\\Delta V$. Cuida el signo de la carga: para un electrón, $q = -e$, así que gana energía cinética al moverse hacia potenciales mayores. Si la partícula se detiene, toda su energía cinética se convirtió en $q\\,\\Delta V$."
+  },
+  "gauss-simetria": {
+    "nodo": "2.1.3",
+    "titulo": "Ley de Gauss y simetría",
+    "texto": "$\\displaystyle\\oint \\mathbf{E}\\cdot d\\mathbf{A} = 4\\pi K_e\\,Q_{\\text{enc}}$ siempre es cierta, pero solo sirve para despejar $E$ cuando la simetría (esférica, cilíndrica o plana) garantiza que $|E|$ es constante sobre la superficie elegida. Primero calcula $Q_{\\text{enc}}(r)$ región por región; un flujo nulo no implica campo nulo."
+  },
+  "flujo-cara-por-cara": {
+    "nodo": "2.1.3",
+    "titulo": "Flujo de un campo no uniforme",
+    "texto": "Si el campo no es uniforme no basta con decir que 'lo que entra sale'. Calcula $\\Phi = \\displaystyle\\int \\mathbf{E}\\cdot d\\mathbf{A}$ cara por cara: en las caras paralelas al campo el flujo es cero, y en las perpendiculares evalúa $E$ donde está la cara. La carga encerrada sale después con la ley de Gauss."
+  },
+  "flujo-angulo-solido": {
+    "nodo": "2.1.3",
+    "titulo": "Flujo y ángulo sólido",
+    "texto": "El flujo total de una carga puntual es $4\\pi K_eQ$, repartido por igual en todas las direcciones. Una superficie que abarca un ángulo sólido $\\Omega$ vista desde la carga recibe la fracción $\\Omega/4\\pi$ de ese total. Para un cono de semiángulo $\\theta$, $\\Omega = 2\\pi(1-\\cos\\theta)$. Revisa los casos extremos $\\theta \\to 0$ y $\\theta \\to 90^\\circ$."
+  },
+  "superposicion-distribuciones": {
+    "nodo": "2.1.4",
+    "titulo": "Superposición de distribuciones conocidas",
+    "texto": "Un cuerpo con un hueco, o una corona, se arma sumando distribuciones que ya sabes resolver: una esfera llena más una esfera de densidad opuesta, o un disco grande menos uno pequeño. El campo total es la suma vectorial de los campos de cada pieza, y con frecuencia el resultado es más simple que las partes."
+  },
+  "conductores-induccion": {
+    "nodo": "2.1.6",
+    "titulo": "Conductores y carga inducida",
+    "texto": "En equilibrio, el campo dentro del metal es cero, así que una gaussiana trazada dentro del material no encierra carga neta: eso fija la carga de la superficie interior. La exterior lleva el resto, repartido según la forma exterior del conductor. Distingue carga neta nula de densidad nula, y recuerda que conectar a tierra fija el potencial, no la carga."
+  },
+  "oscilaciones-pequenas": {
+    "nodo": "1.7",
+    "titulo": "Oscilaciones pequeñas",
+    "texto": "Cerca de un equilibrio, expande la fuerza a primer orden en el desplazamiento. Si queda $F \\approx -kx$, el movimiento es armónico con $\\omega = \\sqrt{k/m}$ y $f = \\omega/2\\pi$. La frecuencia no depende de la amplitud, así que descarta las opciones que dependan de la posición inicial."
+  },
+  "circuito-rc-descarga": {
+    "nodo": "2.7.4",
+    "titulo": "Carga y descarga en circuitos RC",
+    "texto": "Al mover un interruptor, lo primero es ver qué elementos quedan realmente conectados. En una descarga, $I(t) = I_0 e^{-t/\\tau}$ con $I_0 = V_0/R$ y $\\tau = RC$, contando solo las resistencias del lazo. Para identificar una curva basta con dos datos: el valor en $t=0$ y el límite cuando $t \\to \\infty$."
+  },
+  "induccion-faraday-lenz": {
+    "nodo": "2.3.2",
+    "titulo": "Leyes de Faraday y de Lenz",
+    "texto": "La fem inducida es $\\mathcal{E} = -d\\Phi_B/dt$, y con campo uniforme perpendicular al circuito $\\Phi_B = BA$. La ley de Lenz da el sentido: la corriente inducida se opone al cambio de flujo. Si el circuito también tiene una batería, decide primero el sentido de cada fem y súmalas o réstalas antes de aplicar la ley de Ohm."
+  },
+  "analisis-dimensional": {
+    "nodo": "7.1.1",
+    "titulo": "Descarte por unidades",
+    "texto": "Antes de resolver, revisa las unidades de cada opción: en preguntas con varios símbolos suele haber una o dos que no pueden ser la respuesta por dimensiones. Es la forma más barata de reducir cinco opciones a tres."
+  }
+}
