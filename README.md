@@ -9,8 +9,8 @@ La app es estática: HTML, CSS y JavaScript, sin compilación.
 ```bash
 python3 -m http.server        # abrir http://localhost:8000
 python3 scripts/validate.py   # revisar los datos
-python3 scripts/bump_cache.py # actualizar el ?v= de index.html tras tocar app.js, styles.css, data/ o figures/
 bash scripts/build_figures.sh # recompilar las figuras TikZ a SVG
+python3 scripts/bump_cache.py # actualizar el ?v= de index.html tras tocar app.js, styles.css, data/ o figures/
 python3 scripts/build.py      # opcional: dist/index.html en un solo archivo
 ```
 
