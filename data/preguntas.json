@@ -276,5 +276,131 @@
     "barajar": true,
     "pistas": ["flujo-angulo-solido"],
     "explicacion": "El flujo total de la carga es $4\\pi K_e Q$ y se reparte por igual en todas las direcciones. La base recibe la fracción correspondiente al ángulo sólido del cono, $\\Omega = 2\\pi(1-\\cos\\theta)$, así que $\\Phi = K_e Q\\,\\Omega = 2\\pi K_e Q(1-\\cos\\theta)$. Comprobaciones: con $\\theta \\to 0$ el flujo tiende a cero y con $\\theta \\to 90^\\circ$ tiende a $2\\pi K_e Q$, la mitad del total, como corresponde a un plano infinito. Por la superficie lateral, en cambio, el flujo sí es cero, porque allí el campo es tangente."
+  },
+  {
+    "id": "q015",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "facil",
+    "figuras": [],
+    "enunciado": "Una partícula se mueve en el plano con vector de posición (unidades SI) $\\vec{r}(t) = 3t\\,\\hat{\\imath} + (2t^{2}+t)\\,\\hat{\\jmath}$. Los vectores velocidad en $t = 2$ s y aceleración de este movimiento son, respectivamente,",
+    "opciones": [
+      "$\\vec{v} = 3\\,\\hat{\\imath} + 9\\,\\hat{\\jmath}$ m/s y $\\vec{a} = 4\\,\\hat{\\jmath}$ m/s$^2$",
+      "$\\vec{v} = 6\\,\\hat{\\imath} + 10\\,\\hat{\\jmath}$ m/s y $\\vec{a} = 4\\,\\hat{\\jmath}$ m/s$^2$",
+      "$\\vec{v} = 3\\,\\hat{\\imath} + 5\\,\\hat{\\jmath}$ m/s y $\\vec{a} = 4\\,\\hat{\\jmath}$ m/s$^2$",
+      "$\\vec{v} = 3\\,\\hat{\\imath} + 9\\,\\hat{\\jmath}$ m/s y $\\vec{a} = 8\\,\\hat{\\jmath}$ m/s$^2$",
+      "$\\vec{v} = 3\\,\\hat{\\imath} + 9\\,\\hat{\\jmath}$ m/s y $\\vec{a} = 2\\,\\hat{\\jmath}$ m/s$^2$"
+    ],
+    "respuesta": 0,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["cinematica-vectorial-derivadas"],
+    "explicacion": "Derivando componente a componente, $\\vec{v}(t) = 3\\,\\hat{\\imath} + (4t+1)\\,\\hat{\\jmath}$ y $\\vec{a}(t) = 4\\,\\hat{\\jmath}$ (constante, porque la componente $y$ de $\\vec{r}$ es cuadrática). En $t=2$ s, $\\vec{v} = 3\\,\\hat{\\imath} + 9\\,\\hat{\\jmath}$ m/s. Evaluar $\\vec{r}(t)$ en $t=2$ en lugar de derivar primero da $6\\,\\hat{\\imath}+10\\,\\hat{\\jmath}$; usar $t=1$ en vez de $t=2$ en la componente $y$ de $\\vec{v}$ da $5$ en lugar de $9$. Para la aceleración, confundir la derivada de $2t^2$ con $2t$ (en vez de $4t$) da $\\vec{a}=2\\,\\hat{\\jmath}$, y derivar mal por segunda vez, duplicando el resultado, da $\\vec{a}=8\\,\\hat{\\jmath}$."
+  },
+  {
+    "id": "q016",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "dificil",
+    "figuras": [],
+    "enunciado": "El vector de posición de un cuerpo es (unidades SI) $\\vec{r}(t) = (2t^{3}+1)\\,\\hat{\\imath} + (3t^{2}-2)\\,\\hat{\\jmath}$. Las componentes intrínsecas de la aceleración (tangencial $a_t$ y normal $a_n$) en $t = 1$ s son",
+    "opciones": [
+      "$a_t = 12.7$ m/s$^2$ y $a_n = 4.2$ m/s$^2$",
+      "$a_t = 4.2$ m/s$^2$ y $a_n = 12.7$ m/s$^2$",
+      "$a_t = 13.4$ m/s$^2$ y $a_n = 0$",
+      "$a_t = 8.5$ m/s$^2$ y $a_n = 6.0$ m/s$^2$",
+      "$a_t = 12.7$ m/s$^2$ y $a_n = 0.7$ m/s$^2$"
+    ],
+    "respuesta": 0,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["cinematica-vectorial-derivadas", "componentes-intrinsecas-aceleracion"],
+    "explicacion": "En $t=1$ s, $\\vec{v}=6\\,\\hat{\\imath}+6\\,\\hat{\\jmath}$ m/s (con $|\\vec{v}|=6\\sqrt{2}\\approx 8.49$ m/s) y $\\vec{a}=12\\,\\hat{\\imath}+6\\,\\hat{\\jmath}$ m/s$^2$ (con $|\\vec{a}|=\\sqrt{180}\\approx 13.4$ m/s$^2$). La componente tangencial es la proyección de $\\vec{a}$ sobre $\\vec{v}$: $a_t=\\vec{v}\\cdot\\vec{a}/|\\vec{v}|\\approx 12.7$ m/s$^2$, y la normal completa el módulo por Pitágoras, $a_n=\\sqrt{|\\vec{a}|^2-a_t^2}\\approx 4.2$ m/s$^2$. Cualquier par válido debe cumplir $a_t^2+a_n^2=|\\vec{a}|^2\\approx 180$: ni $8.5$ y $6.0$ (suman $108.25$) lo cumplen, ni tiene sentido intercambiar los valores correctos, porque $\\vec{v}$ y $\\vec{a}$ casi apuntan igual y la mayor parte de la aceleración debe ser tangencial. Restar en línea recta, $|\\vec{a}|-a_t=0.7$, en vez de combinar en cuadratura, es otro error típico; y suponer trayectoria recta ($a_n=0$) ignora que $\\vec{v}$ cambia de dirección."
+  },
+  {
+    "id": "q017",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "media",
+    "figuras": [],
+    "enunciado": "Una barca debe cruzar un río de $120$ m de ancho y quiere llegar exactamente al punto situado justo enfrente de su punto de partida. Sus motores le dan una rapidez de $5.0$ m/s respecto del agua y la corriente baja a $3.0$ m/s. El ángulo que debe formar su velocidad con la perpendicular a la orilla, y el tiempo que tarda en cruzar, son",
+    "opciones": [
+      "$31.0^\\circ$ y $24$ s",
+      "$36.9^\\circ$ y $24$ s",
+      "$53.1^\\circ$ y $30$ s",
+      "$36.9^\\circ$ y $30$ s",
+      "$53.1^\\circ$ y $24$ s"
+    ],
+    "respuesta": 3,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["movimiento-relativo-velocidades"],
+    "explicacion": "La componente de la velocidad de la barca contra la corriente debe cancelarla: $5.0\\sin\\theta = 3.0$, de donde $\\theta = \\arcsin(0.6) = 36.9^\\circ$ medido desde la perpendicular a la orilla. La componente que sí cruza el río es $5.0\\cos\\theta = 4.0$ m/s, así que $t = 120/4.0 = 30$ s. Usar el ángulo complementario, $53.1^\\circ$ (medido desde la orilla en vez de desde la perpendicular), es el error más común; dividir $120$ entre la rapidez total de $5.0$ m/s sin proyectarla da el distractor de $24$ s, y se puede combinar con el ángulo equivocado."
+  },
+  {
+    "id": "q018",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "media",
+    "figuras": [],
+    "enunciado": "Desde un helicóptero que se desplaza horizontalmente a $45.0$ m/s y a una altura de $120$ m se deja caer un paquete, que solo queda sujeto a la gravedad. La distancia horizontal entre el punto de lanzamiento y el punto de caída, y la rapidez del paquete al llegar al suelo, son",
+    "opciones": [
+      "$223$ m y $48.5$ m/s",
+      "$223$ m y $66.2$ m/s",
+      "$120$ m y $52.0$ m/s",
+      "$445$ m y $66.2$ m/s",
+      "$223$ m y $45.0$ m/s"
+    ],
+    "respuesta": 1,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["tiro-parabolico-general"],
+    "explicacion": "El paquete conserva la rapidez horizontal de $45.0$ m/s y cae con $v_y = gt$. El tiempo de caída sale de $120 = \\tfrac{1}{2}gt^2$, es decir $t=\\sqrt{2(120)/9.80}\\approx 4.95$ s, y la distancia horizontal es $x = 45.0\\,t\\approx 223$ m. La rapidez de llegada combina las dos componentes: $v=\\sqrt{45.0^2+(gt)^2}\\approx 66.2$ m/s. Responder $48.5$ m/s es dar solo $v_y$, y responder $45.0$ m/s es olvidar que la componente vertical también aporta rapidez al llegar al suelo."
+  },
+  {
+    "id": "q019",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "dificil",
+    "figuras": [],
+    "enunciado": "Desde una altura de $80.0$ m se dispara un proyectil con una rapidez inicial de $60.0$ m/s y un ángulo de $30.0^\\circ$ sobre la horizontal. La altura máxima que alcanza el proyectil medida desde el suelo, y su alcance horizontal (desde el punto de lanzamiento hasta donde cae al suelo), son",
+    "opciones": [
+      "$45.9$ m y $422$ m",
+      "$126$ m y $318$ m",
+      "$80.0$ m y $318$ m",
+      "$126$ m y $422$ m",
+      "$45.9$ m y $318$ m"
+    ],
+    "respuesta": 3,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["tiro-parabolico-general"],
+    "explicacion": "Las componentes iniciales son $v_{0x}=60.0\\cos30.0^\\circ\\approx 52.0$ m/s y $v_{0y}=60.0\\sin30.0^\\circ=30.0$ m/s. La altura máxima sobre el punto de lanzamiento es $v_{0y}^2/2g\\approx 45.9$ m, que sumada a los $80.0$ m del lanzamiento da $126$ m medidos desde el suelo. Para el alcance hay que resolver $80.0+30.0t-4.90t^2=0$, porque el proyectil cae hasta $80.0$ m por debajo del punto de lanzamiento; eso da $t\\approx 8.13$ s y $x=52.0\\,t\\approx 422$ m. Suponer un vuelo simétrico con $t=2v_{0y}/g\\approx 6.12$ s (como si cayera a la misma altura de la que salió) da el distractor de $318$ m, y olvidar sumar los $80.0$ m iniciales deja la altura máxima en solo $45.9$ m."
+  },
+  {
+    "id": "q020",
+    "origen": "propia",
+    "revisada": false,
+    "tema": "1",
+    "subtemas": ["1.2"],
+    "dificultad": "dificil",
+    "figuras": [],
+    "enunciado": "Un hombre parado en la azotea de un edificio de $20.0$ m de altura lanza una piedra con una rapidez inicial de $25.0$ m/s y un ángulo de $40.0^\\circ$ sobre la horizontal. La piedra cae al pie del edificio. La distancia horizontal desde la base del edificio hasta el punto donde la piedra golpea el suelo es",
+    "opciones": ["$62.8$ m", "$68.2$ m", "$81.2$ m", "$106.0$ m", "$76.6$ m"],
+    "respuesta": 2,
+    "respuesta_verificada": false,
+    "barajar": true,
+    "pistas": ["tiro-parabolico-general"],
+    "explicacion": "Las componentes son $v_{0x}=25.0\\cos40.0^\\circ\\approx 19.2$ m/s y $v_{0y}=25.0\\sin40.0^\\circ\\approx 16.1$ m/s. Como la piedra cae $20.0$ m por debajo del punto de lanzamiento, el tiempo de vuelo sale de $20.0+16.1t-4.90t^2=0$, que da $t\\approx 4.24$ s, y el alcance es $x=19.2\\,t\\approx 81.2$ m. Suponer que sube y baja al mismo nivel (ignorando los $20.0$ m del edificio) da un tiempo de vuelo simétrico, $t=2v_{0y}/g\\approx 3.28$ s, y el distractor de $62.8$ m; intercambiar seno y coseno al descomponer la velocidad inicial da $76.6$ m."
   }
 ]

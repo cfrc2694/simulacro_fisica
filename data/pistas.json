@@ -63,5 +63,25 @@
     "nodo": "7.1.1",
     "titulo": "Descarte por unidades",
     "texto": "Antes de resolver, revisa las unidades de cada opción: en preguntas con varios símbolos suele haber una o dos que no pueden ser la respuesta por dimensiones. Es la forma más barata de reducir cinco opciones a tres."
+  },
+  "cinematica-vectorial-derivadas": {
+    "nodo": "1.2",
+    "titulo": "Velocidad y aceleración por derivación",
+    "texto": "Si el movimiento está dado por un vector de posición $\\vec{r}(t)$, la velocidad y la aceleración salen de derivar componente a componente: $\\vec{v}=d\\vec{r}/dt$ y $\\vec{a}=d\\vec{v}/dt$. Evalúa en el instante pedido solo al final, después de derivar, y revisa si la aceleración depende o no del tiempo antes de sustituir nada."
+  },
+  "componentes-intrinsecas-aceleracion": {
+    "nodo": "1.2",
+    "titulo": "Componentes tangencial y normal",
+    "texto": "La aceleración se descompone en una parte que cambia la rapidez (tangencial, $a_t = \\vec{v}\\cdot\\vec{a}/|\\vec{v}|$) y otra que cambia la dirección (normal, $a_n = \\sqrt{|\\vec{a}|^2 - a_t^2}$). Un par de valores solo es consistente si $a_t^2+a_n^2=|\\vec{a}|^2$; úsalo para descartar opciones."
+  },
+  "movimiento-relativo-velocidades": {
+    "nodo": "1.2",
+    "titulo": "Velocidad relativa como suma de vectores",
+    "texto": "La velocidad de un cuerpo respecto de tierra es la suma vectorial de su velocidad respecto del medio más la velocidad del medio: $\\vec{v}_{\\text{tierra}} = \\vec{v}_{\\text{cuerpo/medio}} + \\vec{v}_{\\text{medio}}$. Para cruzar en línea recta, la componente del cuerpo perpendicular a esa línea debe cancelar exactamente la del medio; solo la componente que sí avanza en la línea recta cuenta para el tiempo."
+  },
+  "tiro-parabolico-general": {
+    "nodo": "1.2",
+    "titulo": "Tiro parabólico con lanzamiento y llegada a distinta altura",
+    "texto": "Descompón la velocidad inicial en $v_{0x}=v_0\\cos\\theta$ y $v_{0y}=v_0\\sin\\theta$. La componente horizontal es constante y la vertical sigue $y(t)=y_0+v_{0y}t-\\tfrac12 gt^2$. Si el punto de llegada no está a la misma altura que el de lanzamiento, el tiempo de vuelo sale de resolver esa ecuación cuadrática para $y=0$, no de la fórmula simétrica $2v_{0y}/g$."
   }
 }
