@@ -105,7 +105,7 @@ function repartirCuota(n, k){
 }
 
 function elegirPreguntas(tema, modo, n){
-  if(tema !== "todos") return elegirDeGrupo(disponibles(tema), modo, n).elegidas;
+  if(tema !== "todos") return mezclar(elegirDeGrupo(disponibles(tema), modo, n).elegidas);
 
   /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas,
      y dentro de cada área se respeta la mezcla de dificultad. Si a un área le
