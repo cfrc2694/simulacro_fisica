@@ -9,6 +9,7 @@ La app es estática: HTML, CSS y JavaScript, sin compilación.
 ```bash
 python3 -m http.server        # abrir http://localhost:8000
 python3 scripts/validate.py   # revisar los datos
+python3 scripts/bump_cache.py # actualizar el ?v= de index.html tras tocar app.js, styles.css o data/
 bash scripts/build_figures.sh # recompilar las figuras TikZ a SVG
 python3 scripts/build.py      # opcional: dist/index.html en un solo archivo
 ```
@@ -17,7 +18,9 @@ Abrir `index.html` con doble clic no funciona, porque el navegador bloquea la le
 
 ## Publicar en GitHub Pages
 
-En Settings → Pages, elegir la rama y la carpeta raíz. El repositorio ya trae `.nojekyll`, así que los archivos se sirven tal cual. Al ser un sitio estático, `fetch` de los JSON funciona sin configuración.
+En Settings → Pages, elegir la rama y la carpeta raíz ("Deploy from a branch"). El repositorio ya trae `.nojekyll`, así que los archivos se sirven tal cual. Al ser un sitio estático, `fetch` de los JSON funciona sin configuración.
+
+`index.html` carga `app.js`, `styles.css` y los JSON de `data/` con un parámetro `?v=<hash>`. Ese hash lo pone `scripts/bump_cache.py`: corre ese script después de tocar `app.js`, `styles.css` o cualquier `data/*.json`, antes de subir los cambios, para que el navegador no sirva una copia vieja cacheada.
 
 ## Estructura
 

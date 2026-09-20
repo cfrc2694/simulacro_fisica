@@ -18,7 +18,11 @@ async function cargarDatos(){
     ({ figuras: FIGURAS, temas: TEMAS, pistas: PISTAS, preguntas: PREGUNTAS } = window.__DATOS__);
     return;
   }
-  const traer = async f => { const r = await fetch(f); if(!r.ok) throw new Error(f + ": " + r.status); return r.json(); };
+  // window.__CACHEBUST__ lo fija index.html (la Action de despliegue le pone el hash
+  // del commit); así cada versión publicada obliga a recargar los JSON en vez de
+  // servir una copia vieja desde el caché del navegador.
+  const v = window.__CACHEBUST__ ? ("?v=" + encodeURIComponent(window.__CACHEBUST__)) : "";
+  const traer = async f => { const r = await fetch(f + v); if(!r.ok) throw new Error(f + ": " + r.status); return r.json(); };
   [FIGURAS, TEMAS, PISTAS, PREGUNTAS] = await Promise.all(
     ["data/figuras.json","data/temas.json","data/pistas.json","data/preguntas.json"].map(traer));
 }
