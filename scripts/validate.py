@@ -113,6 +113,48 @@ en_disco = {p.relative_to(RAIZ).as_posix() for p in (RAIZ / "figures").glob("*")
 for huerfano in sorted(en_disco - {i.get("archivo") for i in figuras.values()}):
     avi(f"archivo sin registrar en figuras.json: {huerfano}")
 
+# Coherencia entre el texto y los campos de cada pregunta
+MENCIONA_FIGURA = re.compile(r"\bfiguras?\b", re.I)
+POR_POSICION = re.compile(
+    r"\b(primera|segunda|tercera|cuarta|quinta|última|penúltima)\s+opci[oó]n\b"
+    r"|\bopci[oó]n\s+\$?\(?[A-E]\)?\$?(?![A-Za-z])", re.I)
+for p in preguntas:
+    pid = p.get("id", "?")
+    texto = p.get("enunciado", "") + " " + (p.get("explicacion") or "")
+    if MENCIONA_FIGURA.search(texto) and not p.get("figuras"):
+        err(f"{pid}: el texto menciona una figura, pero la pregunta no tiene ninguna en 'figuras'")
+    if p.get("barajar"):
+        m = POR_POSICION.search(p.get("explicacion") or "")
+        if m:
+            err(f"{pid}: la explicación nombra una opción por su posición («{m.group(0)}»), "
+                "pero las opciones se barajan; nómbrala por su contenido")
+
+# Contraste del texto en las figuras: un color de la paleta con contraste menor
+# que 4.5:1 contra el fondo blanco no se usa en texto sin oscurecerlo (color!NN!black).
+def contraste_con_blanco(r, g, b):
+    def lin(c):
+        c /= 255
+        return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+    lum = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b)
+    return 1.05 / (lum + 0.05)
+
+preambulo = (RAIZ / "tikz" / "preambulo.tex").read_text(encoding="utf-8")
+claros = {}
+for nombre, r, g, b in re.findall(r"\\definecolor\{(\w+)\}\{RGB\}\{(\d+),(\d+),(\d+)\}", preambulo):
+    c = contraste_con_blanco(int(r), int(g), int(b))
+    if c < 4.5:
+        claros[nombre] = c
+for tex in sorted((RAIZ / "tikz").glob("fig-*.tex")):
+    for n, linea in enumerate(tex.read_text(encoding="utf-8").splitlines(), 1):
+        if "node" not in linea and "\\color" not in linea:
+            continue
+        for nombre, c in claros.items():
+            for m in re.finditer(r"\b" + nombre + r"\b(![0-9]+!black)?", linea):
+                if not m.group(1):
+                    err(f"{tex.name}:{n}: texto con el color '{nombre}' (contraste {c:.2f}:1, menor que 4.5:1); "
+                        f"usa {nombre}!80!black o un color más oscuro")
+                    break
+
 # El ?v= de index.html debe corresponder al contenido actual; si no, el
 # navegador puede seguir sirviendo una copia vieja de los datos o las figuras.
 sys.path.insert(0, str(RAIZ / "scripts"))
