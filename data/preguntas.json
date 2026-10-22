@@ -2913,7 +2913,7 @@
     "respuesta_verificada": false,
     "barajar": false,
     "pistas": ["induccion-faraday-lenz"],
-    "explicacion": "El área del semicírculo que está dentro del campo cambia como un sector circular que barre a rapidez angular constante: durante media vuelta crece a ritmo constante y durante la otra media decrece al mismo ritmo. Como la fem es $-B\\,dA/dt$, es constante en cada media vuelta y cambia de signo de una a otra: una onda cuadrada, la gráfica $B$. La onda triangular describiría el flujo, no su derivada. El seno rectificado corresponde a un área que varía como un seno, lo que pasa al girar una espira en un campo que la cubre por completo, no a un sector que barre. No hay ninguna disipación que amortigüe la fem ni la haga decaer."
+    "explicacion": "El área del semicírculo que está dentro del campo cambia como un sector circular que barre a rapidez angular constante: durante media vuelta crece a ritmo constante y durante la otra media decrece al mismo ritmo. Como la fem es $-B\\,dA/dt$, es constante en cada media vuelta y cambia de signo de una a otra: una onda cuadrada, la gráfica $B$. La onda triangular describiría el flujo, no su derivada. El seno rectificado nunca cambia de signo, pero en una vuelta completa el flujo vuelve a su valor inicial, así que la variación neta es cero y la fem tiene que tomar valores de los dos signos. No hay ninguna disipación que amortigüe la fem ni la haga decaer."
   },
   {
     "id": "q178",
