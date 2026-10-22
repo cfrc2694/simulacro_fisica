@@ -513,5 +513,65 @@
     "nodo": "2.2.2",
     "titulo": "Ley de Ampère con simetría cilíndrica",
     "texto": "Con simetría cilíndrica, el campo magnético es azimutal y su magnitud depende solo de $r$. Una circunferencia de radio $r$ centrada en el eje da $B\\,2\\pi r = \\mu_0 I_{\\text{enc}}$, donde $I_{\\text{enc}}$ es la corriente neta que atraviesa el círculo, con signo."
+  },
+  "ecuaciones-maxwell": {
+    "nodo": "2.3.1",
+    "titulo": "Monopolos en las ecuaciones de Maxwell",
+    "texto": "Las ecuaciones de Maxwell son casi simétricas entre $\\vec{E}$ y $\\vec{B}$; la asimetría está en que no hay carga ni corriente magnéticas. Si existieran monopolos, la divergencia de $\\vec{B}$ tendría una fuente, como la de $\\vec{E}$, y la conservación de la carga magnética exigiría una corriente magnética en la ecuación del rotacional de $\\vec{E}$."
+  },
+  "lissajous": {
+    "nodo": "7.3.1",
+    "titulo": "Figuras de Lissajous",
+    "texto": "Con señales $x = \\sin(\\omega_x t)$ e $y = \\sin(\\omega_y t + \\delta)$, la figura cierra si $\\omega_y/\\omega_x$ es racional. Cuenta los máximos: el número de veces que la curva toca el borde superior frente al número de veces que toca el lateral es igual al cociente $\\omega_y/\\omega_x$. Según la fase, la figura puede degenerar en una curva abierta."
+  },
+  "lineas-transmision": {
+    "nodo": "7.3.2",
+    "titulo": "Líneas de transmisión",
+    "texto": "En una línea de impedancia característica $Z_0$ terminada en una carga $Z_L$, el coeficiente de reflexión es $\\Gamma = (Z_L - Z_0)/(Z_L + Z_0)$. Solo si $Z_L = Z_0$ la onda que llega al extremo se absorbe por completo y no vuelve hacia la fuente."
+  },
+  "rendija-doble-envolvente": {
+    "nodo": "3.2.1",
+    "titulo": "Doble rendija con rendijas de ancho finito",
+    "texto": "El patrón es el de interferencia de dos fuentes, $d\\sin\\theta = m\\lambda$, modulado por el de difracción de cada rendija, cuyos ceros están en $w\\sin\\theta = n\\lambda$. Un máximo de interferencia falta cuando cae justo en un cero de difracción, es decir, cuando $m/n = d/w$ con $m$ y $n$ enteros."
+  },
+  "telescopio": {
+    "nodo": "3.3.2",
+    "titulo": "Telescopio refractor",
+    "texto": "Un telescopio afocal tiene las dos lentes con un foco común, así que la distancia entre ellas es $f_o + f_e$. El aumento angular es $f_o/f_e$. Despeja la focal del ocular con el aumento y súmala a la del objetivo."
+  },
+  "enlaces-solidos": {
+    "nodo": "8.2.1",
+    "titulo": "Tipos de enlace en sólidos",
+    "texto": "Clasifica los átomos por su capa externa. Los gases nobles tienen capas cerradas: no ceden ni comparten electrones, y en el sólido solo los unen fuerzas de van der Waals. Los metales comparten electrones de conducción; los iónicos transfieren electrones; los covalentes los comparten en enlaces direccionales."
+  },
+  "rayos-cosmicos": {
+    "nodo": "8.1.1",
+    "titulo": "Radiación cósmica a nivel del suelo y bajo tierra",
+    "texto": "Las partículas primarias (sobre todo protones y núcleos) chocan en la alta atmósfera y producen piones, que decaen en muones y neutrinos. Los muones penetran mucha materia porque no sienten la interacción fuerte y pierden poca energía por radiación; los neutrinos casi no interactúan. Las demás partículas se absorben en la atmósfera o en las primeras capas de roca."
+  },
+  "decaimiento-semilog": {
+    "nodo": "7.4.4",
+    "titulo": "Vida media en una gráfica semilogarítmica",
+    "texto": "En escala semilogarítmica, un decaimiento exponencial es una recta. Busca dos puntos de la recta cuya actividad difiera en un factor conocido: el tiempo que tarda en reducirse a la mitad es la vida media, y la vida media promedio $\\tau$ es $t_{1/2}/\\ln2$. No confundas el tiempo en que cae una década con la vida media."
+  },
+  "paquete-onda": {
+    "nodo": "5.1.4",
+    "titulo": "Ancho de un paquete de ondas",
+    "texto": "Un paquete construido superponiendo ondas en un intervalo de frecuencias $\\Delta\\omega$ (o de números de onda $\\Delta k$) solo se mantiene localizado durante un intervalo $\\Delta t \\sim 1/\\Delta\\omega$ (o en una región $\\Delta x \\sim 1/\\Delta k$). Mientras más localizado, más ancho es su espectro. El valor central $\\omega_0$ no interviene."
+  },
+  "armonicos-probabilidad": {
+    "nodo": "5.4.2",
+    "titulo": "Probabilidades con armónicos esféricos",
+    "texto": "Los armónicos esféricos son ortonormales. Si $\\psi = \\sum c_{\\ell m} Y_\\ell^m$ está normalizada, la probabilidad de medir un valor de $m$ es la suma de $|c_{\\ell m}|^2$ sobre todos los términos con ese $m$, sin importar $\\ell$. Revisa primero que la suma de todos los $|c|^2$ sea $1$."
+  },
+  "pozo-finito": {
+    "nodo": "5.3.4",
+    "titulo": "Estados ligados en un pozo finito",
+    "texto": "Una función de onda de un estado ligado debe ser continua y con derivada continua donde el potencial es finito. Dentro del pozo oscila; fuera, donde la energía es menor que el potencial, decae exponencialmente y tiende a cero en el infinito para poder normalizarse."
+  },
+  "circuitos-serie-paralelo": {
+    "nodo": "2.7.2",
+    "titulo": "Reducción de resistencias",
+    "texto": "Reduce el circuito por pasos: resistencias en paralelo, $1/R = \\sum 1/R_i$; en serie, $R = \\sum R_i$. Con la resistencia equivalente obtienes la corriente total y luego deshaces la reducción para hallar la corriente y el voltaje en cada elemento. La potencia es $I^2R = V^2/R$."
   }
 }

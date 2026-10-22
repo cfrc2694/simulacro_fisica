@@ -250,5 +250,61 @@
     "ancho": 190,
     "pie": null,
     "alt": "Dos placas planas conductoras que comparten una arista sobre el eje z. La placa roja está a potencial V0 y la azul, a tierra. Forman un ángulo α; el ángulo φ se mide desde la placa roja hacia la azul."
+  },
+  "fig-mancuerna-resorte": {
+    "archivo": "figures/fig-mancuerna-resorte.svg",
+    "fuente": "tikz/fig-mancuerna-resorte.tex",
+    "ancho": 170,
+    "pie": null,
+    "alt": "Dos esferas iguales unidas por un resorte."
+  },
+  "fig-lissajous": {
+    "archivo": "figures/fig-lissajous.svg",
+    "fuente": "tikz/fig-lissajous.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Cinco patrones dentro de círculos, de A a E. A: una elipse inclinada. B: una curva en forma de ocho con los dos lazos uno encima del otro. C: una curva en forma de ocho acostado, con los dos lazos uno al lado del otro. D: una curva abierta en forma de N con tres tramos que van de abajo arriba. E: una curva abierta en forma de S acostada, con tres tramos que van de izquierda a derecha."
+  },
+  "fig-doble-rendija": {
+    "archivo": "figures/fig-doble-rendija.svg",
+    "fuente": "tikz/fig-doble-rendija.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Ondas planas inciden desde la izquierda sobre una pantalla opaca con dos rendijas de ancho w, cuyos centros están separados una distancia d. A la derecha, una pantalla de observación lejana."
+  },
+  "fig-telescopio": {
+    "archivo": "figures/fig-telescopio.svg",
+    "fuente": "tikz/fig-telescopio.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Telescopio simple: una lente objetivo grande a la izquierda y una lente ocular pequeña a la derecha, sobre el mismo eje. Dos rayos paralelos al eje atraviesan el objetivo, se cruzan en el punto P y salen paralelos del ocular. P es el foco común de las dos lentes y está muy cerca del ocular."
+  },
+  "fig-decaimiento": {
+    "archivo": "figures/fig-decaimiento.svg",
+    "fuente": "tikz/fig-decaimiento.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Gráfica semilogarítmica de cuentas por minuto, entre 10² y 10⁴, contra el tiempo, de 0 a 30 min. Es una recta que empieza en 8000 cuentas por minuto en t = 0, pasa por 1000 en t = 15 min y llega a 125 en t = 30 min."
+  },
+  "fig-pozo-finito": {
+    "archivo": "figures/fig-pozo-finito.svg",
+    "fuente": "tikz/fig-pozo-finito.tex",
+    "ancho": 260,
+    "pie": "Figura 1",
+    "alt": "Energía potencial de un pozo cuadrado: V = 0 fuera del intervalo entre x1 y x2, y V = −V0 dentro."
+  },
+  "fig-pozo-finito-curvas": {
+    "archivo": "figures/fig-pozo-finito-curvas.svg",
+    "fuente": "tikz/fig-pozo-finito-curvas.tex",
+    "ancho": 260,
+    "pie": "Figura 2",
+    "alt": "Cinco funciones de onda ψ(x), de A a E, con las paredes del pozo en x1 y x2 marcadas. A: una media onda dentro del pozo y cero exacto fuera, con quiebres en las paredes. B: una curva dentro que, fuera, crece sin límite al alejarse. C: una curva dentro y colas que decaen fuera, pero con saltos en las paredes. D: una curva redondeada dentro y colas que decaen suavemente hacia cero fuera, unidas sin saltos ni quiebres. E: una curva dentro que, fuera, sigue oscilando sin decaer."
+  },
+  "fig-circuito-cinco-r": {
+    "archivo": "figures/fig-circuito-cinco-r.svg",
+    "fuente": "tikz/fig-circuito-cinco-r.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Circuito: una batería de fem ℰ en serie con R1 llega a un nodo. De ese nodo baja R2 a la línea inferior. También desde ese nodo, R3 y R4 en paralelo bajan a un segundo nodo, y de ahí R5 baja a la línea inferior."
   }
 }
