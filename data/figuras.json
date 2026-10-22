@@ -201,5 +201,131 @@
     "ancho": 320,
     "pie": null,
     "alt": "Una varilla delgada de longitud ℓ con carga positiva uniforme. Sobre su eje, a una distancia 2ℓ de su extremo derecho, está el punto P."
+  },
+  "fig-cunas-cubo": {
+    "archivo": "figures/fig-cunas-cubo.svg",
+    "fuente": "tikz/fig-cunas-cubo.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos cuñas iguales de masa m, en azul, apoyadas en el piso una junto a la otra. Cada una es un triángulo rectángulo isósceles con ángulos de 45° en la base, y sus caras interiores forman una V. Un cubo de masa M, en rojo, sin girar, se apoya con sus dos esquinas inferiores sobre esas caras interiores y no toca el piso."
+  },
+  "fig-tubo-pendulos": {
+    "archivo": "figures/fig-tubo-pendulos.svg",
+    "fuente": "tikz/fig-tubo-pendulos.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Un tubo de masa M, en azul, ensartado en un alambre horizontal. De cada extremo cuelga un péndulo de longitud ℓ con una masa m, en rojo."
+  },
+  "fig-cono-pivote": {
+    "archivo": "figures/fig-cono-pivote.svg",
+    "fuente": "tikz/fig-cono-pivote.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Ejes x, y, z con origen O. Un cono sólido, en azul, cuelga con su vértice en O y su eje sobre el eje z negativo. Su base, de radio b, está a una distancia c por debajo de O."
+  },
+  "fig-coaxial": {
+    "archivo": "figures/fig-coaxial.svg",
+    "fuente": "tikz/fig-coaxial.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Corte transversal de un cable coaxial: un conductor interior de radio a, en azul, y un conductor exterior entre los radios b y c, en rojo. Un punto P fuera del cable está a una distancia r del eje."
+  },
+  "fig-cargas-plano": {
+    "archivo": "figures/fig-cargas-plano.svg",
+    "fuente": "tikz/fig-cargas-plano.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un plano conductor conectado a tierra en x = 0. Sobre el eje x hay una carga +q, en rojo, en x = a, y una carga −q, en azul, en x = 2a."
+  },
+  "fig-rc-simple": {
+    "archivo": "figures/fig-rc-simple.svg",
+    "fuente": "tikz/fig-rc-simple.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Un capacitor C, un interruptor S abierto y un resistor R conectados en un solo lazo."
+  },
+  "fig-placas-cuna": {
+    "archivo": "figures/fig-placas-cuna.svg",
+    "fuente": "tikz/fig-placas-cuna.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Dos placas planas conductoras que comparten una arista sobre el eje z. La placa roja está a potencial V0 y la azul, a tierra. Forman un ángulo α; el ángulo φ se mide desde la placa roja hacia la azul."
+  },
+  "fig-mancuerna-resorte": {
+    "archivo": "figures/fig-mancuerna-resorte.svg",
+    "fuente": "tikz/fig-mancuerna-resorte.tex",
+    "ancho": 170,
+    "pie": null,
+    "alt": "Dos esferas iguales unidas por un resorte."
+  },
+  "fig-lissajous": {
+    "archivo": "figures/fig-lissajous.svg",
+    "fuente": "tikz/fig-lissajous.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Cinco patrones dentro de círculos, de A a E. A: una elipse inclinada. B: una curva en forma de ocho con los dos lazos uno encima del otro. C: una curva en forma de ocho acostado, con los dos lazos uno al lado del otro. D: una curva abierta en forma de N con tres tramos que van de abajo arriba. E: una curva abierta en forma de S acostada, con tres tramos que van de izquierda a derecha."
+  },
+  "fig-doble-rendija": {
+    "archivo": "figures/fig-doble-rendija.svg",
+    "fuente": "tikz/fig-doble-rendija.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Ondas planas inciden desde la izquierda sobre una pantalla opaca con dos rendijas de ancho w, cuyos centros están separados una distancia d. A la derecha, una pantalla de observación lejana."
+  },
+  "fig-telescopio": {
+    "archivo": "figures/fig-telescopio.svg",
+    "fuente": "tikz/fig-telescopio.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Telescopio simple: una lente objetivo grande a la izquierda y una lente ocular pequeña a la derecha, sobre el mismo eje. Dos rayos paralelos al eje atraviesan el objetivo, se cruzan en el punto P y salen paralelos del ocular. P es el foco común de las dos lentes y está muy cerca del ocular."
+  },
+  "fig-decaimiento": {
+    "archivo": "figures/fig-decaimiento.svg",
+    "fuente": "tikz/fig-decaimiento.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Gráfica semilogarítmica de cuentas por minuto, entre 10² y 10⁴, contra el tiempo, de 0 a 30 min. Es una recta que empieza en 8000 cuentas por minuto en t = 0, pasa por 1000 en t = 15 min y llega a 125 en t = 30 min."
+  },
+  "fig-pozo-finito": {
+    "archivo": "figures/fig-pozo-finito.svg",
+    "fuente": "tikz/fig-pozo-finito.tex",
+    "ancho": 260,
+    "pie": "Figura 1",
+    "alt": "Energía potencial de un pozo cuadrado: V = 0 fuera del intervalo entre x1 y x2, y V = −V0 dentro."
+  },
+  "fig-pozo-finito-curvas": {
+    "archivo": "figures/fig-pozo-finito-curvas.svg",
+    "fuente": "tikz/fig-pozo-finito-curvas.tex",
+    "ancho": 260,
+    "pie": "Figura 2",
+    "alt": "Cinco funciones de onda ψ(x), de A a E, con las paredes del pozo en x1 y x2 marcadas. A: una media onda dentro del pozo y cero exacto fuera, con quiebres en las paredes. B: una curva dentro que, fuera, crece sin límite al alejarse. C: una curva dentro y colas que decaen fuera, pero con saltos en las paredes. D: una curva redondeada dentro y colas que decaen suavemente hacia cero fuera, unidas sin saltos ni quiebres. E: una curva dentro que, fuera, sigue oscilando sin decaer."
+  },
+  "fig-circuito-cinco-r": {
+    "archivo": "figures/fig-circuito-cinco-r.svg",
+    "fuente": "tikz/fig-circuito-cinco-r.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Circuito: una batería de fem ℰ en serie con R1 llega a un nodo. De ese nodo baja R2 a la línea inferior. También desde ese nodo, R3 y R4 en paralelo bajan a un segundo nodo, y de ahí R5 baja a la línea inferior."
+  },
+  "fig-pion-fotones": {
+    "archivo": "figures/fig-pion-fotones.svg",
+    "fuente": "tikz/fig-pion-fotones.tex",
+    "ancho": 150,
+    "pie": null,
+    "alt": "Un pion neutro, en rojo, se mueve hacia la derecha con velocidad 0.6c. Debajo, una flecha indica la dirección del vector unitario k."
+  },
+  "fig-onda-cuadrada": {
+    "archivo": "figures/fig-onda-cuadrada.svg",
+    "fuente": "tikz/fig-onda-cuadrada.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Onda cuadrada V(t) que alterna entre 1 y −1. Vale −1 entre t = 0 y t = π/ω, y 1 entre π/ω y 2π/ω; antes de t = 0 vale 1. El periodo es 2π/ω."
+  },
+  "fig-diagrama-pv": {
+    "archivo": "figures/fig-diagrama-pv.svg",
+    "fuente": "tikz/fig-diagrama-pv.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Diagrama presión contra volumen de un sistema líquido-vapor. Cinco isotermas numeradas de 1 (la más caliente, arriba) a 5 (la más fría, abajo). Una región sombreada en rojo con forma de domo tiene su máximo en un punto donde la isoterma 3 es horizontal y tiene un punto de inflexión; las isotermas 4 y 5 cruzan el domo con tramos horizontales. Una recta punteada horizontal pasa por el máximo del domo, y otra vertical sube desde ese punto. Regiones: C, arriba a la izquierda de la vertical; E, arriba a la derecha; D, dentro del domo; A, a la derecha del domo y por debajo de la recta horizontal; B, señalada con una flecha, a la izquierda del domo, donde las isotermas son casi verticales."
   }
 }

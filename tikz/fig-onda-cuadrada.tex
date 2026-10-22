@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[x=1.0cm, y=0.8cm]
+  \draw[eje] (-2.4,0) -- (4.8,0) node[right]{$t$};
+  \draw[eje] (0,-1.5) -- (0,1.6) node[above]{$V(t)$};
+  \draw[very thick, azul] (-2.3,-1) -- (-2.0,-1) -- (-2.0,1) -- (0,1) -- (0,-1) -- (2,-1) -- (2,1) -- (4,1) -- (4,-1) -- (4.4,-1);
+  \node[left] at (0,1) {$1$};
+  \node[left] at (0,-1) {$-1$};
+  \draw (2,0.08) -- (2,-0.08); \draw (4,0.08) -- (4,-0.08);
+  \node[font=\small] at (2.45,-0.5) {$\dfrac{\pi}{\omega}$};
+  \node[font=\small] at (4.5,0.55) {$\dfrac{2\pi}{\omega}$};
+\end{tikzpicture}
+\end{document}

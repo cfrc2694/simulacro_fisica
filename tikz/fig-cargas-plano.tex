@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines, pattern color=gray] (-0.3,-1.1) rectangle (0,1.1);
+  \draw[very thick] (0,-1.1) -- (0,1.1);
+  \draw (0,-1.1) -- (0,-1.5) node[ground]{};
+  \draw[eje] (0,0) -- (5.2,0) node[right]{$x$};
+  \node[below left] at (0,0) {$O$};
+  \fill[rojo] (1.6,0) circle (2.4pt) node[above=2pt]{$+q$};
+  \fill[azul] (3.2,0) circle (2.4pt) node[above=2pt]{$-q$};
+  \draw (1.6,0.06) -- (1.6,-0.06) node[below]{$a$};
+  \draw (3.2,0.06) -- (3.2,-0.06) node[below]{$2a$};
+\end{tikzpicture}
+\end{document}
