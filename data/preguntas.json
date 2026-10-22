@@ -2874,7 +2874,7 @@
     "tema": "2",
     "subtemas": ["2.2.1", "2.2.3"],
     "dificultad": "media",
-    "figuras": [],
+    "figuras": ["fig-espira-alambre"],
     "enunciado": "Un alambre recto y largo, en el plano de la página, lleva una corriente $I$ hacia arriba. A su izquierda, en el mismo plano, hay una espira rectangular de ancho $a$ (perpendicular al alambre) y alto $b$ (paralelo al alambre), cuyo lado más cercano está a una distancia $r$ del alambre (figura). La espira se aleja del alambre, hacia la izquierda. Si en un instante la corriente inducida es $i$, ¿cuál es la magnitud de la fuerza magnética neta sobre la espira?",
     "opciones": ["$\\dfrac{\\mu_0 iI}{2\\pi}\\,\\dfrac{ab}{r(r+a)}$", "$\\dfrac{\\mu_0 iI}{2\\pi}\\,\\ln\\dfrac{r+a}{r}$", "$\\dfrac{\\mu_0 iI\\,b}{2\\pi r}$", "$\\dfrac{\\mu_0 iI\\,b}{2\\pi}\\left(\\dfrac{1}{r} + \\dfrac{1}{r+a}\\right)$", "$\\dfrac{\\mu_0 iI}{2\\pi}\\,\\dfrac{b}{a}$"],
     "respuesta": 0,
