@@ -323,5 +323,100 @@
     "nodo": "2.6.2",
     "titulo": "Radiación de un dipolo oscilante",
     "texto": "Lejos de un dipolo que oscila sobre un eje, el campo eléctrico radiado es transversal a la dirección de observación, está en el plano que contiene al eje del dipolo y a esa dirección, y su amplitud es proporcional a $\\sin\\theta$, con $\\theta$ el ángulo medido desde el eje. No hay radiación a lo largo del eje."
+  },
+  "dielectricos-carga-ligada": {
+    "nodo": "2.5.2",
+    "titulo": "Carga ligada en un dieléctrico",
+    "texto": "Un dieléctrico lineal de constante $\\kappa$ reduce el campo de la carga libre en un factor $\\kappa$. Junto a la carga libre $\\sigma$ aparece una carga ligada $\\sigma_p$ de signo opuesto, y la carga total, $\\sigma + \\sigma_p$, es la que produce el campo reducido: $\\sigma + \\sigma_p = \\sigma/\\kappa$."
+  },
+  "gas-fermi": {
+    "nodo": "8.2.2",
+    "titulo": "Gas de electrones degenerado",
+    "texto": "Los electrones son fermiones: el principio de exclusión de Pauli les impide ocupar el mismo estado, así que llenan los niveles hasta la energía de Fermi, que en un metal es de varios eV, mucho más que $k_BT \\approx 0.025$ eV a temperatura ambiente. Solo los electrones cercanos a la energía de Fermi pueden cambiar de estado al recibir energía térmica."
+  },
+  "valores-esperados": {
+    "nodo": "5.1.1",
+    "titulo": "Valores esperados",
+    "texto": "Si $\\psi$ está normalizada y $\\hat{Q}$ es el operador de un observable, $\\langle Q\\rangle = \\displaystyle\\int \\psi^*\\hat{Q}\\psi\\,dx$ es su valor esperado: el promedio de muchas mediciones sobre sistemas preparados en el mismo estado. La incertidumbre requiere además $\\langle Q^2\\rangle$."
+  },
+  "holografia": {
+    "nodo": "3.2.5",
+    "titulo": "Holografía",
+    "texto": "Una película fotográfica solo responde a la intensidad, que es proporcional al cuadrado de la amplitud. Para registrar también la fase, el holograma superpone a la luz del objeto un haz de referencia coherente: el patrón de interferencia que queda grabado depende de la diferencia de fase entre los dos haces."
+  },
+  "velocidad-grupo-fase": {
+    "nodo": "3.1.3",
+    "titulo": "Velocidad de fase y de grupo",
+    "texto": "Con una relación de dispersión $\\omega(k)$, la velocidad de fase es $v_f = \\omega/k$ y la de grupo, $v_g = d\\omega/dk$. La señal y la energía viajan con la velocidad de grupo; la de fase puede superar a $c$ sin contradecir la relatividad. Estudia los límites $k \\to 0$ y $k \\to \\infty$ por separado."
+  },
+  "cohete": {
+    "nodo": "1.4",
+    "titulo": "Ecuación del cohete",
+    "texto": "Aplica la conservación del momento a un intervalo $dt$: el cohete de masa $m$ expulsa una masa $|dm|$ con velocidad $u$ relativa a él y gana una velocidad $dv$. Se obtiene $m\\,dv = -u\\,dm$; integrando entre la masa inicial y la final aparece un logaritmo del cociente de masas."
+  },
+  "metodo-imagenes": {
+    "nodo": "2.1.7",
+    "titulo": "Método de imágenes",
+    "texto": "Frente a un plano conductor conectado a tierra, el campo en el lado de la carga real es el mismo que el de la carga real más una carga imagen de signo opuesto, situada en el punto simétrico respecto al plano. La densidad superficial inducida sale del campo justo afuera del conductor: $\\sigma = E_\\perp/(4\\pi K_e)$."
+  },
+  "maxima-transferencia": {
+    "nodo": "7.3.1",
+    "titulo": "Máxima transferencia de potencia en AC",
+    "texto": "La potencia media en una carga es $\\tfrac12|I|^2 R_L$, con $I = V/(Z_g + Z_L)$. Para maximizarla, primero anula la parte reactiva total ($X_L = -X_g$), lo que minimiza $|Z_g + Z_L|$, y después elige $R_L = R_g$. El resultado es que la carga debe ser el conjugado complejo de la impedancia interna."
+  },
+  "dipolo-magnetico": {
+    "nodo": "2.4.2",
+    "titulo": "Campo lejano de una espira",
+    "texto": "Lejos de una espira, su campo magnético es el de un dipolo con momento $\\mu = IA$, con $A$ el área encerrada. A una distancia fija, el campo es proporcional a $\\mu$, así que depende de la corriente y del área, no de la forma de la espira."
+  },
+  "relaciones-termodinamicas": {
+    "nodo": "4.2.4",
+    "titulo": "Derivadas de la entropía",
+    "texto": "Escribe la relación fundamental $dU = T\\,dS - P\\,dV$ y despeja $dS$: $dS = \\dfrac{1}{T}dU + \\dfrac{P}{T}dV$. Los coeficientes de $dU$ y $dV$ son las derivadas parciales de $S(U, V)$, cada una a la otra variable constante."
+  },
+  "promedios-termicos": {
+    "nodo": "4.1.1",
+    "titulo": "Energía media con pocos niveles",
+    "texto": "En equilibrio a temperatura $T$, el nivel de energía $E_i$ se ocupa con probabilidad proporcional a $e^{-E_i/k_BT}$. Cuando $k_BT$ es mucho mayor que todas las diferencias de energía, todos los factores tienden a $1$: los niveles quedan igualmente poblados y la energía media es el promedio simple de los niveles."
+  },
+  "relacion-energia-momento": {
+    "nodo": "6.3.1",
+    "titulo": "Partículas sin masa",
+    "texto": "La relación $E^2 = (pc)^2 + (mc^2)^2$ vale para toda partícula libre. Con $m = 0$ queda $E = pc$, y la rapidez $v = pc^2/E$ es exactamente $c$ en todo sistema inercial. Una partícula sin masa no puede estar en reposo, pero sí tiene energía y momento."
+  },
+  "contraccion-simultaneidad": {
+    "nodo": "6.1.1",
+    "titulo": "Contracción de longitudes y simultaneidad",
+    "texto": "Una longitud medida en movimiento es la propia dividida entre $\\gamma$, y la contracción es recíproca: cada observador ve contraído el objeto del otro. Dos eventos simultáneos en un sistema no lo son en otro si están separados en la dirección del movimiento. Antes de responder sobre el orden de eventos, pregunta: ¿en qué sistema?"
+  },
+  "peliculas-delgadas": {
+    "nodo": "3.2.4",
+    "titulo": "Interferencia en películas delgadas",
+    "texto": "Compara los dos rayos reflejados, en la cara superior y en la inferior de la película. Cuenta los cambios de fase de $\\pi$ en cada reflexión (ocurren al reflejarse en un medio de índice mayor) y la diferencia de camino $2nt$ dentro de la película. Usa la longitud de onda en el medio, $\\lambda/n$, o la del vacío con el camino óptico, pero no las mezcles."
+  },
+  "ley-malus": {
+    "nodo": "3.1.6",
+    "titulo": "Polarizadores en serie",
+    "texto": "Un polarizador ideal deja pasar la mitad de la intensidad de luz no polarizada. Para luz ya polarizada, transmite la fracción $\\cos^2\\theta$ (ley de Malus), donde $\\theta$ es el ángulo entre la polarización que llega y su eje. En una cadena de polarizadores, multiplica los factores de cada uno."
+  },
+  "kepler-tercera": {
+    "nodo": "1.6.3",
+    "titulo": "Tercera ley de Kepler",
+    "texto": "Para órbitas circulares alrededor del mismo cuerpo central, $T^2 \\propto r^3$, así que $r_2/r_1 = (T_2/T_1)^{2/3}$. Compara siempre con una órbita de referencia conocida alrededor del mismo cuerpo; así no necesitas $G$ ni la masa del cuerpo central."
+  },
+  "rodadura": {
+    "nodo": "1.3.3",
+    "titulo": "Rodadura sin deslizamiento",
+    "texto": "Sin deslizamiento, $v = \\omega R$ y la fricción estática no hace trabajo. La energía potencial perdida se reparte entre traslación y rotación: $Mgh = \\tfrac12 Mv^2 + \\tfrac12 I\\omega^2$. Con $I = \\beta MR^2$ queda $v^2 = 2gh/(1+\\beta)$; el momento angular respecto al centro de masa es $I\\omega$."
+  },
+  "energia-mas": {
+    "nodo": "1.7",
+    "titulo": "Rapidez en un movimiento armónico simple",
+    "texto": "En un MAS de amplitud $A$ y frecuencia angular $\\omega = 2\\pi f$, la energía se conserva: $\\tfrac12 mv^2 + \\tfrac12 kx^2 = \\tfrac12 kA^2$. De ahí $v = \\omega\\sqrt{A^2 - x^2}$: la rapidez es máxima en el centro y nula en los extremos."
+  },
+  "divergencia-campos": {
+    "nodo": "2.1.1",
+    "titulo": "Divergencia de un campo vectorial",
+    "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Un campo que sale radialmente de un punto tiene divergencia distinta de cero."
   }
 }
