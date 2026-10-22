@@ -26,5 +26,110 @@
     "ancho": 330,
     "pie": null,
     "alt": "Anillo de radio R con carga Q en el plano yz, centrado en el origen. El punto P está sobre el eje x a una distancia x del centro, y un elemento de carga dq del anillo está a una distancia igual a la raíz de x al cuadrado más R al cuadrado."
+  },
+  "fig-pendulos-plastilina": {
+    "archivo": "figures/fig-pendulos-plastilina.svg",
+    "fuente": "tikz/fig-pendulos-plastilina.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Dos hilos de longitud ℓ cuelgan del mismo punto del techo. La bolita Q, de masa 2m, cuelga en reposo; la bolita P, de masa m, está apartada a un lado con el hilo tenso, a una altura h0 por encima de Q."
+  },
+  "fig-guia-parabolica": {
+    "archivo": "figures/fig-guia-parabolica.svg",
+    "fuente": "tikz/fig-guia-parabolica.tex",
+    "ancho": 210,
+    "pie": null,
+    "alt": "Ejes con origen O, x hacia la derecha e y hacia abajo. Una guía con forma de parábola y = x²/2a parte horizontal del origen y se curva hacia abajo; la partícula está en el origen."
+  },
+  "fig-lampara-viento": {
+    "archivo": "figures/fig-lampara-viento.svg",
+    "fuente": "tikz/fig-lampara-viento.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Una lámpara de masa m cuelga de un cable sujeto al techo. Una fuerza horizontal F hacia la izquierda la desplaza, y el cable forma un ángulo θ con la vertical punteada."
+  },
+  "fig-campo-esfera-curvas": {
+    "archivo": "figures/fig-campo-esfera-curvas.svg",
+    "fuente": "tikz/fig-campo-esfera-curvas.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Cinco curvas del campo E contra la distancia r, etiquetadas de A a E, que coinciden fuera de r = R, donde decaen. Dentro: A crece sin límite hacia el centro, B crece linealmente desde cero, C es cero, D crece como una parábola desde cero y E es constante."
+  },
+  "fig-cargador-bateria": {
+    "archivo": "figures/fig-cargador-bateria.svg",
+    "fuente": "tikz/fig-cargador-bateria.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Lazo con un cargador de voltaje Vc a la izquierda, un resistor variable R arriba y, a la derecha, la resistencia interna r y la batería de fem ℰ. Los terminales positivos del cargador y de la batería están ambos arriba."
+  },
+  "fig-fotocelda": {
+    "archivo": "figures/fig-fotocelda.svg",
+    "fuente": "tikz/fig-fotocelda.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Tubo de vacío con un fotocátodo K a la izquierda, iluminado por luz de energía hν, y un colector C a la derecha. El colector está conectado a un amperímetro A y a una fuente de voltaje V; el cátodo está conectado a tierra."
+  },
+  "fig-pendulo-conico": {
+    "archivo": "figures/fig-pendulo-conico.svg",
+    "fuente": "tikz/fig-pendulo-conico.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Una masa m cuelga de un hilo de longitud ℓ sujeto al techo y gira en una circunferencia horizontal punteada de radio r con velocidad angular ω."
+  },
+  "fig-compuerta-diodos": {
+    "archivo": "figures/fig-compuerta-diodos.svg",
+    "fuente": "tikz/fig-compuerta-diodos.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Dos entradas, E1 y E2, conectadas cada una al cátodo de un diodo. Los ánodos se unen en la salida S, que se conecta a +1 V a través de un resistor R."
+  },
+  "fig-ganancia-filtro": {
+    "archivo": "figures/fig-ganancia-filtro.svg",
+    "fuente": "tikz/fig-ganancia-filtro.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Gráfica log-log de la ganancia G contra la frecuencia angular ω entre 10³ y 10⁵ s⁻¹. La ganancia vale 10³ hasta cerca de 10⁴ s⁻¹ y después cae en línea recta hasta 1 cerca de 7×10⁴ s⁻¹."
+  },
+  "fig-tres-masas": {
+    "archivo": "figures/fig-tres-masas.svg",
+    "fuente": "tikz/fig-tres-masas.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Tres bloques en línea sobre una superficie horizontal: M, m y M, unidos por dos resortes de constante k."
+  },
+  "fig-varilla-disco": {
+    "archivo": "figures/fig-varilla-disco.svg",
+    "fuente": "tikz/fig-varilla-disco.tex",
+    "ancho": 210,
+    "pie": null,
+    "alt": "Vista desde arriba de una varilla vertical de longitud L y masa M. Un disco pequeño de masa m se acerca desde la derecha con velocidad v, dirigido hacia el extremo inferior de la varilla."
+  },
+  "fig-dipolo-radiacion": {
+    "archivo": "figures/fig-dipolo-radiacion.svg",
+    "fuente": "tikz/fig-dipolo-radiacion.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Ejes x, y, z. Una carga q oscila sobre el eje y en el origen, indicada con una flecha doble. Una línea va del origen al punto P en el plano yz, formando un ángulo θ con el eje y."
+  },
+  "fig-dielectrico-conductor": {
+    "archivo": "figures/fig-dielectrico-conductor.svg",
+    "fuente": "tikz/fig-dielectrico-conductor.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Interfaz horizontal: arriba, un dieléctrico de constante κ con densidad ligada σp en su superficie; abajo, un conductor con densidad libre σ."
+  },
+  "fig-disco-plano": {
+    "archivo": "figures/fig-disco-plano.svg",
+    "fuente": "tikz/fig-disco-plano.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Un disco de radio R descansa en lo alto de un plano inclinado. Abajo, punteado, el mismo disco al llegar al suelo. La altura h es la diferencia de altura de su centro."
+  },
+  "fig-lineas-campo": {
+    "archivo": "figures/fig-lineas-campo.svg",
+    "fuente": "tikz/fig-lineas-campo.tex",
+    "ancho": 310,
+    "pie": null,
+    "alt": "Cinco esquemas de líneas de campo en regiones cuadradas punteadas: A, líneas rectas paralelas; B, líneas rectas que salen radialmente de un punto central; C, circunferencias concéntricas; D, hipérbolas en forma de silla que llegan en vertical y salen en horizontal; E, líneas onduladas paralelas."
   }
 }

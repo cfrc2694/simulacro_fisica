@@ -1,0 +1,19 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{circuitikz}[scale=1.0]
+  \draw[thick] (0,0) ellipse (2.4 and 0.55);
+  \draw[very thick] (-1.6,-0.38) -- (-1.6,0.38);
+  \draw[very thick] (1.6,-0.38) -- (1.6,0.38);
+  \node[below] at (-1.25,-0.45) {$K$};
+  \node[below] at (1.25,-0.45) {$C$};
+  \draw[->, thick, decorate, decoration={snake, amplitude=1.2pt, segment length=5pt, post length=2mm}] (0.6,1.4) -- (-1.5,0.15);
+  \node[above] at (0.8,1.4) {$h\nu$};
+  \draw (-1.6,0) -- (-2.4,0);
+  \draw (-2.4,0) -- (-3.0,0) -- (-3.0,-1.6);
+  \draw (1.6,0) -- (2.4,0);
+  \draw (2.4,0) -- (3.2,0) to[rmeter, t=A] (3.2,-1.6)
+        to[battery1, l={$V$}, invert] (0,-1.6) -- (-3.0,-1.6);
+  \node[ground] at (-3.0,-1.6) {};
+\end{circuitikz}
+\end{document}

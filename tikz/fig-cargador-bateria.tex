@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{circuitikz}[scale=1.0]
+  \draw (0,0) to[battery1, l_={$V_c$}, invert] (0,2.4)
+        to[vR, l={$R$}] (3.6,2.4)
+        to[R, l={$r$}] (3.6,1.2)
+        to[battery1, l={$\mathcal{E}$}] (3.6,0)
+        -- (0,0);
+  \node[left] at (-0.35,1.55) {$+$};
+  \node[left] at (3.2,0.8) {$+$};
+\end{circuitikz}
+\end{document}
