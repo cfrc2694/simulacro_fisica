@@ -3216,7 +3216,7 @@
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
-    "pistas": ["terminos-espectroscopicos"],
+    "pistas": ["suma-momentos-angulares"],
     "explicacion": "Los electrones están en subcapas distintas, así que no hay restricción de Pauli. El máximo $L$ es $1 + 2 = 3$ y el máximo $S$ es $\\tfrac12 + \\tfrac12 = 1$; entonces $J_{\\max} = L + S = 4$. $3$ olvida sumar el espín. $5$ suma los espines como si fueran $1$ cada uno. $\\tfrac72$ es imposible con un número par de electrones, porque $J$ debe ser entero. $2$ toma solo el momento orbital del electrón $d$."
   },
   {

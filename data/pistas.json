@@ -803,5 +803,10 @@
     "nodo": "1.4.3",
     "titulo": "Equilibrio de una barra",
     "texto": "En equilibrio, la suma de torques respecto a cualquier punto es cero. Toma torques respecto al centro de la barra o busca el centro de masa de todo el sistema: el fulcro debe estar justo debajo de él. No olvides el peso de la barra, que actúa en su centro."
+  },
+  "suma-momentos-angulares": {
+    "nodo": "5.5.3",
+    "titulo": "Suma de momentos angulares",
+    "texto": "Al combinar dos momentos angulares $L$ y $S$, el total $J$ toma todos los valores desde $|L - S|$ hasta $L + S$, en pasos de uno. Para los valores posibles de $L$ y de $S$ con varios electrones en subcapas distintas, aplica la misma regla a los momentos de cada electrón. Distingue esto de elegir el estado fundamental, que es una sola combinación determinada por las reglas de Hund."
   }
 }
