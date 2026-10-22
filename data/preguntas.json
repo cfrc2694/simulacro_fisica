@@ -1851,13 +1851,13 @@
     "subtemas": ["3.2.5", "5.1.1"],
     "dificultad": "dificil",
     "figuras": [],
-    "enunciado": "Un haz estrecho de electrones de la misma energía incide sobre la superficie de un monocristal formando un ángulo de $30^\\circ$ con el plano de la superficie, y se observa una reflexión de primer orden. Por mediciones con rayos X se sabe que la distancia entre los planos cristalinos que reflejan es $2.0$ Å. La rapidez de los electrones es aproximadamente",
+    "enunciado": "Un haz estrecho de electrones de la misma energía incide sobre la superficie de un monocristal formando un ángulo de $30^\\circ$ con el plano de la superficie, y se observa una reflexión de primer orden. Los planos cristalinos que reflejan son paralelos a la superficie y, por mediciones con rayos X, se sabe que están separados $2.0$ Å. La rapidez de los electrones es aproximadamente",
     "opciones": ["$3.6\\times10^{6}$ m/s", "$2.1\\times10^{6}$ m/s", "$7.3\\times10^{6}$ m/s", "$2.0\\times10^{3}$ m/s", "$3.0\\times10^{8}$ m/s"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["bragg-de-broglie"],
-    "explicacion": "Bragg: $\\lambda = 2d\\sin\\theta = 2(2.0\\ \\text{Å})(0.5) = 2.0$ Å. De de Broglie, $v = h/(m_e\\lambda) = 6.63\\times10^{-34}/[(9.11\\times10^{-31})(2.0\\times10^{-10})] \\approx 3.6\\times10^6$ m/s, mucho menor que $c$, así que no hacen falta correcciones relativistas. Medir el ángulo desde la normal ($60^\\circ$) da $\\lambda = 3.5$ Å y $2.1\\times10^6$ m/s; olvidar el factor $2$ de Bragg da $7.3\\times10^6$ m/s. Usar la masa del protón en lugar de la del electrón da $2.0\\times10^3$ m/s. Los electrones no viajan a la rapidez de la luz."
+    "explicacion": "Como los planos son paralelos a la superficie, el ángulo de Bragg es el mismo $\\theta = 30^\\circ$: $\\lambda = 2d\\sin\\theta = 2(2.0\\ \\text{Å})(0.5) = 2.0$ Å. De de Broglie, $v = h/(m_e\\lambda) = 6.63\\times10^{-34}/[(9.11\\times10^{-31})(2.0\\times10^{-10})] \\approx 3.6\\times10^6$ m/s, mucho menor que $c$, así que no hacen falta correcciones relativistas. Medir el ángulo desde la normal ($60^\\circ$) da $\\lambda = 3.5$ Å y $2.1\\times10^6$ m/s; olvidar el factor $2$ de Bragg da $7.3\\times10^6$ m/s. Usar la masa del protón en lugar de la del electrón da $2.0\\times10^3$ m/s. Los electrones no viajan a la rapidez de la luz."
   },
   {
     "id": "q112",
