@@ -1,0 +1,48 @@
+# Ramas de origen permitidas para los pull requests:
+#   - hacia main:    solo desde develop o desde hotfix/*
+#   - hacia develop: solo desde feature/* o desde backport/*
+# El job "origen-del-pr" es check obligatorio en la protección de main y de
+# develop, así que un PR desde otra rama no se puede fusionar.
+name: Origen de PR
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types: [opened, reopened, synchronize, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  origen:
+    name: origen-del-pr
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar la rama de origen
+        env:
+          BASE: ${{ github.base_ref }}
+          RAMA: ${{ github.head_ref }}
+          REPO_ORIGEN: ${{ github.event.pull_request.head.repo.full_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ "$REPO_ORIGEN" != "$REPO" ]; then
+            echo "::error::Solo se aceptan PR desde ramas de este repositorio; este viene de $REPO_ORIGEN."
+            exit 1
+          fi
+          case "$BASE" in
+            main)
+              case "$RAMA" in
+                develop|hotfix/*) echo "Origen permitido hacia main: $RAMA" ;;
+                *) echo "::error::main solo acepta PR desde develop o desde hotfix/*; este PR viene de '$RAMA'."; exit 1 ;;
+              esac
+              ;;
+            develop)
+              case "$RAMA" in
+                feature/*|backport/*) echo "Origen permitido hacia develop: $RAMA" ;;
+                *) echo "::error::develop solo acepta PR desde feature/* o desde backport/*; este PR viene de '$RAMA'."; exit 1 ;;
+              esac
+              ;;
+            *)
+              echo "Base '$BASE' sin restricción de origen."
+              ;;
+          esac
