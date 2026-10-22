@@ -297,7 +297,7 @@
   "reglas-seleccion": {
     "nodo": "5.7.5",
     "titulo": "Reglas de selección dipolares",
-    "texto": "En una transición dipolar eléctrica con emisión de un fotón, el momento angular orbital debe cambiar en una unidad: $\\Delta\\ell = \\pm1$, con $\\Delta m = 0, \\pm1$. Esto equivale a que los dos estados tengan paridad opuesta. Para el número cuántico principal no hay restricción."
+    "texto": "En una transición dipolar eléctrica con emisión de un fotón, el momento angular orbital debe cambiar en una unidad: $\\Delta\\ell = \\pm1$, con $\\Delta m = 0, \\pm1$. Esto implica que los dos estados tienen paridad opuesta, pero el cambio de paridad no basta: $4f \\to 1s$ cambia la paridad y está prohibida, porque $\\Delta\\ell = -3$. Para el número cuántico principal no hay restricción."
   },
   "cuantizacion-canonica": {
     "nodo": "5.1.1",
