@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[eje] (-3.0,0) -- (3.2,0) node[right]{$x$};
+  \draw[eje] (0,-0.9) -- (0,1.2) node[above]{$y$};
+  \fill[rojo] (-2.4,0) circle (2.6pt) node[above=2pt]{$+Q$};
+  \fill[rojo] (2.4,0) circle (2.6pt) node[above=2pt]{$+Q$};
+  \fill[azul] (0,0) circle (2.4pt) node[above right]{$+q$};
+  \draw[<->, thick, azul] (-0.7,-0.3) -- (0.7,-0.3);
+  \draw[|<->|] (-2.4,-0.75) -- node[below]{$R$} (0,-0.75);
+  \draw[|<->|] (0,-0.75) -- node[below]{$R$} (2.4,-0.75);
+\end{tikzpicture}
+\end{document}
