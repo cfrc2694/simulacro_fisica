@@ -3228,12 +3228,12 @@
     "dificultad": "dificil",
     "figuras": [],
     "enunciado": "Un núcleo pesado tiene espín $\\tfrac12$. ¿Cómo es la magnitud de su momento magnético intrínseco comparada con la del momento magnético del electrón, y por qué?",
-    "opciones": ["Mucho menor, porque la masa del núcleo es mucho mayor que la del electrón", "Mucho mayor, porque el núcleo contiene muchos protones", "Mucho mayor, porque el núcleo es mucho más grande que el electrón", "Menor, por las interacciones fuertes entre los nucleones", "Cero, porque el núcleo no tiene momento magnético intrínseco"],
+    "opciones": ["Mucho menor, porque la escala de los momentos nucleares es el magnetón nuclear, $e\\hbar/2m_p$, unas $1836$ veces menor que el magnetón de Bohr", "Mucho mayor, porque el núcleo contiene muchos protones", "Mucho mayor, porque el núcleo es mucho más grande que el electrón", "Menor, por las interacciones fuertes entre los nucleones", "Cero, porque el núcleo no tiene momento magnético intrínseco"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["momento-magnetico-nuclear"],
-    "explicacion": "El momento magnético asociado a un espín es del orden de $e\\hbar/(2m)$: inversamente proporcional a la masa. Por eso los momentos nucleares se miden en magnetones nucleares, unas $1836$ veces menores que el magnetón de Bohr, y en un núcleo pesado la masa es todavía mayor. El número de protones no suma momentos, porque los espines se aparean. El tamaño no es lo que fija el momento intrínseco. Un núcleo con espín $\\tfrac12$ sí tiene momento magnético, en el que se basa la resonancia magnética nuclear."
+    "explicacion": "El momento magnético del electrón es del orden del magnetón de Bohr, $e\\hbar/2m_e$. Los momentos nucleares provienen de los espines y los movimientos orbitales de los nucleones, y su escala natural es el magnetón nuclear, $e\\hbar/2m_p$, que es unas $1836$ veces menor porque usa la masa del protón. El momento de un núcleo es de unos pocos magnetones nucleares, sin importar cuántos nucleones tenga: no se reduce con la masa total, pero tampoco crece con el número de protones, porque los nucleones se aparean y sus momentos se cancelan en buena parte. El tamaño del núcleo no fija su momento intrínseco, y las interacciones fuertes no lo hacen menor que el del electrón. Un núcleo con espín $\\tfrac12$ sí tiene momento magnético: en eso se basa la resonancia magnética nuclear."
   },
   {
     "id": "q198",
