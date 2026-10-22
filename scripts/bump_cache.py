@@ -24,10 +24,27 @@ ARCHIVOS = [
 
 
 def calcular_version():
+    # Se normalizan los saltos de línea a LF: así el hash depende solo del
+    # contenido, igual al que guarda git y sirve GitHub Pages, y no de si la
+    # copia local tiene CRLF (por ejemplo, con core.autocrlf en Windows).
     h = hashlib.sha256()
     for f in ARCHIVOS:
-        h.update(f.read_bytes())
+        h.update(f.read_bytes().replace(b"\r\n", b"\n"))
     return h.hexdigest()[:12]
+
+
+MARCADORES = {
+    "styles.css?v=": r'styles\.css\?v=([0-9a-f]+)',
+    "app.js?v=": r'app\.js\?v=([0-9a-f]+)',
+    "window.__CACHEBUST__": r'window\.__CACHEBUST__\s*=\s*"([0-9a-f]+)"',
+}
+
+
+def versiones_en_index():
+    """Para cada marcador de index.html, la lista de versiones que tiene escritas.
+    Una lista vacía significa que el marcador falta; cada uno debe aparecer una vez."""
+    html = INDEX.read_text(encoding="utf-8")
+    return {nombre: re.findall(patron, html) for nombre, patron in MARCADORES.items()}
 
 
 def main():
