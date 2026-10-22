@@ -1,0 +1,7 @@
+# Los archivos de texto se guardan y se extraen siempre con LF, también en
+# Windows: así el hash de scripts/bump_cache.py no depende de la máquina.
+* text=auto eol=lf
+*.svg text eol=lf
+*.json text eol=lf
+*.png binary
+*.pdf binary
