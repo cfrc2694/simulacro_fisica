@@ -117,7 +117,7 @@
   "fuerza-media-trabajo": {
     "nodo": "1.3.4",
     "titulo": "Fuerza media a partir del trabajo",
-    "texto": "Si conoces la distancia en la que un cuerpo se detiene, el teorema trabajo-energía da la fuerza media: $\\bar F\\,d = \\Delta K$. Si conocieras el tiempo de frenado, usarías el impulso: $\\bar F\\,\\Delta t = \\Delta p$. Elige la relación que corresponde al dato que tienes."
+    "texto": "Si conoces la distancia en la que un cuerpo se detiene, el teorema trabajo-energía da la magnitud de la fuerza media: $\\bar F\\,d = K_i - K_f$. Si conocieras el tiempo de frenado, usarías el impulso: $\\bar F\\,\\Delta t = |\\Delta p|$. Elige la relación que corresponde al dato que tienes."
   },
   "corriente-deriva": {
     "nodo": "2.7.1",
