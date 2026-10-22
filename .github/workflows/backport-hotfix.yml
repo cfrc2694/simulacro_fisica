@@ -1,0 +1,49 @@
+# Cuando un PR desde hotfix/* se fusiona en main, abre automáticamente un PR
+# que lleva ese hotfix a develop (rama backport/<nombre>).
+# Si el merge con develop tiene conflictos, el PR se abre igual desde la rama
+# del hotfix para resolverlos a mano en GitHub.
+name: Backport de hotfix a develop
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  backport:
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'hotfix/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Crear la rama de backport y el PR hacia develop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOTFIX: ${{ github.head_ref }}
+          NUMERO: ${{ github.event.pull_request.number }}
+          TITULO: ${{ github.event.pull_request.title }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          RAMA="backport/${HOTFIX#hotfix/}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$RAMA" origin/develop
+          if git merge --no-ff --no-edit -m "Backport del hotfix #$NUMERO a develop" "$HEAD_SHA"; then
+            NOTA="El hotfix se fusionó con develop sin conflictos."
+          else
+            git merge --abort
+            git checkout -B "$RAMA" "$HEAD_SHA"
+            NOTA="El merge con develop tiene conflictos: hay que resolverlos en este PR antes de fusionarlo."
+          fi
+          git push origin "$RAMA"
+
+          gh pr create --base develop --head "$RAMA" \
+            --title "Backport: $TITULO" \
+            --body "Lleva a develop el hotfix #$NUMERO, ya fusionado en main. $NOTA"
