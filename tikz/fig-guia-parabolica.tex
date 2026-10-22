@@ -5,8 +5,8 @@
   \draw[eje] (-0.3,0) -- (3.4,0) node[right]{$x$};
   \draw[eje] (0,0.3) -- (0,-3.2) node[below]{$y$};
   \node[above left] at (0,0) {$O$};
-  \draw[very thick] plot[domain=0:3.0, samples=60] (\x, {-\x*\x/3});
-  \fill (0.03,-0.02) circle (2.2pt);
+  \draw[very thick, azul] plot[domain=0:3.0, samples=60] (\x, {-\x*\x/3});
+  \fill[rojo] (0.03,-0.02) circle (2.2pt);
   \node[right] at (2.55,-1.6) {$y = \dfrac{x^2}{2a}$};
 \end{tikzpicture}
 \end{document}

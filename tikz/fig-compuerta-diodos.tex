@@ -2,9 +2,9 @@
 \input{preambulo}
 \begin{document}
 \begin{circuitikz}[scale=1.0]
-  \draw (0,2) node[ocirc]{} node[left]{$E_1$} to[D*, invert] (2.2,2) -- (2.2,1);
-  \draw (0,0) node[ocirc]{} node[left]{$E_2$} to[D*, invert] (2.2,0) -- (2.2,1);
-  \draw (2.2,1) to[short, *-o] (3.6,1) node[right]{$S$};
+  \draw (0,2) node[ocirc]{} node[left, azul]{$E_1$} to[D*, invert] (2.2,2) -- (2.2,1);
+  \draw (0,0) node[ocirc]{} node[left, azul]{$E_2$} to[D*, invert] (2.2,0) -- (2.2,1);
+  \draw (2.2,1) to[short, *-o] (3.6,1) node[right, rojo]{$S$};
   \draw (2.9,1) to[R, l_={$R$}] (2.9,3.0) node[above]{$+1$ V};
 \end{circuitikz}
 \end{document}
