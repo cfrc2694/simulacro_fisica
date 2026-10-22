@@ -3067,13 +3067,13 @@
     "subtemas": ["3.1.6"],
     "dificultad": "media",
     "figuras": ["fig-polaroide"],
-    "enunciado": "Un haz de luz estable incide perpendicularmente sobre un polarizador, como en la figura. Al girar el polarizador alrededor del haz, la intensidad transmitida oscila entre un valor máximo y un valor mínimo que es la tercera parte del máximo. ¿Qué se puede concluir sobre la luz incidente?",
+    "enunciado": "Un haz de luz estable incide perpendicularmente sobre un polarizador, como en la figura. Al girar el polarizador alrededor del haz, la intensidad transmitida oscila entre un valor máximo y un valor mínimo que es la tercera parte del máximo. ¿Cuál de las siguientes descripciones de la luz incidente es compatible con esa medición?",
     "opciones": ["Es en parte polarizada linealmente y en parte no polarizada", "No está polarizada", "Está polarizada linealmente por completo", "Es en parte polarizada circularmente y en parte no polarizada", "Está polarizada circularmente por completo"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["luz-parcialmente-polarizada"],
-    "explicacion": "Si la intensidad depende del ángulo, una parte de la luz está polarizada linealmente; si el mínimo no llega a cero, otra parte no lo está. Con $I = A + B\\cos2\\theta$, aquí $A + B = 3(A - B)$, es decir, $B = A/2$, y el grado de polarización es $B/A = 0.5$. La luz no polarizada y la polarizada circularmente dan una intensidad que no cambia al girar el polarizador, y su mezcla tampoco. La luz polarizada linealmente por completo tendría mínimo cero."
+    "explicacion": "Si la intensidad depende del ángulo, la luz no puede ser no polarizada, ni polarizada circularmente, ni una mezcla de esas dos: en todos esos casos la intensidad no cambia al girar el polarizador. Si fuera polarizada linealmente por completo, el mínimo sería cero. Una mezcla de luz polarizada linealmente y luz no polarizada sí reproduce la medición: con $I = A + B\\cos2\\theta$, la condición $A + B = 3(A - B)$ da $B = A/2$, es decir, la mitad de la intensidad está polarizada linealmente. Hay otra posibilidad que no está entre las opciones: un haz completamente polarizado elípticamente, con amplitudes en razón $\\sqrt3$ y desfase de $90^\\circ$, también da un mínimo igual a un tercio del máximo. Para distinguir entre los dos casos haría falta, por ejemplo, una lámina de cuarto de onda."
   },
   {
     "id": "q188",
