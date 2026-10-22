@@ -83,5 +83,110 @@
     "nodo": "1.2",
     "titulo": "Tiro parabólico con lanzamiento y llegada a distinta altura",
     "texto": "Descompón la velocidad inicial en $v_{0x}=v_0\\cos\\theta$ y $v_{0y}=v_0\\sin\\theta$. La componente horizontal es constante y la vertical sigue $y(t)=y_0+v_{0y}t-\\tfrac12 gt^2$. Si el punto de llegada no está a la misma altura que el de lanzamiento, el tiempo de vuelo sale de resolver esa ecuación cuadrática para $y=0$, no de la fórmula simétrica $2v_{0y}/g$."
+  },
+  "fuerzas-resistivas": {
+    "nodo": "1.1.2",
+    "titulo": "Fuerzas que dependen de la velocidad",
+    "texto": "Dibuja el diagrama de fuerzas en cada tramo del movimiento. Una fuerza resistiva siempre se opone a la velocidad, así que cambia de sentido cuando el cuerpo pasa de subir a bajar. Revisa por separado la subida, el punto más alto (donde $v=0$) y la bajada, y compara en cada caso la fuerza neta con el peso."
+  },
+  "orbitas-impulso": {
+    "nodo": "1.6.2",
+    "titulo": "Órbitas después de un impulso",
+    "texto": "Un impulso breve cambia la velocidad pero no la posición. Mira qué le hace a las magnitudes que se conservan: el momento angular $L = m\\,r\\,v_\\perp$ solo cambia si el impulso tiene componente tangencial, y la energía $E = \\tfrac12 mv^2 - GMm/r$ decide si la órbita queda ligada ($E<0$: elipse) o abierta ($E\\ge 0$)."
+  },
+  "indice-refraccion": {
+    "nodo": "3.1.5",
+    "titulo": "Velocidad de fase en un medio",
+    "texto": "En un medio lineal, homogéneo e isótropo, la luz avanza con velocidad de fase $v = c/n$, donde el índice de refracción es $n = \\sqrt{\\epsilon_r\\,\\mu_r}$, con $\\epsilon_r$ y $\\mu_r$ relativos al vacío. La velocidad de fase en un medio transparente común es menor que $c$."
+  },
+  "ondas-viajeras": {
+    "nodo": "3.1.2",
+    "titulo": "Leer una onda viajera",
+    "texto": "Escribe la fase como $kx \\mp \\omega t$ con $k = 2\\pi/\\lambda$ y $\\omega = 2\\pi/T$. Un punto de fase constante cumple $x = \\pm(\\omega/k)\\,t + \\text{cte}$: el signo relativo entre los términos en $x$ y en $t$ da el sentido de propagación, y la rapidez es $\\omega/k = \\lambda/T$."
+  },
+  "colision-por-etapas": {
+    "nodo": "1.4.1",
+    "titulo": "Problemas por etapas: energía y momento",
+    "texto": "Divide el movimiento en etapas y usa en cada una lo que se conserva. En los tramos sin fricción se conserva la energía mecánica; durante un choque breve se conserva el momento lineal, pero si los cuerpos quedan pegados se pierde energía cinética. No mezcles las dos leyes en la misma etapa."
+  },
+  "equilibrio-fuerzas": {
+    "nodo": "1.1.2",
+    "titulo": "Equilibrio de un cuerpo colgado",
+    "texto": "En equilibrio la suma de fuerzas es cero. Descompón la tensión en una componente vertical, que equilibra el peso, y una horizontal, que equilibra la fuerza aplicada. El cociente de esas dos componentes da directamente una función trigonométrica del ángulo, sin necesidad de calcular la tensión."
+  },
+  "fuerza-media-trabajo": {
+    "nodo": "1.3.4",
+    "titulo": "Fuerza media a partir del trabajo",
+    "texto": "Si conoces la distancia en la que un cuerpo se detiene, el teorema trabajo-energía da la fuerza media: $\\bar F\\,d = \\Delta K$. Si conocieras el tiempo de frenado, usarías el impulso: $\\bar F\\,\\Delta t = \\Delta p$. Elige la relación que corresponde al dato que tienes."
+  },
+  "corriente-deriva": {
+    "nodo": "2.7.1",
+    "titulo": "Corriente y velocidad de deriva",
+    "texto": "La corriente en un conductor es $I = n\\,e\\,v_d\\,A$, con $n$ la densidad de portadores libres, $e$ su carga, $v_d$ la velocidad de deriva y $A$ el área transversal. Cuida el área cuando el dato es un diámetro y las conversiones de milímetros a metros, que entran al cuadrado."
+  },
+  "maxwell-identidades": {
+    "nodo": "2.3.1",
+    "titulo": "Identidades vectoriales en las ecuaciones de Maxwell",
+    "texto": "Dos identidades sirven para sacar consecuencias de las ecuaciones de Maxwell: la divergencia de un rotacional es cero, $\\nabla\\cdot(\\nabla\\times\\vec{A}) = 0$, y el rotacional de un gradiente es cero, $\\nabla\\times(\\nabla f) = 0$. Aplicar la operación adecuada a ambos lados de una ecuación elimina un término."
+  },
+  "efecto-doppler": {
+    "nodo": "3.4.2",
+    "titulo": "Efecto Doppler acústico",
+    "texto": "Para el sonido, $f' = f\\,\\dfrac{v \\pm v_o}{v \\mp v_s}$, con $v$ la rapidez del sonido en el aire. Los signos se eligen para que el acercamiento aumente la frecuencia. No es simétrico: no da lo mismo que se mueva la fuente o el observador, porque el medio define un sistema de referencia privilegiado."
+  },
+  "coherencia-interferencia": {
+    "nodo": "3.2.1",
+    "titulo": "Coherencia y patrones de interferencia",
+    "texto": "La posición de las franjas depende de la diferencia de fase total entre las fuentes, que es la diferencia de camino más la fase relativa propia de las fuentes. Si esa fase relativa cambia con el tiempo, el patrón se desplaza. Compara la rapidez de ese cambio con el tiempo de respuesta del detector."
+  },
+  "capacidad-calorifica-gases": {
+    "nodo": "4.2.5",
+    "titulo": "Calor a presión y a volumen constante",
+    "texto": "Aplica la primera ley, $Q = \\Delta U + W$. En un gas ideal, $U$ depende solo de la temperatura, así que $\\Delta U$ es el mismo para el mismo $\\Delta T$ en cualquier proceso. La diferencia entre procesos está en el trabajo $W = \\int P\\,dV$."
+  },
+  "probabilidad-independiente": {
+    "nodo": "4.1.5",
+    "titulo": "Probabilidades de partículas independientes",
+    "texto": "En un gas ideal las partículas no interactúan, así que cada una está en una región con probabilidad proporcional al volumen de esa región. Si los eventos son independientes, la probabilidad de que se cumplan todos a la vez es el producto de las probabilidades individuales."
+  },
+  "familias-particulas": {
+    "nodo": "8.1.1",
+    "titulo": "Clasificación de las partículas",
+    "texto": "Agrupa las partículas por sus números cuánticos: los leptones (tipo electrón y neutrinos) no sienten la interacción fuerte; los hadrones están hechos de quarks y se dividen en mesones (espín entero) y bariones (espín semientero); los bosones de gauge transmiten las interacciones. Dos partículas de la misma familia difieren principalmente en la masa."
+  },
+  "decaimientos-conservacion": {
+    "nodo": "7.4.4",
+    "titulo": "Balance en decaimientos radiactivos",
+    "texto": "Lleva la cuenta de $A$ y $Z$ en cada etapa: la emisión alfa resta $4$ a $A$ y $2$ a $Z$; la beta menos suma $1$ a $Z$ y la beta más le resta $1$, sin cambiar $A$; la emisión gamma no cambia ninguno. Comprueba además la conservación del número leptónico: con el electrón sale un antineutrino y con el positrón, un neutrino."
+  },
+  "schrodinger-sustitucion": {
+    "nodo": "5.1.3",
+    "titulo": "Comprobar una solución de la ecuación de Schrödinger",
+    "texto": "Deriva dos veces la función de onda propuesta y sustitúyela en $-\\dfrac{\\hbar^2}{2m}\\psi'' + V\\psi = E\\psi$. Divide entre $\\psi$: lo que queda debe cumplirse para todo $x$. Separa los términos que dependen de $x$ de los constantes y usa la condición dada sobre $V$ para fijar la constante."
+  },
+  "niveles-hidrogeno": {
+    "nodo": "5.7.1",
+    "titulo": "Niveles de energía del hidrógeno",
+    "texto": "En el modelo de Bohr, la energía de un estado ligado es negativa y su valor absoluto disminuye al aumentar $n$. Los niveles se acumulan cerca de $E = 0$, que es el umbral de ionización. Prueba cada expresión con $n = 1, 2, 3$ y $n\\to\\infty$."
+  },
+  "energia-relativista": {
+    "nodo": "6.3.1",
+    "titulo": "Energía total y factor de Lorentz",
+    "texto": "La energía total de una partícula libre es $E = \\gamma m c^2$, así que $\\gamma$ es el cociente entre la energía total y la energía en reposo. De ahí, $\\beta = \\sqrt{1 - 1/\\gamma^2}$. Comprueba que $\\beta < 1$ y que crece cuando crece $\\gamma$."
+  },
+  "intervalo-invariante": {
+    "nodo": "6.2.2",
+    "titulo": "Intervalo de espacio-tiempo",
+    "texto": "El intervalo $\\Delta s^2 = c^2\\Delta t^2 - \\Delta x^2 - \\Delta y^2 - \\Delta z^2$ tiene el mismo valor para todos los observadores inerciales. No hace falta aplicar la transformación de Lorentz: se calcula en el sistema donde se conocen las coordenadas. Su signo indica si el intervalo es temporal, espacial o nulo."
+  },
+  "transformacion-campos": {
+    "nodo": "6.2.1",
+    "titulo": "Campos electromagnéticos en otro sistema",
+    "texto": "$\\vec{E}$ y $\\vec{B}$ son partes de un mismo objeto y se mezclan bajo una transformación de Lorentz. Las componentes paralelas a la velocidad relativa no cambian; las perpendiculares se combinan, por ejemplo $\\vec{E}'_\\perp = \\gamma(\\vec{E} + \\vec{v}\\times\\vec{B})_\\perp$. Piensa en la fuerza sobre una carga vista desde los dos sistemas."
+  },
+  "conductividad-materiales": {
+    "nodo": "8.2.3",
+    "titulo": "Metales y semiconductores",
+    "texto": "En un metal la densidad de portadores es fija y enorme; al calentarlo o al agregar impurezas aumentan las colisiones y la conductividad baja. En un semiconductor la densidad de portadores es pequeña y muy sensible: crece con la temperatura (excitación térmica) y con el dopaje controlado."
   }
 }
