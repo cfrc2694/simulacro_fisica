@@ -491,7 +491,7 @@
     "subtemas": ["1.2", "1.3.2"],
     "dificultad": "dificil",
     "figuras": ["fig-guia-parabolica"],
-    "enunciado": "En la figura, una partícula parte del reposo en el origen y desliza sin fricción por una guía curva contenida en un plano vertical. Con el eje $y$ positivo apuntando hacia abajo, la guía cumple $y = \\dfrac{x^2}{2a}$, donde $a$ es una longitud constante. ¿Cuál es la magnitud de la aceleración tangencial de la partícula cuando está en la posición $x$?",
+    "enunciado": "En la figura, una partícula parte del origen con una rapidez inicial despreciable, hacia $x > 0$, y desliza sin fricción por una guía curva contenida en un plano vertical. Con el eje $y$ positivo apuntando hacia abajo, la guía cumple $y = \\dfrac{x^2}{2a}$, donde $a > 0$ es una longitud constante. ¿Cuál es la magnitud de la aceleración tangencial de la partícula cuando está en la posición $x > 0$?",
     "opciones": ["$\\dfrac{g\\,x}{\\sqrt{x^2 + a^2}}$", "$\\dfrac{g\\,a}{\\sqrt{x^2 + a^2}}$", "$\\dfrac{g\\,x}{a}$", "$g$", "$0$"],
     "respuesta": 0,
     "respuesta_verificada": false,
@@ -972,12 +972,12 @@
     "dificultad": "media",
     "figuras": [],
     "enunciado": "Una partícula de masa $m$ y velocidad $v$ se mueve a lo largo del eje $x$ con energía potencial $U(x) = \\alpha x^6$. Va de la posición $x_1$, en el instante $t_1$, a la posición $x_2$, en el instante $t_2$. Entre todas las curvas $x(t)$ con esos extremos fijos, la trayectoria real hace estacionaria la cantidad",
-    "opciones": ["$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\tfrac12 mv^2\\,dt$", "$\\displaystyle\\int_{x_1}^{x_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dx$", "$\\displaystyle\\int_{t_1}^{t_2} m\\,x\\,v\\,dt$"],
+    "opciones": ["$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\tfrac12 mv^2\\,dt$", "$\\displaystyle\\int_{x_1}^{x_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dx$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - 6\\alpha x^6\\right)dt$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["lagrangiano-hamiltoniano"],
-    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. La integral en $x$ no corresponde a extremos fijos en el tiempo."
+    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. Usar $-Fx = 6\\alpha x^6$ como si fuera la energía potencial, en lugar de $U = \\alpha x^6$, da $m\\ddot{x} = -36\\alpha x^5$, una fuerza seis veces mayor. La integral en $x$ no corresponde a extremos fijos en el tiempo."
   },
   {
     "id": "q057",
@@ -1105,7 +1105,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["colision-con-rigido"],
-    "explicacion": "Momento angular respecto al centro de la varilla: antes, $mv\\,(L/2)$; después, $I\\omega$ con $I = ML^2/12$. Entonces $\\omega = (mvL/2)/(ML^2/12) = 6mv/(ML)$. El momento lineal da, además, $V = mv/M$ para el centro de masa. Olvidar el brazo $L/2$ (usar $L$) da $12mv/(ML)$; usar el momento de inercia respecto a un extremo, $ML^2/3$, da $3mv/(ML)$. Por unidades, todas son s$^{-1}$; la comprobación es que el choque sea elástico: $\\tfrac12 mv^2 = \\tfrac12 MV^2 + \\tfrac12 I\\omega^2$ se cumple con $M = 4m$, que es justo la condición para que el disco quede quieto."
+    "explicacion": "Momento angular respecto al centro de la varilla: antes, $mv\\,(L/2)$; después, $I\\omega$ con $I = ML^2/12$. Entonces $\\omega = (mvL/2)/(ML^2/12) = 6mv/(ML)$. El momento lineal da, además, $V = mv/M$ para el centro de masa. Olvidar el brazo $L/2$ (usar $L$) da $12mv/(ML)$; duplicar el momento de inercia correcto, $ML^2/6$ en lugar de $ML^2/12$, da $3mv/(ML)$. Por unidades, todas son s$^{-1}$; la comprobación es que el choque sea elástico: $\\tfrac12 mv^2 = \\tfrac12 MV^2 + \\tfrac12 I\\omega^2$ se cumple con $M = 4m$, que es justo la condición para que el disco quede quieto."
   },
   {
     "id": "q065",
@@ -1195,13 +1195,13 @@
     "subtemas": ["8.2.2", "8.2.3"],
     "dificultad": "media",
     "figuras": [],
-    "enunciado": "Una placa delgada de un material conductor lleva una corriente conocida y se coloca en un campo magnético conocido, perpendicular a la placa. Se mide el voltaje transversal (de Hall) que aparece entre sus bordes. ¿Qué se puede determinar directamente con esa medición?",
+    "enunciado": "Una placa delgada de un material conductor, de espesor conocido y con un solo tipo de portador de carga de magnitud $e$, lleva una corriente conocida y se coloca en un campo magnético conocido, perpendicular a la placa. Se mide el voltaje transversal (de Hall) que aparece entre sus bordes. ¿Qué se puede determinar directamente con esa medición?",
     "opciones": ["El signo y la densidad de los portadores de carga", "El cociente entre la carga y la masa de los portadores", "El ancho de la banda prohibida", "La energía de Fermi", "La susceptibilidad magnética"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["efecto-hall"],
-    "explicacion": "En el equilibrio, $qE_H = qv_dB$, de donde $V_H = IB/(nqt)$. El signo de $V_H$ indica si los portadores son positivos (huecos) o negativos (electrones), y su magnitud da $n$. La masa no aparece en $V_H$: para obtener $q/m$ haría falta una medición dinámica, como la resonancia ciclotrónica. El ancho de la banda prohibida se mide con la dependencia de la conductividad con la temperatura o con absorción óptica. La susceptibilidad describe la magnetización del material, que no interviene aquí."
+    "explicacion": "En el equilibrio, $qE_H = qv_dB$, de donde $V_H = IB/(nqt)$. Con un solo tipo de portador, el signo de $V_H$ indica si son positivos (huecos) o negativos (electrones), y con $I$, $B$, el espesor $t$ y $|q| = e$ conocidos, su magnitud da $n$. Con varios tipos de portadores, el coeficiente Hall ya no es simplemente $1/(nq)$. La masa no aparece en $V_H$: para obtener $q/m$ haría falta una medición dinámica, como la resonancia ciclotrónica. El ancho de la banda prohibida se mide con la dependencia de la conductividad con la temperatura o con absorción óptica. La susceptibilidad describe la magnetización del material, que no interviene aquí."
   },
   {
     "id": "q071",
