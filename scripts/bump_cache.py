@@ -24,10 +24,20 @@ ARCHIVOS = [
 
 
 def calcular_version():
+    # Se normalizan los saltos de línea a LF: así el hash depende solo del
+    # contenido, igual al que guarda git y sirve GitHub Pages, y no de si la
+    # copia local tiene CRLF (por ejemplo, con core.autocrlf en Windows).
     h = hashlib.sha256()
     for f in ARCHIVOS:
-        h.update(f.read_bytes())
+        h.update(f.read_bytes().replace(b"\r\n", b"\n"))
     return h.hexdigest()[:12]
+
+
+def version_en_index():
+    """Las versiones que tiene escritas index.html (deberían ser una sola)."""
+    html = INDEX.read_text(encoding="utf-8")
+    return set(re.findall(r'(?:styles\.css|app\.js)\?v=([0-9a-f]+)', html)) | \
+        set(re.findall(r'window\.__CACHEBUST__\s*=\s*"([0-9a-f]+)"', html))
 
 
 def main():
