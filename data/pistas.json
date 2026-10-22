@@ -188,5 +188,140 @@
     "nodo": "8.2.3",
     "titulo": "Metales y semiconductores",
     "texto": "En un metal la densidad de portadores es fija y enorme; al calentarlo o al agregar impurezas aumentan las colisiones y la conductividad baja. En un semiconductor la densidad de portadores es pequeña y muy sensible: crece con la temperatura (excitación térmica) y con el dopaje controlado."
+  },
+  "kirchhoff-fuentes": {
+    "nodo": "2.7.2",
+    "titulo": "Fuentes en oposición en un lazo",
+    "texto": "Recorre el lazo sumando subidas y caídas de potencial: cada fuente aporta su fem con el signo que corresponde a su polaridad y cada resistencia, incluida la interna de cada fuente, aporta $-IR$ en el sentido de la corriente. Al cargar una batería, la corriente entra por su terminal positivo y su fem se opone a la del cargador."
+  },
+  "lorentz-trayectorias": {
+    "nodo": "2.2.6",
+    "titulo": "Trayectorias bajo la fuerza de Lorentz",
+    "texto": "Descompón la velocidad en componentes paralela y perpendicular a $\\vec{B}$. La parte magnética de la fuerza, $q\\vec{v}\\times\\vec{B}$, solo actúa sobre la componente perpendicular y la hace girar; la parte eléctrica acelera en la dirección de $\\vec{E}$. Si en ningún momento hay componente perpendicular a $\\vec{B}$, el campo magnético no hace nada."
+  },
+  "fuerza-magnetica-direccion": {
+    "nodo": "2.2.1",
+    "titulo": "Dirección de la fuerza magnética",
+    "texto": "Ubica ejes: $\\hat{z}$ a lo largo de la corriente, $\\hat{r}$ alejándose del alambre y $\\hat{\\varphi}$ en el sentido de las líneas de $\\vec{B}$ (regla de la mano derecha). Con $\\hat{r}\\times\\hat{\\varphi} = \\hat{z}$ y sus permutaciones cíclicas, calcula $q\\vec{v}\\times\\vec{B}$ y no olvides el signo de la carga."
+  },
+  "capas-y-rayos-x": {
+    "nodo": "5.7.3",
+    "titulo": "Capas electrónicas y rayos X característicos",
+    "texto": "Un electrón de la capa $K$ ve casi toda la carga del núcleo, apantallada por el otro electrón de esa capa: su energía de enlace es del orden de $13.6\\ \\text{eV}\\times(Z-1)^2$. Para producir rayos X de la serie $K$ hay que arrancar ese electrón, así que el proyectil necesita al menos esa energía."
+  },
+  "espin-consecuencias": {
+    "nodo": "5.5.1",
+    "titulo": "Dónde se nota el espín del electrón",
+    "texto": "El espín aporta un momento magnético propio y un número cuántico más, que a través del principio de exclusión de Pauli fija cuántos electrones caben en cada estado. Para cada fenómeno, pregúntate si se puede explicar con una carga puntual clásica o si hace falta contar estados o un momento magnético intrínseco."
+  },
+  "configuracion-electronica": {
+    "nodo": "5.7.3",
+    "titulo": "Leer una configuración electrónica",
+    "texto": "El número atómico es la suma de los superíndices. Una subcapa $s$ admite $2$ electrones, una $p$, $6$, y una $d$, $10$; la capa $n$ admite $2n^2$. Las subcapas llenas tienen distribución de carga esféricamente simétrica, y lo mismo una subcapa $s$ con un solo electrón."
+  },
+  "normalizacion": {
+    "nodo": "5.1.1",
+    "titulo": "Normalizar una función de onda",
+    "texto": "Impón $\\displaystyle\\int |\\psi|^2 = 1$ sobre todo el dominio de la variable. Si $\\psi$ es una exponencial imaginaria, $|\\psi|^2 = |A|^2$ es constante y la integral es $|A|^2$ por la longitud del dominio. Revisa que las unidades de $A$ sean las de (longitud)$^{-1/2}$ cuando la variable tiene unidades de longitud."
+  },
+  "efecto-fotoelectrico": {
+    "nodo": "7.4.2",
+    "titulo": "Efecto fotoeléctrico",
+    "texto": "Cada fotón de energía $h\\nu$ entrega toda su energía a un solo electrón. Parte se gasta en sacarlo del material (la función de trabajo $\\phi$) y el resto queda como energía cinética: $K_{\\max} = h\\nu - \\phi$. Un potencial de frenado $V_0$ detiene incluso a los electrones más rápidos cuando $eV_0 = K_{\\max}$."
+  },
+  "fuerza-desde-potencial": {
+    "nodo": "1.3.1",
+    "titulo": "Fuerza a partir de la energía potencial",
+    "texto": "En una dimensión, una fuerza conservativa es $F = -dU/dx$. El signo menos significa que la fuerza apunta hacia donde la energía potencial disminuye. Comprueba el resultado con las unidades: $F$ debe tener las unidades de $U$ divididas entre longitud."
+  },
+  "lagrangiano-hamiltoniano": {
+    "nodo": "1.5.1",
+    "titulo": "Lagrangiano, hamiltoniano y acción",
+    "texto": "El lagrangiano es $L = T - V$ y la acción, $S = \\displaystyle\\int_{t_1}^{t_2} L\\,dt$, es estacionaria en la trayectoria real cuando los extremos están fijos. El hamiltoniano se escribe en función de la posición y del momento, no de la velocidad, y para sistemas como estos coincide con la energía total, $H = T + V$."
+  },
+  "dinamica-circular": {
+    "nodo": "1.2.1",
+    "titulo": "Dinámica del movimiento circular",
+    "texto": "En un movimiento circular uniforme, la fuerza neta apunta al centro y vale $m\\omega^2 r$. Descompón la tensión en una componente vertical, que equilibra el peso, y una horizontal, que da la fuerza centrípeta. Las dos componentes son perpendiculares, así que se combinan con el teorema de Pitágoras."
+  },
+  "compuertas-diodos": {
+    "nodo": "7.3.3",
+    "titulo": "Compuertas lógicas con diodos",
+    "texto": "Trata cada diodo como un interruptor ideal: conduce si su ánodo está a mayor potencial que su cátodo. Recorre la tabla de verdad: para cada combinación de entradas, decide qué diodos conducen y a qué potencial queda la salida. La resistencia lleva la salida a su valor de reposo cuando ningún diodo conduce."
+  },
+  "graficas-logaritmicas": {
+    "nodo": "7.1.2",
+    "titulo": "Pendientes en escala logarítmica",
+    "texto": "Si $G = K\\omega^n$, entonces $\\log G = \\log K + n\\log\\omega$: una ley de potencia es una recta en una gráfica log-log, y su pendiente es el exponente $n$. Cuenta cuántas décadas cambia $G$ por cada década de $\\omega$. Una exponencial, en cambio, se curva en esa escala."
+  },
+  "estadistica-poisson": {
+    "nodo": "7.2.2",
+    "titulo": "Incertidumbre en conteos",
+    "texto": "Un conteo de eventos aleatorios independientes sigue la distribución de Poisson: si se cuentan $N$ eventos, la desviación estándar es $\\sqrt{N}$. Para una tasa $N/t$, la incertidumbre es $\\sqrt{N}/t$. Cuida que el conteo y su incertidumbre se dividan entre el mismo intervalo de tiempo."
+  },
+  "energia-enlace": {
+    "nodo": "8.1.2",
+    "titulo": "Energía de enlace por nucleón",
+    "texto": "La energía de enlace por nucleón crece rápido en los núcleos ligeros, alcanza un máximo cerca de $A \\approx 56$–$62$ y luego baja lentamente por la repulsión eléctrica entre protones. Por eso la fusión de núcleos ligeros y la fisión de núcleos pesados liberan energía."
+  },
+  "seccion-eficaz": {
+    "nodo": "7.4.1",
+    "titulo": "Sección eficaz de un blanco delgado",
+    "texto": "En un blanco delgado, la fracción de partículas dispersadas es $f = n\\,\\sigma\\,t$, con $n$ la densidad de centros dispersores y $t$ el espesor. Despeja $\\sigma$ y usa las mismas unidades de longitud en $n$ y en $t$: si $n$ está en cm$^{-3}$, $t$ va en centímetros y $\\sigma$ queda en cm²."
+  },
+  "modos-normales": {
+    "nodo": "1.7.1",
+    "titulo": "Modos normales por simetría",
+    "texto": "En un sistema simétrico, los modos normales son simétricos o antisimétricos. Busca primero el modo en el que el centro de masa no se mueve, que es obligatorio si no hay fuerzas externas, y el modo de traslación con frecuencia cero. Si una masa queda quieta en un modo, cada masa vecina oscila como si estuviera unida a una pared."
+  },
+  "colision-con-rigido": {
+    "nodo": "1.4.2",
+    "titulo": "Choques con un cuerpo rígido",
+    "texto": "En un choque con un cuerpo libre se conservan el momento lineal total y el momento angular total respecto a cualquier punto fijo. Elige el punto donde está el centro de masa del cuerpo antes del choque. El momento lineal da la velocidad del centro de masa; el angular, la rapidez de giro, con el momento de inercia respecto al centro de masa."
+  },
+  "efecto-compton": {
+    "nodo": "7.4.2",
+    "titulo": "Efecto Compton",
+    "texto": "Un fotón que choca elásticamente con una partícula libre de masa $m$ en reposo aumenta su longitud de onda en $\\Delta\\lambda = \\dfrac{h}{mc}(1 - \\cos\\theta)$, con $\\theta$ el ángulo de dispersión. El cambio no depende de la longitud de onda inicial; la masa que aparece es la del blanco."
+  },
+  "radiacion-termica": {
+    "nodo": "5.7.6",
+    "titulo": "Radiación de cuerpo negro",
+    "texto": "La potencia total que emite un cuerpo negro es $P = \\sigma A T^4$ (ley de Stefan-Boltzmann), con $T$ la temperatura absoluta. Si solo cambia la temperatura, $P_2/P_1 = (T_2/T_1)^4$. La longitud de onda del máximo, en cambio, varía como $1/T$ (ley de Wien)."
+  },
+  "experimentos-cuanticos": {
+    "nodo": "5.7.1",
+    "titulo": "Experimentos que fundaron la física cuántica",
+    "texto": "Asocia cada experimento con lo que probó: Franck-Hertz, niveles de energía atómicos discretos; Stern-Gerlach, momento angular cuantizado; Davisson-Germer, carácter ondulatorio de los electrones; Compton, momento de los fotones; efecto fotoeléctrico, energía de la luz en cuantos."
+  },
+  "reglas-seleccion": {
+    "nodo": "5.7.5",
+    "titulo": "Reglas de selección dipolares",
+    "texto": "En una transición dipolar eléctrica con emisión de un fotón, el momento angular orbital debe cambiar en una unidad: $\\Delta\\ell = \\pm1$, con $\\Delta m = 0, \\pm1$. Esto equivale a que los dos estados tengan paridad opuesta. Para el número cuántico principal no hay restricción."
+  },
+  "cuantizacion-canonica": {
+    "nodo": "5.1.1",
+    "titulo": "Del hamiltoniano clásico al operador",
+    "texto": "En la representación de posiciones, la posición actúa multiplicando y el momento se reemplaza por el operador $\\hat{p} = -i\\hbar\\,\\partial/\\partial x$. Al sustituir en $H(x, p)$ se obtiene el operador hamiltoniano, y la ecuación $\\hat{H}\\psi = E\\psi$ es la ecuación de Schrödinger independiente del tiempo."
+  },
+  "efecto-hall": {
+    "nodo": "8.2.2",
+    "titulo": "Efecto Hall",
+    "texto": "En una placa con corriente $I$ dentro de un campo $\\vec{B}$ perpendicular, la fuerza magnética desvía los portadores hacia un borde hasta que el campo eléctrico de la carga acumulada la equilibra. El voltaje transversal es $V_H = IB/(nqt)$, con $t$ el espesor: su signo depende del signo de $q$ y su magnitud, de la densidad $n$."
+  },
+  "calor-especifico-solidos": {
+    "nodo": "4.2.6",
+    "titulo": "Modelos de Einstein y de Debye",
+    "texto": "Los dos modelos describen las vibraciones de $N$ átomos como $3N$ osciladores armónicos cuánticos independientes. Difieren en las frecuencias: Einstein les asigna una sola; Debye, un espectro de ondas elásticas con frecuencia de corte. A alta temperatura ambos tienden a la ley de Dulong-Petit; a baja temperatura solo Debye da $C \\propto T^3$."
+  },
+  "laplace-unicidad": {
+    "nodo": "2.1.5",
+    "titulo": "Ecuación de Laplace y unicidad",
+    "texto": "En una región sin carga el potencial cumple la ecuación de Laplace y no puede tener máximos ni mínimos en el interior: sus valores extremos están en la frontera. Si das el potencial en toda la frontera, la solución es única. Prueba una solución sencilla: si cumple la ecuación y las condiciones de frontera, es la solución."
+  },
+  "radiacion-dipolo": {
+    "nodo": "2.6.2",
+    "titulo": "Radiación de un dipolo oscilante",
+    "texto": "Lejos de un dipolo que oscila sobre un eje, el campo eléctrico radiado es transversal a la dirección de observación, está en el plano que contiene al eje del dipolo y a esa dirección, y su amplitud es proporcional a $\\sin\\theta$, con $\\theta$ el ángulo medido desde el eje. No hay radiación a lo largo del eje."
   }
 }
