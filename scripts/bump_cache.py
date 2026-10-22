@@ -33,11 +33,18 @@ def calcular_version():
     return h.hexdigest()[:12]
 
 
-def version_en_index():
-    """Las versiones que tiene escritas index.html (deberían ser una sola)."""
+MARCADORES = {
+    "styles.css?v=": r'styles\.css\?v=([0-9a-f]+)',
+    "app.js?v=": r'app\.js\?v=([0-9a-f]+)',
+    "window.__CACHEBUST__": r'window\.__CACHEBUST__\s*=\s*"([0-9a-f]+)"',
+}
+
+
+def versiones_en_index():
+    """Para cada marcador de index.html, la lista de versiones que tiene escritas.
+    Una lista vacía significa que el marcador falta; cada uno debe aparecer una vez."""
     html = INDEX.read_text(encoding="utf-8")
-    return set(re.findall(r'(?:styles\.css|app\.js)\?v=([0-9a-f]+)', html)) | \
-        set(re.findall(r'window\.__CACHEBUST__\s*=\s*"([0-9a-f]+)"', html))
+    return {nombre: re.findall(patron, html) for nombre, patron in MARCADORES.items()}
 
 
 def main():
