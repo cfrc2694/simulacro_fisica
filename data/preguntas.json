@@ -1105,7 +1105,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["colision-con-rigido"],
-    "explicacion": "Momento angular respecto al centro de la varilla: antes, $mv\\,(L/2)$; después, $I\\omega$ con $I = ML^2/12$. Entonces $\\omega = (mvL/2)/(ML^2/12) = 6mv/(ML)$. El momento lineal da, además, $V = mv/M$ para el centro de masa. Olvidar el brazo $L/2$ (usar $L$) da $12mv/(ML)$; usar el momento de inercia respecto a un extremo, $ML^2/3$, da $3mv/(ML)$. Por unidades, todas son s$^{-1}$; la comprobación es que el choque sea elástico: $\\tfrac12 mv^2 = \\tfrac12 MV^2 + \\tfrac12 I\\omega^2$ se cumple con $M = 4m$, que es justo la condición para que el disco quede quieto."
+    "explicacion": "Momento angular respecto al centro de la varilla: antes, $mv\\,(L/2)$; después, $I\\omega$ con $I = ML^2/12$. Entonces $\\omega = (mvL/2)/(ML^2/12) = 6mv/(ML)$. El momento lineal da, además, $V = mv/M$ para el centro de masa. Olvidar el brazo $L/2$ (usar $L$) da $12mv/(ML)$; duplicar el momento de inercia correcto, $ML^2/6$ en lugar de $ML^2/12$, da $3mv/(ML)$. Por unidades, todas son s$^{-1}$; la comprobación es que el choque sea elástico: $\\tfrac12 mv^2 = \\tfrac12 MV^2 + \\tfrac12 I\\omega^2$ se cumple con $M = 4m$, que es justo la condición para que el disco quede quieto."
   },
   {
     "id": "q065",
