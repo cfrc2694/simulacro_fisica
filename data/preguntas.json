@@ -972,12 +972,12 @@
     "dificultad": "media",
     "figuras": [],
     "enunciado": "Una partícula de masa $m$ y velocidad $v$ se mueve a lo largo del eje $x$ con energía potencial $U(x) = \\alpha x^6$. Va de la posición $x_1$, en el instante $t_1$, a la posición $x_2$, en el instante $t_2$. Entre todas las curvas $x(t)$ con esos extremos fijos, la trayectoria real hace estacionaria la cantidad",
-    "opciones": ["$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\tfrac12 mv^2\\,dt$", "$\\displaystyle\\int_{x_1}^{x_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dx$", "$\\displaystyle\\int_{t_1}^{t_2} m\\,x\\,v\\,dt$"],
+    "opciones": ["$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dt$", "$\\displaystyle\\int_{t_1}^{t_2}\\tfrac12 mv^2\\,dt$", "$\\displaystyle\\int_{x_1}^{x_2}\\left(\\tfrac12 mv^2 + \\alpha x^6\\right)dx$", "$\\displaystyle\\int_{t_1}^{t_2}\\left(\\tfrac12 mv^2 - 6\\alpha x^6\\right)dt$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["lagrangiano-hamiltoniano"],
-    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. La integral en $x$ no corresponde a extremos fijos en el tiempo."
+    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. Usar $Fx = -6\\alpha x^6$ en lugar de la energía potencial da $m\\ddot{x} = -36\\alpha x^5$, una fuerza seis veces mayor. La integral en $x$ no corresponde a extremos fijos en el tiempo."
   },
   {
     "id": "q057",
