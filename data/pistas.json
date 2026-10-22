@@ -418,5 +418,395 @@
     "nodo": "2.1.1",
     "titulo": "Divergencia de un campo vectorial",
     "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Que un campo sea radial no basta para saber su divergencia: depende de cómo varía su magnitud con la distancia. Un campo proporcional a $\\vec{r}$ tiene divergencia distinta de cero, mientras que el de Coulomb, proporcional a $\\hat{r}/r^2$, la tiene nula fuera de la carga."
+  },
+  "efecto-zeeman": {
+    "nodo": "5.7.4",
+    "titulo": "Efecto Zeeman",
+    "texto": "Un campo magnético externo interactúa con el momento magnético de los electrones del átomo y desdobla niveles que antes tenían la misma energía según su número cuántico magnético. Con las reglas de selección, cada línea puede dividirse en varias componentes; ninguna desaparece. El efecto análogo con campo eléctrico es el efecto Stark."
+  },
+  "ancho-de-linea": {
+    "nodo": "5.1.4",
+    "titulo": "Ancho de una línea espectral",
+    "texto": "Un estado que dura un tiempo $\\tau$ tiene una energía definida solo hasta $\\Delta E \\sim \\hbar/\\tau$. Cualquier proceso que acorte la vida efectiva del estado, como las colisiones en un gas denso, ensancha la línea. Compara el tiempo entre colisiones con la vida media natural."
+  },
+  "terminos-espectroscopicos": {
+    "nodo": "5.7.3",
+    "titulo": "Término del estado fundamental",
+    "texto": "Las subcapas llenas aportan $L = 0$ y $S = 0$, así que solo cuentan los electrones de la última subcapa. Con las reglas de Hund: $S$ máximo, luego $L$ máximo y, si la subcapa está a menos de la mitad, el $J$ más bajo ($J = |L - S|$). El término se escribe $^{2S+1}L_J$, con $L = 0, 1, 2$ como $S, P, D$."
+  },
+  "interacciones-fotones": {
+    "nodo": "7.4.2",
+    "titulo": "Fotones en la materia",
+    "texto": "Hay tres procesos principales. El efecto fotoeléctrico domina a baja energía, cae muy rápido con $h\\nu$ y presenta saltos en las energías de enlace de las capas internas. La dispersión Compton varía lentamente. La producción de pares solo es posible por encima de $2m_ec^2 \\approx 1.02$ MeV y crece con la energía."
+  },
+  "equiparticion-grados": {
+    "nodo": "4.1.4",
+    "titulo": "Grados de libertad activos",
+    "texto": "Por equipartición, cada término cuadrático de la energía aporta $\\tfrac12 k_B$ por molécula al calor específico, pero solo si $k_BT$ es grande frente al espaciamiento de los niveles cuánticos de ese movimiento. Los niveles de rotación están muy juntos y los de vibración muy separados: la vibración se activa a temperaturas mucho más altas."
+  },
+  "estadisticas-cuanticas": {
+    "nodo": "4.3",
+    "titulo": "Fermiones y bosones frente al gas clásico",
+    "texto": "Cuando la longitud de onda térmica se acerca a la separación entre partículas, la simetría de la función de onda importa. Los fermiones no pueden compartir estado y se comportan como si se repelieran; los bosones tienden a agruparse en los mismos estados y se comportan como si se atrajeran. Piensa en cómo eso cambia la presión respecto al gas clásico."
+  },
+  "simetria-intercambio": {
+    "nodo": "5.5.4",
+    "titulo": "Simetría bajo intercambio",
+    "texto": "Para partículas idénticas, la función de onda total, incluido el espín, es simétrica bajo el intercambio si son bosones (espín entero) y antisimétrica si son fermiones (espín semientero). Un núcleo compuesto es fermión si tiene un número impar de nucleones y bosón si lo tiene par."
+  },
+  "pozo-infinito": {
+    "nodo": "5.3.1",
+    "titulo": "Pozo de potencial infinito",
+    "texto": "En un pozo infinito de ancho $L$, las funciones propias son senos que se anulan en las paredes y caben $n$ medias longitudes de onda: $\\lambda_n = 2L/n$. Las energías son $E_n = n^2E_1$. Para identificar $n$ en una gráfica, cuenta las medias ondas, o sea, los nodos interiores más uno."
+  },
+  "bragg-de-broglie": {
+    "nodo": "3.2.5",
+    "titulo": "Difracción de electrones",
+    "texto": "La condición de Bragg es $2d\\sin\\theta = n\\lambda$, con $\\theta$ el ángulo entre el haz y los planos cristalinos, no con la normal. Una vez conocida $\\lambda$, la relación de de Broglie $\\lambda = h/p$ da el momento y, si la partícula no es relativista, la rapidez $v = h/(m\\lambda)$."
+  },
+  "potencia-friccion": {
+    "nodo": "1.3.4",
+    "titulo": "Potencia disipada por fricción",
+    "texto": "Una fuerza constante que actúa sobre algo que se mueve con rapidez $v$ entrega una potencia $P = Fv$. Si toda la potencia eléctrica se convierte en trabajo contra la fricción, la fuerza de fricción es $P/v$; compárala con la fuerza normal para obtener el coeficiente."
+  },
+  "inductor-transitorio": {
+    "nodo": "2.3.3",
+    "titulo": "Inductores en transitorios",
+    "texto": "La corriente en un inductor no puede cambiar de golpe. Justo después de cerrar un interruptor, un inductor sin corriente se comporta como un circuito abierto; en régimen estacionario, como un cable. Si se interrumpe su camino, la corriente busca otro y el voltaje que hace falta para mantenerla puede ser mucho mayor que el de la fuente."
+  },
+  "ciclo-carnot": {
+    "nodo": "4.2.3",
+    "titulo": "Ciclo de Carnot y entropía",
+    "texto": "En un ciclo reversible, la entropía del sistema vuelve a su valor inicial. En las isotermas, el gas intercambia calor y su entropía cambia en $Q/T$; en las adiabáticas reversibles no hay calor y la entropía no cambia, aunque cambie la temperatura. La eficiencia $1 - T_c/T_h$ no depende de la sustancia."
+  },
+  "paridad-perturbaciones": {
+    "nodo": "5.6.1",
+    "titulo": "Simetría y perturbaciones",
+    "texto": "Si el potencial completo es simétrico respecto a un punto, el hamiltoniano no mezcla estados de paridad distinta respecto a ese punto: $\\langle\\psi_m|V'|\\psi_n\\rangle = 0$ si $\\psi_m$ y $\\psi_n$ tienen paridades opuestas y $V'$ es par. Revisa la simetría de cada $\\psi_n$ respecto al centro del pozo."
+  },
+  "momento-angular-punto": {
+    "nodo": "1.4.2",
+    "titulo": "Momento angular respecto a un punto",
+    "texto": "El momento angular de un cuerpo rígido respecto a un punto fijo $P$ es la suma de un término orbital, $\\vec{r}_{cm}\\times M\\vec{v}_{cm}$, y uno de rotación propia, $I_{cm}\\vec{\\omega}$. Cuida los signos: los dos términos pueden tener sentidos opuestos. Si no hay torques externos respecto a $P$, el total se conserva en un choque."
+  },
+  "masa-reducida": {
+    "nodo": "5.4.3",
+    "titulo": "Masa reducida en átomos hidrogenoides",
+    "texto": "En un sistema de dos cuerpos, el movimiento relativo es el de una partícula de masa reducida $\\mu = m_1m_2/(m_1 + m_2)$. Las energías de los niveles del átomo de Bohr son proporcionales a la masa que orbita, así que se escalan con $\\mu$. Si una masa es mucho mayor que la otra, $\\mu$ es casi la menor."
+  },
+  "camara-estenopeica": {
+    "nodo": "3.2.2",
+    "titulo": "Tamaño óptimo de un estenopo",
+    "texto": "Con un agujero de diámetro $d$ hay dos fuentes de borrosidad: la geométrica, de tamaño $\\sim d$, y la difracción, que abre el haz en un ángulo $\\sim\\lambda/d$ y produce una mancha de tamaño $\\sim\\lambda D/d$ en la pantalla. La imagen más nítida se obtiene cuando las dos son comparables."
+  },
+  "gravedad-esfera": {
+    "nodo": "1.6",
+    "titulo": "Gravedad dentro y fuera de una esfera",
+    "texto": "Por el teorema del cascarón, una esfera homogénea atrae a una masa exterior como si toda su masa estuviera en el centro: $F \\propto 1/r^2$. Dentro, solo atrae la masa de radio menor que $r$, que crece como $r^3$; el resultado es $F \\propto r$. Escribe la fuerza en cada región antes de tomar cocientes."
+  },
+  "torque-producto-vectorial": {
+    "nodo": "1.4.2",
+    "titulo": "Torque como producto vectorial",
+    "texto": "El torque respecto al origen es $\\vec{\\tau} = \\vec{r}\\times\\vec{F}$. Su componente $z$ es $\\tau_z = xF_y - yF_x$: solo contribuyen las componentes horizontales de la fuerza y de la posición. Una fuerza vertical, paralela a $\\hat{k}$, nunca da $\\tau_z$."
+  },
+  "ley-ampere": {
+    "nodo": "2.2.2",
+    "titulo": "Ley de Ampère con simetría cilíndrica",
+    "texto": "Con simetría cilíndrica, el campo magnético es azimutal y su magnitud depende solo de $r$. Una circunferencia de radio $r$ centrada en el eje da $B\\,2\\pi r = \\mu_0 I_{\\text{enc}}$, donde $I_{\\text{enc}}$ es la corriente neta que atraviesa el círculo, con signo."
+  },
+  "ecuaciones-maxwell": {
+    "nodo": "2.3.1",
+    "titulo": "Monopolos en las ecuaciones de Maxwell",
+    "texto": "Las ecuaciones de Maxwell son casi simétricas entre $\\vec{E}$ y $\\vec{B}$; la asimetría está en que no hay carga ni corriente magnéticas. Si existieran monopolos, la divergencia de $\\vec{B}$ tendría una fuente, como la de $\\vec{E}$, y la conservación de la carga magnética exigiría una corriente magnética en la ecuación del rotacional de $\\vec{E}$."
+  },
+  "lissajous": {
+    "nodo": "7.3.1",
+    "titulo": "Figuras de Lissajous",
+    "texto": "Con señales $x = \\sin(\\omega_x t)$ e $y = \\sin(\\omega_y t + \\delta)$, la figura cierra si $\\omega_y/\\omega_x$ es racional. Cuenta los máximos: el número de veces que la curva toca el borde superior frente al número de veces que toca el lateral es igual al cociente $\\omega_y/\\omega_x$. Según la fase, la figura puede degenerar en una curva abierta."
+  },
+  "lineas-transmision": {
+    "nodo": "7.3.2",
+    "titulo": "Líneas de transmisión",
+    "texto": "En una línea de impedancia característica $Z_0$ terminada en una carga $Z_L$, el coeficiente de reflexión es $\\Gamma = (Z_L - Z_0)/(Z_L + Z_0)$. Solo si $Z_L = Z_0$ la onda que llega al extremo se absorbe por completo y no vuelve hacia la fuente."
+  },
+  "rendija-doble-envolvente": {
+    "nodo": "3.2.1",
+    "titulo": "Doble rendija con rendijas de ancho finito",
+    "texto": "El patrón es el de interferencia de dos fuentes, $d\\sin\\theta = m\\lambda$, modulado por el de difracción de cada rendija, cuyos ceros están en $w\\sin\\theta = n\\lambda$. Un máximo de interferencia falta cuando cae justo en un cero de difracción, es decir, cuando $m/n = d/w$ con $m$ y $n$ enteros."
+  },
+  "telescopio": {
+    "nodo": "3.3.2",
+    "titulo": "Telescopio refractor",
+    "texto": "Un telescopio afocal tiene las dos lentes con un foco común, así que la distancia entre ellas es $f_o + f_e$. El aumento angular es $f_o/f_e$. Despeja la focal del ocular con el aumento y súmala a la del objetivo."
+  },
+  "enlaces-solidos": {
+    "nodo": "8.2.1",
+    "titulo": "Tipos de enlace en sólidos",
+    "texto": "Clasifica los átomos por su capa externa. Los gases nobles tienen capas cerradas: no ceden ni comparten electrones, y en el sólido solo los unen fuerzas de van der Waals. Los metales comparten electrones de conducción; los iónicos transfieren electrones; los covalentes los comparten en enlaces direccionales."
+  },
+  "rayos-cosmicos": {
+    "nodo": "8.1.1",
+    "titulo": "Radiación cósmica a nivel del suelo y bajo tierra",
+    "texto": "Las partículas primarias (sobre todo protones y núcleos) chocan en la alta atmósfera y producen piones, que decaen en muones y neutrinos. Los muones penetran mucha materia porque no sienten la interacción fuerte y pierden poca energía por radiación; los neutrinos casi no interactúan. Las demás partículas se absorben en la atmósfera o en las primeras capas de roca."
+  },
+  "decaimiento-semilog": {
+    "nodo": "7.4.4",
+    "titulo": "Vida media en una gráfica semilogarítmica",
+    "texto": "En escala semilogarítmica, un decaimiento exponencial es una recta. Busca dos puntos de la recta cuya actividad difiera en un factor conocido: el tiempo que tarda en reducirse a la mitad es la vida media, y la vida media promedio $\\tau$ es $t_{1/2}/\\ln2$. No confundas el tiempo en que cae una década con la vida media."
+  },
+  "paquete-onda": {
+    "nodo": "5.1.4",
+    "titulo": "Ancho de un paquete de ondas",
+    "texto": "Un paquete construido superponiendo ondas en un intervalo de frecuencias $\\Delta\\omega$ (o de números de onda $\\Delta k$) solo se mantiene localizado durante un intervalo $\\Delta t \\sim 1/\\Delta\\omega$ (o en una región $\\Delta x \\sim 1/\\Delta k$). Mientras más localizado, más ancho es su espectro. El valor central $\\omega_0$ no interviene."
+  },
+  "armonicos-probabilidad": {
+    "nodo": "5.4.2",
+    "titulo": "Probabilidades con armónicos esféricos",
+    "texto": "Los armónicos esféricos son ortonormales. Si $\\psi = \\sum c_{\\ell m} Y_\\ell^m$ está normalizada, la probabilidad de medir un valor de $m$ es la suma de $|c_{\\ell m}|^2$ sobre todos los términos con ese $m$, sin importar $\\ell$. Revisa primero que la suma de todos los $|c|^2$ sea $1$."
+  },
+  "pozo-finito": {
+    "nodo": "5.3.4",
+    "titulo": "Estados ligados en un pozo finito",
+    "texto": "Una función de onda de un estado ligado debe ser continua y con derivada continua donde el potencial es finito. Dentro del pozo oscila; fuera, donde la energía es menor que el potencial, decae exponencialmente y tiende a cero en el infinito para poder normalizarse."
+  },
+  "circuitos-serie-paralelo": {
+    "nodo": "2.7.2",
+    "titulo": "Reducción de resistencias",
+    "texto": "Reduce el circuito por pasos: resistencias en paralelo, $1/R = \\sum 1/R_i$; en serie, $R = \\sum R_i$. Con la resistencia equivalente obtienes la corriente total y luego deshaces la reducción para hallar la corriente y el voltaje en cada elemento. La potencia es $I^2R = V^2/R$."
+  },
+  "condiciones-frontera-conductor": {
+    "nodo": "2.1.5",
+    "titulo": "Campos en la superficie de un conductor perfecto",
+    "texto": "Dentro de un conductor perfecto no hay campos variables. La continuidad de la componente tangencial de $\\vec{E}$ y de la normal de $\\vec{B}$ a través de la superficie obliga a que esas dos componentes se anulen justo afuera. Las otras dos, $E_n$ y $B_t$, pueden ser distintas de cero: las sostienen la carga y la corriente superficiales."
+  },
+  "red-difraccion": {
+    "nodo": "3.2.5",
+    "titulo": "Red de difracción",
+    "texto": "Los máximos de una red con separación $d$ entre rendijas cumplen $d\\sin\\theta = m\\lambda$. Si el dato es el número de líneas por unidad de longitud, $d$ es su inverso: cuida las unidades antes de calcular. Para ángulos pequeños, $\\theta \\approx \\lambda/d$ en radianes."
+  },
+  "reflexion-conductor": {
+    "nodo": "2.6.1",
+    "titulo": "Reflexión en un conductor perfecto",
+    "texto": "En la superficie de un conductor perfecto, el campo eléctrico tangencial total debe anularse: la onda reflejada tiene $\\vec{E}$ opuesto al de la incidente. Como la dirección de propagación también se invierte y $\\vec{E}\\times\\vec{B}$ debe apuntar en el sentido de propagación, eso fija lo que le pasa a $\\vec{B}$."
+  },
+  "invariancia-c": {
+    "nodo": "6.1.4",
+    "titulo": "La rapidez de la luz es la misma para todos",
+    "texto": "El segundo postulado de la relatividad dice que la luz en el vacío se mueve a $c$ en todo sistema inercial, sin importar el movimiento de la fuente. La suma relativista de velocidades, $u' = (u + v)/(1 + uv/c^2)$, lo confirma: con $u = \\pm c$ da $\\pm c$. Solo puede cambiar el sentido, no la rapidez."
+  },
+  "dilatacion-tiempo": {
+    "nodo": "6.1.2",
+    "titulo": "Dilatación del tiempo",
+    "texto": "El intervalo entre dos eventos que ocurren en el mismo lugar de un sistema es el tiempo propio $\\Delta\\tau$, el más corto. Un observador respecto al cual ese sistema se mueve con rapidez $v$ mide $\\gamma\\Delta\\tau$. Identifica primero el sistema de reposo de lo que se mide; el factor $\\gamma$ siempre usa la velocidad relativa respecto a ese sistema."
+  },
+  "series-fourier": {
+    "nodo": "3.1.2",
+    "titulo": "Series de Fourier de funciones con simetría",
+    "texto": "Si una función es impar, $f(-t) = -f(t)$, su serie de Fourier solo tiene senos; si es par, solo cosenos y una constante. Si además $f(t + T/2) = -f(t)$, solo aparecen los armónicos impares. Revisa el signo del primer semiciclo para fijar el signo global."
+  },
+  "dinamica-rotacional": {
+    "nodo": "1.4.3",
+    "titulo": "Dinámica de rotación alrededor de un eje fijo",
+    "texto": "Para un cuerpo que gira alrededor de un eje fijo valen las mismas relaciones que en traslación, con $I$ en lugar de $m$ y $\\omega$ en lugar de $v$: $K = \\tfrac12 I\\omega^2$, $\\tau = I\\alpha$ y, con torque constante, $\\alpha = \\Delta\\omega/\\Delta t$."
+  },
+  "coordenadas-ciclicas": {
+    "nodo": "1.5.3",
+    "titulo": "Coordenadas cíclicas",
+    "texto": "La ecuación de Euler-Lagrange es $\\dfrac{d}{dt}\\dfrac{\\partial L}{\\partial\\dot{q}} = \\dfrac{\\partial L}{\\partial q}$. Si el lagrangiano no depende de una coordenada $q$ (aunque sí de su velocidad), el lado derecho es cero. Piensa qué dice eso sobre $p = \\partial L/\\partial\\dot{q}$."
+  },
+  "diagrama-pv": {
+    "nodo": "4.2.2",
+    "titulo": "Isotermas y coexistencia de fases",
+    "texto": "Por debajo de la temperatura crítica, una isoterma tiene un tramo horizontal: a presión constante, el volumen cambia mientras el líquido se evapora. La región donde están esos tramos es la de coexistencia. La isoterma crítica es la que solo toca esa región en un punto, donde es horizontal y tiene un punto de inflexión."
+  },
+  "propagacion-errores": {
+    "nodo": "7.2.1",
+    "titulo": "Propagación de errores",
+    "texto": "Si $f = A\\,x^a y^b$ y los errores de $x$ e $y$ son independientes, las incertidumbres relativas se suman en cuadratura: $(\\sigma_f/f)^2 = a^2(\\sigma_x/x)^2 + b^2(\\sigma_y/y)^2$. El exponente multiplica a la incertidumbre relativa de cada factor."
+  },
+  "tiempo-de-vuelo": {
+    "nodo": "7.4.3",
+    "titulo": "Resolución temporal de detectores",
+    "texto": "Para distinguir el orden en que una partícula atraviesa dos detectores, la resolución temporal debe ser bastante menor que el tiempo que tarda en ir de uno a otro. Calcula ese tiempo con la rapidez de la partícula; una partícula relativista recorre unos $30$ cm por nanosegundo."
+  },
+  "observables-compatibles": {
+    "nodo": "5.1.4",
+    "titulo": "Observables compatibles",
+    "texto": "Dos observables tienen un conjunto completo de autofunciones comunes exactamente cuando sus operadores conmutan. Si no conmutan, medir uno perturba el valor del otro, como pasa con la posición y el momento."
+  },
+  "ortonormalidad": {
+    "nodo": "5.1.2",
+    "titulo": "Conjuntos ortonormales",
+    "texto": "$\\int\\psi_n^*\\psi_\\ell\\,dx = \\delta_{n\\ell}$ reúne dos condiciones: si $n \\neq \\ell$ la integral es cero (ortogonalidad) y si $n = \\ell$ vale $1$ (normalización). Es una propiedad del conjunto de funciones, distinta de que cada una cumpla la ecuación de Schrödinger."
+  },
+  "oscilador-cuantico": {
+    "nodo": "5.2.1",
+    "titulo": "Niveles del oscilador armónico cuántico",
+    "texto": "Los niveles del oscilador armónico unidimensional son $E_n = \\left(n + \\tfrac12\\right)h\\nu$, con $n = 0, 1, 2, \\ldots$ y $\\nu$ la frecuencia clásica. Están igualmente espaciados en $h\\nu$, y el más bajo no es cero: la energía de punto cero es $\\tfrac12 h\\nu$."
+  },
+  "resonancia-ciclotron": {
+    "nodo": "2.2.6",
+    "titulo": "Frecuencia de ciclotrón",
+    "texto": "Una carga $q$ de masa $m$ en un campo $B$ uniforme gira con frecuencia angular $\\omega_c = |q|B/m$, independiente de su rapidez. En un sólido se usa la masa efectiva del portador. Revisa si te piden la frecuencia angular $\\omega$ (en rad/s) o la frecuencia $f = \\omega/2\\pi$ (en Hz)."
+  },
+  "pendulo-fisico": {
+    "nodo": "1.7",
+    "titulo": "Péndulo físico",
+    "texto": "Para un cuerpo rígido que oscila alrededor de un pivote, $\\omega^2 = \\dfrac{(\\sum m_i)\\,g\\,d}{I}$, donde $d$ es la distancia del pivote al centro de masa e $I$ el momento de inercia respecto al pivote. Con masas puntuales sobre una varilla sin masa, el numerador es $g\\sum m_i\\ell_i$ y el denominador, $\\sum m_i\\ell_i^2$."
+  },
+  "procesos-gas-ideal": {
+    "nodo": "4.2.3",
+    "titulo": "Trabajo en procesos de un gas ideal",
+    "texto": "El trabajo que hace el gas es $W = \\int P\\,dV$. En un proceso isotérmico, $P = nRT/V$ y la integral da un logaritmo del cociente de volúmenes. En uno adiabático, $PV^\\gamma$ es constante y $W = -\\Delta U = nc_v(T_i - T_f)$. Identifica el proceso antes de elegir la fórmula."
+  },
+  "equilibrio-entropia": {
+    "nodo": "4.1.2",
+    "titulo": "Equilibrio y máxima entropía",
+    "texto": "En un sistema aislado, la entropía es $S = k_B\\ln\\Omega$, con $\\Omega$ el número de microestados del macroestado. El equilibrio es el macroestado con más microestados, es decir, de máxima entropía; una vez allí, la segunda ley no permite que el sistema evolucione espontáneamente a otro macroestado."
+  },
+  "estabilidad-electrostatica": {
+    "nodo": "1.7",
+    "titulo": "Oscilaciones alrededor de un equilibrio electrostático",
+    "texto": "Desplaza la carga una distancia pequeña $x$ desde el equilibrio, escribe la fuerza neta y expándela a primer orden en $x$. Si queda $F \\approx -kx$ con $k > 0$, el equilibrio es estable en esa dirección y $\\omega = \\sqrt{k/m}$. Por el teorema de Earnshaw, el equilibrio no puede ser estable en todas las direcciones a la vez."
+  },
+  "trabajo-cuerpo-extendido": {
+    "nodo": "1.3.2",
+    "titulo": "Trabajo para levantar un cuerpo extendido",
+    "texto": "El trabajo para levantar lentamente un cuerpo es el aumento de su energía potencial, $Mg\\,\\Delta y_{cm}$, donde $\\Delta y_{cm}$ es lo que sube su centro de masa. Para una cadena uniforme que cuelga y se enrolla en un eje, el centro de masa empieza a la mitad de su longitud por debajo del eje."
+  },
+  "luz-parcialmente-polarizada": {
+    "nodo": "3.1.6",
+    "titulo": "Luz parcialmente polarizada",
+    "texto": "Al girar un polarizador, la luz no polarizada da intensidad constante; la luz polarizada linealmente, $I_0\\cos^2\\theta$, que llega a cero; la circular, intensidad constante. Una mezcla de polarizada lineal y no polarizada da $A + B\\cos2\\theta$, con un mínimo distinto de cero. Para distinguir circular de no polarizada hace falta una lámina de cuarto de onda."
+  },
+  "criterio-rayleigh": {
+    "nodo": "3.2.2",
+    "titulo": "Límite de resolución de un telescopio",
+    "texto": "Por el criterio de Rayleigh, una abertura circular de diámetro $D$ resuelve dos fuentes puntuales si su separación angular es al menos $\\theta = 1.22\\,\\lambda/D$, con $\\theta$ en radianes. Despeja $D$ y cuida las unidades de $\\lambda$."
+  },
+  "radiacion-cherenkov": {
+    "nodo": "7.4.1",
+    "titulo": "Radiación de Cherenkov",
+    "texto": "Una partícula cargada emite radiación de Cherenkov cuando se mueve en un medio más rápido que la luz en ese medio, $v > c/n$. No contradice la relatividad: la velocidad de fase de la luz en el medio es menor que $c$, pero la partícula sigue siendo más lenta que $c$."
+  },
+  "momento-relativista": {
+    "nodo": "6.3.1",
+    "titulo": "Momento de una partícula relativista",
+    "texto": "La relación $E^2 = (pc)^2 + (mc^2)^2$ da $p = \\sqrt{E^2 - m^2c^4}/c$. Si $E = \\gamma mc^2$, entonces $p = mc\\sqrt{\\gamma^2 - 1}$, que para $\\gamma \\gg 1$ es casi $\\gamma mc$: la partícula es ultrarrelativista y $E \\approx pc$."
+  },
+  "sistema-dos-niveles": {
+    "nodo": "4.1.1",
+    "titulo": "Sistema de dos niveles",
+    "texto": "Con dos niveles separados por $\\epsilon$, las probabilidades de ocupación son proporcionales a $1$ y a $e^{-\\epsilon/k_BT}$. Normaliza para obtener las fracciones. La energía media, el calor específico y la entropía salen de ahí; revisa sus límites a $T \\to 0$ (todo en el nivel bajo) y a $T \\to \\infty$ (mitad y mitad)."
+  },
+  "decaimiento-dos-cuerpos": {
+    "nodo": "8.1.3",
+    "titulo": "Decaimiento en dos cuerpos",
+    "texto": "Si el núcleo inicial está en reposo, los dos productos salen en sentidos opuestos con momentos de igual magnitud. Como $K = p^2/2m$, el producto más liviano se lleva la mayor parte de la energía cinética."
+  },
+  "momento-magnetico-nuclear": {
+    "nodo": "8.1.2",
+    "titulo": "Momento magnético nuclear",
+    "texto": "El momento magnético de una partícula con espín es del orden de $e\\hbar/(2m)$, inversamente proporcional a su masa. El magnetón nuclear usa la masa del protón, unas $1836$ veces la del electrón, así que los momentos nucleares son mucho menores que el del electrón."
+  },
+  "rigido-libre": {
+    "nodo": "1.4.4",
+    "titulo": "Movimiento de un cuerpo rígido libre",
+    "texto": "Sin fuerzas externas netas, el centro de masa se mueve con velocidad constante: calcula esa velocidad con el momento lineal total. Sin torques externos, el momento angular respecto al centro de masa se conserva y fija la velocidad angular del giro. El movimiento de cada parte es la suma de la traslación del centro de masa y la rotación alrededor de él."
+  },
+  "rayos-x-frenado": {
+    "nodo": "7.4.2",
+    "titulo": "Límite del espectro continuo de rayos X",
+    "texto": "En el espectro de frenado, el fotón más energético se produce cuando un electrón entrega toda su energía cinética, $eV$, en un solo fotón: $hc/\\lambda_{\\min} = eV$. Es útil recordar $hc \\approx 12.4$ keV·Å."
+  },
+  "resonancia-rlc": {
+    "nodo": "2.7.4",
+    "titulo": "Resonancia en un circuito RLC en serie",
+    "texto": "La amplitud de la corriente es $\\mathcal{E}_m/|Z|$ con $|Z| = \\sqrt{R^2 + (\\omega L - 1/\\omega C)^2}$. Es máxima cuando la reactancia total se anula. No confundas esta frecuencia con la de las oscilaciones libres amortiguadas, que sí depende de $R$."
+  },
+  "equilibrio-electrostatico": {
+    "nodo": "2.1.4",
+    "titulo": "Equilibrio con fuerzas eléctricas",
+    "texto": "En equilibrio, la tensión del hilo, el peso y la fuerza eléctrica suman cero. Para ángulos pequeños, $\\tan\\theta \\approx \\sin\\theta$ y se relaciona con la geometría. Por la tercera ley de Newton, la fuerza eléctrica sobre las dos esferitas tiene la misma magnitud aunque sus cargas sean distintas."
+  },
+  "circuito-medicion-rc": {
+    "nodo": "2.7.4",
+    "titulo": "Medir una constante de tiempo",
+    "texto": "Al abrir el interruptor, el capacitor se descarga a través de la resistencia que queda en paralelo con él, y el voltaje decae con constante de tiempo $\\tau = RC$. En el osciloscopio, una distancia horizontal se convierte en tiempo con la velocidad de barrido. Pregúntate qué datos hacen falta para pasar de la forma de la curva a $\\tau$ y de $\\tau$ a $C$."
+  },
+  "orbitas-potencial-general": {
+    "nodo": "1.6.1",
+    "titulo": "Energía en órbitas circulares",
+    "texto": "Integra la fuerza para obtener la energía potencial, con cero en el infinito: si $F = -K/r^n$, $U = -K/[(n-1)r^{n-1}]$. La condición de órbita circular, $Mv^2/r = K/r^n$, da la energía cinética; súmalas para obtener la energía total. Para saber si una órbita es estable o qué regiones están permitidas no basta el signo de la energía: usa el potencial efectivo $U_{\\text{ef}} = U + L^2/2Mr^2$, cuyo mínimo o máximo indica si la órbita circular es estable o inestable."
+  },
+  "capacitor-dielectrico": {
+    "nodo": "2.5.2",
+    "titulo": "Dieléctricos en un capacitor",
+    "texto": "Distingue qué se mantiene fijo. Con la batería conectada, el voltaje es constante y la carga cambia. Con la batería desconectada, la carga es constante y el voltaje cambia. El vector $\\vec{D}$ depende solo de la carga libre por unidad de área; el campo $\\vec{E}$ se reduce en el factor $\\kappa$."
+  },
+  "simetria-pared": {
+    "nodo": "5.2.1",
+    "titulo": "Potenciales con una pared",
+    "texto": "Si a un potencial simétrico se le pone una pared infinita en el centro, las soluciones para $x > 0$ deben anularse en $x = 0$. Entre las funciones propias del potencial completo, solo cumplen esa condición las impares, así que solo sobreviven sus niveles."
+  },
+  "escalas-moleculares": {
+    "nodo": "5.7.1",
+    "titulo": "Escalas de energía en moléculas",
+    "texto": "Las energías electrónicas son de unos eV; las vibracionales, de décimas de eV (del orden de $\\sqrt{m_e/M}$ por debajo); las rotacionales, de milésimas de eV (otro factor $\\sqrt{m_e/M}$). Las nucleares están en MeV. Para el hidrógeno, la masa reducida es la menor posible y sus escalas son las más grandes."
+  },
+  "conservacion-extranez": {
+    "nodo": "8.1.3",
+    "titulo": "Interacciones y números cuánticos conservados",
+    "texto": "La interacción fuerte y la electromagnética conservan la extrañeza; la débil puede cambiarla en una unidad. Si en un decaimiento cambia la extrañeza, es débil, aunque no haya neutrinos. La vida media también da una pista: unos $10^{-10}$ s en lugar de $10^{-23}$ s."
+  },
+  "generador-polos": {
+    "nodo": "2.3.2",
+    "titulo": "Frecuencia de un generador",
+    "texto": "La fem de una bobina que gira cambia de signo cada vez que el campo que atraviesa la bobina se invierte. Cuenta cuántos ciclos completos del campo ve la bobina en una vuelta: con $p$ pares de polos alrededor de ella, la frecuencia de la fem es $p$ veces la de rotación."
+  },
+  "aceleracion-tangencial-normal": {
+    "nodo": "1.2.1",
+    "titulo": "Aceleración en un movimiento circular no uniforme",
+    "texto": "En un movimiento circular con rapidez variable, la aceleración tiene una componente tangencial, $dv/dt$, y una centrípeta, $v^2/r$. Obtén $v$ con la conservación de la energía y la tangencial con la componente del peso a lo largo de la trayectoria. Las dos son perpendiculares."
+  },
+  "transformacion-lorentz": {
+    "nodo": "6.2.1",
+    "titulo": "Reconocer una transformación de Lorentz",
+    "texto": "Para un movimiento a lo largo de $x$ con $c = 1$: $x' = \\gamma(x - vt)$, $t' = \\gamma(t - vx)$, $y' = y$, $z' = z$. Los coeficientes deben cumplir $\\gamma^2 - (\\gamma v)^2 = 1$, y los términos cruzados de $x'$ y de $t'$ deben ser iguales. Comprueba también que el intervalo $t^2 - x^2$ no cambie."
+  },
+  "seccion-diferencial": {
+    "nodo": "7.4.1",
+    "titulo": "Sección eficaz diferencial",
+    "texto": "El número de partículas dispersadas por segundo hacia un detector es $\\dot{N} = \\Phi\\,n\\,\\dfrac{d\\sigma}{d\\Omega}\\,\\Delta\\Omega$, donde $\\Phi$ es el número de partículas incidentes por segundo, $n$ la densidad superficial de núcleos del blanco y $\\Delta\\Omega$ el ángulo sólido del detector. Despeja y revisa las unidades: cm² por estereorradián."
+  },
+  "michelson-indice": {
+    "nodo": "7.5.3",
+    "titulo": "Índice de refracción con un interferómetro",
+    "texto": "La luz atraviesa la celda dos veces, de ida y de vuelta. Al cambiar el índice de $n$ a $1$, el camino óptico cambia en $2L(n - 1)$, y cada franja que pasa corresponde a un cambio de una longitud de onda."
+  },
+  "masa-efectiva": {
+    "nodo": "8.2.2",
+    "titulo": "Masa efectiva",
+    "texto": "Para una partícula libre, $E = \\hbar^2k^2/2m$, de modo que $d^2E/dk^2 = \\hbar^2/m$. En un cristal se define la masa efectiva con esa misma relación, usando la curvatura de la banda real: así la dinámica cerca de un extremo de la banda se parece a la de una partícula libre."
+  },
+  "autovalores-matriz": {
+    "nodo": "5.1.2",
+    "titulo": "Autovalores de una matriz",
+    "texto": "La suma de los autovalores es la traza y su producto es el determinante. El polinomio característico $\\det(A - \\lambda I) = 0$ da los demás invariantes. Una matriz real puede tener autovalores complejos, que aparecen en pares conjugados; las matrices simétricas reales, en cambio, solo los tienen reales."
+  },
+  "efecto-stark": {
+    "nodo": "5.7.4",
+    "titulo": "Efecto Stark",
+    "texto": "La corrección de primer orden es $\\langle\\psi|eEz|\\psi\\rangle$. Para un estado de paridad definida, $|\\psi|^2$ es par y $z$ es impar, así que la integral se anula. Solo hay efecto lineal cuando hay estados degenerados de paridades opuestas que el campo puede mezclar."
+  },
+  "equilibrio-torques": {
+    "nodo": "1.4.3",
+    "titulo": "Equilibrio de una barra",
+    "texto": "En equilibrio, la suma de torques respecto a cualquier punto es cero. Toma torques respecto al centro de la barra o busca el centro de masa de todo el sistema: el fulcro debe estar justo debajo de él. No olvides el peso de la barra, que actúa en su centro."
+  },
+  "suma-momentos-angulares": {
+    "nodo": "5.5.3",
+    "titulo": "Suma de momentos angulares",
+    "texto": "Al combinar dos momentos angulares $L$ y $S$, el total $J$ toma todos los valores desde $|L - S|$ hasta $L + S$, en pasos de uno. Para los valores posibles de $L$ y de $S$ con varios electrones en subcapas distintas, aplica la misma regla a los momentos de cada electrón. Distingue esto de elegir el estado fundamental, que es una sola combinación determinada por las reglas de Hund."
   }
 }

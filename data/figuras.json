@@ -131,5 +131,320 @@
     "ancho": 310,
     "pie": null,
     "alt": "Cinco esquemas de líneas de campo en regiones cuadradas punteadas: A, líneas rectas paralelas; B, líneas rectas que salen radialmente de un punto central; C, circunferencias concéntricas; D, hipérbolas en forma de silla que llegan en vertical y salen en horizontal; E, líneas onduladas paralelas."
+  },
+  "fig-espiras-concentricas": {
+    "archivo": "figures/fig-espiras-concentricas.svg",
+    "fuente": "tikz/fig-espiras-concentricas.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Una espira grande de radio b, en azul, lleva una corriente I(t). En su centro hay una espira pequeña de radio a, en rojo, en el mismo plano."
+  },
+  "fig-secciones-fotones": {
+    "archivo": "figures/fig-secciones-fotones.svg",
+    "fuente": "tikz/fig-secciones-fotones.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Gráfica log-log de tres secciones eficaces σ, entre 10⁻²⁴ y 10⁻²⁰ cm², contra la energía del fotón hν, entre 10⁴ y 10⁸ eV. La curva 1, azul, empieza cerca de 5×10⁻²³ cm² y baja suavemente. La curva 2, roja, empieza arriba de 10⁻²¹ cm², cae con pendiente muy fuerte, tiene un salto hacia arriba cerca de 10⁵ eV y desaparece antes de 10⁶ eV. La curva 3, verde, aparece a partir de unos 10⁶ eV y crece con la energía."
+  },
+  "fig-modelos-diatomica": {
+    "archivo": "figures/fig-modelos-diatomica.svg",
+    "fuente": "tikz/fig-modelos-diatomica.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Dos modelos de molécula diatómica: el modelo I, dos esferas unidas por una barra rígida; el modelo II, dos esferas unidas por un resorte."
+  },
+  "fig-pozo-funcion": {
+    "archivo": "figures/fig-pozo-funcion.svg",
+    "fuente": "tikz/fig-pozo-funcion.tex",
+    "ancho": 250,
+    "pie": null,
+    "alt": "Pozo de paredes impenetrables en x = 0 y x = L. Dentro, una función de onda ψ(x) con forma de seno que se anula en las paredes y completa tres medias ondas: dos máximos y un mínimo, con dos nodos interiores."
+  },
+  "fig-lijadora-banda": {
+    "archivo": "figures/fig-lijadora-banda.svg",
+    "fuente": "tikz/fig-lijadora-banda.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Lijadora de banda vista de lado: una banda continua alrededor de dos rodillos, con su tramo inferior apoyado en la superficie. La banda se mueve con velocidad v y la lijadora se presiona contra la superficie con una fuerza normal N."
+  },
+  "fig-rl-diodo": {
+    "archivo": "figures/fig-rl-diodo.svg",
+    "fuente": "tikz/fig-rl-diodo.tex",
+    "ancho": 300,
+    "pie": "Figura 1",
+    "alt": "Circuito: una batería de fem ℰ, con el terminal positivo hacia arriba (hacia S y R1) y el negativo en la línea de tierra, en serie con un interruptor S y un resistor R1, llega al nodo A. De A baja una bobina L a la línea de tierra. También de A sale un diodo, con el cátodo hacia A y el ánodo hacia R2, en serie con un resistor R2 que baja a la línea de tierra."
+  },
+  "fig-curvas-va": {
+    "archivo": "figures/fig-curvas-va.svg",
+    "fuente": "tikz/fig-curvas-va.tex",
+    "ancho": 290,
+    "pie": "Figura 2",
+    "alt": "Cinco gráficas del potencial V_A contra el tiempo, de A a E, con el instante t1 marcado con una línea punteada y el nivel ℰ marcado en el eje. A: sube desde cero hasta ℰ y después de t1 baja a cero. B: empieza en ℰ y decae a cero; en t1 salta a +2ℰ y decae. C: es cero hasta t1; ahí salta a −2ℰ y decae. D: empieza en ℰ y decae a cero; en t1 salta a −2ℰ y decae a cero más rápido. E: empieza en ℰ y decae a cero; en t1 salta a −ℰ/2 y decae lentamente."
+  },
+  "fig-ciclo-carnot": {
+    "archivo": "figures/fig-ciclo-carnot.svg",
+    "fuente": "tikz/fig-ciclo-carnot.tex",
+    "ancho": 250,
+    "pie": null,
+    "alt": "Diagrama presión contra volumen de un ciclo de Carnot ABCD. AB está sobre la isoterma caliente Th, en rojo; CD, sobre la isoterma fría Tc, en azul; BC y DA son adiabáticas, en negro."
+  },
+  "fig-discos-rozantes": {
+    "archivo": "figures/fig-discos-rozantes.svg",
+    "fuente": "tikz/fig-discos-rozantes.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Vista desde arriba. Una recta punteada horizontal pasa por el punto P. El disco I, en azul, está arriba de la recta y tangente a ella, se mueve hacia la izquierda con velocidad v0 y gira en sentido horario con ω0. El disco II, en rojo, está en reposo debajo de la recta, tangente a ella en P."
+  },
+  "fig-varilla-cargada-eje": {
+    "archivo": "figures/fig-varilla-cargada-eje.svg",
+    "fuente": "tikz/fig-varilla-cargada-eje.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Una varilla delgada de longitud ℓ con carga positiva uniforme. Sobre su eje, a una distancia 2ℓ de su extremo derecho, está el punto P."
+  },
+  "fig-cunas-cubo": {
+    "archivo": "figures/fig-cunas-cubo.svg",
+    "fuente": "tikz/fig-cunas-cubo.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos cuñas iguales de masa m, en azul, apoyadas en el piso una junto a la otra. Cada una es un triángulo rectángulo isósceles con ángulos de 45° en la base, y sus caras interiores forman una V. Un cubo de masa M, en rojo, sin girar, se apoya con sus dos esquinas inferiores sobre esas caras interiores y no toca el piso."
+  },
+  "fig-tubo-pendulos": {
+    "archivo": "figures/fig-tubo-pendulos.svg",
+    "fuente": "tikz/fig-tubo-pendulos.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Un tubo de masa M, en azul, ensartado en un alambre horizontal. De cada extremo cuelga un péndulo de longitud ℓ con una masa m, en rojo."
+  },
+  "fig-cono-pivote": {
+    "archivo": "figures/fig-cono-pivote.svg",
+    "fuente": "tikz/fig-cono-pivote.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Ejes x, y, z con origen O. Un cono sólido, en azul, cuelga con su vértice en O y su eje sobre el eje z negativo. Su base, de radio b, está a una distancia c por debajo de O."
+  },
+  "fig-coaxial": {
+    "archivo": "figures/fig-coaxial.svg",
+    "fuente": "tikz/fig-coaxial.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Corte transversal de un cable coaxial: un conductor interior de radio a, en azul, y un conductor exterior entre los radios b y c, en rojo. Un punto P fuera del cable está a una distancia r del eje."
+  },
+  "fig-cargas-plano": {
+    "archivo": "figures/fig-cargas-plano.svg",
+    "fuente": "tikz/fig-cargas-plano.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un plano conductor conectado a tierra en x = 0. Sobre el eje x hay una carga +q, en rojo, en x = a, y una carga −q, en azul, en x = 2a."
+  },
+  "fig-rc-simple": {
+    "archivo": "figures/fig-rc-simple.svg",
+    "fuente": "tikz/fig-rc-simple.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Un capacitor C, un interruptor S abierto y un resistor R conectados en un solo lazo."
+  },
+  "fig-placas-cuna": {
+    "archivo": "figures/fig-placas-cuna.svg",
+    "fuente": "tikz/fig-placas-cuna.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Dos placas planas conductoras que comparten una arista sobre el eje z. La placa roja está a potencial V0 y la azul, a tierra. Forman un ángulo α; el ángulo φ se mide desde la placa roja hacia la azul."
+  },
+  "fig-mancuerna-resorte": {
+    "archivo": "figures/fig-mancuerna-resorte.svg",
+    "fuente": "tikz/fig-mancuerna-resorte.tex",
+    "ancho": 170,
+    "pie": null,
+    "alt": "Dos esferas iguales unidas por un resorte."
+  },
+  "fig-lissajous": {
+    "archivo": "figures/fig-lissajous.svg",
+    "fuente": "tikz/fig-lissajous.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Cinco patrones dentro de círculos, de A a E. A: una elipse inclinada. B: una curva en forma de ocho con los dos lazos uno encima del otro. C: una curva en forma de ocho acostado, con los dos lazos uno al lado del otro. D: una curva abierta en forma de N con tres tramos que van de abajo arriba. E: una curva abierta en forma de S acostada, con tres tramos que van de izquierda a derecha."
+  },
+  "fig-doble-rendija": {
+    "archivo": "figures/fig-doble-rendija.svg",
+    "fuente": "tikz/fig-doble-rendija.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Ondas planas inciden desde la izquierda sobre una pantalla opaca con dos rendijas de ancho w, cuyos centros están separados una distancia d. A la derecha, una pantalla de observación lejana."
+  },
+  "fig-telescopio": {
+    "archivo": "figures/fig-telescopio.svg",
+    "fuente": "tikz/fig-telescopio.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Telescopio simple: una lente objetivo grande a la izquierda y una lente ocular pequeña a la derecha, sobre el mismo eje. Dos rayos paralelos al eje atraviesan el objetivo, se cruzan en el punto P y salen paralelos del ocular. P es el foco común de las dos lentes y está muy cerca del ocular."
+  },
+  "fig-decaimiento": {
+    "archivo": "figures/fig-decaimiento.svg",
+    "fuente": "tikz/fig-decaimiento.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Gráfica semilogarítmica de cuentas por minuto, entre 10² y 10⁴, contra el tiempo, de 0 a 30 min. Es una recta que empieza en 8000 cuentas por minuto en t = 0, pasa por 1000 en t = 15 min y llega a 125 en t = 30 min."
+  },
+  "fig-pozo-finito": {
+    "archivo": "figures/fig-pozo-finito.svg",
+    "fuente": "tikz/fig-pozo-finito.tex",
+    "ancho": 260,
+    "pie": "Figura 1",
+    "alt": "Energía potencial de un pozo cuadrado: V = 0 fuera del intervalo entre x1 y x2, y V = −V0 dentro."
+  },
+  "fig-pozo-finito-curvas": {
+    "archivo": "figures/fig-pozo-finito-curvas.svg",
+    "fuente": "tikz/fig-pozo-finito-curvas.tex",
+    "ancho": 260,
+    "pie": "Figura 2",
+    "alt": "Cinco funciones de onda ψ(x), de A a E, con las paredes del pozo en x1 y x2 marcadas. A: una media onda dentro del pozo y cero exacto fuera, con quiebres en las paredes. B: una curva dentro que, fuera, crece sin límite al alejarse. C: una curva dentro y colas que decaen fuera, pero con saltos en las paredes. D: una curva redondeada dentro y colas que decaen suavemente hacia cero fuera, unidas sin saltos ni quiebres. E: una curva dentro que, fuera, sigue oscilando sin decaer."
+  },
+  "fig-circuito-cinco-r": {
+    "archivo": "figures/fig-circuito-cinco-r.svg",
+    "fuente": "tikz/fig-circuito-cinco-r.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Circuito: una batería de fem ℰ en serie con R1 llega a un nodo. De ese nodo baja R2 a la línea inferior. También desde ese nodo, R3 y R4 en paralelo bajan a un segundo nodo, y de ahí R5 baja a la línea inferior."
+  },
+  "fig-pion-fotones": {
+    "archivo": "figures/fig-pion-fotones.svg",
+    "fuente": "tikz/fig-pion-fotones.tex",
+    "ancho": 150,
+    "pie": null,
+    "alt": "Un pion neutro, en rojo, se mueve hacia la derecha con velocidad 0.6c. Debajo, una flecha indica la dirección del vector unitario k."
+  },
+  "fig-onda-cuadrada": {
+    "archivo": "figures/fig-onda-cuadrada.svg",
+    "fuente": "tikz/fig-onda-cuadrada.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Onda cuadrada V(t) que alterna entre 1 y −1. Vale −1 entre t = 0 y t = π/ω, y 1 entre π/ω y 2π/ω; antes de t = 0 vale 1. El periodo es 2π/ω."
+  },
+  "fig-diagrama-pv": {
+    "archivo": "figures/fig-diagrama-pv.svg",
+    "fuente": "tikz/fig-diagrama-pv.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Diagrama presión contra volumen de un sistema líquido-vapor. Cinco isotermas numeradas de 1 (la más caliente, arriba) a 5 (la más fría, abajo). Una región sombreada en rojo con forma de domo tiene su máximo en un punto donde la isoterma 3 es horizontal y tiene un punto de inflexión; las isotermas 4 y 5 cruzan el domo con tramos horizontales. Una recta punteada horizontal pasa por el máximo del domo, y otra vertical sube desde ese punto. Regiones: C, arriba a la izquierda de la vertical; E, arriba a la derecha; D, dentro del domo; A, a la derecha del domo y por debajo de la recta horizontal; B, señalada con una flecha, a la izquierda del domo, donde las isotermas son casi verticales."
+  },
+  "fig-espira-alambre": {
+    "archivo": "figures/fig-espira-alambre.svg",
+    "fuente": "tikz/fig-espira-alambre.tex",
+    "ancho": 210,
+    "pie": null,
+    "alt": "Un alambre recto vertical, en rojo, lleva una corriente I hacia arriba. A su izquierda, en el mismo plano, hay una espira rectangular, en azul, de ancho a y alto b, cuyo lado derecho está a una distancia r del alambre. Una flecha indica que la espira se mueve hacia la izquierda con velocidad v."
+  },
+  "fig-semicirculo-campo": {
+    "archivo": "figures/fig-semicirculo-campo.svg",
+    "fuente": "tikz/fig-semicirculo-campo.tex",
+    "ancho": 260,
+    "pie": "Figura 1",
+    "alt": "Una región rectangular punteada con campo magnético B entrante, marcado con cruces. Un circuito en forma de semicírculo, en azul, tiene el punto medio A de su lado recto sobre el borde inferior de la región; parte del semicírculo está dentro del campo y parte fuera. Una flecha indica que gira en sentido antihorario alrededor de A."
+  },
+  "fig-curvas-fem": {
+    "archivo": "figures/fig-curvas-fem.svg",
+    "fuente": "tikz/fig-curvas-fem.tex",
+    "ancho": 250,
+    "pie": "Figura 2",
+    "alt": "Cinco gráficas de la fem contra el tiempo, de A a E. A: onda triangular. B: onda cuadrada que alterna entre un valor positivo y uno negativo. C: arcos positivos repetidos, como un seno rectificado. D: oscilación que se amortigua. E: decaimiento exponencial desde un valor positivo."
+  },
+  "fig-varilla-masas": {
+    "archivo": "figures/fig-varilla-masas.svg",
+    "fuente": "tikz/fig-varilla-masas.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Dos varillas sin masa de longitud L cuelgan de pivotes en el techo. En la configuración I, dos masas iguales, en rojo, están juntas en el extremo libre. En la configuración II, una masa está en el extremo libre y la otra a un cuarto de la longitud desde el pivote."
+  },
+  "fig-cargas-eje-x": {
+    "archivo": "figures/fig-cargas-eje-x.svg",
+    "fuente": "tikz/fig-cargas-eje-x.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos cargas +Q, en rojo, fijas sobre el eje x a una distancia R a cada lado del origen. En el origen hay una partícula de carga +q, en azul, con una flecha doble horizontal que indica que oscila a lo largo del eje x."
+  },
+  "fig-polaroide": {
+    "archivo": "figures/fig-polaroide.svg",
+    "fuente": "tikz/fig-polaroide.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un haz de luz incide perpendicularmente sobre un polarizador con forma de disco, en azul. El eje del polarizador forma un ángulo θ con la vertical, y el polarizador gira alrededor del haz."
+  },
+  "fig-patinadores": {
+    "archivo": "figures/fig-patinadores.svg",
+    "fuente": "tikz/fig-patinadores.tex",
+    "ancho": 420,
+    "pie": null,
+    "alt": "Dos paneles. I, antes de t = 0: un patinador de masa m, en rojo, se mueve hacia la derecha con rapidez 3v por arriba del eje x, y otro de masa m, en azul, se mueve hacia la izquierda con rapidez v por abajo; sus trayectorias están separadas una distancia b, y una vara vertical sobre el eje y las une. II, en t = 0: los dos patinadores están en los extremos de la vara, sobre el eje y, a una distancia b/2 del origen cada uno."
+  },
+  "fig-dispersion": {
+    "archivo": "figures/fig-dispersion.svg",
+    "fuente": "tikz/fig-dispersion.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Relación de dispersión: la frecuencia angular ω contra el número de onda k. La curva sube desde el origen hasta un máximo en k1, baja hasta un mínimo en k2 y vuelve a subir."
+  },
+  "fig-rlc-serie": {
+    "archivo": "figures/fig-rlc-serie.svg",
+    "fuente": "tikz/fig-rlc-serie.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Circuito en serie con una fuente de voltaje alterno ℰ(t), un resistor R, un capacitor C y una bobina L."
+  },
+  "fig-placa-eje": {
+    "archivo": "figures/fig-placa-eje.svg",
+    "fuente": "tikz/fig-placa-eje.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Una placa delgada vertical, en azul, de altura L y ancho 2d, montada sobre el eje z, que pasa por la mitad de su ancho. Una flecha roja horizontal indica un golpe perpendicular a la placa, cerca de uno de sus bordes verticales."
+  },
+  "fig-esferitas-cargadas": {
+    "archivo": "figures/fig-esferitas-cargadas.svg",
+    "fuente": "tikz/fig-esferitas-cargadas.tex",
+    "ancho": 130,
+    "pie": null,
+    "alt": "Dos esferitas cargadas, en rojo, con cargas q y 2q, cuelgan del mismo punto mediante hilos de longitud L. Cada hilo forma un ángulo θ con la vertical, y la distancia entre las esferitas es d."
+  },
+  "fig-circuito-osciloscopio": {
+    "archivo": "figures/fig-circuito-osciloscopio.svg",
+    "fuente": "tikz/fig-circuito-osciloscopio.tex",
+    "ancho": 340,
+    "pie": null,
+    "alt": "Circuito: una fuente de voltaje V0 en serie con un interruptor S y un resistor R' llega a un nodo. Desde ese nodo, un capacitor C y un resistor R están en paralelo hacia la línea inferior. Los extremos de R se conectan a un osciloscopio, cuya pantalla muestra una curva que sube y luego decae."
+  },
+  "fig-medio-oscilador": {
+    "archivo": "figures/fig-medio-oscilador.svg",
+    "fuente": "tikz/fig-medio-oscilador.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Energía potencial V contra x: una pared infinita en x = 0 y, para x positivo, una parábola V = kx²/2 que crece desde cero."
+  },
+  "fig-bobina-imanes": {
+    "archivo": "figures/fig-bobina-imanes.svg",
+    "fuente": "tikz/fig-bobina-imanes.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Alternador visto de frente: un estator circular con cuatro polos que apuntan hacia el centro, alternados N, S, N, S a intervalos de 90°. En el centro gira un rotor circular que lleva una bobina pequeña en su borde, orientada hacia afuera, de modo que pasa frente a cada polo."
+  },
+  "fig-pendulo-horizontal": {
+    "archivo": "figures/fig-pendulo-horizontal.svg",
+    "fuente": "tikz/fig-pendulo-horizontal.tex",
+    "ancho": 170,
+    "pie": null,
+    "alt": "Una masa, en rojo, cuelga de un hilo atado a un poste. Empieza con el hilo horizontal y baja por un arco punteado. En una posición intermedia, el hilo forma un ángulo φ con la vertical."
+  },
+  "fig-michelson-celda": {
+    "archivo": "figures/fig-michelson-celda.svg",
+    "fuente": "tikz/fig-michelson-celda.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Interferómetro de Michelson: la luz de una fuente llega a un divisor de haz. Un brazo va hacia un espejo móvil arriba; el otro atraviesa una celda de longitud L con gas, conectada a una bomba de vacío, y llega a un espejo fijo a la derecha. El haz recombinado baja hacia el observador."
+  },
+  "fig-palanca": {
+    "archivo": "figures/fig-palanca.svg",
+    "fuente": "tikz/fig-palanca.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Una varilla uniforme de longitud L, en azul, apoyada en un fulcro que está a la derecha de su centro, marcado con una línea punteada. Del extremo izquierdo cuelga un bloque de masa m1 y del derecho, uno más grande de masa m2."
   }
 }

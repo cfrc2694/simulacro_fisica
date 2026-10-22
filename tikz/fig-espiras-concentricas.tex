@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[very thick, azul] (0,0) circle (1.8);
+  \draw[thick, rojo] (0,0) circle (0.35);
+  \fill (0,0) circle (1pt);
+  \draw[->] (0,0) -- (135:0.35);
+  \node[font=\small] at (135:0.62) {$a$};
+  \draw[->] (0,0) -- (40:1.8) node[midway, above left, font=\small]{$b$};
+  \draw[->, thick, azul] (-60:2.05) arc[start angle=-60, end angle=-25, radius=2.05];
+  \node[azul] at (-40:2.4) {$I(t)$};
+\end{tikzpicture}
+\end{document}

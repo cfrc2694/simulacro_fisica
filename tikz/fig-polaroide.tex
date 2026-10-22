@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[->, thick, naranja, decorate, decoration={snake, amplitude=1.5pt, segment length=6pt, post length=2mm}] (-3.0,-0.6) -- (-0.15,0);
+  \draw[thick, naranja] (0,0) -- (3.0,0.6);
+  \filldraw[draw=azul, fill=azul!12, thick] (0,0) ellipse (0.4 and 1.1);
+  \draw[dashed] (0,0) -- (0,1.0);
+  \draw[thick, azul] (0,0) -- (65:1.0);
+  \draw (0,0.6) arc[start angle=90, end angle=65, radius=0.6];
+  \node[font=\small] at (0.28,0.82) {$\theta$};
+\end{tikzpicture}
+\end{document}

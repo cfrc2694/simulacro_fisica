@@ -1,0 +1,16 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{circuitikz}[scale=1.0]
+  \draw (0,0) to[battery1, l={$V_0$}, invert] (0,2.4)
+        to[opening switch, l={$S$}] (1.6,2.4)
+        to[R, l={$R'$}] (3.4,2.4) -- (4.8,2.4)
+        to[R, l={$R$}] (4.8,0) -- (0,0);
+  \draw (3.4,2.4) to[C, l_={$C$}, *-*] (3.4,0);
+  \draw (4.8,2.4) -- (5.8,2.4) -- (5.8,1.6);
+  \draw (4.8,0) -- (5.8,0) -- (5.8,0.8);
+  \draw[thick] (5.8,0.6) rectangle (7.4,1.8);
+  \draw (6.6,1.2) circle (0.5);
+  \draw[azul, thick] (6.2,1.0) .. controls (6.4,1.6) and (6.5,1.4) .. (7.0,1.05);
+\end{circuitikz}
+\end{document}

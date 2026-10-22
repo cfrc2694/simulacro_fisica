@@ -1,0 +1,23 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.7,0) rectangle (0.7,0.2);
+  \draw[thick] (-0.7,0) -- (0.7,0);
+  \draw[line width=2pt, gray] (0,0) -- (1.268,-2.719);
+  \fill (0,0) circle (1.6pt);
+  \fill[rojo] (1.192,-2.556) circle (0.13);
+  \fill[rojo] (1.268,-2.719) circle (0.13);
+  \node at (0.6,-3.3) {I};
+  \fill[pattern=north east lines] (2.9000000000000004,0) rectangle (4.3,0.2);
+  \draw[thick] (2.9000000000000004,0) -- (4.3,0);
+  \draw[line width=2pt, gray] (3.6,0) -- (4.868,-2.719);
+  \fill (3.6,0) circle (1.6pt);
+  \fill[rojo] (3.917,-0.680) circle (0.13);
+  \fill[rojo] (4.868,-2.719) circle (0.13);
+  \node at (4.2,-3.3) {II};
+  \draw[gray, thin] (3.673,0.034) -- (4.117,0.241);
+  \draw[gray, thin] (5.049,-2.634) -- (5.384,-2.478);
+  \draw[<->] (4.008,0.190) -- node[right]{$L$} (5.276,-2.529);
+\end{tikzpicture}
+\end{document}

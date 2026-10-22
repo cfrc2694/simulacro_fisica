@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{circuitikz}[scale=1.0]
+  \draw (0,0) to[battery1, l={$\mathcal{E}$}, invert] (0,3)
+        to[R, l={$R_1$}] (3,3)
+        to[R, l={$R_2$}, *-*] (3,0) -- (0,0);
+  \draw (3,3) -- (6.4,3);
+  \draw (4.6,3) node[circ]{} to[R, l_={$R_3$}] (4.6,1.6);
+  \draw (6.4,3) to[R, l={$R_4$}] (6.4,1.6);
+  \draw (4.6,1.6) -- (6.4,1.6);
+  \draw (5.5,1.6) node[circ]{} to[R, l={$R_5$}] (5.5,0) -- (3,0);
+\end{circuitikz}
+\end{document}

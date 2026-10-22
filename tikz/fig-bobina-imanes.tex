@@ -1,0 +1,21 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  % estator: cuatro polos alternados que apuntan hacia el centro
+  \draw[thick, gray] (0,0) circle (2.3);
+  \foreach \a/\p/\c in {90/N/rojo, 0/S/azul, 270/N/rojo, 180/S/azul} {
+    \begin{scope}[rotate=\a]
+      \filldraw[draw=\c, fill=\c!20, thick] (1.45,-0.35) rectangle (2.3,0.35);
+      \node[rotate=0] at (1.85,0) {\textbf{\p}};
+    \end{scope}
+  }
+  % rotor con una bobina pequeña en su borde
+  \filldraw[draw=gray, fill=gray!12, thick] (0,0) circle (1.15);
+  \fill (0,0) circle (1.5pt);
+  \begin{scope}[rotate=40]
+    \filldraw[draw=naranja!80!black, fill=naranja!30, thick] (0.8,-0.22) rectangle (1.15,0.22);
+  \end{scope}
+  \draw[->, thick] (0.55,0.15) arc[start angle=15, end angle=95, radius=0.57];
+\end{tikzpicture}
+\end{document}
