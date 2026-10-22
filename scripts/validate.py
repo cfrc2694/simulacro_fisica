@@ -113,6 +113,15 @@ en_disco = {p.relative_to(RAIZ).as_posix() for p in (RAIZ / "figures").glob("*")
 for huerfano in sorted(en_disco - {i.get("archivo") for i in figuras.values()}):
     avi(f"archivo sin registrar en figuras.json: {huerfano}")
 
+# El ?v= de index.html debe corresponder al contenido actual; si no, el
+# navegador puede seguir sirviendo una copia vieja de los datos o las figuras.
+sys.path.insert(0, str(RAIZ / "scripts"))
+import bump_cache
+esperada, escritas = bump_cache.calcular_version(), bump_cache.version_en_index()
+if escritas != {esperada}:
+    err(f"index.html tiene la versión de caché {sorted(escritas)}, pero el contenido actual "
+        f"corresponde a {esperada}: corre python3 scripts/bump_cache.py")
+
 por_dificultad = {d: sum(1 for p in preguntas if p.get("dificultad") == d) for d in sorted(DIFICULTADES)}
 for a in avisos: print("AVISO ", a)
 for e in errores: print("ERROR ", e)
