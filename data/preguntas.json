@@ -2763,7 +2763,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["propagacion-errores"],
-    "explicacion": "Para un producto de potencias con errores independientes, las incertidumbres relativas se suman en cuadratura y cada una se multiplica por su exponente: $m$ aparece a la primera potencia y $v$ al cuadrado, así que $\\sigma_K/K = \\sqrt{(\\sigma_m/m)^2 + (2\\sigma_v/v)^2}$. Olvidar el exponente de $v$ da la segunda opción. La suma lineal es una cota superior, adecuada solo si los errores estuvieran correlacionados. Sin la raíz, la expresión tiene el tamaño de una varianza relativa, no de una desviación. El factor $\\tfrac12$ es exacto y no aporta incertidumbre."
+    "explicacion": "Para un producto de potencias con errores independientes, las incertidumbres relativas se suman en cuadratura y cada una se multiplica por su exponente: $m$ aparece a la primera potencia y $v$ al cuadrado, así que $\\sigma_K/K = \\sqrt{(\\sigma_m/m)^2 + (2\\sigma_v/v)^2}$. Olvidar el exponente de $v$ da $\\sqrt{(\\sigma_m/m)^2 + (\\sigma_v/v)^2}$, y dividir entre él en lugar de multiplicar, la expresión con $\\sigma_v/2v$. La suma lineal es una cota superior, adecuada solo si los errores estuvieran correlacionados. Sin la raíz, la expresión tiene el tamaño de una varianza relativa, no de una desviación. El factor $\\tfrac12$ es exacto y no aporta incertidumbre."
   },
   {
     "id": "q169",
