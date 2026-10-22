@@ -737,7 +737,7 @@
   "orbitas-potencial-general": {
     "nodo": "1.6.1",
     "titulo": "Energía en órbitas circulares",
-    "texto": "Integra la fuerza para obtener la energía potencial, con cero en el infinito: si $F = -K/r^n$, $U = -K/[(n-1)r^{n-1}]$. La condición de órbita circular, $Mv^2/r = K/r^n$, da la energía cinética. Suma las dos y compara: el signo de la energía total dice si la órbita es ligada."
+    "texto": "Integra la fuerza para obtener la energía potencial, con cero en el infinito: si $F = -K/r^n$, $U = -K/[(n-1)r^{n-1}]$. La condición de órbita circular, $Mv^2/r = K/r^n$, da la energía cinética; súmalas para obtener la energía total. Para saber si una órbita es estable o qué regiones están permitidas no basta el signo de la energía: usa el potencial efectivo $U_{\\text{ef}} = U + L^2/2Mr^2$, cuyo mínimo o máximo indica si la órbita circular es estable o inestable."
   },
   "capacitor-dielectrico": {
     "nodo": "2.5.2",
