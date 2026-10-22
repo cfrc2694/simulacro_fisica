@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[x=1.1cm, y=1.0cm]
+  \fill[pattern=north east lines] (-0.25,-1.3) rectangle (0,1.3);
+  \fill[pattern=north east lines] (4,-1.3) rectangle (4.25,1.3);
+  \draw[thick] (0,-1.3) -- (0,1.3);
+  \draw[thick] (4,-1.3) -- (4,1.3);
+  \draw[eje] (0,0) -- (4.7,0) node[right]{$x$};
+  \node[below] at (0,-1.3) {$0$};
+  \node[below] at (4,-1.3) {$L$};
+  \draw[very thick, azul] plot[domain=0:4, samples=90] (\x, {sin(deg(3*pi*\x/4))});
+  \node[above, azul] at (0.7,1.05) {$\psi(x)$};
+\end{tikzpicture}
+\end{document}

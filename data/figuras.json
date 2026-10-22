@@ -131,5 +131,75 @@
     "ancho": 310,
     "pie": null,
     "alt": "Cinco esquemas de líneas de campo en regiones cuadradas punteadas: A, líneas rectas paralelas; B, líneas rectas que salen radialmente de un punto central; C, circunferencias concéntricas; D, hipérbolas en forma de silla que llegan en vertical y salen en horizontal; E, líneas onduladas paralelas."
+  },
+  "fig-espiras-concentricas": {
+    "archivo": "figures/fig-espiras-concentricas.svg",
+    "fuente": "tikz/fig-espiras-concentricas.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Una espira grande de radio b, en azul, lleva una corriente I(t). En su centro hay una espira pequeña de radio a, en rojo, en el mismo plano."
+  },
+  "fig-secciones-fotones": {
+    "archivo": "figures/fig-secciones-fotones.svg",
+    "fuente": "tikz/fig-secciones-fotones.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Gráfica log-log de tres secciones eficaces σ, entre 10⁻²⁴ y 10⁻²⁰ cm², contra la energía del fotón hν, entre 10⁴ y 10⁸ eV. La curva 1, azul, empieza cerca de 5×10⁻²³ cm² y baja suavemente. La curva 2, roja, empieza arriba de 10⁻²¹ cm², cae con pendiente muy fuerte, tiene un salto hacia arriba cerca de 10⁵ eV y desaparece antes de 10⁶ eV. La curva 3, verde, aparece a partir de unos 10⁶ eV y crece con la energía."
+  },
+  "fig-modelos-diatomica": {
+    "archivo": "figures/fig-modelos-diatomica.svg",
+    "fuente": "tikz/fig-modelos-diatomica.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Dos modelos de molécula diatómica: el modelo I, dos esferas unidas por una barra rígida; el modelo II, dos esferas unidas por un resorte."
+  },
+  "fig-pozo-funcion": {
+    "archivo": "figures/fig-pozo-funcion.svg",
+    "fuente": "tikz/fig-pozo-funcion.tex",
+    "ancho": 250,
+    "pie": null,
+    "alt": "Pozo de paredes impenetrables en x = 0 y x = L. Dentro, una función de onda ψ(x) con forma de seno que se anula en las paredes y completa tres medias ondas: dos máximos y un mínimo, con dos nodos interiores."
+  },
+  "fig-lijadora-banda": {
+    "archivo": "figures/fig-lijadora-banda.svg",
+    "fuente": "tikz/fig-lijadora-banda.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Lijadora de banda vista de lado: una banda continua alrededor de dos rodillos, con su tramo inferior apoyado en la superficie. La banda se mueve con velocidad v y la lijadora se presiona contra la superficie con una fuerza normal N."
+  },
+  "fig-rl-diodo": {
+    "archivo": "figures/fig-rl-diodo.svg",
+    "fuente": "tikz/fig-rl-diodo.tex",
+    "ancho": 300,
+    "pie": "Figura 1",
+    "alt": "Circuito: una batería de fem ℰ en serie con un interruptor S y un resistor R1 llega al nodo A. De A baja una bobina L a la línea de tierra. También de A sale un diodo, con el cátodo hacia A, en serie con un resistor R2 que baja a la línea de tierra."
+  },
+  "fig-curvas-va": {
+    "archivo": "figures/fig-curvas-va.svg",
+    "fuente": "tikz/fig-curvas-va.tex",
+    "ancho": 290,
+    "pie": "Figura 2",
+    "alt": "Cinco gráficas del potencial V_A contra el tiempo, de A a E, con el instante t1 marcado con una línea punteada y el nivel ℰ marcado en el eje. A: sube desde cero hasta ℰ y después de t1 baja a cero. B: empieza en ℰ y decae a cero; en t1 salta a +2ℰ y decae. C: es cero hasta t1; ahí salta a −2ℰ y decae. D: empieza en ℰ y decae a cero; en t1 salta a −2ℰ y decae a cero más rápido. E: empieza en ℰ y decae a cero; en t1 salta a −ℰ/2 y decae lentamente."
+  },
+  "fig-ciclo-carnot": {
+    "archivo": "figures/fig-ciclo-carnot.svg",
+    "fuente": "tikz/fig-ciclo-carnot.tex",
+    "ancho": 250,
+    "pie": null,
+    "alt": "Diagrama presión contra volumen de un ciclo de Carnot ABCD. AB está sobre la isoterma caliente Th, en rojo; CD, sobre la isoterma fría Tc, en azul; BC y DA son adiabáticas, en negro."
+  },
+  "fig-discos-rozantes": {
+    "archivo": "figures/fig-discos-rozantes.svg",
+    "fuente": "tikz/fig-discos-rozantes.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Vista desde arriba. Una recta punteada horizontal pasa por el punto P. El disco I, en azul, está arriba de la recta y tangente a ella, se mueve hacia la izquierda con velocidad v0 y gira en sentido horario con ω0. El disco II, en rojo, está en reposo debajo de la recta, tangente a ella en P."
+  },
+  "fig-varilla-cargada-eje": {
+    "archivo": "figures/fig-varilla-cargada-eje.svg",
+    "fuente": "tikz/fig-varilla-cargada-eje.tex",
+    "ancho": 320,
+    "pie": null,
+    "alt": "Una varilla delgada de longitud ℓ con carga positiva uniforme. Sobre su eje, a una distancia 2ℓ de su extremo derecho, está el punto P."
   }
 }
