@@ -3153,7 +3153,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["sistema-dos-niveles"],
-    "explicacion": "$C = dU/dT = N_0\\epsilon\\,\\dfrac{e^{x}}{(1 + e^{x})^2}\\cdot\\dfrac{\\epsilon}{k_BT^2} = N_0k_B\\,x^2\\dfrac{e^{x}}{(1 + e^{x})^2}$. Olvidar el factor $e^{x}$ de la regla de la cadena da la segunda opción. $\\tfrac32 N_0k_B$ es la equipartición de un gas monoatómico, que no aplica a un espectro de dos niveles. Límites: $C \\to 0$ cuando $T \\to 0$ (todo congelado en el nivel bajo) y cuando $T \\to \\infty$ (los niveles ya están igualmente poblados), con un máximo intermedio: es la anomalía de Schottky. $\\tfrac12 N_0k_Bx^2$ crece sin límite a baja temperatura."
+    "explicacion": "$C = dU/dT = N_0\\epsilon\\,\\dfrac{e^{x}}{(1 + e^{x})^2}\\cdot\\dfrac{\\epsilon}{k_BT^2} = N_0k_B\\,x^2\\dfrac{e^{x}}{(1 + e^{x})^2}$. Olvidar el factor $e^{x}$ del numerador da la expresión con solo $1/(1 + e^{x})^2$. $\\tfrac32 N_0k_B$ es la equipartición de un gas monoatómico, que no aplica a un espectro de dos niveles. Límites: $C \\to 0$ cuando $T \\to 0$ (todo congelado en el nivel bajo) y cuando $T \\to \\infty$ (los niveles ya están igualmente poblados), con un máximo intermedio: es la anomalía de Schottky. $\\tfrac12 N_0k_Bx^2$ crece sin límite a baja temperatura."
   },
   {
     "id": "q193",
@@ -3505,7 +3505,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["transformacion-lorentz"],
-    "explicacion": "Con $v = 0.8$, $\\gamma = 1/\\sqrt{1 - 0.64} = 5/3 \\approx 1.667$ y $\\gamma v = 4/3 \\approx 1.333$: $x' = \\gamma(x - vt)$ y $t' = \\gamma(t - vx)$ dan la primera opción. Intercambiar los coeficientes en $t'$ no conserva el intervalo. $x' = x - 0.8t$ con $t' = t$ es la transformación de Galileo. Escalar $x$ y $t$ por separado no mezcla espacio y tiempo. La última usa $\\gamma = 1.25$, que corresponde a $v = 0.6$, con $v = 0.8$: $1.25^2 - 0.8^2 \\neq 1$. Comprobación: $1.667^2 - 1.333^2 = 1$."
+    "explicacion": "Con $v = 0.8$, $\\gamma = 1/\\sqrt{1 - 0.64} = 5/3 \\approx 1.667$ y $\\gamma v = 4/3 \\approx 1.333$: $x' = \\gamma(x - vt)$ y $t' = \\gamma(t - vx)$ dan $x' = 1.667x - 1.333t$ y $t' = 1.667t - 1.333x$. Intercambiar los coeficientes en $t'$ no conserva el intervalo. $x' = x - 0.8t$ con $t' = t$ es la transformación de Galileo. Escalar $x$ y $t$ por separado no mezcla espacio y tiempo. La transformación con coeficientes $1.25$ y $0.8$ mezcla el $\\gamma$ de $v = 0.6$ con $v = 0.8$: $1.25^2 - 0.8^2 \\neq 1$. Comprobación: $1.667^2 - 1.333^2 = 1$."
   },
   {
     "id": "q215",
@@ -3585,7 +3585,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["efecto-stark"],
-    "explicacion": "La corrección es $\\langle1s|eEz|1s\\rangle$. La densidad $|\\psi_{1s}|^2$ es esféricamente simétrica y $z$ es impar, así que la integral se anula: no hay efecto Stark lineal en el estado fundamental. La primera corrección no nula es de segundo orden, proporcional a $E^2$ (la última opción tiene esa forma, pero no es de primer orden). $3eEa_0$ es el desdoblamiento lineal del nivel $n = 2$, donde sí hay estados degenerados de paridades opuestas. $eEa_0$ supone un dipolo permanente que el átomo en $1s$ no tiene."
+    "explicacion": "La corrección es $\\langle1s|eEz|1s\\rangle$. La densidad $|\\psi_{1s}|^2$ es esféricamente simétrica y $z$ es impar, así que la integral se anula: no hay efecto Stark lineal en el estado fundamental. La primera corrección no nula es de segundo orden, proporcional a $E^2$ (la opción $-\\tfrac94 a_0^3E^2/K_e$ es esa corrección de segundo orden, no la de primer orden). $3eEa_0$ es el desdoblamiento lineal del nivel $n = 2$, donde sí hay estados degenerados de paridades opuestas. $eEa_0$ supone un dipolo permanente que el átomo en $1s$ no tiene."
   },
   {
     "id": "q220",
