@@ -638,5 +638,20 @@
     "nodo": "5.1.2",
     "titulo": "Conjuntos ortonormales",
     "texto": "$\\int\\psi_n^*\\psi_\\ell\\,dx = \\delta_{n\\ell}$ reúne dos condiciones: si $n \\neq \\ell$ la integral es cero (ortogonalidad) y si $n = \\ell$ vale $1$ (normalización). Es una propiedad del conjunto de funciones, distinta de que cada una cumpla la ecuación de Schrödinger."
+  },
+  "oscilador-cuantico": {
+    "nodo": "5.2.1",
+    "titulo": "Niveles del oscilador armónico cuántico",
+    "texto": "Los niveles del oscilador armónico unidimensional son $E_n = \\left(n + \\tfrac12\\right)h\\nu$, con $n = 0, 1, 2, \\ldots$ y $\\nu$ la frecuencia clásica. Están igualmente espaciados en $h\\nu$, y el más bajo no es cero: la energía de punto cero es $\\tfrac12 h\\nu$."
+  },
+  "resonancia-ciclotron": {
+    "nodo": "2.2.6",
+    "titulo": "Frecuencia de ciclotrón",
+    "texto": "Una carga $q$ de masa $m$ en un campo $B$ uniforme gira con frecuencia angular $\\omega_c = |q|B/m$, independiente de su rapidez. En un sólido se usa la masa efectiva del portador. Revisa si te piden la frecuencia angular $\\omega$ (en rad/s) o la frecuencia $f = \\omega/2\\pi$ (en Hz)."
+  },
+  "pendulo-fisico": {
+    "nodo": "1.7",
+    "titulo": "Péndulo físico",
+    "texto": "Para un cuerpo rígido que oscila alrededor de un pivote, $\\omega^2 = \\dfrac{(\\sum m_i)\\,g\\,d}{I}$, donde $d$ es la distancia del pivote al centro de masa e $I$ el momento de inercia respecto al pivote. Con masas puntuales sobre una varilla sin masa, el numerador es $g\\sum m_i\\ell_i$ y el denominador, $\\sum m_i\\ell_i^2$."
   }
 }

@@ -327,5 +327,33 @@
     "ancho": 360,
     "pie": null,
     "alt": "Diagrama presión contra volumen de un sistema líquido-vapor. Cinco isotermas numeradas de 1 (la más caliente, arriba) a 5 (la más fría, abajo). Una región sombreada en rojo con forma de domo tiene su máximo en un punto donde la isoterma 3 es horizontal y tiene un punto de inflexión; las isotermas 4 y 5 cruzan el domo con tramos horizontales. Una recta punteada horizontal pasa por el máximo del domo, y otra vertical sube desde ese punto. Regiones: C, arriba a la izquierda de la vertical; E, arriba a la derecha; D, dentro del domo; A, a la derecha del domo y por debajo de la recta horizontal; B, señalada con una flecha, a la izquierda del domo, donde las isotermas son casi verticales."
+  },
+  "fig-espira-alambre": {
+    "archivo": "figures/fig-espira-alambre.svg",
+    "fuente": "tikz/fig-espira-alambre.tex",
+    "ancho": 210,
+    "pie": null,
+    "alt": "Un alambre recto vertical, en rojo, lleva una corriente I hacia arriba. A su izquierda, en el mismo plano, hay una espira rectangular, en azul, de ancho a y alto b, cuyo lado derecho está a una distancia r del alambre. Una flecha indica que la espira se mueve hacia la izquierda con velocidad v."
+  },
+  "fig-semicirculo-campo": {
+    "archivo": "figures/fig-semicirculo-campo.svg",
+    "fuente": "tikz/fig-semicirculo-campo.tex",
+    "ancho": 260,
+    "pie": "Figura 1",
+    "alt": "Una región rectangular punteada con campo magnético B entrante, marcado con cruces. Un circuito en forma de semicírculo, en azul, tiene el punto medio A de su lado recto sobre el borde inferior de la región; parte del semicírculo está dentro del campo y parte fuera. Una flecha indica que gira en sentido antihorario alrededor de A."
+  },
+  "fig-curvas-fem": {
+    "archivo": "figures/fig-curvas-fem.svg",
+    "fuente": "tikz/fig-curvas-fem.tex",
+    "ancho": 250,
+    "pie": "Figura 2",
+    "alt": "Cinco gráficas de la fem contra el tiempo, de A a E. A: onda triangular. B: onda cuadrada que alterna entre un valor positivo y uno negativo. C: arcos positivos repetidos, como un seno rectificado. D: oscilación que se amortigua. E: decaimiento exponencial desde un valor positivo."
+  },
+  "fig-varilla-masas": {
+    "archivo": "figures/fig-varilla-masas.svg",
+    "fuente": "tikz/fig-varilla-masas.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Dos varillas sin masa de longitud L cuelgan de pivotes en el techo. En la configuración I, dos masas iguales, en rojo, están juntas en el extremo libre. En la configuración II, una masa está en el extremo libre y la otra a un cuarto de la longitud desde el pivote."
   }
 }
