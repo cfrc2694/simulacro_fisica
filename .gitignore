@@ -13,3 +13,6 @@ __pycache__/
 *.log
 *.out
 *.synctex.gz
+
+# Entorno virtual de Python
+.venv/

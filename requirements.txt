@@ -1,0 +1,5 @@
+# Dependencias opcionales para generar figuras (scripts/validate.py, build.py y
+# bump_cache.py solo usan la biblioteca estándar).
+# Instalar con:  python -m venv .venv  y luego  .venv/Scripts/pip install -r requirements.txt
+numpy>=2.0
+pillow>=10.0
