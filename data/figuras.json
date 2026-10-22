@@ -88,7 +88,7 @@
     "fuente": "tikz/fig-ganancia-filtro.tex",
     "ancho": 300,
     "pie": null,
-    "alt": "Gráfica log-log de la ganancia G contra la frecuencia angular ω entre 10³ y 10⁵ s⁻¹. La ganancia vale 10³ hasta cerca de 10⁴ s⁻¹ y después cae en línea recta hasta 1 cerca de 7×10⁴ s⁻¹."
+    "alt": "Gráfica log-log de la ganancia G contra la frecuencia angular ω entre 10³ y 10⁵ s⁻¹. La ganancia vale 10³ a bajas frecuencias, empieza a bajar cerca de 5×10³ s⁻¹ (en 10⁴ s⁻¹ ya vale unos 330) y después cae en línea recta: unos 44 en ω = 2×10⁴ s⁻¹, unos 5.5 en ω = 4×10⁴ s⁻¹ y 1 cerca de 7×10⁴ s⁻¹."
   },
   "fig-tres-masas": {
     "archivo": "figures/fig-tres-masas.svg",
