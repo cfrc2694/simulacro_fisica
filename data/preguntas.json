@@ -3057,7 +3057,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["trabajo-cuerpo-extendido"],
-    "explicacion": "La masa es $24$ kg y su centro de masa está $4.0$ m por debajo del eje; al enrollarla sube hasta el eje. $W = Mg\\,\\Delta y_{cm} = (24)(9.8)(4.0) \\approx 940$ J. Subir toda la masa la longitud completa da $1900$ J, el doble. Tomar el centro de masa a un cuarto de la longitud da $470$ J. $\\lambda gL \\approx 240$ J no tiene en cuenta que la mitad de la cadena sube más que la otra mitad. Comprobación por integración: $\\int_0^L\\lambda g\\,y\\,dy = \\tfrac12\\lambda gL^2$."
+    "explicacion": "La masa es $24$ kg y su centro de masa está $4.0$ m por debajo del eje; al enrollarla sube hasta el eje. $W = Mg\\,\\Delta y_{cm} = (24)(9.8)(4.0) \\approx 940$ J. Subir toda la masa la longitud completa da $1900$ J, el doble. Tomar el centro de masa a un cuarto de la longitud da $470$ J. $\\lambda gL \\approx 240$ N es el peso de la cadena, una fuerza: tomarlo como trabajo olvida multiplicar por el desplazamiento medio, $L/2$. Comprobación por integración: $\\int_0^L\\lambda g\\,y\\,dy = \\tfrac12\\lambda gL^2$."
   },
   {
     "id": "q187",
