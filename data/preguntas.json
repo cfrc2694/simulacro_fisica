@@ -1697,7 +1697,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["induccion-faraday-lenz"],
-    "explicacion": "En el centro de la espira grande el campo es $B = \\mu_0 I/(2b)$, casi uniforme sobre la espira pequeña porque $a \\ll b$. El flujo es $\\Phi = \\pi a^2\\mu_0 I_0\\sin\\omega t/(2b)$ y su derivada da $|\\mathcal{E}| = \\dfrac{\\pi\\mu_0 I_0 a^2\\omega}{2b}\\cos\\omega t$. Con $\\sin\\omega t$ se olvida que la fem sigue a la derivada de la corriente, no a la corriente. Intercambiar $a$ y $b$ da $a/b^2$, que confunde el área con el campo. La opción sin $\\omega$ es el flujo, no la fem: tiene unidades de Wb. Comprobación: la fem es máxima cuando la corriente pasa por cero, que es cuando cambia más rápido."
+    "explicacion": "En el centro de la espira grande el campo es $B = \\mu_0 I/(2b)$, casi uniforme sobre la espira pequeña porque $a \\ll b$. El flujo es $\\Phi = \\pi a^2\\mu_0 I_0\\sin\\omega t/(2b)$, y por la ley de Faraday $\\mathcal{E} = -d\\Phi/dt = -\\dfrac{\\pi\\mu_0 I_0 a^2\\omega}{2b}\\cos\\omega t$; salvo el signo, es la primera expresión. Con $\\sin\\omega t$ se olvida que la fem sigue a la derivada de la corriente, no a la corriente. Por unidades se descartan dos opciones: $\\mu_0 I_0/b$ es un campo magnético (T), así que la fem debe ser T·m²/s; la expresión con $a\\,\\omega/b^2$ queda en T/s, y la que no tiene $\\omega$ queda en T·m² = Wb, que son unidades de flujo, no de fem. La opción sin $\\pi$ tiene las unidades correctas, pero toma el área como $a^2$ en lugar de $\\pi a^2$. Comprobación: la fem es máxima cuando la corriente pasa por cero, que es cuando cambia más rápido."
   },
   {
     "id": "q102",
