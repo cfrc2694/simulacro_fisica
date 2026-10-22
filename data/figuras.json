@@ -422,9 +422,9 @@
   "fig-bobina-imanes": {
     "archivo": "figures/fig-bobina-imanes.svg",
     "fuente": "tikz/fig-bobina-imanes.tex",
-    "ancho": 160,
+    "ancho": 200,
     "pie": null,
-    "alt": "Una bobina plana vista de canto gira alrededor de un eje vertical punteado. A su alrededor hay cuatro polos magnéticos alternados en las esquinas: N arriba a la derecha, S arriba a la izquierda, N abajo a la izquierda y S abajo a la derecha."
+    "alt": "Alternador visto de frente: un estator circular con cuatro polos que apuntan hacia el centro, alternados N, S, N, S a intervalos de 90°. En el centro gira un rotor circular que lleva una bobina pequeña en su borde, orientada hacia afuera, de modo que pasa frente a cada polo."
   },
   "fig-pendulo-horizontal": {
     "archivo": "figures/fig-pendulo-horizontal.svg",

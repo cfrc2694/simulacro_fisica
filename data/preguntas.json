@@ -3467,13 +3467,13 @@
     "subtemas": ["2.3.2"],
     "dificultad": "dificil",
     "figuras": ["fig-bobina-imanes"],
-    "enunciado": "Una bobina plana gira a $15$ revoluciones por segundo en el campo magnético producido por dos pares de polos alternados, como en la figura. El eje de giro está en el plano de la bobina y es perpendicular a las líneas de campo. ¿Cuál es la frecuencia del voltaje alterno en la bobina?",
+    "enunciado": "En el alternador de la figura, una bobina pequeña montada en el borde de un rotor gira a $15$ revoluciones por segundo y pasa sucesivamente frente a cuatro polos magnéticos alternados (N, S, N, S) fijos alrededor del rotor. El campo de cada polo atraviesa la bobina cuando pasa frente a él. ¿Cuál es la frecuencia del voltaje alterno en la bobina?",
     "opciones": ["$30$ Hz", "$15$ Hz", "$60$ Hz", "$7.5$ Hz", "$120$ Hz"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["generador-polos"],
-    "explicacion": "En una vuelta, la bobina pasa frente a la secuencia N, S, N, S: el campo que la atraviesa completa dos ciclos. La fem completa entonces dos ciclos por vuelta, y su frecuencia es $2\\times15 = 30$ Hz. $15$ Hz sería con un solo par de polos. $60$ Hz cuenta cuatro ciclos, uno por polo en lugar de uno por par. $7.5$ Hz divide en lugar de multiplicar."
+    "explicacion": "Al pasar frente a un polo N el flujo que atraviesa la bobina tiene un signo, y frente a un polo S, el contrario. En una vuelta, la bobina recorre la secuencia N, S, N, S: el flujo completa dos ciclos, y con él la fem. La frecuencia es $2\\times15 = 30$ Hz, el número de pares de polos por la frecuencia de rotación. $15$ Hz sería con un solo par de polos. $60$ Hz cuenta un ciclo por polo en lugar de uno por par. $7.5$ Hz divide en lugar de multiplicar. Comprobación: los alternadores de varios polos sirven justamente para obtener la frecuencia de la red con rotores más lentos."
   },
   {
     "id": "q213",
