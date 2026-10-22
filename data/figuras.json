@@ -369,5 +369,82 @@
     "ancho": 260,
     "pie": null,
     "alt": "Un haz de luz incide perpendicularmente sobre un polarizador con forma de disco, en azul. El eje del polarizador forma un ángulo θ con la vertical, y el polarizador gira alrededor del haz."
+  },
+  "fig-patinadores": {
+    "archivo": "figures/fig-patinadores.svg",
+    "fuente": "tikz/fig-patinadores.tex",
+    "ancho": 420,
+    "pie": null,
+    "alt": "Dos paneles. I, antes de t = 0: un patinador de masa m, en rojo, se mueve hacia la derecha con rapidez 3v por arriba del eje x, y otro de masa m, en azul, se mueve hacia la izquierda con rapidez v por abajo; sus trayectorias están separadas una distancia b, y una vara vertical sobre el eje y las une. II, en t = 0: los dos patinadores están en los extremos de la vara, sobre el eje y, a una distancia b/2 del origen cada uno."
+  },
+  "fig-dispersion": {
+    "archivo": "figures/fig-dispersion.svg",
+    "fuente": "tikz/fig-dispersion.tex",
+    "ancho": 230,
+    "pie": null,
+    "alt": "Relación de dispersión: la frecuencia angular ω contra el número de onda k. La curva sube desde el origen hasta un máximo en k1, baja hasta un mínimo en k2 y vuelve a subir."
+  },
+  "fig-rlc-serie": {
+    "archivo": "figures/fig-rlc-serie.svg",
+    "fuente": "tikz/fig-rlc-serie.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Circuito en serie con una fuente de voltaje alterno ℰ(t), un resistor R, un capacitor C y una bobina L."
+  },
+  "fig-placa-eje": {
+    "archivo": "figures/fig-placa-eje.svg",
+    "fuente": "tikz/fig-placa-eje.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Una placa delgada vertical, en azul, de altura L y ancho 2d, montada sobre el eje z, que pasa por la mitad de su ancho. Una flecha roja horizontal indica un golpe perpendicular a la placa, cerca de uno de sus bordes verticales."
+  },
+  "fig-esferitas-cargadas": {
+    "archivo": "figures/fig-esferitas-cargadas.svg",
+    "fuente": "tikz/fig-esferitas-cargadas.tex",
+    "ancho": 130,
+    "pie": null,
+    "alt": "Dos esferitas cargadas, en rojo, con cargas q y 2q, cuelgan del mismo punto mediante hilos de longitud L. Cada hilo forma un ángulo θ con la vertical, y la distancia entre las esferitas es d."
+  },
+  "fig-circuito-osciloscopio": {
+    "archivo": "figures/fig-circuito-osciloscopio.svg",
+    "fuente": "tikz/fig-circuito-osciloscopio.tex",
+    "ancho": 340,
+    "pie": null,
+    "alt": "Circuito: una fuente de voltaje V0 en serie con un interruptor S y un resistor R' llega a un nodo. Desde ese nodo, un capacitor C y un resistor R están en paralelo hacia la línea inferior. Los extremos de R se conectan a un osciloscopio, cuya pantalla muestra una curva que sube y luego decae."
+  },
+  "fig-medio-oscilador": {
+    "archivo": "figures/fig-medio-oscilador.svg",
+    "fuente": "tikz/fig-medio-oscilador.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Energía potencial V contra x: una pared infinita en x = 0 y, para x positivo, una parábola V = kx²/2 que crece desde cero."
+  },
+  "fig-bobina-imanes": {
+    "archivo": "figures/fig-bobina-imanes.svg",
+    "fuente": "tikz/fig-bobina-imanes.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Alternador visto de frente: un estator circular con cuatro polos que apuntan hacia el centro, alternados N, S, N, S a intervalos de 90°. En el centro gira un rotor circular que lleva una bobina pequeña en su borde, orientada hacia afuera, de modo que pasa frente a cada polo."
+  },
+  "fig-pendulo-horizontal": {
+    "archivo": "figures/fig-pendulo-horizontal.svg",
+    "fuente": "tikz/fig-pendulo-horizontal.tex",
+    "ancho": 170,
+    "pie": null,
+    "alt": "Una masa, en rojo, cuelga de un hilo atado a un poste. Empieza con el hilo horizontal y baja por un arco punteado. En una posición intermedia, el hilo forma un ángulo φ con la vertical."
+  },
+  "fig-michelson-celda": {
+    "archivo": "figures/fig-michelson-celda.svg",
+    "fuente": "tikz/fig-michelson-celda.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Interferómetro de Michelson: la luz de una fuente llega a un divisor de haz. Un brazo va hacia un espejo móvil arriba; el otro atraviesa una celda de longitud L con gas, conectada a una bomba de vacío, y llega a un espejo fijo a la derecha. El haz recombinado baja hacia el observador."
+  },
+  "fig-palanca": {
+    "archivo": "figures/fig-palanca.svg",
+    "fuente": "tikz/fig-palanca.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Una varilla uniforme de longitud L, en azul, apoyada en un fulcro que está a la derecha de su centro, marcado con una línea punteada. Del extremo izquierdo cuelga un bloque de masa m1 y del derecho, uno más grande de masa m2."
   }
 }
