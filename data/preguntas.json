@@ -1195,13 +1195,13 @@
     "subtemas": ["8.2.2", "8.2.3"],
     "dificultad": "media",
     "figuras": [],
-    "enunciado": "Una placa delgada de un material conductor lleva una corriente conocida y se coloca en un campo magnético conocido, perpendicular a la placa. Se mide el voltaje transversal (de Hall) que aparece entre sus bordes. ¿Qué se puede determinar directamente con esa medición?",
+    "enunciado": "Una placa delgada de un material conductor, de espesor conocido y con un solo tipo de portador de carga de magnitud $e$, lleva una corriente conocida y se coloca en un campo magnético conocido, perpendicular a la placa. Se mide el voltaje transversal (de Hall) que aparece entre sus bordes. ¿Qué se puede determinar directamente con esa medición?",
     "opciones": ["El signo y la densidad de los portadores de carga", "El cociente entre la carga y la masa de los portadores", "El ancho de la banda prohibida", "La energía de Fermi", "La susceptibilidad magnética"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["efecto-hall"],
-    "explicacion": "En el equilibrio, $qE_H = qv_dB$, de donde $V_H = IB/(nqt)$. El signo de $V_H$ indica si los portadores son positivos (huecos) o negativos (electrones), y su magnitud da $n$. La masa no aparece en $V_H$: para obtener $q/m$ haría falta una medición dinámica, como la resonancia ciclotrónica. El ancho de la banda prohibida se mide con la dependencia de la conductividad con la temperatura o con absorción óptica. La susceptibilidad describe la magnetización del material, que no interviene aquí."
+    "explicacion": "En el equilibrio, $qE_H = qv_dB$, de donde $V_H = IB/(nqt)$. Con un solo tipo de portador, el signo de $V_H$ indica si son positivos (huecos) o negativos (electrones), y con $I$, $B$, el espesor $t$ y $|q| = e$ conocidos, su magnitud da $n$. Con varios tipos de portadores, el coeficiente Hall ya no es simplemente $1/(nq)$. La masa no aparece en $V_H$: para obtener $q/m$ haría falta una medición dinámica, como la resonancia ciclotrónica. El ancho de la banda prohibida se mide con la dependencia de la conductividad con la temperatura o con absorción óptica. La susceptibilidad describe la magnetización del material, que no interviene aquí."
   },
   {
     "id": "q071",
