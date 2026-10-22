@@ -172,7 +172,7 @@
     "fuente": "tikz/fig-rl-diodo.tex",
     "ancho": 300,
     "pie": "Figura 1",
-    "alt": "Circuito: una batería de fem ℰ en serie con un interruptor S y un resistor R1 llega al nodo A. De A baja una bobina L a la línea de tierra. También de A sale un diodo, con el cátodo hacia A, en serie con un resistor R2 que baja a la línea de tierra."
+    "alt": "Circuito: una batería de fem ℰ, con el terminal positivo hacia arriba (hacia S y R1) y el negativo en la línea de tierra, en serie con un interruptor S y un resistor R1, llega al nodo A. De A baja una bobina L a la línea de tierra. También de A sale un diodo, con el cátodo hacia A y el ánodo hacia R2, en serie con un resistor R2 que baja a la línea de tierra."
   },
   "fig-curvas-va": {
     "archivo": "figures/fig-curvas-va.svg",

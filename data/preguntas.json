@@ -1899,7 +1899,7 @@
     "subtemas": ["2.3.3", "2.7.4"],
     "dificultad": "dificil",
     "figuras": ["fig-rl-diodo", "fig-curvas-va"],
-    "enunciado": "En el circuito de la Figura 1, $R_2 = 2R_1$, la batería de fem $\\mathcal{E}$ tiene resistencia interna despreciable y el diodo es ideal: no conduce en sentido inverso y su resistencia es nula cuando conduce. En $t = 0$ se cierra el interruptor $S$ y se espera a que corrientes y voltajes alcancen sus valores estacionarios. En el instante $t_1$ se abre $S$. ¿Cuál de las curvas de la Figura 2 representa el potencial $V_A$ del punto $A$ en función del tiempo?",
+    "enunciado": "En el circuito de la Figura 1, $R_2 = 2R_1$, la batería de fem $\\mathcal{E}$ tiene su terminal positivo hacia $S$ y el negativo a tierra, con resistencia interna despreciable y el diodo es ideal: no conduce en sentido inverso y su resistencia es nula cuando conduce. En $t = 0$ se cierra el interruptor $S$ y se espera a que corrientes y voltajes alcancen sus valores estacionarios. En el instante $t_1$ se abre $S$. ¿Cuál de las curvas de la Figura 2 representa el potencial $V_A$ del punto $A$ en función del tiempo?",
     "opciones": ["La curva $A$", "La curva $B$", "La curva $C$", "La curva $D$", "La curva $E$"],
     "respuesta": 3,
     "respuesta_verificada": false,
