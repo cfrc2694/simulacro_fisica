@@ -355,5 +355,19 @@
     "ancho": 240,
     "pie": null,
     "alt": "Dos varillas sin masa de longitud L cuelgan de pivotes en el techo. En la configuración I, dos masas iguales, en rojo, están juntas en el extremo libre. En la configuración II, una masa está en el extremo libre y la otra a un cuarto de la longitud desde el pivote."
+  },
+  "fig-cargas-eje-x": {
+    "archivo": "figures/fig-cargas-eje-x.svg",
+    "fuente": "tikz/fig-cargas-eje-x.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos cargas +Q, en rojo, fijas sobre el eje x a una distancia R a cada lado del origen. En el origen hay una partícula de carga +q, en azul, con una flecha doble horizontal que indica que oscila a lo largo del eje x."
+  },
+  "fig-polaroide": {
+    "archivo": "figures/fig-polaroide.svg",
+    "fuente": "tikz/fig-polaroide.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un haz de luz incide perpendicularmente sobre un polarizador con forma de disco, en azul. El eje del polarizador forma un ángulo θ con la vertical, y el polarizador gira alrededor del haz."
   }
 }

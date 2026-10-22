@@ -653,5 +653,45 @@
     "nodo": "1.7",
     "titulo": "Péndulo físico",
     "texto": "Para un cuerpo rígido que oscila alrededor de un pivote, $\\omega^2 = \\dfrac{(\\sum m_i)\\,g\\,d}{I}$, donde $d$ es la distancia del pivote al centro de masa e $I$ el momento de inercia respecto al pivote. Con masas puntuales sobre una varilla sin masa, el numerador es $g\\sum m_i\\ell_i$ y el denominador, $\\sum m_i\\ell_i^2$."
+  },
+  "procesos-gas-ideal": {
+    "nodo": "4.2.3",
+    "titulo": "Trabajo en procesos de un gas ideal",
+    "texto": "El trabajo que hace el gas es $W = \\int P\\,dV$. En un proceso isotérmico, $P = nRT/V$ y la integral da un logaritmo del cociente de volúmenes. En uno adiabático, $PV^\\gamma$ es constante y $W = -\\Delta U = nc_v(T_i - T_f)$. Identifica el proceso antes de elegir la fórmula."
+  },
+  "equilibrio-entropia": {
+    "nodo": "4.1.2",
+    "titulo": "Equilibrio y máxima entropía",
+    "texto": "En un sistema aislado, la entropía es $S = k_B\\ln\\Omega$, con $\\Omega$ el número de microestados del macroestado. El equilibrio es el macroestado con más microestados, es decir, de máxima entropía; una vez allí, la segunda ley no permite que el sistema evolucione espontáneamente a otro macroestado."
+  },
+  "estabilidad-electrostatica": {
+    "nodo": "1.7",
+    "titulo": "Oscilaciones alrededor de un equilibrio electrostático",
+    "texto": "Desplaza la carga una distancia pequeña $x$ desde el equilibrio, escribe la fuerza neta y expándela a primer orden en $x$. Si queda $F \\approx -kx$ con $k > 0$, el equilibrio es estable en esa dirección y $\\omega = \\sqrt{k/m}$. Por el teorema de Earnshaw, el equilibrio no puede ser estable en todas las direcciones a la vez."
+  },
+  "trabajo-cuerpo-extendido": {
+    "nodo": "1.3.2",
+    "titulo": "Trabajo para levantar un cuerpo extendido",
+    "texto": "El trabajo para levantar lentamente un cuerpo es el aumento de su energía potencial, $Mg\\,\\Delta y_{cm}$, donde $\\Delta y_{cm}$ es lo que sube su centro de masa. Para una cadena uniforme que cuelga y se enrolla en un eje, el centro de masa empieza a la mitad de su longitud por debajo del eje."
+  },
+  "luz-parcialmente-polarizada": {
+    "nodo": "3.1.6",
+    "titulo": "Luz parcialmente polarizada",
+    "texto": "Al girar un polarizador, la luz no polarizada da intensidad constante; la luz polarizada linealmente, $I_0\\cos^2\\theta$, que llega a cero; la circular, intensidad constante. Una mezcla de polarizada lineal y no polarizada da $A + B\\cos2\\theta$, con un mínimo distinto de cero. Para distinguir circular de no polarizada hace falta una lámina de cuarto de onda."
+  },
+  "criterio-rayleigh": {
+    "nodo": "3.2.2",
+    "titulo": "Límite de resolución de un telescopio",
+    "texto": "Por el criterio de Rayleigh, una abertura circular de diámetro $D$ resuelve dos fuentes puntuales si su separación angular es al menos $\\theta = 1.22\\,\\lambda/D$, con $\\theta$ en radianes. Despeja $D$ y cuida las unidades de $\\lambda$."
+  },
+  "radiacion-cherenkov": {
+    "nodo": "7.4.1",
+    "titulo": "Radiación de Cherenkov",
+    "texto": "Una partícula cargada emite radiación de Cherenkov cuando se mueve en un medio más rápido que la luz en ese medio, $v > c/n$. No contradice la relatividad: la velocidad de fase de la luz en el medio es menor que $c$, pero la partícula sigue siendo más lenta que $c$."
+  },
+  "momento-relativista": {
+    "nodo": "6.3.1",
+    "titulo": "Momento de una partícula relativista",
+    "texto": "La relación $E^2 = (pc)^2 + (mc^2)^2$ da $p = \\sqrt{E^2 - m^2c^4}/c$. Si $E = \\gamma mc^2$, entonces $p = mc\\sqrt{\\gamma^2 - 1}$, que para $\\gamma \\gg 1$ es casi $\\gamma mc$: la partícula es ultrarrelativista y $E \\approx pc$."
   }
 }
