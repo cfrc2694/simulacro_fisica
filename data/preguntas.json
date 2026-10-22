@@ -977,7 +977,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["lagrangiano-hamiltoniano"],
-    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. Usar $Fx = -6\\alpha x^6$ en lugar de la energía potencial da $m\\ddot{x} = -36\\alpha x^5$, una fuerza seis veces mayor. La integral en $x$ no corresponde a extremos fijos en el tiempo."
+    "explicacion": "Por el principio de Hamilton, la acción $S = \\int L\\,dt$ con $L = T - V = \\tfrac12 mv^2 - \\alpha x^6$ es estacionaria. Su ecuación de Euler-Lagrange da $m\\ddot{x} = -6\\alpha x^5$, la segunda ley de Newton. Con $T + V$ dentro de la integral se obtiene $m\\ddot{x} = +6\\alpha x^5$, con la fuerza al revés. Sin el término potencial la ecuación describe a una partícula libre. Usar $-Fx = 6\\alpha x^6$ como si fuera la energía potencial, en lugar de $U = \\alpha x^6$, da $m\\ddot{x} = -36\\alpha x^5$, una fuerza seis veces mayor. La integral en $x$ no corresponde a extremos fijos en el tiempo."
   },
   {
     "id": "q057",
