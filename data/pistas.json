@@ -117,7 +117,7 @@
   "fuerza-media-trabajo": {
     "nodo": "1.3.4",
     "titulo": "Fuerza media a partir del trabajo",
-    "texto": "Si conoces la distancia en la que un cuerpo se detiene, el teorema trabajo-energía da la fuerza media: $\\bar F\\,d = \\Delta K$. Si conocieras el tiempo de frenado, usarías el impulso: $\\bar F\\,\\Delta t = \\Delta p$. Elige la relación que corresponde al dato que tienes."
+    "texto": "Si conoces la distancia en la que un cuerpo se detiene, el teorema trabajo-energía da la magnitud de la fuerza media: $\\bar F\\,d = K_i - K_f$. Si conocieras el tiempo de frenado, usarías el impulso: $\\bar F\\,\\Delta t = |\\Delta p|$. Elige la relación que corresponde al dato que tienes."
   },
   "corriente-deriva": {
     "nodo": "2.7.1",
@@ -297,7 +297,7 @@
   "reglas-seleccion": {
     "nodo": "5.7.5",
     "titulo": "Reglas de selección dipolares",
-    "texto": "En una transición dipolar eléctrica con emisión de un fotón, el momento angular orbital debe cambiar en una unidad: $\\Delta\\ell = \\pm1$, con $\\Delta m = 0, \\pm1$. Esto equivale a que los dos estados tengan paridad opuesta. Para el número cuántico principal no hay restricción."
+    "texto": "En una transición dipolar eléctrica con emisión de un fotón, el momento angular orbital debe cambiar en una unidad: $\\Delta\\ell = \\pm1$, con $\\Delta m = 0, \\pm1$. Esto implica que los dos estados tienen paridad opuesta, pero el cambio de paridad no basta: $4f \\to 1s$ cambia la paridad y está prohibida, porque $\\Delta\\ell = -3$. Para el número cuántico principal no hay restricción."
   },
   "cuantizacion-canonica": {
     "nodo": "5.1.1",
@@ -417,7 +417,7 @@
   "divergencia-campos": {
     "nodo": "2.1.1",
     "titulo": "Divergencia de un campo vectorial",
-    "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Un campo que sale radialmente de un punto tiene divergencia distinta de cero."
+    "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Que un campo sea radial no basta para saber su divergencia: depende de cómo varía su magnitud con la distancia. Un campo proporcional a $\\vec{r}$ tiene divergencia distinta de cero, mientras que el de Coulomb, proporcional a $\\hat{r}/r^2$, la tiene nula fuera de la carga."
   },
   "efecto-zeeman": {
     "nodo": "5.7.4",
