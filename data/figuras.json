@@ -306,5 +306,26 @@
     "ancho": 300,
     "pie": null,
     "alt": "Circuito: una batería de fem ℰ en serie con R1 llega a un nodo. De ese nodo baja R2 a la línea inferior. También desde ese nodo, R3 y R4 en paralelo bajan a un segundo nodo, y de ahí R5 baja a la línea inferior."
+  },
+  "fig-pion-fotones": {
+    "archivo": "figures/fig-pion-fotones.svg",
+    "fuente": "tikz/fig-pion-fotones.tex",
+    "ancho": 150,
+    "pie": null,
+    "alt": "Un pion neutro, en rojo, se mueve hacia la derecha con velocidad 0.6c. Debajo, una flecha indica la dirección del vector unitario k."
+  },
+  "fig-onda-cuadrada": {
+    "archivo": "figures/fig-onda-cuadrada.svg",
+    "fuente": "tikz/fig-onda-cuadrada.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Onda cuadrada V(t) que alterna entre 1 y −1. Vale −1 entre t = 0 y t = π/ω, y 1 entre π/ω y 2π/ω; antes de t = 0 vale 1. El periodo es 2π/ω."
+  },
+  "fig-diagrama-pv": {
+    "archivo": "figures/fig-diagrama-pv.svg",
+    "fuente": "tikz/fig-diagrama-pv.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Diagrama presión contra volumen de un sistema líquido-vapor. Cinco isotermas numeradas de 1 (la más caliente, arriba) a 5 (la más fría, abajo). Una región sombreada en rojo con forma de domo tiene su máximo en un punto donde la isoterma 3 es horizontal y tiene un punto de inflexión; las isotermas 4 y 5 cruzan el domo con tramos horizontales. Una recta punteada horizontal pasa por el máximo del domo, y otra vertical sube desde ese punto. Regiones: C, arriba a la izquierda de la vertical; E, arriba a la derecha; D, dentro del domo; A, a la derecha del domo y por debajo de la recta horizontal; B, señalada con una flecha, a la izquierda del domo, donde las isotermas son casi verticales."
   }
 }

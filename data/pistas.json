@@ -573,5 +573,70 @@
     "nodo": "2.7.2",
     "titulo": "Reducción de resistencias",
     "texto": "Reduce el circuito por pasos: resistencias en paralelo, $1/R = \\sum 1/R_i$; en serie, $R = \\sum R_i$. Con la resistencia equivalente obtienes la corriente total y luego deshaces la reducción para hallar la corriente y el voltaje en cada elemento. La potencia es $I^2R = V^2/R$."
+  },
+  "condiciones-frontera-conductor": {
+    "nodo": "2.1.5",
+    "titulo": "Campos en la superficie de un conductor perfecto",
+    "texto": "Dentro de un conductor perfecto no hay campos variables. La continuidad de la componente tangencial de $\\vec{E}$ y de la normal de $\\vec{B}$ a través de la superficie obliga a que esas dos componentes se anulen justo afuera. Las otras dos, $E_n$ y $B_t$, pueden ser distintas de cero: las sostienen la carga y la corriente superficiales."
+  },
+  "red-difraccion": {
+    "nodo": "3.2.5",
+    "titulo": "Red de difracción",
+    "texto": "Los máximos de una red con separación $d$ entre rendijas cumplen $d\\sin\\theta = m\\lambda$. Si el dato es el número de líneas por unidad de longitud, $d$ es su inverso: cuida las unidades antes de calcular. Para ángulos pequeños, $\\theta \\approx \\lambda/d$ en radianes."
+  },
+  "reflexion-conductor": {
+    "nodo": "2.6.1",
+    "titulo": "Reflexión en un conductor perfecto",
+    "texto": "En la superficie de un conductor perfecto, el campo eléctrico tangencial total debe anularse: la onda reflejada tiene $\\vec{E}$ opuesto al de la incidente. Como la dirección de propagación también se invierte y $\\vec{E}\\times\\vec{B}$ debe apuntar en el sentido de propagación, eso fija lo que le pasa a $\\vec{B}$."
+  },
+  "invariancia-c": {
+    "nodo": "6.1.4",
+    "titulo": "La rapidez de la luz es la misma para todos",
+    "texto": "El segundo postulado de la relatividad dice que la luz en el vacío se mueve a $c$ en todo sistema inercial, sin importar el movimiento de la fuente. La suma relativista de velocidades, $u' = (u + v)/(1 + uv/c^2)$, lo confirma: con $u = \\pm c$ da $\\pm c$. Solo puede cambiar el sentido, no la rapidez."
+  },
+  "dilatacion-tiempo": {
+    "nodo": "6.1.2",
+    "titulo": "Dilatación del tiempo",
+    "texto": "El intervalo entre dos eventos que ocurren en el mismo lugar de un sistema es el tiempo propio $\\Delta\\tau$, el más corto. Un observador respecto al cual ese sistema se mueve con rapidez $v$ mide $\\gamma\\Delta\\tau$. Identifica primero el sistema de reposo de lo que se mide; el factor $\\gamma$ siempre usa la velocidad relativa respecto a ese sistema."
+  },
+  "series-fourier": {
+    "nodo": "3.1.2",
+    "titulo": "Series de Fourier de funciones con simetría",
+    "texto": "Si una función es impar, $f(-t) = -f(t)$, su serie de Fourier solo tiene senos; si es par, solo cosenos y una constante. Si además $f(t + T/2) = -f(t)$, solo aparecen los armónicos impares. Revisa el signo del primer semiciclo para fijar el signo global."
+  },
+  "dinamica-rotacional": {
+    "nodo": "1.4.3",
+    "titulo": "Dinámica de rotación alrededor de un eje fijo",
+    "texto": "Para un cuerpo que gira alrededor de un eje fijo valen las mismas relaciones que en traslación, con $I$ en lugar de $m$ y $\\omega$ en lugar de $v$: $K = \\tfrac12 I\\omega^2$, $\\tau = I\\alpha$ y, con torque constante, $\\alpha = \\Delta\\omega/\\Delta t$."
+  },
+  "coordenadas-ciclicas": {
+    "nodo": "1.5.3",
+    "titulo": "Coordenadas cíclicas",
+    "texto": "La ecuación de Euler-Lagrange es $\\dfrac{d}{dt}\\dfrac{\\partial L}{\\partial\\dot{q}} = \\dfrac{\\partial L}{\\partial q}$. Si el lagrangiano no depende de una coordenada $q$ (aunque sí de su velocidad), el lado derecho es cero. Piensa qué dice eso sobre $p = \\partial L/\\partial\\dot{q}$."
+  },
+  "diagrama-pv": {
+    "nodo": "4.2.2",
+    "titulo": "Isotermas y coexistencia de fases",
+    "texto": "Por debajo de la temperatura crítica, una isoterma tiene un tramo horizontal: a presión constante, el volumen cambia mientras el líquido se evapora. La región donde están esos tramos es la de coexistencia. La isoterma crítica es la que solo toca esa región en un punto, donde es horizontal y tiene un punto de inflexión."
+  },
+  "propagacion-errores": {
+    "nodo": "7.2.1",
+    "titulo": "Propagación de errores",
+    "texto": "Si $f = A\\,x^a y^b$ y los errores de $x$ e $y$ son independientes, las incertidumbres relativas se suman en cuadratura: $(\\sigma_f/f)^2 = a^2(\\sigma_x/x)^2 + b^2(\\sigma_y/y)^2$. El exponente multiplica a la incertidumbre relativa de cada factor."
+  },
+  "tiempo-de-vuelo": {
+    "nodo": "7.4.3",
+    "titulo": "Resolución temporal de detectores",
+    "texto": "Para distinguir el orden en que una partícula atraviesa dos detectores, la resolución temporal debe ser bastante menor que el tiempo que tarda en ir de uno a otro. Calcula ese tiempo con la rapidez de la partícula; una partícula relativista recorre unos $30$ cm por nanosegundo."
+  },
+  "observables-compatibles": {
+    "nodo": "5.1.4",
+    "titulo": "Observables compatibles",
+    "texto": "Dos observables tienen un conjunto completo de autofunciones comunes exactamente cuando sus operadores conmutan. Si no conmutan, medir uno perturba el valor del otro, como pasa con la posición y el momento."
+  },
+  "ortonormalidad": {
+    "nodo": "5.1.2",
+    "titulo": "Conjuntos ortonormales",
+    "texto": "$\\int\\psi_n^*\\psi_\\ell\\,dx = \\delta_{n\\ell}$ reúne dos condiciones: si $n \\neq \\ell$ la integral es cero (ortogonalidad) y si $n = \\ell$ vale $1$ (normalización). Es una propiedad del conjunto de funciones, distinta de que cada una cumpla la ecuación de Schrödinger."
   }
 }
