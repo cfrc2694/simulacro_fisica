@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-1.0,-0.2) rectangle (5.0,0);
+  \draw[thick] (-1.0,0) -- (5.0,0);
+  \draw[thick] (0,0.45) circle (0.45);
+  \draw[thick] (4,0.45) circle (0.45);
+  \fill (0,0.45) circle (1.2pt); \fill (4,0.45) circle (1.2pt);
+  \draw[thick] (0,0.9) -- (4,0.9);
+  \draw[thick] (0,0.0) -- (4,0.0);
+  \draw[->, thick, azul] (1.4,1.15) -- (2.6,1.15) node[midway, above]{$\vec{v}$};
+  \draw[->, thick, rojo] (3.3,2.1) -- (3.3,1.05) node[midway, right]{$\vec{N}$};
+\end{tikzpicture}
+\end{document}
