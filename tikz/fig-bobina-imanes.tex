@@ -1,0 +1,25 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \begin{scope}[rotate=45]
+    \filldraw[draw=rojo, fill=rojo!20, thick] (1.25,-0.45) rectangle (2.05,0.45);
+    \node at (1.65,0) {\textbf{N}};
+  \end{scope}
+  \begin{scope}[rotate=135]
+    \filldraw[draw=azul, fill=azul!20, thick] (1.25,-0.45) rectangle (2.05,0.45);
+    \node at (1.65,0) {\textbf{S}};
+  \end{scope}
+  \begin{scope}[rotate=225]
+    \filldraw[draw=rojo, fill=rojo!20, thick] (1.25,-0.45) rectangle (2.05,0.45);
+    \node at (1.65,0) {\textbf{N}};
+  \end{scope}
+  \begin{scope}[rotate=315]
+    \filldraw[draw=azul, fill=azul!20, thick] (1.25,-0.45) rectangle (2.05,0.45);
+    \node at (1.65,0) {\textbf{S}};
+  \end{scope}
+  \draw[line width=2.2pt, gray] (-0.15,-0.85) -- (0.15,0.85);
+  \draw[dashed] (-0.2,-1.15) -- (0.2,1.15);
+  \draw[->, thick] (0.75,0.25) arc[start angle=20, end angle=100, radius=0.7];
+\end{tikzpicture}
+\end{document}

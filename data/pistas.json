@@ -693,5 +693,115 @@
     "nodo": "6.3.1",
     "titulo": "Momento de una partícula relativista",
     "texto": "La relación $E^2 = (pc)^2 + (mc^2)^2$ da $p = \\sqrt{E^2 - m^2c^4}/c$. Si $E = \\gamma mc^2$, entonces $p = mc\\sqrt{\\gamma^2 - 1}$, que para $\\gamma \\gg 1$ es casi $\\gamma mc$: la partícula es ultrarrelativista y $E \\approx pc$."
+  },
+  "sistema-dos-niveles": {
+    "nodo": "4.1.1",
+    "titulo": "Sistema de dos niveles",
+    "texto": "Con dos niveles separados por $\\epsilon$, las probabilidades de ocupación son proporcionales a $1$ y a $e^{-\\epsilon/k_BT}$. Normaliza para obtener las fracciones. La energía media, el calor específico y la entropía salen de ahí; revisa sus límites a $T \\to 0$ (todo en el nivel bajo) y a $T \\to \\infty$ (mitad y mitad)."
+  },
+  "decaimiento-dos-cuerpos": {
+    "nodo": "8.1.3",
+    "titulo": "Decaimiento en dos cuerpos",
+    "texto": "Si el núcleo inicial está en reposo, los dos productos salen en sentidos opuestos con momentos de igual magnitud. Como $K = p^2/2m$, el producto más liviano se lleva la mayor parte de la energía cinética."
+  },
+  "momento-magnetico-nuclear": {
+    "nodo": "8.1.2",
+    "titulo": "Momento magnético nuclear",
+    "texto": "El momento magnético de una partícula con espín es del orden de $e\\hbar/(2m)$, inversamente proporcional a su masa. El magnetón nuclear usa la masa del protón, unas $1836$ veces la del electrón, así que los momentos nucleares son mucho menores que el del electrón."
+  },
+  "rigido-libre": {
+    "nodo": "1.4.4",
+    "titulo": "Movimiento de un cuerpo rígido libre",
+    "texto": "Sin fuerzas externas netas, el centro de masa se mueve con velocidad constante: calcula esa velocidad con el momento lineal total. Sin torques externos, el momento angular respecto al centro de masa se conserva y fija la velocidad angular del giro. El movimiento de cada parte es la suma de la traslación del centro de masa y la rotación alrededor de él."
+  },
+  "rayos-x-frenado": {
+    "nodo": "7.4.2",
+    "titulo": "Límite del espectro continuo de rayos X",
+    "texto": "En el espectro de frenado, el fotón más energético se produce cuando un electrón entrega toda su energía cinética, $eV$, en un solo fotón: $hc/\\lambda_{\\min} = eV$. Es útil recordar $hc \\approx 12.4$ keV·Å."
+  },
+  "resonancia-rlc": {
+    "nodo": "2.7.4",
+    "titulo": "Resonancia en un circuito RLC en serie",
+    "texto": "La amplitud de la corriente es $\\mathcal{E}_m/|Z|$ con $|Z| = \\sqrt{R^2 + (\\omega L - 1/\\omega C)^2}$. Es máxima cuando la reactancia total se anula. No confundas esta frecuencia con la de las oscilaciones libres amortiguadas, que sí depende de $R$."
+  },
+  "equilibrio-electrostatico": {
+    "nodo": "2.1.4",
+    "titulo": "Equilibrio con fuerzas eléctricas",
+    "texto": "En equilibrio, la tensión del hilo, el peso y la fuerza eléctrica suman cero. Para ángulos pequeños, $\\tan\\theta \\approx \\sin\\theta$ y se relaciona con la geometría. Por la tercera ley de Newton, la fuerza eléctrica sobre las dos esferitas tiene la misma magnitud aunque sus cargas sean distintas."
+  },
+  "circuito-medicion-rc": {
+    "nodo": "2.7.4",
+    "titulo": "Medir una constante de tiempo",
+    "texto": "Al abrir el interruptor, el capacitor se descarga a través de la resistencia que queda en paralelo con él, y el voltaje decae con constante de tiempo $\\tau = RC$. En el osciloscopio, una distancia horizontal se convierte en tiempo con la velocidad de barrido. Pregúntate qué datos hacen falta para pasar de la forma de la curva a $\\tau$ y de $\\tau$ a $C$."
+  },
+  "orbitas-potencial-general": {
+    "nodo": "1.6.1",
+    "titulo": "Energía en órbitas circulares",
+    "texto": "Integra la fuerza para obtener la energía potencial, con cero en el infinito: si $F = -K/r^n$, $U = -K/[(n-1)r^{n-1}]$. La condición de órbita circular, $Mv^2/r = K/r^n$, da la energía cinética. Suma las dos y compara: el signo de la energía total dice si la órbita es ligada."
+  },
+  "capacitor-dielectrico": {
+    "nodo": "2.5.2",
+    "titulo": "Dieléctricos en un capacitor",
+    "texto": "Distingue qué se mantiene fijo. Con la batería conectada, el voltaje es constante y la carga cambia. Con la batería desconectada, la carga es constante y el voltaje cambia. El vector $\\vec{D}$ depende solo de la carga libre por unidad de área; el campo $\\vec{E}$ se reduce en el factor $\\kappa$."
+  },
+  "simetria-pared": {
+    "nodo": "5.2.1",
+    "titulo": "Potenciales con una pared",
+    "texto": "Si a un potencial simétrico se le pone una pared infinita en el centro, las soluciones para $x > 0$ deben anularse en $x = 0$. Entre las funciones propias del potencial completo, solo cumplen esa condición las impares, así que solo sobreviven sus niveles."
+  },
+  "escalas-moleculares": {
+    "nodo": "5.7.1",
+    "titulo": "Escalas de energía en moléculas",
+    "texto": "Las energías electrónicas son de unos eV; las vibracionales, de décimas de eV (del orden de $\\sqrt{m_e/M}$ por debajo); las rotacionales, de milésimas de eV (otro factor $\\sqrt{m_e/M}$). Las nucleares están en MeV. Para el hidrógeno, la masa reducida es la menor posible y sus escalas son las más grandes."
+  },
+  "conservacion-extranez": {
+    "nodo": "8.1.3",
+    "titulo": "Interacciones y números cuánticos conservados",
+    "texto": "La interacción fuerte y la electromagnética conservan la extrañeza; la débil puede cambiarla en una unidad. Si en un decaimiento cambia la extrañeza, es débil, aunque no haya neutrinos. La vida media también da una pista: unos $10^{-10}$ s en lugar de $10^{-23}$ s."
+  },
+  "generador-polos": {
+    "nodo": "2.3.2",
+    "titulo": "Frecuencia de un generador",
+    "texto": "La fem de una bobina que gira cambia de signo cada vez que el campo que atraviesa la bobina se invierte. Cuenta cuántos ciclos completos del campo ve la bobina en una vuelta: con $p$ pares de polos alrededor de ella, la frecuencia de la fem es $p$ veces la de rotación."
+  },
+  "aceleracion-tangencial-normal": {
+    "nodo": "1.2.1",
+    "titulo": "Aceleración en un movimiento circular no uniforme",
+    "texto": "En un movimiento circular con rapidez variable, la aceleración tiene una componente tangencial, $dv/dt$, y una centrípeta, $v^2/r$. Obtén $v$ con la conservación de la energía y la tangencial con la componente del peso a lo largo de la trayectoria. Las dos son perpendiculares."
+  },
+  "transformacion-lorentz": {
+    "nodo": "6.2.1",
+    "titulo": "Reconocer una transformación de Lorentz",
+    "texto": "Para un movimiento a lo largo de $x$ con $c = 1$: $x' = \\gamma(x - vt)$, $t' = \\gamma(t - vx)$, $y' = y$, $z' = z$. Los coeficientes deben cumplir $\\gamma^2 - (\\gamma v)^2 = 1$, y los términos cruzados de $x'$ y de $t'$ deben ser iguales. Comprueba también que el intervalo $t^2 - x^2$ no cambie."
+  },
+  "seccion-diferencial": {
+    "nodo": "7.4.1",
+    "titulo": "Sección eficaz diferencial",
+    "texto": "El número de partículas dispersadas por segundo hacia un detector es $\\dot{N} = \\Phi\\,n\\,\\dfrac{d\\sigma}{d\\Omega}\\,\\Delta\\Omega$, donde $\\Phi$ es el número de partículas incidentes por segundo, $n$ la densidad superficial de núcleos del blanco y $\\Delta\\Omega$ el ángulo sólido del detector. Despeja y revisa las unidades: cm² por estereorradián."
+  },
+  "michelson-indice": {
+    "nodo": "7.5.3",
+    "titulo": "Índice de refracción con un interferómetro",
+    "texto": "La luz atraviesa la celda dos veces, de ida y de vuelta. Al cambiar el índice de $n$ a $1$, el camino óptico cambia en $2L(n - 1)$, y cada franja que pasa corresponde a un cambio de una longitud de onda."
+  },
+  "masa-efectiva": {
+    "nodo": "8.2.2",
+    "titulo": "Masa efectiva",
+    "texto": "Para una partícula libre, $E = \\hbar^2k^2/2m$, de modo que $d^2E/dk^2 = \\hbar^2/m$. En un cristal se define la masa efectiva con esa misma relación, usando la curvatura de la banda real: así la dinámica cerca de un extremo de la banda se parece a la de una partícula libre."
+  },
+  "autovalores-matriz": {
+    "nodo": "5.1.2",
+    "titulo": "Autovalores de una matriz",
+    "texto": "La suma de los autovalores es la traza y su producto es el determinante. El polinomio característico $\\det(A - \\lambda I) = 0$ da los demás invariantes. Una matriz real puede tener autovalores complejos, que aparecen en pares conjugados; las matrices simétricas reales, en cambio, solo los tienen reales."
+  },
+  "efecto-stark": {
+    "nodo": "5.7.4",
+    "titulo": "Efecto Stark",
+    "texto": "La corrección de primer orden es $\\langle\\psi|eEz|\\psi\\rangle$. Para un estado de paridad definida, $|\\psi|^2$ es par y $z$ es impar, así que la integral se anula. Solo hay efecto lineal cuando hay estados degenerados de paridades opuestas que el campo puede mezclar."
+  },
+  "equilibrio-torques": {
+    "nodo": "1.4.3",
+    "titulo": "Equilibrio de una barra",
+    "texto": "En equilibrio, la suma de torques respecto a cualquier punto es cero. Toma torques respecto al centro de la barra o busca el centro de masa de todo el sistema: el fulcro debe estar justo debajo de él. No olvides el peso de la barra, que actúa en su centro."
   }
 }

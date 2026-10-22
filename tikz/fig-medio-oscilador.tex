@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.25,0) rectangle (0,2.6);
+  \draw[very thick, rojo] (0,2.6) -- (0,0);
+  \draw[eje] (0,0) -- (3.6,0) node[right]{$x$};
+  \draw[eje] (0,0) -- (0,3.0) node[above]{$V$};
+  \node[below left] at (0,0) {$O$};
+  \draw[very thick, rojo] plot[domain=0:3.1, samples=50] (\x, {0.26*\x*\x});
+  \node[right, rojo] at (3.1,2.5) {$V = \tfrac12 kx^2$};
+\end{tikzpicture}
+\end{document}
