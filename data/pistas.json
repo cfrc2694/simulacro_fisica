@@ -417,6 +417,6 @@
   "divergencia-campos": {
     "nodo": "2.1.1",
     "titulo": "Divergencia de un campo vectorial",
-    "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Un campo que sale radialmente de un punto tiene divergencia distinta de cero."
+    "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Que un campo sea radial no basta para saber su divergencia: depende de cómo varía su magnitud con la distancia. Un campo proporcional a $\\vec{r}$ tiene divergencia distinta de cero, mientras que el de Coulomb, proporcional a $\\hat{r}/r^2$, la tiene nula fuera de la carga."
   }
 }
