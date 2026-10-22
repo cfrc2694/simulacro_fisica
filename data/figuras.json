@@ -201,5 +201,54 @@
     "ancho": 320,
     "pie": null,
     "alt": "Una varilla delgada de longitud ℓ con carga positiva uniforme. Sobre su eje, a una distancia 2ℓ de su extremo derecho, está el punto P."
+  },
+  "fig-cunas-cubo": {
+    "archivo": "figures/fig-cunas-cubo.svg",
+    "fuente": "tikz/fig-cunas-cubo.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos cuñas iguales de masa m, en azul, apoyadas en el piso una junto a la otra. Cada una es un triángulo rectángulo isósceles con ángulos de 45° en la base. Un cubo de masa M, en rojo, descansa entre las dos caras interiores, que forman un ángulo recto."
+  },
+  "fig-tubo-pendulos": {
+    "archivo": "figures/fig-tubo-pendulos.svg",
+    "fuente": "tikz/fig-tubo-pendulos.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Un tubo de masa M, en azul, ensartado en un alambre horizontal. De cada extremo cuelga un péndulo de longitud ℓ con una masa m, en rojo."
+  },
+  "fig-cono-pivote": {
+    "archivo": "figures/fig-cono-pivote.svg",
+    "fuente": "tikz/fig-cono-pivote.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Ejes x, y, z con origen O. Un cono sólido, en azul, cuelga con su vértice en O y su eje sobre el eje z negativo. Su base, de radio b, está a una distancia c por debajo de O."
+  },
+  "fig-coaxial": {
+    "archivo": "figures/fig-coaxial.svg",
+    "fuente": "tikz/fig-coaxial.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Corte transversal de un cable coaxial: un conductor interior de radio a, en azul, y un conductor exterior entre los radios b y c, en rojo. Un punto P fuera del cable está a una distancia r del eje."
+  },
+  "fig-cargas-plano": {
+    "archivo": "figures/fig-cargas-plano.svg",
+    "fuente": "tikz/fig-cargas-plano.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un plano conductor conectado a tierra en x = 0. Sobre el eje x hay una carga +q, en rojo, en x = a, y una carga −q, en azul, en x = 2a."
+  },
+  "fig-rc-simple": {
+    "archivo": "figures/fig-rc-simple.svg",
+    "fuente": "tikz/fig-rc-simple.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Un capacitor C, un interruptor S abierto y un resistor R conectados en un solo lazo."
+  },
+  "fig-placas-cuna": {
+    "archivo": "figures/fig-placas-cuna.svg",
+    "fuente": "tikz/fig-placas-cuna.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Dos placas planas conductoras que comparten una arista sobre el eje z. La placa roja está a potencial V0 y la azul, a tierra. Forman un ángulo α; el ángulo φ se mide desde la placa roja hacia la azul."
   }
 }

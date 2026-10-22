@@ -1,0 +1,18 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.4,-0.18) rectangle (6.4,0);
+  \draw[thick] (-0.4,0) -- (6.4,0);
+  % cuñas: triángulos rectángulos isósceles con el ángulo recto arriba
+  \filldraw[draw=azul, fill=azul!15, thick] (0,0) -- (3,0) -- (1.5,1.5) -- cycle;
+  \filldraw[draw=azul, fill=azul!15, thick] (3,0) -- (6,0) -- (4.5,1.5) -- cycle;
+  \node at (1.5,0.5) {$m$};
+  \node at (4.5,0.5) {$m$};
+  % cubo apoyado en las dos caras interiores, girado 45 grados
+  \filldraw[draw=rojo, fill=rojo!15, thick] (3,0) -- (4.5,1.5) -- (3,3) -- (1.5,1.5) -- cycle;
+  \node at (3,1.5) {$M$};
+  \node[font=\small] at (0.55,0.18) {$45^\circ$};
+  \node[font=\small] at (5.45,0.18) {$45^\circ$};
+\end{tikzpicture}
+\end{document}

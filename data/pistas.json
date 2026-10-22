@@ -498,5 +498,20 @@
     "nodo": "3.2.2",
     "titulo": "Tamaño óptimo de un estenopo",
     "texto": "Con un agujero de diámetro $d$ hay dos fuentes de borrosidad: la geométrica, de tamaño $\\sim d$, y la difracción, que abre el haz en un ángulo $\\sim\\lambda/d$ y produce una mancha de tamaño $\\sim\\lambda D/d$ en la pantalla. La imagen más nítida se obtiene cuando las dos son comparables."
+  },
+  "gravedad-esfera": {
+    "nodo": "1.6",
+    "titulo": "Gravedad dentro y fuera de una esfera",
+    "texto": "Por el teorema del cascarón, una esfera homogénea atrae a una masa exterior como si toda su masa estuviera en el centro: $F \\propto 1/r^2$. Dentro, solo atrae la masa de radio menor que $r$, que crece como $r^3$; el resultado es $F \\propto r$. Escribe la fuerza en cada región antes de tomar cocientes."
+  },
+  "torque-producto-vectorial": {
+    "nodo": "1.4.2",
+    "titulo": "Torque como producto vectorial",
+    "texto": "El torque respecto al origen es $\\vec{\\tau} = \\vec{r}\\times\\vec{F}$. Su componente $z$ es $\\tau_z = xF_y - yF_x$: solo contribuyen las componentes horizontales de la fuerza y de la posición. Una fuerza vertical, paralela a $\\hat{k}$, nunca da $\\tau_z$."
+  },
+  "ley-ampere": {
+    "nodo": "2.2.2",
+    "titulo": "Ley de Ampère con simetría cilíndrica",
+    "texto": "Con simetría cilíndrica, el campo magnético es azimutal y su magnitud depende solo de $r$. Una circunferencia de radio $r$ centrada en el eje da $B\\,2\\pi r = \\mu_0 I_{\\text{enc}}$, donde $I_{\\text{enc}}$ es la corriente neta que atraviesa el círculo, con signo."
   }
 }
