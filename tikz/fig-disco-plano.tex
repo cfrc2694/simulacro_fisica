@@ -8,12 +8,12 @@
   \draw[thick] (0,2.4) -- (5.0,0);
   % normal unitaria al plano: (2.4, 5)/5.546
   \coordinate (A) at ({0.8 + 0.4*2.4/5.546},{2.4 - 0.48*0.8 + 0.4*5/5.546});
-  \draw[thick] (A) circle (0.4);
+  \draw[thick, azul, fill=azul!12] (A) circle (0.4);
   \fill (A) circle (1.2pt);
   \draw[thin] (A) -- ++(135:0.4);
   \node[font=\small] at ($(A)+(0.1,0.62)$) {$R$};
   \coordinate (B) at (5.7,0.4);
-  \draw[dashed] (B) circle (0.4);
+  \draw[dashed, azul] (B) circle (0.4);
   \fill (B) circle (1.2pt);
   \draw[dashed, thin] (A) -- (-0.75,{2.4 - 0.48*0.8 + 0.4*5/5.546});
   \draw[dashed, thin] (B) -- (-0.75,0.4);

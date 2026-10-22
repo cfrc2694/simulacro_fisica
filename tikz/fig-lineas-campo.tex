@@ -2,7 +2,7 @@
 \input{preambulo}
 \begin{document}
 \begin{tikzpicture}[scale=0.9, >={Stealth[length=1.6mm]}]
-  \tikzset{caja/.style={dashed, gray}, linea/.style={thick, ->}}
+  \tikzset{caja/.style={dashed, gray}, linea/.style={thick, ->, azul}}
   % A: uniforme
   \begin{scope}[shift={(0,0)}]
     \draw[caja] (0,0) rectangle (2,2);
@@ -19,8 +19,8 @@
   \begin{scope}[shift={(5.6,0)}]
     \draw[caja] (0,0) rectangle (2,2);
     \foreach \r in {0.3,0.6,0.9} {
-      \draw[thick] (1,1) circle (\r);
-      \draw[thick, ->] ({1+\r},1.0) -- ({1+\r},1.03);
+      \draw[thick, azul] (1,1) circle (\r);
+      \draw[thick, ->, azul] ({1+\r},1.0) -- ({1+\r},1.03);
     }
     \node at (1,-0.35) {$C$};
   \end{scope}

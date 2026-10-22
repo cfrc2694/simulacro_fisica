@@ -6,12 +6,12 @@
   \draw[thick] (-1.8,0) -- (1.8,0);
   \coordinate (O) at (0,0);
   \coordinate (C) at (0,-2.4);
-  \draw[dashed] (C) ellipse (1.5 and 0.32);
+  \draw[dashed, azul] (C) ellipse (1.5 and 0.32);
   \draw[dashed] (O) -- (C);
   \draw[hilo] (O) -- (-1.5,-2.4);
   \draw[thin] (C) -- node[below]{$r$} (-1.5,-2.4);
-  \fill (-1.5,-2.4) circle (2.6pt) node[left]{$m$};
-  \draw[->] (0.6,-2.72) -- (1.0,-2.67) node[below right]{$\omega$};
+  \fill[rojo] (-1.5,-2.4) circle (2.6pt) node[left]{$m$};
+  \draw[->, thick, azul] (0.6,-2.72) -- (1.0,-2.67) node[below right]{$\omega$};
   \node[left] at (-0.75,-1.1) {$\ell$};
 \end{tikzpicture}
 \end{document}
