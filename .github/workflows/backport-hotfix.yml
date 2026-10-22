@@ -1,0 +1,77 @@
+# Cuando un PR desde hotfix/* se fusiona en main, abre automáticamente un PR
+# que lleva ese hotfix a develop (rama backport/<nombre>).
+#
+# - Después de fusionar, recalcula la versión de caché de index.html con
+#   scripts/bump_cache.py, para que el commit quede con el caché al día.
+# - Si el único conflicto es index.html (lo normal: cada rama tiene su propio
+#   hash de caché), toma la versión de develop y recalcula el caché.
+# - Si hay conflictos en otros archivos, abre el PR desde la rama del hotfix
+#   para resolverlos a mano en GitHub.
+# - Si develop ya contiene el hotfix, termina sin hacer nada.
+name: Backport de hotfix a develop
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  backport:
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'hotfix/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Crear la rama de backport y el PR hacia develop
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOTFIX: ${{ github.head_ref }}
+          NUMERO: ${{ github.event.pull_request.number }}
+          TITULO: ${{ github.event.pull_request.title }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          RAMA="backport/${HOTFIX#hotfix/}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$RAMA" origin/develop
+
+          MENSAJE="Backport del hotfix #$NUMERO a develop"
+          if git merge-base --is-ancestor "$HEAD_SHA" origin/develop; then
+            echo "develop ya contiene el hotfix #$NUMERO; no hace falta backport."
+            exit 0
+          fi
+          if git merge --no-ff --no-commit "$HEAD_SHA"; then
+            CONFLICTOS=""
+          else
+            CONFLICTOS="$(git diff --name-only --diff-filter=U)"
+          fi
+
+          if [ -z "$CONFLICTOS" ] || [ "$CONFLICTOS" = "index.html" ]; then
+            if [ -n "$CONFLICTOS" ]; then
+              git checkout --ours index.html
+            fi
+            python3 scripts/bump_cache.py
+            git add index.html
+            git commit --no-edit -m "$MENSAJE"
+            if python3 scripts/validate.py > validacion.txt 2>&1; then
+              NOTA="El hotfix se fusionó con develop y el caché se recalculó. validate.py: $(tail -n 1 validacion.txt)"
+            else
+              NOTA="El hotfix se fusionó con develop y el caché se recalculó, pero validate.py reporta errores: revísalos antes de fusionar. $(grep '^ERROR' validacion.txt | head -n 5 | tr '\n' ' ')"
+            fi
+            rm -f validacion.txt
+          else
+            git merge --abort
+            git checkout -B "$RAMA" "$HEAD_SHA"
+            NOTA="El merge con develop tiene conflictos en: $(echo "$CONFLICTOS" | tr '\n' ' '). Hay que resolverlos en este PR y luego correr scripts/bump_cache.py antes de fusionarlo."
+          fi
+          git push origin "$RAMA"
+
+          gh pr create --base develop --head "$RAMA" \
+            --title "Backport: $TITULO" \
+            --body "Lleva a develop el hotfix #$NUMERO, ya fusionado en main. $NOTA"
