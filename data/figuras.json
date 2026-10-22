@@ -207,7 +207,7 @@
     "fuente": "tikz/fig-cunas-cubo.tex",
     "ancho": 300,
     "pie": null,
-    "alt": "Dos cuñas iguales de masa m, en azul, apoyadas en el piso una junto a la otra. Cada una es un triángulo rectángulo isósceles con ángulos de 45° en la base. Un cubo de masa M, en rojo, descansa entre las dos caras interiores, que forman un ángulo recto."
+    "alt": "Dos cuñas iguales de masa m, en azul, apoyadas en el piso una junto a la otra. Cada una es un triángulo rectángulo isósceles con ángulos de 45° en la base, y sus caras interiores forman una V. Un cubo de masa M, en rojo, sin girar, se apoya con sus dos esquinas inferiores sobre esas caras interiores y no toca el piso."
   },
   "fig-tubo-pendulos": {
     "archivo": "figures/fig-tubo-pendulos.svg",
