@@ -491,7 +491,7 @@
     "subtemas": ["1.2", "1.3.2"],
     "dificultad": "dificil",
     "figuras": ["fig-guia-parabolica"],
-    "enunciado": "En la figura, una partícula parte del reposo en el origen y desliza sin fricción por una guía curva contenida en un plano vertical. Con el eje $y$ positivo apuntando hacia abajo, la guía cumple $y = \\dfrac{x^2}{2a}$, donde $a$ es una longitud constante. ¿Cuál es la magnitud de la aceleración tangencial de la partícula cuando está en la posición $x$?",
+    "enunciado": "En la figura, una partícula parte del origen con una rapidez inicial despreciable, hacia $x > 0$, y desliza sin fricción por una guía curva contenida en un plano vertical. Con el eje $y$ positivo apuntando hacia abajo, la guía cumple $y = \\dfrac{x^2}{2a}$, donde $a > 0$ es una longitud constante. ¿Cuál es la magnitud de la aceleración tangencial de la partícula cuando está en la posición $x > 0$?",
     "opciones": ["$\\dfrac{g\\,x}{\\sqrt{x^2 + a^2}}$", "$\\dfrac{g\\,a}{\\sqrt{x^2 + a^2}}$", "$\\dfrac{g\\,x}{a}$", "$g$", "$0$"],
     "respuesta": 0,
     "respuesta_verificada": false,
