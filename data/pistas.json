@@ -418,5 +418,85 @@
     "nodo": "2.1.1",
     "titulo": "Divergencia de un campo vectorial",
     "texto": "En una región sin cargas, el campo eléctrico cumple $\\nabla\\cdot\\vec{E} = 0$; el magnético cumple $\\nabla\\cdot\\vec{B} = 0$ siempre. Calcula $\\partial F_x/\\partial x + \\partial F_y/\\partial y + \\partial F_z/\\partial z$ para cada opción. Un campo que sale radialmente de un punto tiene divergencia distinta de cero."
+  },
+  "efecto-zeeman": {
+    "nodo": "5.7.4",
+    "titulo": "Efecto Zeeman",
+    "texto": "Un campo magnético externo interactúa con el momento magnético de los electrones del átomo y desdobla niveles que antes tenían la misma energía según su número cuántico magnético. Con las reglas de selección, cada línea puede dividirse en varias componentes; ninguna desaparece. El efecto análogo con campo eléctrico es el efecto Stark."
+  },
+  "ancho-de-linea": {
+    "nodo": "5.1.4",
+    "titulo": "Ancho de una línea espectral",
+    "texto": "Un estado que dura un tiempo $\\tau$ tiene una energía definida solo hasta $\\Delta E \\sim \\hbar/\\tau$. Cualquier proceso que acorte la vida efectiva del estado, como las colisiones en un gas denso, ensancha la línea. Compara el tiempo entre colisiones con la vida media natural."
+  },
+  "terminos-espectroscopicos": {
+    "nodo": "5.7.3",
+    "titulo": "Término del estado fundamental",
+    "texto": "Las subcapas llenas aportan $L = 0$ y $S = 0$, así que solo cuentan los electrones de la última subcapa. Con las reglas de Hund: $S$ máximo, luego $L$ máximo y, si la subcapa está a menos de la mitad, el $J$ más bajo ($J = |L - S|$). El término se escribe $^{2S+1}L_J$, con $L = 0, 1, 2$ como $S, P, D$."
+  },
+  "interacciones-fotones": {
+    "nodo": "7.4.2",
+    "titulo": "Fotones en la materia",
+    "texto": "Hay tres procesos principales. El efecto fotoeléctrico domina a baja energía, cae muy rápido con $h\\nu$ y presenta saltos en las energías de enlace de las capas internas. La dispersión Compton varía lentamente. La producción de pares solo es posible por encima de $2m_ec^2 \\approx 1.02$ MeV y crece con la energía."
+  },
+  "equiparticion-grados": {
+    "nodo": "4.1.4",
+    "titulo": "Grados de libertad activos",
+    "texto": "Por equipartición, cada término cuadrático de la energía aporta $\\tfrac12 k_B$ por molécula al calor específico, pero solo si $k_BT$ es grande frente al espaciamiento de los niveles cuánticos de ese movimiento. Los niveles de rotación están muy juntos y los de vibración muy separados: la vibración se activa a temperaturas mucho más altas."
+  },
+  "estadisticas-cuanticas": {
+    "nodo": "4.3",
+    "titulo": "Fermiones y bosones frente al gas clásico",
+    "texto": "Cuando la longitud de onda térmica se acerca a la separación entre partículas, la simetría de la función de onda importa. Los fermiones no pueden compartir estado y se comportan como si se repelieran; los bosones tienden a agruparse en los mismos estados y se comportan como si se atrajeran. Piensa en cómo eso cambia la presión respecto al gas clásico."
+  },
+  "simetria-intercambio": {
+    "nodo": "5.5.4",
+    "titulo": "Simetría bajo intercambio",
+    "texto": "Para partículas idénticas, la función de onda total, incluido el espín, es simétrica bajo el intercambio si son bosones (espín entero) y antisimétrica si son fermiones (espín semientero). Un núcleo compuesto es fermión si tiene un número impar de nucleones y bosón si lo tiene par."
+  },
+  "pozo-infinito": {
+    "nodo": "5.3.1",
+    "titulo": "Pozo de potencial infinito",
+    "texto": "En un pozo infinito de ancho $L$, las funciones propias son senos que se anulan en las paredes y caben $n$ medias longitudes de onda: $\\lambda_n = 2L/n$. Las energías son $E_n = n^2E_1$. Para identificar $n$ en una gráfica, cuenta las medias ondas, o sea, los nodos interiores más uno."
+  },
+  "bragg-de-broglie": {
+    "nodo": "3.2.5",
+    "titulo": "Difracción de electrones",
+    "texto": "La condición de Bragg es $2d\\sin\\theta = n\\lambda$, con $\\theta$ el ángulo entre el haz y los planos cristalinos, no con la normal. Una vez conocida $\\lambda$, la relación de de Broglie $\\lambda = h/p$ da el momento y, si la partícula no es relativista, la rapidez $v = h/(m\\lambda)$."
+  },
+  "potencia-friccion": {
+    "nodo": "1.3.4",
+    "titulo": "Potencia disipada por fricción",
+    "texto": "Una fuerza constante que actúa sobre algo que se mueve con rapidez $v$ entrega una potencia $P = Fv$. Si toda la potencia eléctrica se convierte en trabajo contra la fricción, la fuerza de fricción es $P/v$; compárala con la fuerza normal para obtener el coeficiente."
+  },
+  "inductor-transitorio": {
+    "nodo": "2.3.3",
+    "titulo": "Inductores en transitorios",
+    "texto": "La corriente en un inductor no puede cambiar de golpe. Justo después de cerrar un interruptor, un inductor sin corriente se comporta como un circuito abierto; en régimen estacionario, como un cable. Si se interrumpe su camino, la corriente busca otro y el voltaje que hace falta para mantenerla puede ser mucho mayor que el de la fuente."
+  },
+  "ciclo-carnot": {
+    "nodo": "4.2.3",
+    "titulo": "Ciclo de Carnot y entropía",
+    "texto": "En un ciclo reversible, la entropía del sistema vuelve a su valor inicial. En las isotermas, el gas intercambia calor y su entropía cambia en $Q/T$; en las adiabáticas reversibles no hay calor y la entropía no cambia, aunque cambie la temperatura. La eficiencia $1 - T_c/T_h$ no depende de la sustancia."
+  },
+  "paridad-perturbaciones": {
+    "nodo": "5.6.1",
+    "titulo": "Simetría y perturbaciones",
+    "texto": "Si el potencial completo es simétrico respecto a un punto, el hamiltoniano no mezcla estados de paridad distinta respecto a ese punto: $\\langle\\psi_m|V'|\\psi_n\\rangle = 0$ si $\\psi_m$ y $\\psi_n$ tienen paridades opuestas y $V'$ es par. Revisa la simetría de cada $\\psi_n$ respecto al centro del pozo."
+  },
+  "momento-angular-punto": {
+    "nodo": "1.4.2",
+    "titulo": "Momento angular respecto a un punto",
+    "texto": "El momento angular de un cuerpo rígido respecto a un punto fijo $P$ es la suma de un término orbital, $\\vec{r}_{cm}\\times M\\vec{v}_{cm}$, y uno de rotación propia, $I_{cm}\\vec{\\omega}$. Cuida los signos: los dos términos pueden tener sentidos opuestos. Si no hay torques externos respecto a $P$, el total se conserva en un choque."
+  },
+  "masa-reducida": {
+    "nodo": "5.4.3",
+    "titulo": "Masa reducida en átomos hidrogenoides",
+    "texto": "En un sistema de dos cuerpos, el movimiento relativo es el de una partícula de masa reducida $\\mu = m_1m_2/(m_1 + m_2)$. Las energías de los niveles del átomo de Bohr son proporcionales a la masa que orbita, así que se escalan con $\\mu$. Si una masa es mucho mayor que la otra, $\\mu$ es casi la menor."
+  },
+  "camara-estenopeica": {
+    "nodo": "3.2.2",
+    "titulo": "Tamaño óptimo de un estenopo",
+    "texto": "Con un agujero de diámetro $d$ hay dos fuentes de borrosidad: la geométrica, de tamaño $\\sim d$, y la difracción, que abre el haz en un ángulo $\\sim\\lambda/d$ y produce una mancha de tamaño $\\sim\\lambda D/d$ en la pantalla. La imagen más nítida se obtiene cuando las dos son comparables."
   }
 }

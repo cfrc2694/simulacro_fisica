@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[thick] (0,0) -- (1.6,0);
+  \fill[azul!35] (0,0) circle (0.2); \draw (0,0) circle (0.2);
+  \fill[azul!35] (1.6,0) circle (0.2); \draw (1.6,0) circle (0.2);
+  \node at (0.8,-0.6) {I};
+  \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=3pt, post length=3pt}] (3.2,0) -- (4.8,0);
+  \fill[azul!35] (3.2,0) circle (0.2); \draw (3.2,0) circle (0.2);
+  \fill[azul!35] (4.8,0) circle (0.2); \draw (4.8,0) circle (0.2);
+  \node at (4.0,-0.6) {II};
+\end{tikzpicture}
+\end{document}

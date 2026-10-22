@@ -36,6 +36,7 @@ Reglas para escribir preguntas, pistas y explicaciones en este banco. Si vas a a
 - Todas las figuras se dibujan en TikZ (`tikz/*.tex`) y se compilan a SVG con `scripts/build_figures.sh`. No se usan capturas ni recortes de otras fuentes.
 - El texto dentro de la figura se limita a símbolos ($R$, $Q$, $x$, $P$). Los pies van en `data/figuras.json`, no dibujados en la imagen.
 - Una figura puede servir a varias preguntas: se referencia por su id.
+- Se puede usar color para distinguir elementos (curvas, cuerpos, isotermas), con la paleta de `tikz/preambulo.tex`: `azul`, `rojo`, `verde`, `naranja` y `morado`. El color no debe delatar la respuesta: en una pregunta de "¿cuál curva?", todas las opciones van del mismo color.
 
 ## Nombres
 
