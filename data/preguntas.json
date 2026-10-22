@@ -2977,7 +2977,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["pendulo-fisico"],
-    "explicacion": "Con $\\omega^2 = g\\sum m\\ell/\\sum m\\ell^2$: en I, $\\omega_I^2 = g(2mL)/(2mL^2) = g/L$. En II, $\\omega_{II}^2 = g\\,m(L + L/4)/[m(L^2 + L^2/16)] = \\dfrac{5/4}{17/16}\\dfrac{g}{L} = \\dfrac{20}{17}\\dfrac{g}{L}$. El cociente de frecuencias es $\\sqrt{20/17} \\approx 1.08$: la configuración II oscila un poco más rápido, porque su momento de inercia baja más que el torque. Olvidar la raíz da $20/17$; invertir el cociente, $\\sqrt{17/20}$. $\\sqrt{5/4}$ cambia el torque pero conserva el momento de inercia de la configuración I. $\\sqrt{16/17}$ hace lo contrario: conserva el torque y solo cambia el momento de inercia."
+    "explicacion": "Con $\\omega^2 = g\\sum m\\ell/\\sum m\\ell^2$: en I, $\\omega_I^2 = g(2mL)/(2mL^2) = g/L$. En II, $\\omega_{II}^2 = g\\,m(L + L/4)/[m(L^2 + L^2/16)] = \\dfrac{5/4}{17/16}\\dfrac{g}{L} = \\dfrac{20}{17}\\dfrac{g}{L}$. El cociente de frecuencias es $\\sqrt{20/17} \\approx 1.08$: la configuración II oscila un poco más rápido, porque su momento de inercia baja más que el torque. Olvidar la raíz da $20/17$; invertir el cociente, $\\sqrt{17/20}$. $\\sqrt{5/4}$ sale de omitir la masa reubicada en el momento de inercia de la configuración II, y $\\sqrt{16/17}$, de omitirla en el torque."
   },
   {
     "id": "q182",
