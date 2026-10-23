@@ -117,5 +117,6 @@ h2{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:2rem 0 .75re
   .hoja{padding:1.1rem 1rem}
   .enunciado{font-size:1.02rem}
   .puntaje b{font-size:2.4rem}
+  .tamanos{display:grid}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
