@@ -40,18 +40,12 @@
     "dificultad": "media",
     "figuras": ["fig-anillo-eje"],
     "enunciado": "Un anillo delgado de radio $R$ tiene una carga total $Q$ distribuida uniformemente. El punto $P$ está sobre el eje de simetría, a una distancia $x$ del centro. Tomando $V = 0$ en el infinito, el potencial eléctrico en $P$ es",
-    "opciones": [
-      "$\\dfrac{K_e Q}{\\sqrt{x^2+R^2}}$",
-      "$\\dfrac{K_e Q}{x^2+R^2}$",
-      "$\\dfrac{K_e Q\\,x}{(x^2+R^2)^{3/2}}$",
-      "$\\dfrac{K_e Q}{x}$",
-      "$\\dfrac{K_e Q\\,R}{x^2+R^2}$"
-    ],
+    "opciones": ["$\\dfrac{K_e Q}{\\sqrt{x^2+R^2}}$", "$\\dfrac{K_e Q}{x^2+R^2}$", "$\\dfrac{K_e Q\\,x}{(x^2+R^2)^{3/2}}$", "$\\dfrac{K_e Q}{x}$", "$\\dfrac{K_e Q\\,R}{x^2+R^2}$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["potencial-integral"],
-    "explicacion": "Todos los elementos de carga están a la misma distancia $\\sqrt{x^2+R^2}$ de $P$ y el potencial es escalar, así que la integral se reduce a una suma: $V = K_e Q/\\sqrt{x^2+R^2}$. Dos comprobaciones rápidas: si $x \\gg R$ queda $K_eQ/x$, el potencial de una carga puntual, y en el centro ($x=0$) vale $K_eQ/R$, que es finito. La tercera opción es la componente $E_x$ del campo, no el potencial, y la segunda y la quinta no tienen unidades de potencial."
+    "explicacion": "Todos los elementos de carga están a la misma distancia $\\sqrt{x^2+R^2}$ de $P$ y el potencial es escalar, así que la integral se reduce a una suma: $V = K_e Q/\\sqrt{x^2+R^2}$. Dos comprobaciones rápidas: si $x \\gg R$ queda $K_eQ/x$, el potencial de una carga puntual, y en el centro ($x=0$) vale $K_eQ/R$, que es finito. $K_eQ\\,x/(x^2+R^2)^{3/2}$ es la componente $E_x$ del campo, no el potencial, y $K_eQ/(x^2+R^2)$ tiene unidades de campo, no de potencial. $K_eQ\\,R/(x^2+R^2)$ sí tiene unidades de potencial y coincide con el resultado en el centro, pero lejos decae como $1/x^2$ en lugar de $1/x$. $K_eQ/x$ es solo el límite lejano y diverge en el centro."
   },
   {
     "id": "q004",
@@ -2769,7 +2763,7 @@
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["propagacion-errores"],
-    "explicacion": "Para un producto de potencias con errores independientes, las incertidumbres relativas se suman en cuadratura y cada una se multiplica por su exponente: $m$ aparece a la primera potencia y $v$ al cuadrado, así que $\\sigma_K/K = \\sqrt{(\\sigma_m/m)^2 + (2\\sigma_v/v)^2}$. Olvidar el exponente de $v$ da la segunda opción. La suma lineal es una cota superior, adecuada solo si los errores estuvieran correlacionados. Sin la raíz, la expresión tiene el tamaño de una varianza relativa, no de una desviación. El factor $\\tfrac12$ es exacto y no aporta incertidumbre."
+    "explicacion": "Para un producto de potencias con errores independientes, las incertidumbres relativas se suman en cuadratura y cada una se multiplica por su exponente: $m$ aparece a la primera potencia y $v$ al cuadrado, así que $\\sigma_K/K = \\sqrt{(\\sigma_m/m)^2 + (2\\sigma_v/v)^2}$. Olvidar el exponente de $v$ da $\\sqrt{(\\sigma_m/m)^2 + (\\sigma_v/v)^2}$, y dividir entre él en lugar de multiplicar, la expresión con $\\sigma_v/2v$. La suma lineal es una cota superior, adecuada solo si los errores estuvieran correlacionados. Sin la raíz, la expresión tiene el tamaño de una varianza relativa, no de una desviación. El factor $\\tfrac12$ es exacto y no aporta incertidumbre."
   },
   {
     "id": "q169",
