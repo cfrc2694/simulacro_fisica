@@ -5,7 +5,7 @@
    scripts/build.py) se usan esos datos y no se hace fetch.
    ============================================================ */
 
-const TAMANO_ENSAYO = 30;          // preguntas por ensayo
+const TAMANOS_ENSAYO = [10, 20, 30]; // preguntas por ensayo: un botón para cada tamaño
 const VALOR_CON_PISTA = 0.5;       // cuánto vale un acierto después de ver la pista
 const SEGUNDOS_POR_PREGUNTA = 100; // ritmo de referencia que muestra el cronómetro
 const MEZCLA_ESTANDAR = { facil: 0.30, media: 0.45, dificil: 0.25 };
@@ -138,10 +138,10 @@ function elegirPreguntas(tema, modo, n){
 
 /* ------------------------- estado ------------------------- */
 let S = null, reloj = null;
-let opciones = { tema: "todos", modo: "estandar" };
+let opciones = { tema: "todos", modo: "estandar", tamano: 30 };
 
 function iniciarEnsayo(){
-  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, TAMANO_ENSAYO);
+  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, opciones.tamano);
   if(!preguntas.length){ renderInicio("No hay preguntas que cumplan esa combinación de tema y dificultad."); return; }
   S = {
     items: preguntas.map(p => ({
@@ -178,8 +178,12 @@ const puntos = x => acerto(x) ? (x.pista ? VALOR_CON_PISTA : 1) : 0;
 function renderInicio(aviso){
   S = null;
   const secciones = seccionesDisponibles();
-  const n = Math.min(TAMANO_ENSAYO, disponibles(opciones.tema).length);
   const cuenta = d => disponibles(opciones.tema).filter(p => p.dificultad === d).length;
+  /* Cuántas preguntas cumplen el tema y la dificultad elegidos. Si son menos que un
+     tamaño, ese botón ofrece todas, y no se repiten botones con el mismo número. */
+  const total = opciones.modo === "estandar" ? disponibles(opciones.tema).length : cuenta(opciones.modo);
+  const botones = [];
+  TAMANOS_ENSAYO.forEach(t => { const n = Math.min(t, total); if(n > 0 && !botones.some(b => b.n === n)) botones.push({ t, n }); });
 
   $app.innerHTML = `
     <header class="top"><h1>Simulacro de Física</h1><span class="meta">Banco de ${PREGUNTAS.length} preguntas</span></header>
@@ -206,16 +210,19 @@ function renderInicio(aviso){
       Con el tema "Todos" además reparte las preguntas por área lo más parejo posible.</p>
     </div>
 
-    <button class="btn primary" id="empezar">Empezar ensayo de ${n} ${n === 1 ? "pregunta" : "preguntas"}</button>
+    <div class="grupo">
+      <span class="etiqueta">Empezar ensayo</span>
+      ${botones.length ? `<div class="tamanos" role="group" aria-label="Empezar ensayo">${botones.map(b =>
+        `<button class="btn primary" data-tamano="${b.t}">${b.n < b.t ? `Todas (${b.n})` : `${b.n} preguntas`}</button>`).join("")}</div>`
+      : `<p class="nota">No hay preguntas con esa combinación de tema y dificultad.</p>`}
+    </div>
     <p class="nota" style="margin-top:1rem">Atajos: <kbd>1</kbd>–<kbd>5</kbd> marcan una opción, <kbd>←</kbd> <kbd>→</kbd> cambian de pregunta, <kbd>P</kbd> muestra la pista.</p>
     <p class="descargo">Material de práctica escrito para este proyecto, en parte con ayuda de modelos de lenguaje.
     Puede contener errores: revisa siempre la explicación y contrasta con tu libro o tu profesor antes de darla por buena.</p>`;
 
   $app.querySelectorAll("[data-tema]").forEach(b => b.onclick = () => { opciones.tema = b.dataset.tema; renderInicio(); });
   $app.querySelectorAll("[data-modo]").forEach(b => b.onclick = () => { opciones.modo = b.dataset.modo; renderInicio(); });
-  const e = document.getElementById("empezar");
-  e.onclick = iniciarEnsayo;
-  e.disabled = n === 0;
+  $app.querySelectorAll("[data-tamano]").forEach(b => b.onclick = () => { opciones.tamano = +b.dataset.tamano; iniciarEnsayo(); });
 }
 
 function renderPregunta(mantenerFoco){
