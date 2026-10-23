@@ -120,20 +120,30 @@ function repartirCuota(n, k){
 function elegirPreguntas(tema, modo, n){
   if(tema !== "todos") return mezclar(elegirDeGrupo(disponibles(tema), modo, n).elegidas);
 
-  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas,
-     y dentro de cada área se respeta la mezcla de dificultad. Si a un área le
-     faltan preguntas para su cuota, el resto se rellena con las demás. */
+  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas.
+     La mezcla de dificultad se cumple en el total del ensayo y no área por área:
+     con 10 preguntas cada área aporta una o dos, y redondear la mezcla en cada
+     una la deforma. Se elige por rondas: en cada ronda cada área aporta una
+     pregunta del nivel al que más le falta para su cupo, entre los que el área
+     todavía tiene. Si a un área le faltan preguntas, se rellena con las demás. */
   const temas = mezclar([...new Set(PREGUNTAS.map(p => p.tema))]);
   const cuotas = repartirCuota(n, temas.length);
-  const elegidas = [], sobrantes = [];
-  temas.forEach((t, i) => {
-    const { elegidas: e, resto } = elegirDeGrupo(PREGUNTAS.filter(p => p.tema === t), modo, cuotas[i]);
-    elegidas.push(...e);
-    sobrantes.push(...resto);
-  });
-  const resto = mezclar(sobrantes);
-  while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
-  return mezclar(elegidas).slice(0, n);
+  const pendientes = modo === "estandar" ? cuotasMezcla(n) : null;
+  const grupos = temas.map(t => mezclar(PREGUNTAS.filter(p => p.tema === t && (modo === "estandar" || p.dificultad === modo))));
+  const sacar = grupo => {
+    let k = 0;
+    if(pendientes) grupo.forEach((p, j) => { if(pendientes[p.dificultad] > pendientes[grupo[k].dificultad]) k = j; });
+    const [p] = grupo.splice(k, 1);
+    if(pendientes) pendientes[p.dificultad]--;
+    return p;
+  };
+  const elegidas = [];
+  for(let ronda = 0; ronda < Math.max(...cuotas); ronda++){
+    grupos.forEach((g, i) => { if(ronda < cuotas[i] && g.length) elegidas.push(sacar(g)); });
+  }
+  const resto = mezclar([].concat(...grupos));
+  while(elegidas.length < n && resto.length) elegidas.push(sacar(resto));
+  return mezclar(elegidas);
 }
 
 /* ------------------------- estado ------------------------- */
