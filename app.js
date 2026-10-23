@@ -80,6 +80,19 @@ function disponibles(tema){
   return tema === "todos" ? PREGUNTAS : PREGUNTAS.filter(p => p.tema === tema);
 }
 
+/* Cupos de cada nivel para n preguntas según MEZCLA_ESTANDAR. Redondear cada
+   nivel por separado puede pasarse de n (con 30: 9 + 14 + 8 = 31), así que se
+   toma la parte entera y los cupos que faltan van a los restos más grandes. */
+function cuotasMezcla(n){
+  const niveles = Object.entries(MEZCLA_ESTANDAR).map(([d, frac]) => {
+    const exacto = n * frac, q = Math.floor(exacto + 1e-9);
+    return { d, q, resto: exacto - q };
+  });
+  let faltan = n - niveles.reduce((s, x) => s + x.q, 0);
+  niveles.slice().sort((a, b) => b.resto - a.resto).forEach(x => { if(faltan > 0){ x.q++; faltan--; } });
+  return Object.fromEntries(niveles.map(x => [x.d, x.q]));
+}
+
 /* Elige de un solo grupo (pool ya filtrado) respetando la mezcla de dificultad.
    Devuelve también lo que no se usó, para poder rellenar cuotas de otros grupos. */
 function elegirDeGrupo(pool, modo, n){
@@ -90,8 +103,8 @@ function elegirDeGrupo(pool, modo, n){
   const porNivel = {};
   Object.keys(MEZCLA_ESTANDAR).forEach(d => porNivel[d] = mezclar(pool.filter(p => p.dificultad === d)));
   const elegidas = [];
-  Object.entries(MEZCLA_ESTANDAR).forEach(([d, frac]) => {
-    elegidas.push(...porNivel[d].splice(0, Math.round(n * frac)));
+  Object.entries(cuotasMezcla(n)).forEach(([d, q]) => {
+    elegidas.push(...porNivel[d].splice(0, q));
   });
   const resto = mezclar([].concat(...Object.values(porNivel)));
   while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
