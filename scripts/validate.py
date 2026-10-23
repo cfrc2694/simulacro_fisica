@@ -114,10 +114,12 @@ for huerfano in sorted(en_disco - {i.get("archivo") for i in figuras.values()}):
     avi(f"archivo sin registrar en figuras.json: {huerfano}")
 
 # Coherencia entre el texto y los campos de cada pregunta
-MENCIONA_FIGURA = re.compile(r"\bfiguras?\b", re.I)
+# "figura de difracción" o "de interferencia" es un patrón físico, no una imagen
+MENCIONA_FIGURA = re.compile(r"\bfiguras?\b(?!\s+de\s+(difracci[oó]n|interferencia))", re.I)
+# La letra va en mayúscula: "la opción a elegir" no nombra una opción
 POR_POSICION = re.compile(
     r"\b(primera|segunda|tercera|cuarta|quinta|última|penúltima)\s+opci[oó]n\b"
-    r"|\bopci[oó]n\s+\$?\(?[A-E]\)?\$?(?![A-Za-z])", re.I)
+    r"|\bopci[oó]n\s+\$?\(?(?-i:[A-E])\)?\$?(?![A-Za-z])", re.I)
 for p in preguntas:
     pid = p.get("id", "?")
     texto = p.get("enunciado", "") + " " + (p.get("explicacion") or "")
