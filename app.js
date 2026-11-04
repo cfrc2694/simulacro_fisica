@@ -70,34 +70,19 @@ function pistaHTML(item){
     <span class="nota">Si aciertas después de verla, esta pregunta vale ${fmtPts(VALOR_CON_PISTA)} en vez de 1.</span></div>`;
 }
 
-/* Formato de examen de admisión a posgrado: cinco áreas, cada una definida por
-   nodos de temas.json. Una pregunta entra en un área si alguno de sus subtemas
-   es uno de esos nodos o cuelga de él, así que puede estar en más de un área.
-   Física 1 y 2 sigue un curso estándar de física general: mecánica (unidades,
-   cinemática, Newton, energía, momento, rotación y gravitación), calor y
-   termodinámica básica, y electricidad y magnetismo hasta la inductancia.
-   Quedan fuera la óptica, los fluidos y casi todos los métodos de laboratorio. */
-const AREAS_ADMISION = [
-  { id: "a-general", titulo: "Física 1 y Física 2", nodos: ["1.1", "1.2", "1.3", "1.4", "1.6.3",
-      "4.2.1", "4.2.2", "4.2.3", "4.2.5", "2.1.1", "2.1.2", "2.1.3", "2.1.4", "2.1.6", "2.1.9",
-      "2.2.1", "2.2.2", "2.2.3", "2.2.6", "2.3.2", "2.3.3", "2.7"] },
-  { id: "a-termo", titulo: "Termodinámica y Física Estadística", nodos: ["4"] },
-  { id: "a-moderna", titulo: "Física Moderna y Mecánica Cuántica", nodos: ["5", "6", "7.4.2", "8.1"] },
-  { id: "a-clasica", titulo: "Física Clásica", nodos: ["1.4.2", "1.4.3", "1.4.4", "1.5", "1.6", "1.7"] },
-  { id: "a-em", titulo: "Electromagnetismo", nodos: ["2"] },
-];
+/* Formato de examen de admisión a posgrado: solo los temas principales de
+   temas.json que entran en ese examen (mecánica clásica, electricidad y
+   magnetismo, termodinámica y estadística, cuántica y atómica, y relatividad).
+   Quedan fuera óptica y ondas, métodos de laboratorio y temas especializados. */
+const TEMAS_ADMISION = ["1", "2", "4", "5", "6"];
 const FORMATOS = { banco: "Banco completo", admision: "Examen de admisión a posgrado" };
 
-const nodosDe = p => (p.subtemas && p.subtemas.length ? p.subtemas : [p.tema]);
-const enArea = (p, area) => nodosDe(p).some(n => area.nodos.some(x => n === x || n.startsWith(x + ".")));
-
 /* -------------------- armado del ensayo -------------------- */
-/* Grupos entre los que se reparte el ensayo: las áreas de temas.json en el banco
-   completo, o las cinco áreas del examen de admisión. */
+/* Grupos entre los que se reparte el ensayo: los temas principales de temas.json,
+   o solo los del examen de admisión. */
 function grupos(){
-  if(opciones.formato === "admision")
-    return AREAS_ADMISION.map(a => ({ id: a.id, titulo: a.titulo, preguntas: PREGUNTAS.filter(p => enArea(p, a)) }));
-  const ids = [...new Set(PREGUNTAS.map(p => p.tema))].sort();
+  const ids = [...new Set(PREGUNTAS.map(p => p.tema))].sort()
+    .filter(id => opciones.formato !== "admision" || TEMAS_ADMISION.includes(id));
   return ids.map(id => ({ id, titulo: tituloTema(id), preguntas: PREGUNTAS.filter(p => p.tema === id) }));
 }
 
@@ -154,8 +139,6 @@ function elegirPreguntas(tema, modo, n){
      una la deforma. Se elige por rondas: en cada ronda cada área aporta una
      pregunta del nivel al que más le falta para su cupo, entre los que el área
      todavía tiene. Si a un área le faltan preguntas, se rellena con las demás. */
-  /* En el examen de admisión una pregunta puede estar en dos áreas: las ya
-     elegidas se descartan de todos los grupos para no repetirlas. */
   const pools = mezclar(grupos().filter(g => g.preguntas.length))
     .map(g => mezclar(g.preguntas.filter(p => modo === "estandar" || p.dificultad === modo)));
   const cuotas = repartirCuota(n, pools.length);
@@ -240,14 +223,13 @@ function renderInicio(aviso){
         ${Object.entries(FORMATOS).map(([k,v]) =>
           `<button data-formato="${k}" aria-pressed="${opciones.formato===k}">${v}</button>`).join("")}
       </div>
-      ${admision ? `<p class="nota">Las cinco áreas de un examen de admisión a posgrado en física: ${AREAS_ADMISION.map(a => a.titulo).join(", ")}.
-      Deja por fuera la óptica, los fluidos y la mayoría de los métodos de laboratorio.</p>` : ""}
+      ${admision ? `<p class="nota">Solo los temas de un examen de admisión a posgrado en física: ${TEMAS_ADMISION.map(tituloTema).join(", ")}.</p>` : ""}
     </div>
 
     <div class="grupo">
-      <span class="etiqueta">${admision ? "Área" : "Tema"}</span>
-      <div class="segmentado" role="group" aria-label="${admision ? "Área" : "Tema"}">
-        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">${admision ? "Todas" : "Todos"} (${disponibles("todos").length})</button>
+      <span class="etiqueta">Tema</span>
+      <div class="segmentado" role="group" aria-label="Tema">
+        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">Todos (${disponibles("todos").length})</button>
         ${secciones.map(s => `<button data-tema="${s.id}" aria-pressed="${opciones.tema===s.id}">${esc(s.titulo)} (${s.preguntas.length})</button>`).join("")}
       </div>
     </div>
@@ -260,7 +242,7 @@ function renderInicio(aviso){
           `<button data-modo="${k}" aria-pressed="${opciones.modo===k}">${v} (${cuenta(k)})</button>`).join("")}
       </div>
       <p class="nota">El ensayo estándar mezcla los tres niveles: 30 % fáciles, 45 % medias y 25 % difíciles.
-      Con ${admision ? `"Todas"` : `el tema "Todos"`} además reparte las preguntas por área lo más parejo posible.</p>
+      Con el tema "Todos" además reparte las preguntas por área lo más parejo posible.</p>
     </div>
 
     <div class="grupo">
