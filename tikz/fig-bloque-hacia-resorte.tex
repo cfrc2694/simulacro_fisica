@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.25,0) rectangle (0,1.1);
+  \draw[thick] (0,0) -- (0,1.1);
+  \draw[thick] (-0.25,0) -- (5.2,0);
+  \draw[decorate, decoration={coil, aspect=0.5, segment length=4pt, amplitude=4pt}, thick, verde] (0,0.35) -- node[above=6pt, text=black]{$k$} (1.9,0.35);
+  \filldraw[draw=rojo, fill=rojo!20, thick] (3.4,0) rectangle (4.2,0.8);
+  \node at (3.8,0.4) {$m$};
+  \draw[->, thick, azul] (3.3,1.15) -- node[above, text=black]{$\vec v_0$} (2.3,1.15);
+\end{tikzpicture}
+\end{document}

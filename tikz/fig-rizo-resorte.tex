@@ -1,0 +1,16 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.25,0) rectangle (0,1.0);
+  \draw[thick] (0,0) -- (0,1.0);
+  \draw[thick] (-0.25,0) -- (7.6,0);
+  \draw[decorate, decoration={coil, aspect=0.5, segment length=4pt, amplitude=4pt}, thick, verde] (0,0.3) -- node[above=6pt, text=black]{$k$} (1.7,0.3);
+  \filldraw[draw=rojo, fill=rojo!20, thick] (1.7,0) rectangle (2.3,0.6);
+  \node at (2.0,0.3) {$m$};
+  \draw[very thick, azul] (5.2,1.15) circle (1.15);
+  \fill (5.2,1.15) circle (1.2pt);
+  \draw[->] (5.2,1.15) -- node[above left=-1pt]{$R$} ++(40:1.15);
+  \draw[->, thick] (2.6,0.35) -- (3.4,0.35);
+\end{tikzpicture}
+\end{document}

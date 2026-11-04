@@ -808,5 +808,40 @@
     "nodo": "5.5.3",
     "titulo": "Suma de momentos angulares",
     "texto": "Al combinar dos momentos angulares $L$ y $S$, el total $J$ toma todos los valores desde $|L - S|$ hasta $L + S$, en pasos de uno. Para los valores posibles de $L$ y de $S$ con varios electrones en subcapas distintas, aplica la misma regla a los momentos de cada electrón. Distingue esto de elegir el estado fundamental, que es una sola combinación determinada por las reglas de Hund."
+  },
+  "rizo-vertical": {
+    "nodo": "1.3.2",
+    "titulo": "Recorrer un rizo vertical",
+    "texto": "En el punto más alto de un rizo, la pista solo puede empujar hacia el centro. La condición límite para no despegarse es que la normal se anule allí, de modo que el peso aporta por sí solo toda la fuerza centrípeta. Combina esa condición con la conservación de la energía entre el punto de partida y la cima, sin olvidar la energía potencial gravitatoria que se gana al subir."
+  },
+  "friccion-bloques-apilados": {
+    "nodo": "1.1.3",
+    "titulo": "Bloques apilados que se mueven juntos",
+    "texto": "Si un bloque va encima de otro que es arrastrado, la única fuerza horizontal sobre el de arriba es la fricción entre ambos. Mientras se mueven juntos, esa fricción es la que le da su aceleración, y la fricción estática no puede superar $\\mu_s N$. Calcula la aceleración del conjunto como si fuera un solo cuerpo y luego exige que la fricción alcance para que el bloque de arriba la siga."
+  },
+  "cinematica-angular-constante": {
+    "nodo": "1.2.1",
+    "titulo": "Rotación con aceleración angular constante",
+    "texto": "Con aceleración angular constante valen las mismas ecuaciones que en la cinemática lineal: $\\omega = \\omega_0 + \\alpha t$ y $\\theta = \\omega_0 t + \\tfrac12\\alpha t^2$. Trabaja en unidades coherentes (vueltas y vueltas por segundo, o radianes y radianes por segundo) y usa el dato del ángulo recorrido para obtener $\\alpha$ antes de preguntar por otro instante."
+  },
+  "oscilador-forzado": {
+    "nodo": "1.7.2",
+    "titulo": "Oscilador forzado y amortiguado",
+    "texto": "En el régimen estacionario el oscilador vibra con la frecuencia de la fuerza externa. Prueba la solución $x(t) = \\mathrm{Re}\\,[\\tilde A e^{i\\omega t}]$ en $\\ddot x + \\gamma\\dot x + \\omega_0^2 x = (F_0/m)\\cos\\omega t$: la amplitud compleja $\\tilde A$ queda como un cociente, y la amplitud física es su módulo. Comprueba el resultado en el límite sin amortiguamiento y en la resonancia."
+  },
+  "accion-periodo": {
+    "nodo": "1.5.3",
+    "titulo": "Área en el espacio de fase y período",
+    "texto": "Una órbita cerrada de energía $E$ encierra en el espacio de fase un área $A(E) = \\oint p\\,dq$. Para relacionarla con el tiempo, deriva respecto a $E$ dentro de la integral y usa la ecuación de Hamilton $\\dot q = \\partial H/\\partial p$. Comprueba el resultado con el oscilador armónico, cuya órbita es una elipse de área conocida."
+  },
+  "corchetes-poisson": {
+    "nodo": "1.5.3",
+    "titulo": "Corchetes de Poisson",
+    "texto": "Con la convención $\\{f,g\\} = \\sum_n \\left(\\dfrac{\\partial f}{\\partial q_n}\\dfrac{\\partial g}{\\partial p_n} - \\dfrac{\\partial f}{\\partial p_n}\\dfrac{\\partial g}{\\partial q_n}\\right)$, escribe la función en coordenadas y momentos y deriva término por término. Si el segundo argumento es una sola coordenada o un solo momento, el corchete se reduce a una derivada: $\\{f, q_k\\} = -\\partial f/\\partial p_k$ y $\\{f, p_k\\} = \\partial f/\\partial q_k$. Con otra convención de signo, todo el resultado cambia de signo."
+  },
+  "dispersion-esfera-dura": {
+    "nodo": "1.4.1",
+    "titulo": "Dispersión por una superficie rígida",
+    "texto": "En un choque elástico con una superficie fija y lisa, la partícula se refleja como un rayo de luz: forma el mismo ángulo con la normal al llegar y al salir. Dibuja la normal en el punto de impacto, relaciona el parámetro de impacto con el ángulo de incidencia y después ese ángulo con la desviación total. Comprueba los dos extremos: el choque de frente y el roce tangente."
   }
 }
