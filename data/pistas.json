@@ -863,5 +863,25 @@
     "nodo": "4.2",
     "titulo": "Coeficiente de dilatación lineal",
     "texto": "El coeficiente de dilatación lineal a una temperatura $T$ es el cambio relativo de longitud por unidad de temperatura: $\\alpha = \\dfrac{1}{L}\\dfrac{dL}{dT}$, con $L$ evaluada a esa misma temperatura. Tiene unidades de inverso de temperatura. Si $L(T)$ está dada por una fórmula, deriva primero y divide después."
+  },
+  "calorimetria-cambio-fase": {
+    "nodo": "4.2.5",
+    "titulo": "Balance de calor con cambio de fase",
+    "texto": "En un recipiente aislado, el calor que cede el cuerpo caliente es igual al que absorbe el frío. Primero decide la temperatura final: si en el equilibrio coexisten agua y vapor, es la de ebullición. Después suma por tramos: $mc\\,\\Delta T$ para cada cambio de temperatura y $mL$ para cada cambio de fase, aplicado solo a la masa que realmente cambia de fase."
+  },
+  "doppler-relativista": {
+    "nodo": "6.4.1",
+    "titulo": "Efecto Doppler relativista",
+    "texto": "Para la luz, cuando fuente y observador se acercan con rapidez relativa $\\beta c$, la frecuencia observada es $f' = f\\sqrt{\\dfrac{1+\\beta}{1-\\beta}}$, y la energía de cada fotón cambia en el mismo factor. A diferencia del sonido, solo importa la velocidad relativa, porque no hay un medio. Despeja $\\beta$ del factor que necesitas y comprueba que quede menor que 1."
+  },
+  "escalon-potencial": {
+    "nodo": "5.3.5",
+    "titulo": "Reflexión en un escalón de potencial",
+    "texto": "Si la energía supera la altura del escalón, la función de onda oscila a ambos lados, con números de onda $k_1 \\propto \\sqrt{E}$ y $k_2 \\propto \\sqrt{E - V_0}$. La continuidad de $\\psi$ y de $\\psi'$ en el escalón da la amplitud reflejada, y la fracción reflejada es el cuadrado de su módulo: $R = \\left(\\dfrac{k_1 - k_2}{k_1 + k_2}\\right)^2$. Comprueba que $R + T = 1$."
+  },
+  "evolucion-temporal-estados": {
+    "nodo": "5.1.3",
+    "titulo": "Evolución de una superposición",
+    "texto": "Cada estado propio del hamiltoniano evoluciona multiplicándose por su propia fase, $|n\\rangle \\to e^{-iE_nt/\\hbar}|n\\rangle$. En una superposición, los valores esperados que mezclan dos niveles oscilan con la frecuencia $(E_m - E_n)/\\hbar$, y los que solo dependen de las probabilidades de cada nivel no cambian. Para el oscilador, escribe los operadores con $a$ y $a^\\dagger$ y usa $a|n\\rangle = \\sqrt n\\,|n-1\\rangle$."
   }
 }
