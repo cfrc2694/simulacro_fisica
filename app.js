@@ -80,6 +80,19 @@ function disponibles(tema){
   return tema === "todos" ? PREGUNTAS : PREGUNTAS.filter(p => p.tema === tema);
 }
 
+/* Cupos de cada nivel para n preguntas según MEZCLA_ESTANDAR. Redondear cada
+   nivel por separado puede pasarse de n (con 30: 9 + 14 + 8 = 31), así que se
+   toma la parte entera y los cupos que faltan van a los restos más grandes. */
+function cuotasMezcla(n){
+  const niveles = Object.entries(MEZCLA_ESTANDAR).map(([d, frac]) => {
+    const exacto = n * frac, q = Math.floor(exacto + 1e-9);
+    return { d, q, resto: exacto - q };
+  });
+  let faltan = n - niveles.reduce((s, x) => s + x.q, 0);
+  niveles.slice().sort((a, b) => b.resto - a.resto).forEach(x => { if(faltan > 0){ x.q++; faltan--; } });
+  return Object.fromEntries(niveles.map(x => [x.d, x.q]));
+}
+
 /* Elige de un solo grupo (pool ya filtrado) respetando la mezcla de dificultad.
    Devuelve también lo que no se usó, para poder rellenar cuotas de otros grupos. */
 function elegirDeGrupo(pool, modo, n){
@@ -90,8 +103,8 @@ function elegirDeGrupo(pool, modo, n){
   const porNivel = {};
   Object.keys(MEZCLA_ESTANDAR).forEach(d => porNivel[d] = mezclar(pool.filter(p => p.dificultad === d)));
   const elegidas = [];
-  Object.entries(MEZCLA_ESTANDAR).forEach(([d, frac]) => {
-    elegidas.push(...porNivel[d].splice(0, Math.round(n * frac)));
+  Object.entries(cuotasMezcla(n)).forEach(([d, q]) => {
+    elegidas.push(...porNivel[d].splice(0, q));
   });
   const resto = mezclar([].concat(...Object.values(porNivel)));
   while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
@@ -107,20 +120,30 @@ function repartirCuota(n, k){
 function elegirPreguntas(tema, modo, n){
   if(tema !== "todos") return mezclar(elegirDeGrupo(disponibles(tema), modo, n).elegidas);
 
-  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas,
-     y dentro de cada área se respeta la mezcla de dificultad. Si a un área le
-     faltan preguntas para su cuota, el resto se rellena con las demás. */
+  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas.
+     La mezcla de dificultad se cumple en el total del ensayo y no área por área:
+     con 10 preguntas cada área aporta una o dos, y redondear la mezcla en cada
+     una la deforma. Se elige por rondas: en cada ronda cada área aporta una
+     pregunta del nivel al que más le falta para su cupo, entre los que el área
+     todavía tiene. Si a un área le faltan preguntas, se rellena con las demás. */
   const temas = mezclar([...new Set(PREGUNTAS.map(p => p.tema))]);
   const cuotas = repartirCuota(n, temas.length);
-  const elegidas = [], sobrantes = [];
-  temas.forEach((t, i) => {
-    const { elegidas: e, resto } = elegirDeGrupo(PREGUNTAS.filter(p => p.tema === t), modo, cuotas[i]);
-    elegidas.push(...e);
-    sobrantes.push(...resto);
-  });
-  const resto = mezclar(sobrantes);
-  while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
-  return mezclar(elegidas).slice(0, n);
+  const pendientes = modo === "estandar" ? cuotasMezcla(n) : null;
+  const grupos = temas.map(t => mezclar(PREGUNTAS.filter(p => p.tema === t && (modo === "estandar" || p.dificultad === modo))));
+  const sacar = grupo => {
+    let k = 0;
+    if(pendientes) grupo.forEach((p, j) => { if(pendientes[p.dificultad] > pendientes[grupo[k].dificultad]) k = j; });
+    const [p] = grupo.splice(k, 1);
+    if(pendientes) pendientes[p.dificultad]--;
+    return p;
+  };
+  const elegidas = [];
+  for(let ronda = 0; ronda < Math.max(...cuotas); ronda++){
+    grupos.forEach((g, i) => { if(ronda < cuotas[i] && g.length) elegidas.push(sacar(g)); });
+  }
+  const resto = mezclar([].concat(...grupos));
+  while(elegidas.length < n && resto.length) elegidas.push(sacar(resto));
+  return mezclar(elegidas);
 }
 
 /* ------------------------- estado ------------------------- */
