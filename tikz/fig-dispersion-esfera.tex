@@ -1,0 +1,19 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+  % R = 1, b = 0.6: incidencia a 36.87 grados de la normal, desviacion de 106.26 grados
+  \draw[dashed, thin] (-3.2,0) -- (2.4,0);
+  \filldraw[draw=azul, fill=azul!12, thick] (0,0) circle (1);
+  \fill (0,0) circle (0.8pt);
+  \draw[->] (0,0) -- node[below left=-1pt]{$R$} (225:1);
+  \draw[very thick, rojo] (-3.2,0.6) -- (-0.8,0.6);
+  \draw[->, very thick, rojo] (-3.2,0.6) -- (-2.2,0.6);
+  \draw[very thick, rojo, ->] (-0.8,0.6) -- ++(106.26:1.25);
+  \draw[dashed, thin] (0,0) -- ++(143.13:1.6);
+  \draw[dashed, thin] (-0.8,0.6) -- ++(0:1.0);
+  \draw[->] (-0.3,0.6) arc (0:106.26:0.5);
+  \node at (-0.55,1.25) {$\theta$};
+  \draw[|<->|] (-2.8,0) -- node[left]{$b$} (-2.8,0.6);
+\end{tikzpicture}
+\end{document}

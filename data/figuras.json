@@ -446,5 +446,47 @@
     "ancho": 300,
     "pie": null,
     "alt": "Una varilla uniforme de longitud L, en azul, apoyada en un fulcro que está a la derecha de su centro, marcado con una línea punteada. Del extremo izquierdo cuelga un bloque de masa m1 y del derecho, uno más grande de masa m2."
+  },
+  "fig-rizo-resorte": {
+    "archivo": "figures/fig-rizo-resorte.svg",
+    "fuente": "tikz/fig-rizo-resorte.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Pista horizontal. A la izquierda, un resorte de constante k, en verde, fijo a una pared y en contacto con un bloque de masa m. A la derecha, la pista forma un rizo circular vertical de radio R, en azul, que toca el piso en su punto más bajo. Una flecha indica que el bloque se mueve hacia el rizo."
+  },
+  "fig-bloques-polea": {
+    "archivo": "figures/fig-bloques-polea.svg",
+    "fuente": "tikz/fig-bloques-polea.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Sobre una mesa horizontal hay un bloque Q, en azul, y encima de él un bloque P más pequeño, en naranja. Una cuerda horizontal sale de Q, pasa por una polea en el borde de la mesa y sostiene un bloque colgante R, en rojo."
+  },
+  "fig-bloque-hacia-resorte": {
+    "archivo": "figures/fig-bloque-hacia-resorte.svg",
+    "fuente": "tikz/fig-bloque-hacia-resorte.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un resorte horizontal de constante k, en verde, está fijo a una pared a la izquierda. A la derecha, un bloque de masa m se mueve sobre el piso hacia el resorte con velocidad v0, indicada con una flecha azul que apunta a la izquierda."
+  },
+  "fig-dispersion-esfera": {
+    "archivo": "figures/fig-dispersion-esfera.svg",
+    "fuente": "tikz/fig-dispersion-esfera.tex",
+    "ancho": 380,
+    "pie": null,
+    "alt": "Una esfera de radio R, en azul, con su centro sobre una línea horizontal punteada. Una partícula, en rojo, llega horizontalmente desde la izquierda a una altura b sobre esa línea, toca la esfera y sale hacia arriba y a la izquierda. El ángulo θ entre la dirección de llegada y la de salida está marcado, y también la normal a la esfera en el punto de impacto."
+  },
+  "fig-anillos-coaxiales": {
+    "archivo": "figures/fig-anillos-coaxiales.svg",
+    "fuente": "tikz/fig-anillos-coaxiales.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos anillos iguales y coaxiales, perpendiculares al eje y. El anillo de carga q, en azul, está en el origen, y el de carga 3q, en rojo, está a una distancia d sobre el eje y. El punto P está en el eje, a d/2 de cada anillo."
+  },
+  "fig-esfera-cascaron": {
+    "archivo": "figures/fig-esfera-cascaron.svg",
+    "fuente": "tikz/fig-esfera-cascaron.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Una esfera maciza de radio a, en azul, con carga +Q, dentro de un cascarón esférico concéntrico de radio b, en rojo, con carga −Q."
   }
 }

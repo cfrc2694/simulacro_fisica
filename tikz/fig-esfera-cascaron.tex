@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[very thick, rojo] (0,0) circle (1.8);
+  \filldraw[draw=azul, fill=azul!20, thick] (0,0) circle (0.8);
+  \fill (0,0) circle (1pt);
+  \draw[->] (0,0) -- node[above, pos=0.6]{$a$} (30:0.8);
+  \draw[->] (0,0) -- node[below, pos=0.7]{$b$} (-35:1.8);
+  \node[azul] at (-0.2,-0.4) {$+Q$};
+  \node[rojo] at (-1.55,1.55) {$-Q$};
+\end{tikzpicture}
+\end{document}
