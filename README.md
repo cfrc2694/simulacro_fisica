@@ -1,6 +1,6 @@
 # Simulacro de Física
 
-Aplicación web para practicar física con ensayos: toma preguntas al azar del banco, permite elegir tema y nivel de dificultad, ofrece una pista por tema con costo en el puntaje y al final entrega un reporte con aciertos, errores y explicaciones.
+Aplicación web para practicar física con ensayos: toma preguntas al azar del banco, permite elegir tema, nivel de dificultad y número de preguntas (de 5 a 50), tiene un formato de examen de admisión a posgrado con cinco áreas, ofrece una pista por tema con costo en el puntaje y al final entrega un reporte con aciertos, errores y explicaciones.
 
 ## Cómo correr
 

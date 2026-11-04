@@ -5,7 +5,7 @@
    scripts/build.py) se usan esos datos y no se hace fetch.
    ============================================================ */
 
-const TAMANO_ENSAYO = 30;          // preguntas por ensayo
+const TAMANO_ENSAYO = { min: 5, max: 50, paso: 5, inicial: 30 }; // selector del número de preguntas
 const VALOR_CON_PISTA = 0.5;       // cuánto vale un acierto después de ver la pista
 const SEGUNDOS_POR_PREGUNTA = 100; // ritmo de referencia que muestra el cronómetro
 const MEZCLA_ESTANDAR = { facil: 0.30, media: 0.45, dificil: 0.25 };
@@ -70,14 +70,42 @@ function pistaHTML(item){
     <span class="nota">Si aciertas después de verla, esta pregunta vale ${fmtPts(VALOR_CON_PISTA)} en vez de 1.</span></div>`;
 }
 
+/* Formato de examen de admisión a posgrado: cinco áreas, cada una definida por
+   nodos de temas.json. Una pregunta entra en un área si alguno de sus subtemas
+   es uno de esos nodos o cuelga de él, así que puede estar en más de un área.
+   Física 1 y 2 sigue un curso estándar de física general: mecánica (unidades,
+   cinemática, Newton, energía, momento, rotación y gravitación), calor y
+   termodinámica básica, y electricidad y magnetismo hasta la inductancia.
+   Quedan fuera la óptica, los fluidos y casi todos los métodos de laboratorio. */
+const AREAS_ADMISION = [
+  { id: "a-general", titulo: "Física 1 y Física 2", nodos: ["1.1", "1.2", "1.3", "1.4", "1.6.3",
+      "4.2.1", "4.2.2", "4.2.3", "4.2.5", "2.1.1", "2.1.2", "2.1.3", "2.1.4", "2.1.6", "2.1.9",
+      "2.2.1", "2.2.2", "2.2.3", "2.2.6", "2.3.2", "2.3.3", "2.7"] },
+  { id: "a-termo", titulo: "Termodinámica y Física Estadística", nodos: ["4"] },
+  { id: "a-moderna", titulo: "Física Moderna y Mecánica Cuántica", nodos: ["5", "6", "7.4.2", "8.1"] },
+  { id: "a-clasica", titulo: "Física Clásica", nodos: ["1.4.2", "1.4.3", "1.4.4", "1.5", "1.6", "1.7"] },
+  { id: "a-em", titulo: "Electromagnetismo", nodos: ["2"] },
+];
+const FORMATOS = { banco: "Banco completo", admision: "Examen de admisión a posgrado" };
+
+const nodosDe = p => (p.subtemas && p.subtemas.length ? p.subtemas : [p.tema]);
+const enArea = (p, area) => nodosDe(p).some(n => area.nodos.some(x => n === x || n.startsWith(x + ".")));
+
 /* -------------------- armado del ensayo -------------------- */
-function seccionesDisponibles(){
-  const ids = [...new Set(PREGUNTAS.map(p => p.tema))];
-  return ids.sort().map(id => ({ id, titulo: tituloTema(id), n: PREGUNTAS.filter(p => p.tema === id).length }));
+/* Grupos entre los que se reparte el ensayo: las áreas de temas.json en el banco
+   completo, o las cinco áreas del examen de admisión. */
+function grupos(){
+  if(opciones.formato === "admision")
+    return AREAS_ADMISION.map(a => ({ id: a.id, titulo: a.titulo, preguntas: PREGUNTAS.filter(p => enArea(p, a)) }));
+  const ids = [...new Set(PREGUNTAS.map(p => p.tema))].sort();
+  return ids.map(id => ({ id, titulo: tituloTema(id), preguntas: PREGUNTAS.filter(p => p.tema === id) }));
 }
 
 function disponibles(tema){
-  return tema === "todos" ? PREGUNTAS : PREGUNTAS.filter(p => p.tema === tema);
+  const gs = grupos();
+  if(tema !== "todos") return (gs.find(g => g.id === tema) || { preguntas: [] }).preguntas;
+  const vistas = new Set();
+  return [].concat(...gs.map(g => g.preguntas)).filter(p => !vistas.has(p.id) && vistas.add(p.id));
 }
 
 /* Cupos de cada nivel para n preguntas según MEZCLA_ESTANDAR. Redondear cada
@@ -126,32 +154,38 @@ function elegirPreguntas(tema, modo, n){
      una la deforma. Se elige por rondas: en cada ronda cada área aporta una
      pregunta del nivel al que más le falta para su cupo, entre los que el área
      todavía tiene. Si a un área le faltan preguntas, se rellena con las demás. */
-  const temas = mezclar([...new Set(PREGUNTAS.map(p => p.tema))]);
-  const cuotas = repartirCuota(n, temas.length);
+  /* En el examen de admisión una pregunta puede estar en dos áreas: las ya
+     elegidas se descartan de todos los grupos para no repetirlas. */
+  const pools = mezclar(grupos().filter(g => g.preguntas.length))
+    .map(g => mezclar(g.preguntas.filter(p => modo === "estandar" || p.dificultad === modo)));
+  const cuotas = repartirCuota(n, pools.length);
   const pendientes = modo === "estandar" ? cuotasMezcla(n) : null;
-  const grupos = temas.map(t => mezclar(PREGUNTAS.filter(p => p.tema === t && (modo === "estandar" || p.dificultad === modo))));
+  const usadas = new Set();
   const sacar = grupo => {
+    for(let i = grupo.length - 1; i >= 0; i--) if(usadas.has(grupo[i].id)) grupo.splice(i, 1);
+    if(!grupo.length) return null;
     let k = 0;
     if(pendientes) grupo.forEach((p, j) => { if(pendientes[p.dificultad] > pendientes[grupo[k].dificultad]) k = j; });
     const [p] = grupo.splice(k, 1);
     if(pendientes) pendientes[p.dificultad]--;
+    usadas.add(p.id);
     return p;
   };
   const elegidas = [];
   for(let ronda = 0; ronda < Math.max(...cuotas); ronda++){
-    grupos.forEach((g, i) => { if(ronda < cuotas[i] && g.length) elegidas.push(sacar(g)); });
+    pools.forEach((g, i) => { if(ronda < cuotas[i]){ const p = sacar(g); if(p) elegidas.push(p); } });
   }
-  const resto = mezclar([].concat(...grupos));
-  while(elegidas.length < n && resto.length) elegidas.push(sacar(resto));
+  const resto = mezclar([].concat(...pools));
+  while(elegidas.length < n){ const p = sacar(resto); if(!p) break; elegidas.push(p); }
   return mezclar(elegidas);
 }
 
 /* ------------------------- estado ------------------------- */
 let S = null, reloj = null;
-let opciones = { tema: "todos", modo: "estandar" };
+let opciones = { formato: "banco", tema: "todos", modo: "estandar", tamano: TAMANO_ENSAYO.inicial };
 
 function iniciarEnsayo(){
-  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, TAMANO_ENSAYO);
+  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, opciones.tamano);
   if(!preguntas.length){ renderInicio("No hay preguntas que cumplan esa combinación de tema y dificultad."); return; }
   S = {
     items: preguntas.map(p => ({
@@ -187,9 +221,12 @@ const puntos = x => acerto(x) ? (x.pista ? VALOR_CON_PISTA : 1) : 0;
 /* ------------------------- vistas ------------------------- */
 function renderInicio(aviso){
   S = null;
-  const secciones = seccionesDisponibles();
-  const n = Math.min(TAMANO_ENSAYO, disponibles(opciones.tema).length);
+  const secciones = grupos();
+  const admision = opciones.formato === "admision";
   const cuenta = d => disponibles(opciones.tema).filter(p => p.dificultad === d).length;
+  const total = opciones.modo === "estandar" ? disponibles(opciones.tema).length : cuenta(opciones.modo);
+  const n = Math.min(opciones.tamano, total);
+  const T = TAMANO_ENSAYO;
 
   $app.innerHTML = `
     <header class="top"><h1>Simulacro de Física</h1><span class="meta">Banco de ${PREGUNTAS.length} preguntas</span></header>
@@ -198,10 +235,20 @@ function renderInicio(aviso){
     ${aviso ? `<p class="aviso">${esc(aviso)}</p>` : ""}
 
     <div class="grupo">
-      <span class="etiqueta">Tema</span>
-      <div class="segmentado" role="group" aria-label="Tema">
-        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">Todos (${PREGUNTAS.length})</button>
-        ${secciones.map(s => `<button data-tema="${s.id}" aria-pressed="${opciones.tema===s.id}">${esc(s.titulo)} (${s.n})</button>`).join("")}
+      <span class="etiqueta">Formato</span>
+      <div class="segmentado" role="group" aria-label="Formato">
+        ${Object.entries(FORMATOS).map(([k,v]) =>
+          `<button data-formato="${k}" aria-pressed="${opciones.formato===k}">${v}</button>`).join("")}
+      </div>
+      ${admision ? `<p class="nota">Las cinco áreas de un examen de admisión a posgrado en física: ${AREAS_ADMISION.map(a => a.titulo).join(", ")}.
+      Deja por fuera la óptica, los fluidos y la mayoría de los métodos de laboratorio.</p>` : ""}
+    </div>
+
+    <div class="grupo">
+      <span class="etiqueta">${admision ? "Área" : "Tema"}</span>
+      <div class="segmentado" role="group" aria-label="${admision ? "Área" : "Tema"}">
+        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">${admision ? "Todas" : "Todos"} (${disponibles("todos").length})</button>
+        ${secciones.map(s => `<button data-tema="${s.id}" aria-pressed="${opciones.tema===s.id}">${esc(s.titulo)} (${s.preguntas.length})</button>`).join("")}
       </div>
     </div>
 
@@ -213,7 +260,14 @@ function renderInicio(aviso){
           `<button data-modo="${k}" aria-pressed="${opciones.modo===k}">${v} (${cuenta(k)})</button>`).join("")}
       </div>
       <p class="nota">El ensayo estándar mezcla los tres niveles: 30 % fáciles, 45 % medias y 25 % difíciles.
-      Con el tema "Todos" además reparte las preguntas por área lo más parejo posible.</p>
+      Con ${admision ? `"Todas"` : `el tema "Todos"`} además reparte las preguntas por área lo más parejo posible.</p>
+    </div>
+
+    <div class="grupo">
+      <label class="etiqueta" for="tamano">Número de preguntas: <strong id="tamano-valor">${opciones.tamano}</strong></label>
+      <input type="range" id="tamano" class="deslizador" min="${T.min}" max="${T.max}" step="${T.paso}" value="${opciones.tamano}">
+      <div class="marcas" aria-hidden="true"><span>${T.min}</span><span>${T.max}</span></div>
+      <p class="nota" id="tamano-nota">${n < opciones.tamano && n > 0 ? `Con este filtro solo hay ${n} ${n === 1 ? "pregunta" : "preguntas"}; el ensayo las usa todas.` : ""}</p>
     </div>
 
     <button class="btn primary" id="empezar">Empezar ensayo de ${n} ${n === 1 ? "pregunta" : "preguntas"}</button>
@@ -221,8 +275,22 @@ function renderInicio(aviso){
     <p class="descargo">Material de práctica escrito para este proyecto, en parte con ayuda de modelos de lenguaje.
     Puede contener errores: revisa siempre la explicación y contrasta con tu libro o tu profesor antes de darla por buena.</p>`;
 
+  $app.querySelectorAll("[data-formato]").forEach(b => b.onclick = () => {
+    if(opciones.formato !== b.dataset.formato){ opciones.formato = b.dataset.formato; opciones.tema = "todos"; }
+    renderInicio();
+  });
   $app.querySelectorAll("[data-tema]").forEach(b => b.onclick = () => { opciones.tema = b.dataset.tema; renderInicio(); });
   $app.querySelectorAll("[data-modo]").forEach(b => b.onclick = () => { opciones.modo = b.dataset.modo; renderInicio(); });
+  /* El deslizador actualiza el texto sin redibujar la página, para no perder el foco mientras se arrastra */
+  const r = document.getElementById("tamano");
+  r.oninput = () => {
+    opciones.tamano = +r.value;
+    const m = Math.min(opciones.tamano, total);
+    document.getElementById("tamano-valor").textContent = opciones.tamano;
+    document.getElementById("tamano-nota").textContent = m < opciones.tamano && m > 0
+      ? `Con este filtro solo hay ${m} ${m === 1 ? "pregunta" : "preguntas"}; el ensayo las usa todas.` : "";
+    document.getElementById("empezar").textContent = `Empezar ensayo de ${m} ${m === 1 ? "pregunta" : "preguntas"}`;
+  };
   const e = document.getElementById("empezar");
   e.onclick = iniciarEnsayo;
   e.disabled = n === 0;
