@@ -5,7 +5,7 @@
    scripts/build.py) se usan esos datos y no se hace fetch.
    ============================================================ */
 
-const TAMANO_ENSAYO = { min: 5, max: 50, paso: 5, inicial: 30 }; // selector del número de preguntas
+const TAMANO_ENSAYO = { min: 5, max: 50, paso: 5, inicial: { banco: 30, admision: 25 } }; // selector del número de preguntas; el inicial depende del formato
 const VALOR_CON_PISTA = 0.5;       // cuánto vale un acierto después de ver la pista
 const SEGUNDOS_POR_PREGUNTA = 100; // ritmo de referencia que muestra el cronómetro
 const MEZCLA_ESTANDAR = { facil: 0.30, media: 0.45, dificil: 0.25 };
@@ -165,7 +165,7 @@ function elegirPreguntas(tema, modo, n){
 
 /* ------------------------- estado ------------------------- */
 let S = null, reloj = null;
-let opciones = { formato: "banco", tema: "todos", modo: "estandar", tamano: TAMANO_ENSAYO.inicial };
+let opciones = { formato: "banco", tema: "todos", modo: "estandar", tamano: TAMANO_ENSAYO.inicial.banco };
 
 function iniciarEnsayo(){
   const preguntas = elegirPreguntas(opciones.tema, opciones.modo, opciones.tamano);
@@ -258,7 +258,7 @@ function renderInicio(aviso){
     Puede contener errores: revisa siempre la explicación y contrasta con tu libro o tu profesor antes de darla por buena.</p>`;
 
   $app.querySelectorAll("[data-formato]").forEach(b => b.onclick = () => {
-    if(opciones.formato !== b.dataset.formato){ opciones.formato = b.dataset.formato; opciones.tema = "todos"; }
+    if(opciones.formato !== b.dataset.formato){ opciones.formato = b.dataset.formato; opciones.tema = "todos"; opciones.tamano = TAMANO_ENSAYO.inicial[opciones.formato]; }
     renderInicio();
   });
   $app.querySelectorAll("[data-tema]").forEach(b => b.onclick = () => { opciones.tema = b.dataset.tema; renderInicio(); });
