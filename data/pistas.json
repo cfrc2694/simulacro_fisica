@@ -808,5 +808,80 @@
     "nodo": "5.5.3",
     "titulo": "Suma de momentos angulares",
     "texto": "Al combinar dos momentos angulares $L$ y $S$, el total $J$ toma todos los valores desde $|L - S|$ hasta $L + S$, en pasos de uno. Para los valores posibles de $L$ y de $S$ con varios electrones en subcapas distintas, aplica la misma regla a los momentos de cada electrón. Distingue esto de elegir el estado fundamental, que es una sola combinación determinada por las reglas de Hund."
+  },
+  "rizo-vertical": {
+    "nodo": "1.3.2",
+    "titulo": "Recorrer un rizo vertical",
+    "texto": "En el punto más alto de un rizo, la pista solo puede empujar hacia el centro. La condición límite para no despegarse es que la normal se anule allí, de modo que el peso aporta por sí solo toda la fuerza centrípeta. Combina esa condición con la conservación de la energía entre el punto de partida y la cima, sin olvidar la energía potencial gravitatoria que se gana al subir."
+  },
+  "friccion-bloques-apilados": {
+    "nodo": "1.1.3",
+    "titulo": "Bloques apilados que se mueven juntos",
+    "texto": "Si un bloque va encima de otro que es arrastrado, la única fuerza horizontal sobre el de arriba es la fricción entre ambos. Mientras se mueven juntos, esa fricción es la que le da su aceleración, y la fricción estática no puede superar $\\mu_s N$. Calcula la aceleración del conjunto como si fuera un solo cuerpo y luego exige que la fricción alcance para que el bloque de arriba la siga."
+  },
+  "cinematica-angular-constante": {
+    "nodo": "1.2.1",
+    "titulo": "Rotación con aceleración angular constante",
+    "texto": "Con aceleración angular constante valen las mismas ecuaciones que en la cinemática lineal: $\\omega = \\omega_0 + \\alpha t$ y $\\theta = \\omega_0 t + \\tfrac12\\alpha t^2$. Trabaja en unidades coherentes (vueltas y vueltas por segundo, o radianes y radianes por segundo) y usa el dato del ángulo recorrido para obtener $\\alpha$ antes de preguntar por otro instante."
+  },
+  "oscilador-forzado": {
+    "nodo": "1.7.2",
+    "titulo": "Oscilador forzado y amortiguado",
+    "texto": "En el régimen estacionario el oscilador vibra con la frecuencia de la fuerza externa. Prueba la solución $x(t) = \\mathrm{Re}\\,[\\tilde A e^{i\\omega t}]$ en $\\ddot x + \\gamma\\dot x + \\omega_0^2 x = (F_0/m)\\cos\\omega t$: la amplitud compleja $\\tilde A$ queda como un cociente, y la amplitud física es su módulo. Comprueba el resultado en el límite sin amortiguamiento y en la resonancia."
+  },
+  "accion-periodo": {
+    "nodo": "1.5.3",
+    "titulo": "Área en el espacio de fase y período",
+    "texto": "Una órbita cerrada de energía $E$ encierra en el espacio de fase un área $A(E) = \\oint p\\,dq$. Para relacionarla con el tiempo, deriva respecto a $E$ dentro de la integral y usa la ecuación de Hamilton $\\dot q = \\partial H/\\partial p$. Comprueba el resultado con el oscilador armónico, cuya órbita es una elipse de área conocida."
+  },
+  "corchetes-poisson": {
+    "nodo": "1.5.3",
+    "titulo": "Corchetes de Poisson",
+    "texto": "Con la convención $\\{f,g\\} = \\sum_n \\left(\\dfrac{\\partial f}{\\partial q_n}\\dfrac{\\partial g}{\\partial p_n} - \\dfrac{\\partial f}{\\partial p_n}\\dfrac{\\partial g}{\\partial q_n}\\right)$, escribe la función en coordenadas y momentos y deriva término por término. Si el segundo argumento es una sola coordenada o un solo momento, el corchete se reduce a una derivada: $\\{f, q_k\\} = -\\partial f/\\partial p_k$ y $\\{f, p_k\\} = \\partial f/\\partial q_k$. Con otra convención de signo, todo el resultado cambia de signo."
+  },
+  "dispersion-esfera-dura": {
+    "nodo": "1.4.1",
+    "titulo": "Dispersión por una superficie rígida",
+    "texto": "En un choque elástico con una superficie fija y lisa, la partícula se refleja como un rayo de luz: forma el mismo ángulo con la normal al llegar y al salir. Dibuja la normal en el punto de impacto, relaciona el parámetro de impacto con el ángulo de incidencia y después ese ángulo con la desviación total. Comprueba los dos extremos: el choque de frente y el roce tangente."
+  },
+  "potenciales-onda-plana": {
+    "nodo": "2.6.1",
+    "titulo": "Ondas planas descritas con potenciales",
+    "texto": "Con potenciales, los campos son $\\vec E = -\\nabla\\phi - \\partial\\vec A/\\partial t$ y $\\vec B = \\nabla\\times\\vec A$. Para una onda plana $e^{i(\\vec k\\cdot\\vec x - \\omega t)}$, cada derivada se convierte en un factor: $\\nabla \\to i\\vec k$ y $\\partial/\\partial t \\to -i\\omega$. Sustituye los campos en cada ecuación de Maxwell por separado y mira qué condición impone cada una sobre $\\vec k$, $\\omega$ y la amplitud."
+  },
+  "biot-savart-espira": {
+    "nodo": "2.2.2",
+    "titulo": "Campo de una espira con Biot–Savart",
+    "texto": "En el centro de una espira circular, cada elemento $d\\vec l$ es perpendicular al vector que lo une con el centro y está a la misma distancia $r$. Por eso las contribuciones de la ley de Biot–Savart, $dB = \\dfrac{\\mu_0}{4\\pi}\\dfrac{I\\,dl}{r^2}$, apuntan todas en la misma dirección y se suman sin cancelarse. Si hay varias vueltas superpuestas, cada una aporta lo mismo."
+  },
+  "campo-anillo-eje": {
+    "nodo": "2.1.4",
+    "titulo": "Campo de anillos sobre su eje",
+    "texto": "Sobre el eje de un anillo con carga uniforme, las componentes perpendiculares al eje se cancelan por simetría y el campo queda a lo largo del eje, alejándose del anillo si su carga es positiva. Su magnitud depende de la carga y de la distancia al anillo. Con varios anillos coaxiales, suma con signo las contribuciones a lo largo del eje."
+  },
+  "coeficiente-dilatacion": {
+    "nodo": "4.2",
+    "titulo": "Coeficiente de dilatación lineal",
+    "texto": "El coeficiente de dilatación lineal a una temperatura $T$ es el cambio relativo de longitud por unidad de temperatura: $\\alpha = \\dfrac{1}{L}\\dfrac{dL}{dT}$, con $L$ evaluada a esa misma temperatura. Tiene unidades de inverso de temperatura. Si $L(T)$ está dada por una fórmula, deriva primero y divide después."
+  },
+  "calorimetria-cambio-fase": {
+    "nodo": "4.2.5",
+    "titulo": "Balance de calor con cambio de fase",
+    "texto": "En un recipiente aislado, el calor que cede el cuerpo caliente es igual al que absorbe el frío. Primero decide la temperatura final: si en el equilibrio coexisten agua y vapor, es la de ebullición. Después suma por tramos: $mc\\,\\Delta T$ para cada cambio de temperatura y $mL$ para cada cambio de fase, aplicado solo a la masa que realmente cambia de fase."
+  },
+  "doppler-relativista": {
+    "nodo": "6.4.1",
+    "titulo": "Efecto Doppler relativista",
+    "texto": "Para la luz, cuando fuente y observador se acercan con rapidez relativa $\\beta c$, la frecuencia observada es $f' = f\\sqrt{\\dfrac{1+\\beta}{1-\\beta}}$, y la energía de cada fotón cambia en el mismo factor. A diferencia del sonido, solo importa la velocidad relativa, porque no hay un medio. Despeja $\\beta$ del factor que necesitas y comprueba que quede menor que 1."
+  },
+  "escalon-potencial": {
+    "nodo": "5.3.5",
+    "titulo": "Reflexión en un escalón de potencial",
+    "texto": "Si la energía supera la altura del escalón, la función de onda oscila a ambos lados, con números de onda $k_1 \\propto \\sqrt{E}$ y $k_2 \\propto \\sqrt{E - V_0}$. La continuidad de $\\psi$ y de $\\psi'$ en el escalón da la amplitud reflejada, y la fracción reflejada es el cuadrado de su módulo: $R = \\left(\\dfrac{k_1 - k_2}{k_1 + k_2}\\right)^2$. Comprueba que $R + T = 1$."
+  },
+  "evolucion-temporal-estados": {
+    "nodo": "5.1.3",
+    "titulo": "Evolución de una superposición",
+    "texto": "Cada estado propio del hamiltoniano evoluciona multiplicándose por su propia fase, $|n\\rangle \\to e^{-iE_nt/\\hbar}|n\\rangle$. En una superposición, los valores esperados que mezclan dos niveles oscilan con la frecuencia $(E_m - E_n)/\\hbar$, y los que solo dependen de las probabilidades de cada nivel no cambian. Para el oscilador, escribe los operadores con $a$ y $a^\\dagger$ y usa $a|n\\rangle = \\sqrt n\\,|n-1\\rangle$."
   }
 }
