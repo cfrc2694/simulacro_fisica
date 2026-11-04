@@ -3861,13 +3861,13 @@
     "subtemas": ["4.2.5"],
     "dificultad": "media",
     "figuras": [],
-    "enunciado": "Una barra de hierro de $10$ kg a $1200$ °C se introduce en un recipiente aislado con agua a $20$ °C. Datos: calor específico del hierro $0.470$ kJ/(kg·K), calor específico del agua $4.19$ kJ/(kg·K) y calor de vaporización del agua $2300$ kJ/kg. ¿Cuál es la menor masa de agua con la que, en el equilibrio, solo se evapora $1.0$ kg?",
+    "enunciado": "Una barra de hierro de $10$ kg a $1200$ °C se introduce en un recipiente aislado, abierto a la atmósfera ($1$ atm), con agua a $20$ °C. Datos: calor específico del hierro $0.470$ kJ/(kg·K), calor específico del agua $4.19$ kJ/(kg·K) y calor de vaporización del agua $2300$ kJ/kg. ¿Qué masa inicial de agua hace que, al llegar al equilibrio, se haya evaporado exactamente $1.0$ kg y todavía quede agua líquida?",
     "opciones": ["$8.6$ kg", "$15$ kg", "$7.6$ kg", "$9.7$ kg", "$6.8$ kg"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["calorimetria-cambio-fase"],
-    "explicacion": "Como queda agua y vapor, el equilibrio es a $100$ °C. El hierro cede $10(0.470)(1200 - 100) = 5170$ kJ. Toda el agua, de masa $m$, se calienta de $20$ a $100$ °C, y $1.0$ kg se evapora: $5170 = m(4.19)(80) + (1.0)(2300)$, así que $m = 2870/335.2 = 8.6$ kg. Es mayor que el kilo que se evapora, como debe ser. Olvidar la vaporización da $5170/335.2 = 15$ kg. $7.6$ kg es la masa que queda líquida, no la masa inicial. Enfriar el hierro hasta $20$ °C en vez de $100$ °C da $9.7$ kg, y calentar el agua $100$ K en vez de $80$ K da $6.8$ kg."
+    "explicacion": "Como a $1$ atm quedan agua líquida y vapor, el equilibrio es a $100$ °C. El hierro cede $10(0.470)(1200 - 100) = 5170$ kJ. Toda el agua, de masa $m$, se calienta de $20$ a $100$ °C, y $1.0$ kg se evapora: $5170 = m(4.19)(80) + (1.0)(2300)$, así que $m = 2870/335.2 = 8.6$ kg. Es mayor que el kilo que se evapora, como debe ser. Olvidar la vaporización da $5170/335.2 = 15$ kg. $7.6$ kg es la masa que queda líquida, no la masa inicial. Enfriar el hierro hasta $20$ °C en vez de $100$ °C da $9.7$ kg, y calentar el agua $100$ K en vez de $80$ K da $6.8$ kg."
   },
   {
     "id": "q238",
