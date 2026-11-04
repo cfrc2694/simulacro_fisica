@@ -3749,13 +3749,13 @@
     "subtemas": ["2.6.1", "2.3.1"],
     "dificultad": "dificil",
     "figuras": [],
-    "enunciado": "En una región del vacío sin cargas ni corrientes, un campo electromagnético se describe con el potencial escalar $\\phi = 0$ y el potencial vectorial $\\vec A(\\vec x, t) = \\vec A_0\\, e^{i(\\vec k\\cdot\\vec x - \\omega t)}$, con $\\vec A_0 \\ne 0$ constante. ¿Qué condición exigen las ecuaciones de Maxwell?",
+    "enunciado": "En una región del vacío sin cargas ni corrientes, un campo electromagnético se describe con el potencial escalar $\\phi = 0$ y el potencial vectorial $\\vec A(\\vec x, t) = \\vec A_0\\, e^{i(\\vec k\\cdot\\vec x - \\omega t)}$, con $\\vec A_0 \\ne 0$ constante y $\\omega \\ne 0$. ¿Qué condición exigen las ecuaciones de Maxwell?",
     "opciones": ["$\\vec k\\cdot\\vec A_0 = 0$", "$\\vec k\\times\\vec A_0 = 0$", "$\\vec A_0 = 0$", "$k^2 = \\omega^2 c^2$", "$\\omega = 0$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["potenciales-onda-plana"],
-    "explicacion": "Con $\\phi = 0$, los campos son $\\vec E = -\\partial\\vec A/\\partial t = i\\omega\\vec A$ y $\\vec B = \\nabla\\times\\vec A = i\\vec k\\times\\vec A$. Sin cargas, la ley de Gauss exige $\\nabla\\cdot\\vec E = i\\omega\\,(i\\vec k\\cdot\\vec A) = -\\omega\\,\\vec k\\cdot\\vec A = 0$, y como $\\omega \\ne 0$ para una onda, $\\vec k\\cdot\\vec A_0 = 0$: la onda es transversal. La ley de Ampère–Maxwell exige además $k^2 = \\omega^2/c^2$. $k^2 = \\omega^2c^2$ falla por unidades: el lado izquierdo tiene m$^{-2}$ y el derecho m²/s⁴. $\\vec k\\times\\vec A_0 = 0$ haría $\\vec B = 0$, y junto con la transversalidad obligaría a $\\vec A_0 = 0$, que es la solución trivial que el enunciado descarta. Con $\\omega = 0$ no hay onda."
+    "explicacion": "Con $\\phi = 0$, los campos son $\\vec E = -\\partial\\vec A/\\partial t = i\\omega\\vec A$ y $\\vec B = \\nabla\\times\\vec A = i\\vec k\\times\\vec A$. Sin cargas, la ley de Gauss exige $\\nabla\\cdot\\vec E = i\\omega\\,(i\\vec k\\cdot\\vec A) = -\\omega\\,\\vec k\\cdot\\vec A = 0$, y como $\\omega \\ne 0$, $\\vec k\\cdot\\vec A_0 = 0$: la onda es transversal. La ley de Ampère–Maxwell exige además $k^2 = \\omega^2/c^2$. $k^2 = \\omega^2c^2$ falla por unidades: el lado izquierdo tiene m$^{-2}$ y el derecho m²/s⁴. $\\vec k\\times\\vec A_0 = 0$ haría $\\vec B = 0$, y junto con la transversalidad obligaría a $\\vec A_0 = 0$, que es la solución trivial que el enunciado descarta. $\\omega = 0$ contradice el enunciado; además, con $\\omega = 0$ y $\\vec k \\parallel \\vec A_0$ los dos campos se anulan y no hay onda."
   },
   {
     "id": "q231",
