@@ -5,7 +5,7 @@
    scripts/build.py) se usan esos datos y no se hace fetch.
    ============================================================ */
 
-const TAMANO_ENSAYO = 30;          // preguntas por ensayo
+const TAMANO_ENSAYO = { min: 5, max: 50, paso: 5, inicial: { banco: 30, admision: 25 } }; // selector del número de preguntas; el inicial depende del formato
 const VALOR_CON_PISTA = 0.5;       // cuánto vale un acierto después de ver la pista
 const SEGUNDOS_POR_PREGUNTA = 100; // ritmo de referencia que muestra el cronómetro
 const MEZCLA_ESTANDAR = { facil: 0.30, media: 0.45, dificil: 0.25 };
@@ -70,14 +70,40 @@ function pistaHTML(item){
     <span class="nota">Si aciertas después de verla, esta pregunta vale ${fmtPts(VALOR_CON_PISTA)} en vez de 1.</span></div>`;
 }
 
+/* Formato de examen de admisión a posgrado: solo los temas principales de
+   temas.json que entran en ese examen (mecánica clásica, electricidad y
+   magnetismo, termodinámica y estadística, cuántica y atómica, y relatividad).
+   Quedan fuera óptica y ondas, métodos de laboratorio y temas especializados. */
+const TEMAS_ADMISION = ["1", "2", "4", "5", "6"];
+const FORMATOS = { banco: "Banco completo", admision: "Examen de admisión a posgrado" };
+
 /* -------------------- armado del ensayo -------------------- */
-function seccionesDisponibles(){
-  const ids = [...new Set(PREGUNTAS.map(p => p.tema))];
-  return ids.sort().map(id => ({ id, titulo: tituloTema(id), n: PREGUNTAS.filter(p => p.tema === id).length }));
+/* Grupos entre los que se reparte el ensayo: los temas principales de temas.json,
+   o solo los del examen de admisión. */
+function grupos(){
+  const ids = [...new Set(PREGUNTAS.map(p => p.tema))].sort()
+    .filter(id => opciones.formato !== "admision" || TEMAS_ADMISION.includes(id));
+  return ids.map(id => ({ id, titulo: tituloTema(id), preguntas: PREGUNTAS.filter(p => p.tema === id) }));
 }
 
 function disponibles(tema){
-  return tema === "todos" ? PREGUNTAS : PREGUNTAS.filter(p => p.tema === tema);
+  const gs = grupos();
+  if(tema !== "todos") return (gs.find(g => g.id === tema) || { preguntas: [] }).preguntas;
+  const vistas = new Set();
+  return [].concat(...gs.map(g => g.preguntas)).filter(p => !vistas.has(p.id) && vistas.add(p.id));
+}
+
+/* Cupos de cada nivel para n preguntas según MEZCLA_ESTANDAR. Redondear cada
+   nivel por separado puede pasarse de n (con 30: 9 + 14 + 8 = 31), así que se
+   toma la parte entera y los cupos que faltan van a los restos más grandes. */
+function cuotasMezcla(n){
+  const niveles = Object.entries(MEZCLA_ESTANDAR).map(([d, frac]) => {
+    const exacto = n * frac, q = Math.floor(exacto + 1e-9);
+    return { d, q, resto: exacto - q };
+  });
+  let faltan = n - niveles.reduce((s, x) => s + x.q, 0);
+  niveles.slice().sort((a, b) => b.resto - a.resto).forEach(x => { if(faltan > 0){ x.q++; faltan--; } });
+  return Object.fromEntries(niveles.map(x => [x.d, x.q]));
 }
 
 /* Elige de un solo grupo (pool ya filtrado) respetando la mezcla de dificultad.
@@ -90,8 +116,8 @@ function elegirDeGrupo(pool, modo, n){
   const porNivel = {};
   Object.keys(MEZCLA_ESTANDAR).forEach(d => porNivel[d] = mezclar(pool.filter(p => p.dificultad === d)));
   const elegidas = [];
-  Object.entries(MEZCLA_ESTANDAR).forEach(([d, frac]) => {
-    elegidas.push(...porNivel[d].splice(0, Math.round(n * frac)));
+  Object.entries(cuotasMezcla(n)).forEach(([d, q]) => {
+    elegidas.push(...porNivel[d].splice(0, q));
   });
   const resto = mezclar([].concat(...Object.values(porNivel)));
   while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
@@ -107,28 +133,42 @@ function repartirCuota(n, k){
 function elegirPreguntas(tema, modo, n){
   if(tema !== "todos") return mezclar(elegirDeGrupo(disponibles(tema), modo, n).elegidas);
 
-  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas,
-     y dentro de cada área se respeta la mezcla de dificultad. Si a un área le
-     faltan preguntas para su cuota, el resto se rellena con las demás. */
-  const temas = mezclar([...new Set(PREGUNTAS.map(p => p.tema))]);
-  const cuotas = repartirCuota(n, temas.length);
-  const elegidas = [], sobrantes = [];
-  temas.forEach((t, i) => {
-    const { elegidas: e, resto } = elegirDeGrupo(PREGUNTAS.filter(p => p.tema === t), modo, cuotas[i]);
-    elegidas.push(...e);
-    sobrantes.push(...resto);
-  });
-  const resto = mezclar(sobrantes);
-  while(elegidas.length < n && resto.length) elegidas.push(resto.shift());
-  return mezclar(elegidas).slice(0, n);
+  /* "todos": cuota por tema (área), pareja entre las áreas que tengan preguntas.
+     La mezcla de dificultad se cumple en el total del ensayo y no área por área:
+     con 10 preguntas cada área aporta una o dos, y redondear la mezcla en cada
+     una la deforma. Se elige por rondas: en cada ronda cada área aporta una
+     pregunta del nivel al que más le falta para su cupo, entre los que el área
+     todavía tiene. Si a un área le faltan preguntas, se rellena con las demás. */
+  const pools = mezclar(grupos().filter(g => g.preguntas.length))
+    .map(g => mezclar(g.preguntas.filter(p => modo === "estandar" || p.dificultad === modo)));
+  const cuotas = repartirCuota(n, pools.length);
+  const pendientes = modo === "estandar" ? cuotasMezcla(n) : null;
+  const usadas = new Set();
+  const sacar = grupo => {
+    for(let i = grupo.length - 1; i >= 0; i--) if(usadas.has(grupo[i].id)) grupo.splice(i, 1);
+    if(!grupo.length) return null;
+    let k = 0;
+    if(pendientes) grupo.forEach((p, j) => { if(pendientes[p.dificultad] > pendientes[grupo[k].dificultad]) k = j; });
+    const [p] = grupo.splice(k, 1);
+    if(pendientes) pendientes[p.dificultad]--;
+    usadas.add(p.id);
+    return p;
+  };
+  const elegidas = [];
+  for(let ronda = 0; ronda < Math.max(...cuotas); ronda++){
+    pools.forEach((g, i) => { if(ronda < cuotas[i]){ const p = sacar(g); if(p) elegidas.push(p); } });
+  }
+  const resto = mezclar([].concat(...pools));
+  while(elegidas.length < n){ const p = sacar(resto); if(!p) break; elegidas.push(p); }
+  return mezclar(elegidas);
 }
 
 /* ------------------------- estado ------------------------- */
 let S = null, reloj = null;
-let opciones = { tema: "todos", modo: "estandar" };
+let opciones = { formato: "banco", tema: "todos", modo: "estandar", tamano: TAMANO_ENSAYO.inicial.banco };
 
 function iniciarEnsayo(){
-  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, TAMANO_ENSAYO);
+  const preguntas = elegirPreguntas(opciones.tema, opciones.modo, opciones.tamano);
   if(!preguntas.length){ renderInicio("No hay preguntas que cumplan esa combinación de tema y dificultad."); return; }
   S = {
     items: preguntas.map(p => ({
@@ -164,9 +204,12 @@ const puntos = x => acerto(x) ? (x.pista ? VALOR_CON_PISTA : 1) : 0;
 /* ------------------------- vistas ------------------------- */
 function renderInicio(aviso){
   S = null;
-  const secciones = seccionesDisponibles();
-  const n = Math.min(TAMANO_ENSAYO, disponibles(opciones.tema).length);
+  const secciones = grupos();
+  const admision = opciones.formato === "admision";
   const cuenta = d => disponibles(opciones.tema).filter(p => p.dificultad === d).length;
+  const total = opciones.modo === "estandar" ? disponibles(opciones.tema).length : cuenta(opciones.modo);
+  const n = Math.min(opciones.tamano, total);
+  const T = TAMANO_ENSAYO;
 
   $app.innerHTML = `
     <header class="top"><h1>Simulacro de Física</h1><span class="meta">Banco de ${PREGUNTAS.length} preguntas</span></header>
@@ -175,10 +218,19 @@ function renderInicio(aviso){
     ${aviso ? `<p class="aviso">${esc(aviso)}</p>` : ""}
 
     <div class="grupo">
+      <span class="etiqueta">Formato</span>
+      <div class="segmentado" role="group" aria-label="Formato">
+        ${Object.entries(FORMATOS).map(([k,v]) =>
+          `<button data-formato="${k}" aria-pressed="${opciones.formato===k}">${v}</button>`).join("")}
+      </div>
+      ${admision ? `<p class="nota">Solo los temas de un examen de admisión a posgrado en física: ${TEMAS_ADMISION.map(tituloTema).join(", ")}.</p>` : ""}
+    </div>
+
+    <div class="grupo">
       <span class="etiqueta">Tema</span>
       <div class="segmentado" role="group" aria-label="Tema">
-        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">Todos (${PREGUNTAS.length})</button>
-        ${secciones.map(s => `<button data-tema="${s.id}" aria-pressed="${opciones.tema===s.id}">${esc(s.titulo)} (${s.n})</button>`).join("")}
+        <button data-tema="todos" aria-pressed="${opciones.tema==="todos"}">Todos (${disponibles("todos").length})</button>
+        ${secciones.map(s => `<button data-tema="${s.id}" aria-pressed="${opciones.tema===s.id}">${esc(s.titulo)} (${s.preguntas.length})</button>`).join("")}
       </div>
     </div>
 
@@ -193,13 +245,34 @@ function renderInicio(aviso){
       Con el tema "Todos" además reparte las preguntas por área lo más parejo posible.</p>
     </div>
 
+    <div class="grupo">
+      <label class="etiqueta" for="tamano">Número de preguntas: <strong id="tamano-valor">${opciones.tamano}</strong></label>
+      <input type="range" id="tamano" class="deslizador" min="${T.min}" max="${T.max}" step="${T.paso}" value="${opciones.tamano}">
+      <div class="marcas" aria-hidden="true"><span>${T.min}</span><span>${T.max}</span></div>
+      <p class="nota" id="tamano-nota">${n < opciones.tamano && n > 0 ? `Con este filtro solo hay ${n} ${n === 1 ? "pregunta" : "preguntas"}; el ensayo las usa todas.` : ""}</p>
+    </div>
+
     <button class="btn primary" id="empezar">Empezar ensayo de ${n} ${n === 1 ? "pregunta" : "preguntas"}</button>
     <p class="nota" style="margin-top:1rem">Atajos: <kbd>1</kbd>–<kbd>5</kbd> marcan una opción, <kbd>←</kbd> <kbd>→</kbd> cambian de pregunta, <kbd>P</kbd> muestra la pista.</p>
     <p class="descargo">Material de práctica escrito para este proyecto, en parte con ayuda de modelos de lenguaje.
     Puede contener errores: revisa siempre la explicación y contrasta con tu libro o tu profesor antes de darla por buena.</p>`;
 
+  $app.querySelectorAll("[data-formato]").forEach(b => b.onclick = () => {
+    if(opciones.formato !== b.dataset.formato){ opciones.formato = b.dataset.formato; opciones.tema = "todos"; opciones.tamano = TAMANO_ENSAYO.inicial[opciones.formato]; }
+    renderInicio();
+  });
   $app.querySelectorAll("[data-tema]").forEach(b => b.onclick = () => { opciones.tema = b.dataset.tema; renderInicio(); });
   $app.querySelectorAll("[data-modo]").forEach(b => b.onclick = () => { opciones.modo = b.dataset.modo; renderInicio(); });
+  /* El deslizador actualiza el texto sin redibujar la página, para no perder el foco mientras se arrastra */
+  const r = document.getElementById("tamano");
+  r.oninput = () => {
+    opciones.tamano = +r.value;
+    const m = Math.min(opciones.tamano, total);
+    document.getElementById("tamano-valor").textContent = opciones.tamano;
+    document.getElementById("tamano-nota").textContent = m < opciones.tamano && m > 0
+      ? `Con este filtro solo hay ${m} ${m === 1 ? "pregunta" : "preguntas"}; el ensayo las usa todas.` : "";
+    document.getElementById("empezar").textContent = `Empezar ensayo de ${m} ${m === 1 ? "pregunta" : "preguntas"}`;
+  };
   const e = document.getElementById("empezar");
   e.onclick = iniciarEnsayo;
   e.disabled = n === 0;
