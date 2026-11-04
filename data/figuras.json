@@ -474,5 +474,19 @@
     "ancho": 380,
     "pie": null,
     "alt": "Una esfera de radio R, en azul, con su centro sobre una línea horizontal punteada. Una partícula, en rojo, llega horizontalmente desde la izquierda a una altura b sobre esa línea, toca la esfera y sale hacia arriba y a la izquierda. El ángulo θ entre la dirección de llegada y la de salida está marcado, y también la normal a la esfera en el punto de impacto."
+  },
+  "fig-anillos-coaxiales": {
+    "archivo": "figures/fig-anillos-coaxiales.svg",
+    "fuente": "tikz/fig-anillos-coaxiales.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Dos anillos iguales y coaxiales, perpendiculares al eje y. El anillo de carga q, en azul, está en el origen, y el de carga 3q, en rojo, está a una distancia d sobre el eje y. El punto P está en el eje, a d/2 de cada anillo."
+  },
+  "fig-esfera-cascaron": {
+    "archivo": "figures/fig-esfera-cascaron.svg",
+    "fuente": "tikz/fig-esfera-cascaron.tex",
+    "ancho": 190,
+    "pie": null,
+    "alt": "Una esfera maciza de radio a, en azul, con carga +Q, dentro de un cascarón esférico concéntrico de radio b, en rojo, con carga −Q."
   }
 }

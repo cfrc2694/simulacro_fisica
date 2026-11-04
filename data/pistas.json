@@ -843,5 +843,25 @@
     "nodo": "1.4.1",
     "titulo": "Dispersión por una superficie rígida",
     "texto": "En un choque elástico con una superficie fija y lisa, la partícula se refleja como un rayo de luz: forma el mismo ángulo con la normal al llegar y al salir. Dibuja la normal en el punto de impacto, relaciona el parámetro de impacto con el ángulo de incidencia y después ese ángulo con la desviación total. Comprueba los dos extremos: el choque de frente y el roce tangente."
+  },
+  "potenciales-onda-plana": {
+    "nodo": "2.6.1",
+    "titulo": "Ondas planas descritas con potenciales",
+    "texto": "Con potenciales, los campos son $\\vec E = -\\nabla\\phi - \\partial\\vec A/\\partial t$ y $\\vec B = \\nabla\\times\\vec A$. Para una onda plana $e^{i(\\vec k\\cdot\\vec x - \\omega t)}$, cada derivada se convierte en un factor: $\\nabla \\to i\\vec k$ y $\\partial/\\partial t \\to -i\\omega$. Sustituye los campos en cada ecuación de Maxwell por separado y mira qué condición impone cada una sobre $\\vec k$, $\\omega$ y la amplitud."
+  },
+  "biot-savart-espira": {
+    "nodo": "2.2.2",
+    "titulo": "Campo de una espira con Biot–Savart",
+    "texto": "En el centro de una espira circular, cada elemento $d\\vec l$ es perpendicular al vector que lo une con el centro y está a la misma distancia $r$. Por eso las contribuciones de la ley de Biot–Savart, $dB = \\dfrac{\\mu_0}{4\\pi}\\dfrac{I\\,dl}{r^2}$, apuntan todas en la misma dirección y se suman sin cancelarse. Si hay varias vueltas superpuestas, cada una aporta lo mismo."
+  },
+  "campo-anillo-eje": {
+    "nodo": "2.1.4",
+    "titulo": "Campo de anillos sobre su eje",
+    "texto": "Sobre el eje de un anillo con carga uniforme, las componentes perpendiculares al eje se cancelan por simetría y el campo queda a lo largo del eje, alejándose del anillo si su carga es positiva. Su magnitud depende de la carga y de la distancia al anillo. Con varios anillos coaxiales, suma con signo las contribuciones a lo largo del eje."
+  },
+  "coeficiente-dilatacion": {
+    "nodo": "4.2",
+    "titulo": "Coeficiente de dilatación lineal",
+    "texto": "El coeficiente de dilatación lineal a una temperatura $T$ es el cambio relativo de longitud por unidad de temperatura: $\\alpha = \\dfrac{1}{L}\\dfrac{dL}{dT}$, con $L$ evaluada a esa misma temperatura. Tiene unidades de inverso de temperatura. Si $L(T)$ está dada por una fórmula, deriva primero y divide después."
   }
 }
