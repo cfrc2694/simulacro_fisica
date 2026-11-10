@@ -628,5 +628,47 @@
     "ancho": 240,
     "pie": null,
     "alt": "Dos alambres de longitud L forman una L con la esquina arriba a la izquierda: uno horizontal, en rojo, con carga +Q, y uno vertical que baja desde la esquina, en azul, con carga −Q. El punto P está a una distancia a por debajo del alambre horizontal y a una distancia a a la derecha del vertical, frente a los puntos medios de ambos."
+  },
+  "fig-cilindros-coaxiales": {
+    "archivo": "figures/fig-cilindros-coaxiales.svg",
+    "fuente": "tikz/fig-cilindros-coaxiales.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Corte transversal de dos conductores coaxiales: un cilindro macizo de radio a, en azul, con carga +lambda por unidad de longitud, y un tubo delgado de radio b, en rojo, con carga −lambda por unidad de longitud."
+  },
+  "fig-varilla-semicircunferencia": {
+    "archivo": "figures/fig-varilla-semicircunferencia.svg",
+    "fuente": "tikz/fig-varilla-semicircunferencia.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Una varilla horizontal con carga positiva, en rojo, sobre el eje x. Por encima de ella, los puntos A y B están a la misma distancia y de la varilla, uno a cada lado. Una semicircunferencia punteada azul con flechas va de A, sube hasta el punto más alto C y baja hasta B."
+  },
+  "fig-esfera-cascaron-tierra": {
+    "archivo": "figures/fig-esfera-cascaron-tierra.svg",
+    "fuente": "tikz/fig-esfera-cascaron-tierra.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Una esfera conductora con carga +Q1, en azul, en el centro de un cascarón esférico conductor grueso con carga Q2, en rojo. Un alambre une la superficie exterior del cascarón con el símbolo de tierra."
+  },
+  "fig-tubo-tapas": {
+    "archivo": "figures/fig-tubo-tapas.svg",
+    "fuente": "tikz/fig-tubo-tapas.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Un tubo metálico horizontal, en gris, cerrado en sus dos extremos con tapas metálicas. Dentro hay una carga puntual Q, en rojo, fuera del eje y más cerca de la tapa izquierda."
+  },
+  "fig-cavidad-dos-cargas": {
+    "archivo": "figures/fig-cavidad-dos-cargas.svg",
+    "fuente": "tikz/fig-cavidad-dos-cargas.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Un conductor de forma irregular, en gris, con una cavidad esférica vacía. En el centro de la cavidad está la carga Q0, en azul. Fuera del conductor, a la derecha, está la carga Q, en rojo."
+  },
+  "fig-cascaron-campo-externo": {
+    "archivo": "figures/fig-cascaron-campo-externo.svg",
+    "fuente": "tikz/fig-cascaron-campo-externo.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un cascarón esférico conductor, en gris, con centro C. Dentro de la cavidad, abajo a la izquierda del centro, hay una carga positiva Q, en rojo. A ambos lados del cascarón, flechas azules horizontales hacia la derecha representan un campo externo uniforme E."
   }
 }

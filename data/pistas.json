@@ -953,5 +953,10 @@
     "nodo": "2.1.2",
     "titulo": "Potencial de varias cargas puntuales",
     "texto": "El potencial de un conjunto de cargas puntuales es la suma escalar $V = K_e\\sum q_i/r_i$, cada carga con su signo y su distancia al punto. Agrupa las cargas que están a la misma distancia y suma primero sus valores. A diferencia del campo, el potencial no tiene dirección, así que no hay componentes que se cancelen."
+  },
+  "trabajo-equipotenciales": {
+    "nodo": "2.1.8",
+    "titulo": "Trabajo del campo y superficies equipotenciales",
+    "texto": "El trabajo del campo electrostático sobre una carga $q_0$ que va de un punto a otro es $q_0(V_{\\text{inicial}} - V_{\\text{final}})$, sin importar el camino. Identifica la forma de las superficies equipotenciales de la distribución. Si el punto inicial y el final están en la misma, el trabajo total es cero, aunque en los tramos intermedios no lo sea."
   }
 }

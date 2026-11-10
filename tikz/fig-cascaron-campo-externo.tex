@@ -1,0 +1,11 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \filldraw[fill=gray!30, thick, even odd rule] (0,0) circle (1.3) (0,0) circle (1.08);
+  \fill (0,0) circle (0.04) node[right, font=\small]{$C$};
+  \fill[rojo] (-0.5,-0.45) circle (0.05) node[right, text=black, font=\small]{$Q$};
+  \foreach \y in {-0.9,0,0.9} {\draw[->, thick, azul] (-2.5,\y) -- (-1.6,\y); \draw[->, thick, azul] (1.6,\y) -- (2.5,\y);}
+  \node at (-2.05,1.3) {$\vec E$};
+\end{tikzpicture}
+\end{document}
