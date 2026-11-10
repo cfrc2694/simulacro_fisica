@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \def\d{1.6}
+  \draw[thick, gray] (-\d,-\d/2) rectangle (\d,\d/2);
+  \foreach \x/\y/\l/\c in {-1/1/{+4q}/rojo, 0/1/{-2q}/azul, 1/1/{+6q}/rojo, -1/-1/{-3q}/azul, 0/-1/{+4q}/rojo, 1/-1/{+5q}/rojo}
+    \node[circle, draw=\c, thick, fill=white, minimum size=0.8cm, inner sep=0pt, font=\scriptsize] at (\x*\d,\y*\d/2) {$\l$};
+  \foreach \x in {-0.8,0.8} \node[above=0.35cm, font=\scriptsize] at (\x,\d/2) {$d$};
+  \node[left=0.4cm, font=\scriptsize] at (-\d,0) {$d$};
+  \fill (0,0) circle (0.04) node[below]{$P$};
+\end{tikzpicture}
+\end{document}

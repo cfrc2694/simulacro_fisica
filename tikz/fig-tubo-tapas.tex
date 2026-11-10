@@ -1,0 +1,11 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.1]
+  \fill[gray!20] (0,0) rectangle (3,0.9);
+  \draw[thick] (0,0) -- (3,0) (0,0.9) -- (3,0.9);
+  \filldraw[fill=gray!45, thick] (0,0.45) ellipse (0.15 and 0.45);
+  \filldraw[fill=gray!45, thick] (3,0.45) ellipse (0.15 and 0.45);
+  \fill[rojo] (1.0,0.3) circle (0.05) node[right, text=black]{$Q$};
+\end{tikzpicture}
+\end{document}

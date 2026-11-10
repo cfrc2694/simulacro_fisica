@@ -1,0 +1,10 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \filldraw[fill=gray!30, thick] plot[smooth cycle, tension=0.8] coordinates {(-1.2,0.3) (-0.6,1.1) (0.5,1.0) (1.2,0.4) (1.0,-0.6) (0.1,-1.1) (-0.9,-0.8)};
+  \filldraw[fill=white, thick] (0,0) circle (0.4);
+  \fill[azul] (0,0) circle (0.05) node[above, text=black, font=\small]{$Q_0$};
+  \fill[rojo] (2.0,0) circle (0.05) node[right, text=black]{$Q$};
+\end{tikzpicture}
+\end{document}
