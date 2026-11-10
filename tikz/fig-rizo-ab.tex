@@ -1,0 +1,12 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thick] (-2.6,0) -- (2.6,0);
+  \draw[thick, azul] (0,1.5) circle (1.5);
+  \fill (0,0) circle (0.08) node[below]{$A$};
+  \fill (0,3) circle (0.08) node[above]{$B$};
+  \fill (0,1.5) circle (0.04);
+  \draw[->] (0,1.5) -- node[above, pos=0.55]{$R$} ++(-30:1.5);
+\end{tikzpicture}
+\end{document}

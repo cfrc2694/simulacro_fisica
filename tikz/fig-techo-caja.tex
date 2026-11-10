@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+  % techo de 30 grados: base 4.33, altura 2.5
+  \draw[thick] (0,0) -- (4.33,0) -- (0,2.5) -- cycle;
+  \draw (3.53,0) arc (180:150:0.8); \node at (3.25,0.2) {$\theta$};
+  \begin{scope}[shift={(0.35,2.298)}, rotate=-30]
+    \filldraw[draw=rojo, fill=rojo!20, thick] (-0.15,0) rectangle (0.4,0.38);
+  \end{scope}
+  \draw[<->, thin] ($(0.35,2.298)+(60:0.75)$) -- node[above right]{$L$} ($(4.33,0)+(60:0.75)$);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \filldraw[draw=rojo, fill=rojo!15] (-2.4,-0.08) rectangle (2.4,0.08);
+  \foreach \x in {-2.2,-1.8,...,2.3} \node[text=rojo, font=\scriptsize, inner sep=0pt] at (\x,0) {$+$};
+  \draw[eje] (2.4,0) -- (3.0,0) node[right]{$x$};
+  \draw[dashed, thick, azul, ->] (-1.1,1.2) arc (180:95:1.1);
+  \draw[dashed, thick, azul, ->] (0,2.3) arc (90:5:1.1);
+  \fill (-1.1,1.2) circle (0.05) node[left]{$A$};
+  \fill (1.1,1.2) circle (0.05) node[right]{$B$};
+  \fill (0,2.3) circle (0.05) node[above]{$C$};
+  \draw[<->, thin] (-1.1,0.12) -- node[left]{$y$} (-1.1,1.12);
+  \draw[<->, thin] (1.1,0.12) -- node[right]{$y$} (1.1,1.12);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \filldraw[draw=rojo, fill=rojo!15, thick, even odd rule] (0,0) circle (1.6) (0,0) circle (1.45);
+  \filldraw[draw=azul, fill=azul!25, thick] (0,0) circle (0.5);
+  \fill (0,0) circle (0.03);
+  \draw[->] (0,0) -- (160:0.5) node[pos=0.5, above]{$a$};
+  \draw[->] (0,0) -- (35:1.45) node[pos=0.65, above left, inner sep=1pt]{$b$};
+  \node[text=azul] at (0,-0.25) {$+\lambda$};
+  \node[text=rojo] at (1.6,1.3) {$-\lambda$};
+\end{tikzpicture}
+\end{document}

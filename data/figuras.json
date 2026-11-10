@@ -488,5 +488,187 @@
     "ancho": 190,
     "pie": null,
     "alt": "Una esfera maciza de radio a, en azul, con carga +Q, dentro de un cascarón esférico concéntrico de radio b, en rojo, con carga −Q."
+  },
+  "fig-rampa-esquiador": {
+    "archivo": "figures/fig-rampa-esquiador.svg",
+    "fuente": "tikz/fig-rampa-esquiador.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Rampa recta que sube hacia la derecha, inclinada un ángulo alfa sobre el suelo. En la base hay una caja, en rojo, con una flecha azul v0 paralela a la rampa y hacia arriba. En la parte superior, a una altura vertical h sobre la base, hay un círculo verde que representa a la esquiadora."
+  },
+  "fig-bloque-mesa-polea": {
+    "archivo": "figures/fig-bloque-mesa-polea.svg",
+    "fuente": "tikz/fig-bloque-mesa-polea.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Sobre una mesa horizontal hay un bloque de peso w_A, en azul. Una cuerda horizontal sale de él, pasa por una polea en el borde derecho de la mesa y baja hasta un bloque colgante de peso w_B, en rojo. Una flecha hacia abajo, junto al bloque colgante, marca el descenso d."
+  },
+  "fig-fuerza-posicion": {
+    "archivo": "figures/fig-fuerza-posicion.svg",
+    "fuente": "tikz/fig-fuerza-posicion.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Gráfica de F_x en newtons contra x en metros, en rojo. F_x sube en línea recta de 0 en x = 0 a 4.0 N en x = 2.0 m, se mantiene en 4.0 N hasta x = 4.0 m, cae de golpe a 0 y sigue en 0 hasta x = 5.0 m. Luego baja en línea recta hasta -3.0 N en x = 6.5 m y vuelve en línea recta a 0 en x = 8.0 m."
+  },
+  "fig-tiro-azotea": {
+    "archivo": "figures/fig-tiro-azotea.svg",
+    "fuente": "tikz/fig-tiro-azotea.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Edificio de altura h. Desde el borde de la azotea sale una pelota con velocidad v0, flecha azul inclinada un ángulo theta sobre la horizontal. Una trayectoria parabólica punteada, en verde, sube, pasa por un máximo y baja hasta el suelo a la derecha del edificio."
+  },
+  "fig-rizo-ab": {
+    "archivo": "figures/fig-rizo-ab.svg",
+    "fuente": "tikz/fig-rizo-ab.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Rizo vertical circular de radio R, en azul, apoyado sobre una vía horizontal. El punto A está en la parte más baja del rizo, al nivel de la vía, y el punto B en la parte más alta, a una altura 2R sobre A."
+  },
+  "fig-bloque-resorte-comprimido": {
+    "archivo": "figures/fig-bloque-resorte-comprimido.svg",
+    "fuente": "tikz/fig-bloque-resorte-comprimido.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un resorte horizontal de constante k, en verde, está fijo a una pared a la izquierda y unido a un bloque de masa m, en rojo, que descansa sobre un piso con coeficiente de fricción cinética mu_k. Una flecha azul v apunta a la derecha, alejándose de la pared."
+  },
+  "fig-techo-caja": {
+    "archivo": "figures/fig-techo-caja.svg",
+    "fuente": "tikz/fig-techo-caja.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Plano inclinado un ángulo theta sobre la horizontal, que baja hacia la derecha. Cerca de la parte alta hay un cuerpo, en rojo. Una cota paralela al plano marca la distancia L que recorre el cuerpo hacia abajo."
+  },
+  "fig-escalera-pared": {
+    "archivo": "figures/fig-escalera-pared.svg",
+    "fuente": "tikz/fig-escalera-pared.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Escalera de longitud L, en naranja oscuro, apoyada en el piso y en una pared vertical a la derecha; forma un ángulo beta con la pared. Sobre la escalera hay una persona, representada por un círculo azul, con su peso m g dibujado como una flecha roja vertical hacia abajo."
+  },
+  "fig-vectores-producto": {
+    "archivo": "figures/fig-vectores-producto.svg",
+    "fuente": "tikz/fig-vectores-producto.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Ejes x e y con tres vectores que salen del origen. A, en azul, apunta hacia y negativo. B, en rojo, está en el primer cuadrante y forma 30 grados con el eje y positivo. C, en verde, está en el tercer cuadrante y forma 30 grados por debajo del eje x negativo."
+  },
+  "fig-libro-ab": {
+    "archivo": "figures/fig-libro-ab.svg",
+    "fuente": "tikz/fig-libro-ab.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un libro, en morado, se desliza hacia la derecha sobre una superficie horizontal. Aparece en dos posiciones: en el punto A, con velocidad v_A, y más a la derecha, en el punto B, con velocidad v_B; las dos velocidades son flechas azules hacia la derecha."
+  },
+  "fig-fuerza-desplazamiento": {
+    "archivo": "figures/fig-fuerza-desplazamiento.svg",
+    "fuente": "tikz/fig-fuerza-desplazamiento.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Ejes x e y. El desplazamiento s, en azul, sale del origen hacia el tercer cuadrante, a un ángulo theta medido en sentido antihorario desde el eje x positivo. La fuerza F, en rojo, sale del origen hacia el segundo cuadrante, arriba a la izquierda."
+  },
+  "fig-semicircunferencia-cuartos": {
+    "archivo": "figures/fig-semicircunferencia-cuartos.svg",
+    "fuente": "tikz/fig-semicircunferencia-cuartos.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Semicircunferencia de radio r en la región y positiva, con centro en el origen O y extremos sobre el eje x. El cuarto izquierdo, en rojo, tiene carga +q, marcada con signos más; el cuarto derecho, en azul, tiene carga −q, marcada con signos menos."
+  },
+  "fig-placa-anillos": {
+    "archivo": "figures/fig-placa-anillos.svg",
+    "fuente": "tikz/fig-placa-anillos.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Placa plana, en azul claro, con densidad de carga sigma, vista en perspectiva en el plano yz. Sobre ella se resalta un anillo de radio r y espesor dr centrado en el origen. El eje x sale perpendicular a la placa desde su centro; en él está el punto P, con una flecha roja dE que apunta en el sentido de x positivo."
+  },
+  "fig-cono-vertice": {
+    "archivo": "figures/fig-cono-vertice.svg",
+    "fuente": "tikz/fig-cono-vertice.tex",
+    "ancho": 160,
+    "pie": null,
+    "alt": "Cono circular recto, en azul claro, con el vértice arriba y la base circular abajo. En el vértice hay una carga puntual Q, en rojo. Una línea punteada baja del vértice al centro de la base, y el ángulo theta está marcado entre esa línea y el borde lateral del cono."
+  },
+  "fig-hemisferio-campo": {
+    "archivo": "figures/fig-hemisferio-campo.svg",
+    "fuente": "tikz/fig-hemisferio-campo.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Hemisferio de radio R, en azul claro, con la parte curva hacia arriba y el borde circular abajo, sin base. Varias flechas rojas verticales y paralelas representan un campo uniforme E que apunta hacia arriba, a lo largo del eje del hemisferio."
+  },
+  "fig-superficie-conductor": {
+    "archivo": "figures/fig-superficie-conductor.svg",
+    "fuente": "tikz/fig-superficie-conductor.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Una esfera conductora C, en gris, y una superficie cerrada S, dibujada como un círculo punteado azul a la izquierda, que se superponen: S encierra el lado izquierdo de la esfera. A la derecha de la esfera, fuera de las dos, está el punto P, en rojo."
+  },
+  "fig-graficas-er": {
+    "archivo": "figures/fig-graficas-er.svg",
+    "fuente": "tikz/fig-graficas-er.tex",
+    "ancho": 420,
+    "pie": null,
+    "alt": "Cinco gráficas de E_r contra r, todas en el mismo color azul, con marcas en R y 2R. (1): sube en línea recta hasta R y después decrece como 1 sobre r al cuadrado sin anularse. (2): vale cero hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después. (3): sube en línea recta hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después de 2R. (4): igual que la (3) hasta 2R, y después de 2R es negativa y su magnitud decrece como 1 sobre r al cuadrado. (5): constante hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después."
+  },
+  "fig-rectangulo-seis-cargas": {
+    "archivo": "figures/fig-rectangulo-seis-cargas.svg",
+    "fuente": "tikz/fig-rectangulo-seis-cargas.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Rectángulo de lados 2d (horizontal) y d (vertical) con seis cargas: arriba, de izquierda a derecha, +4q, −2q en el punto medio y +6q; abajo, de izquierda a derecha, −3q, +4q en el punto medio y +5q. Las cargas positivas tienen borde rojo y las negativas, azul. El punto P está en el centro del rectángulo."
+  },
+  "fig-potencial-regiones": {
+    "archivo": "figures/fig-potencial-regiones.svg",
+    "fuente": "tikz/fig-potencial-regiones.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Gráfica de V en voltios contra x en metros, en azul, con cinco regiones numeradas separadas por líneas punteadas en x = 3, 5, 6 y 8 m. V sube en línea recta de 0 a 3 V entre x = 0 y 3 m, se mantiene en 3 V hasta 5 m, baja en línea recta a −3 V en 6 m, se mantiene en −3 V hasta 8 m y sube en línea recta a 1 V en 10 m."
+  },
+  "fig-alambres-angulo-recto": {
+    "archivo": "figures/fig-alambres-angulo-recto.svg",
+    "fuente": "tikz/fig-alambres-angulo-recto.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Dos alambres de longitud L forman una L con la esquina arriba a la izquierda: uno horizontal, en rojo, con carga +Q, y uno vertical que baja desde la esquina, en azul, con carga −Q. El punto P está a una distancia a por debajo del alambre horizontal y a una distancia a a la derecha del vertical, frente a los puntos medios de ambos."
+  },
+  "fig-cilindros-coaxiales": {
+    "archivo": "figures/fig-cilindros-coaxiales.svg",
+    "fuente": "tikz/fig-cilindros-coaxiales.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Corte transversal de dos conductores coaxiales: un cilindro macizo de radio a, en azul, con carga +lambda por unidad de longitud, y un tubo delgado de radio b, en rojo, con carga −lambda por unidad de longitud."
+  },
+  "fig-varilla-semicircunferencia": {
+    "archivo": "figures/fig-varilla-semicircunferencia.svg",
+    "fuente": "tikz/fig-varilla-semicircunferencia.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Una varilla horizontal con carga positiva, en rojo, sobre el eje x. Por encima de ella, los puntos A y B están a la misma distancia y de la varilla, uno a cada lado. Una semicircunferencia punteada azul con flechas va de A, sube hasta el punto más alto C y baja hasta B."
+  },
+  "fig-esfera-cascaron-tierra": {
+    "archivo": "figures/fig-esfera-cascaron-tierra.svg",
+    "fuente": "tikz/fig-esfera-cascaron-tierra.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Una esfera conductora con carga +Q1, en azul, en el centro de un cascarón esférico conductor grueso con carga Q2, en rojo. Un alambre une la superficie exterior del cascarón con el símbolo de tierra."
+  },
+  "fig-tubo-tapas": {
+    "archivo": "figures/fig-tubo-tapas.svg",
+    "fuente": "tikz/fig-tubo-tapas.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Un tubo metálico horizontal, en gris, cerrado en sus dos extremos con tapas metálicas. Dentro hay una carga puntual Q, en rojo, fuera del eje y más cerca de la tapa izquierda."
+  },
+  "fig-cavidad-dos-cargas": {
+    "archivo": "figures/fig-cavidad-dos-cargas.svg",
+    "fuente": "tikz/fig-cavidad-dos-cargas.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Un conductor de forma irregular, en gris, con una cavidad esférica vacía. En el centro de la cavidad está la carga Q0, en azul. Fuera del conductor, a la derecha, está la carga Q, en rojo."
+  },
+  "fig-cascaron-campo-externo": {
+    "archivo": "figures/fig-cascaron-campo-externo.svg",
+    "fuente": "tikz/fig-cascaron-campo-externo.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un cascarón esférico conductor, en gris, con centro C. Dentro de la cavidad, abajo a la izquierda del centro, hay una carga positiva Q, en rojo. A ambos lados del cascarón, flechas azules horizontales hacia la derecha representan un campo externo uniforme E."
   }
 }
