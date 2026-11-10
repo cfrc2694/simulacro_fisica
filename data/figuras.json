@@ -565,5 +565,19 @@
     "ancho": 220,
     "pie": null,
     "alt": "Ejes x e y. El desplazamiento s, en azul, sale del origen hacia el tercer cuadrante, a un ángulo theta medido en sentido antihorario desde el eje x positivo. La fuerza F, en rojo, sale del origen hacia el segundo cuadrante, arriba a la izquierda."
+  },
+  "fig-semicircunferencia-cuartos": {
+    "archivo": "figures/fig-semicircunferencia-cuartos.svg",
+    "fuente": "tikz/fig-semicircunferencia-cuartos.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Semicircunferencia de radio r en la región y positiva, con centro en el origen O y extremos sobre el eje x. El cuarto izquierdo, en rojo, tiene carga +q, marcada con signos más; el cuarto derecho, en azul, tiene carga −q, marcada con signos menos."
+  },
+  "fig-placa-anillos": {
+    "archivo": "figures/fig-placa-anillos.svg",
+    "fuente": "tikz/fig-placa-anillos.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Placa plana, en azul claro, con densidad de carga sigma, vista en perspectiva en el plano yz. Sobre ella se resalta un anillo de radio r y espesor dr centrado en el origen. El eje x sale perpendicular a la placa desde su centro; en él está el punto P, con una flecha roja dE que apunta en el sentido de x positivo."
   }
 }
