@@ -1,0 +1,18 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  % rampa de 35 grados: base 4.0, altura 2.8
+  \fill[pattern=north east lines] (-0.3,-0.18) rectangle (4.6,0);
+  \draw[thick] (-0.3,0) -- (4.6,0);
+  \draw[thick] (0,0) -- (4,2.8) -- (4,0);
+  \draw (0.8,0) arc (0:35:0.8); \node at (17.5:1.12) {$\alpha$};
+  \begin{scope}[shift={(0.55,0.385)}, rotate=35]
+    \filldraw[draw=rojo, fill=rojo!20, thick] (-0.25,0) rectangle (0.25,0.4);
+  \end{scope}
+  \draw[->, thick, azul] (0.95,1.05) -- ++(35:1.0) node[above left, text=black]{$\vec v_0$};
+  \filldraw[draw=verde, fill=verde!30, thick] (3.85,3.05) circle (0.2);
+  \draw[<->, thin] (4.4,0) -- node[right]{$h$} (4.4,2.8);
+  \draw[dashed, thin] (4,2.8) -- (4.5,2.8);
+\end{tikzpicture}
+\end{document}

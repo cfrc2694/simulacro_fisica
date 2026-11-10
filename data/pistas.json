@@ -883,5 +883,40 @@
     "nodo": "5.1.3",
     "titulo": "Evolución de una superposición",
     "texto": "Cada estado propio del hamiltoniano evoluciona multiplicándose por su propia fase, $|n\\rangle \\to e^{-iE_nt/\\hbar}|n\\rangle$. En una superposición, los valores esperados que mezclan dos niveles oscilan con la frecuencia $(E_m - E_n)/\\hbar$, y los que solo dependen de las probabilidades de cada nivel no cambian. Para el oscilador, escribe los operadores con $a$ y $a^\\dagger$ y usa $a|n\\rangle = \\sqrt n\\,|n-1\\rangle$."
+  },
+  "trabajo-energia-rampa": {
+    "nodo": "1.3.4",
+    "titulo": "Trabajo y energía en una rampa con fricción",
+    "texto": "En una rampa recta de inclinación $\\alpha$, subir una altura $h$ obliga a recorrer $s = h/\\sin\\alpha$ sobre ella. Si sobre el cuerpo solo actúan el peso, la normal y la fricción, la normal es $mg\\cos\\alpha$ y la fricción cinética hace $W_f = -\\mu_k mg\\cos\\alpha\\, s$. Suma el trabajo de todas las fuerzas e iguálalo al cambio de energía cinética, $W_{\\text{tot}} = K_2 - K_1$."
+  },
+  "sistema-cuerda-polea": {
+    "nodo": "1.1.2",
+    "titulo": "Cuerpos unidos por una cuerda y una polea",
+    "texto": "Con una cuerda ideal y una polea ideal, los dos cuerpos tienen la misma rapidez y la misma magnitud de aceleración. Para hallar la tensión, aplica la segunda ley a cada cuerpo por separado. Si tomas los dos cuerpos como un solo sistema, la tensión es una fuerza interna: tira de los dos extremos con la misma magnitud a lo largo de desplazamientos iguales, y su trabajo total es cero."
+  },
+  "trabajo-area-grafica": {
+    "nodo": "1.3.4",
+    "titulo": "Trabajo como área bajo la gráfica de fuerza",
+    "texto": "El trabajo de una fuerza que depende de la posición es $W = \\int F_x\\,dx$: el área bajo la curva $F_x(x)$ entre las posiciones inicial y final, contando como negativa la parte bajo el eje $x$. Divide la región en triángulos y rectángulos. Si $F_x$ es la fuerza neta, ese trabajo es el cambio de energía cinética."
+  },
+  "compresion-resorte": {
+    "nodo": "1.3.2",
+    "titulo": "Compresión máxima de un resorte",
+    "texto": "Cuando un resorte ideal frena un cuerpo sin fricción, la energía cinética se convierte en energía elástica, y en la compresión máxima el cuerpo está quieto: $\\tfrac12 mv^2 = \\tfrac12 kx^2$. Antes de sustituir, expresa $k$ en N/m."
+  },
+  "potencia-instantanea": {
+    "nodo": "1.3.4",
+    "titulo": "Potencia instantánea y potencia media",
+    "texto": "La potencia instantánea de una fuerza es $P = \\vec F\\cdot\\vec v$, con la fuerza y la velocidad evaluadas en el mismo instante. La potencia media en un intervalo es el trabajo dividido por el tiempo, $W/\\Delta t$. Si la fuerza o la velocidad cambian durante el intervalo, en general las dos no coinciden."
+  },
+  "energia-no-conservativas": {
+    "nodo": "1.3.2",
+    "titulo": "Energía mecánica con fuerzas no conservativas",
+    "texto": "Escribe $E = K + U$ en dos puntos del movimiento y relaciónalos con $E_{\\text{final}} = E_{\\text{inicial}} + W_{\\text{nc}}$, donde $W_{\\text{nc}}$ es el trabajo de las fuerzas no conservativas, como la fricción. La fricción cinética que se opone al deslizamiento hace trabajo negativo. La energía potencial gravitatoria depende solo de la altura, $mgy$, y la elástica, de la deformación, $\\tfrac12 kx^2$. La energía es escalar: la dirección de la velocidad no entra."
+  },
+  "fuerza-gradiente": {
+    "nodo": "1.3.1",
+    "titulo": "Fuerza como menos el gradiente de la energía potencial",
+    "texto": "En el plano, una fuerza conservativa tiene componentes $F_x = -\\partial U/\\partial x$ y $F_y = -\\partial U/\\partial y$. Deriva cada término de $U$ respecto a una variable, tratando la otra como constante, y evalúa en el punto pedido. La dirección sale de las dos componentes: fíjate en sus signos para ubicar el cuadrante antes de calcular el ángulo."
   }
 }

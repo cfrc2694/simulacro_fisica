@@ -488,5 +488,54 @@
     "ancho": 190,
     "pie": null,
     "alt": "Una esfera maciza de radio a, en azul, con carga +Q, dentro de un cascarón esférico concéntrico de radio b, en rojo, con carga −Q."
+  },
+  "fig-rampa-esquiador": {
+    "archivo": "figures/fig-rampa-esquiador.svg",
+    "fuente": "tikz/fig-rampa-esquiador.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Rampa recta que sube hacia la derecha, inclinada un ángulo alfa de 35 grados sobre el suelo. En la base hay una caja, en rojo, con una flecha azul v0 paralela a la rampa y hacia arriba. En la parte superior, a una altura vertical h de 2.80 m sobre la base, hay un círculo verde que representa a la esquiadora."
+  },
+  "fig-bloque-mesa-polea": {
+    "archivo": "figures/fig-bloque-mesa-polea.svg",
+    "fuente": "tikz/fig-bloque-mesa-polea.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Sobre una mesa horizontal hay un bloque de peso w_A, en azul. Una cuerda horizontal sale de él, pasa por una polea en el borde derecho de la mesa y baja hasta un bloque colgante de peso w_B, en rojo. Una flecha hacia abajo, junto al bloque colgante, marca el descenso d."
+  },
+  "fig-fuerza-posicion": {
+    "archivo": "figures/fig-fuerza-posicion.svg",
+    "fuente": "tikz/fig-fuerza-posicion.tex",
+    "ancho": 330,
+    "pie": null,
+    "alt": "Gráfica de F_x en newtons contra x en metros, en rojo. F_x sube en línea recta de 0 en x = 0 a 4.0 N en x = 2.0 m, se mantiene en 4.0 N hasta x = 4.0 m, cae de golpe a 0 y sigue en 0 hasta x = 5.0 m. Luego baja en línea recta hasta -3.0 N en x = 6.5 m y vuelve en línea recta a 0 en x = 8.0 m."
+  },
+  "fig-tiro-azotea": {
+    "archivo": "figures/fig-tiro-azotea.svg",
+    "fuente": "tikz/fig-tiro-azotea.tex",
+    "ancho": 300,
+    "pie": null,
+    "alt": "Edificio de altura h. Desde el borde de la azotea sale una pelota con velocidad v0, flecha azul inclinada un ángulo theta sobre la horizontal. Una trayectoria parabólica punteada, en verde, sube, pasa por un máximo y baja hasta el suelo a la derecha del edificio."
+  },
+  "fig-rizo-ab": {
+    "archivo": "figures/fig-rizo-ab.svg",
+    "fuente": "tikz/fig-rizo-ab.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Rizo vertical circular de radio R, en azul, apoyado sobre una vía horizontal. El punto A está en la parte más baja del rizo, al nivel de la vía, y el punto B en la parte más alta, a una altura 2R sobre A."
+  },
+  "fig-bloque-resorte-comprimido": {
+    "archivo": "figures/fig-bloque-resorte-comprimido.svg",
+    "fuente": "tikz/fig-bloque-resorte-comprimido.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un resorte horizontal de constante k, en verde, está fijo a una pared a la izquierda y unido a un bloque de masa m, en rojo, que descansa sobre un piso con coeficiente de fricción cinética mu_k. Una flecha azul v apunta a la derecha, alejándose de la pared."
+  },
+  "fig-techo-caja": {
+    "archivo": "figures/fig-techo-caja.svg",
+    "fuente": "tikz/fig-techo-caja.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Techo inclinado un ángulo theta sobre la horizontal, que baja hacia la derecha. Cerca de la parte alta hay una caja, en rojo. Una cota paralela al techo marca la distancia L entre la caja y el borde inferior."
   }
 }
