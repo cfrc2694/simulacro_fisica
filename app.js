@@ -160,6 +160,31 @@ function elegirPreguntas(tema, modo, n){
   }
   const resto = mezclar([].concat(...pools));
   while(elegidas.length < n){ const p = sacar(resto); if(!p) break; elegidas.push(p); }
+  /* Si un área no tenía preguntas de los niveles pendientes, sacar tomó un nivel
+     con el cupo ya lleno. Se corrige cambiando preguntas del nivel sobrante por
+     preguntas no usadas del nivel que falta: primero dentro de la misma área, para
+     no mover el reparto por temas, y si no se puede, de cualquier área. */
+  if(pendientes){
+    const libres = mezclar([].concat(...grupos().map(g => g.preguntas)).filter(p => !usadas.has(p.id)));
+    const niveles = Object.keys(pendientes);
+    niveles.forEach(sobra => niveles.forEach(falta => {
+      while(pendientes[sobra] < 0 && pendientes[falta] > 0){
+        let i = -1, j = -1;
+        elegidas.some((p, a) => {
+          if(p.dificultad !== sobra) return false;
+          const b = libres.findIndex(q => q.dificultad === falta && q.tema === p.tema);
+          if(b >= 0){ i = a; j = b; }
+          return b >= 0;
+        });
+        if(i < 0){ i = elegidas.findIndex(p => p.dificultad === sobra); j = libres.findIndex(q => q.dificultad === falta); }
+        if(i < 0 || j < 0) break;
+        const [nueva] = libres.splice(j, 1);
+        libres.push(elegidas[i]);
+        elegidas[i] = nueva;
+        pendientes[sobra]++; pendientes[falta]--;
+      }
+    }));
+  }
   return mezclar(elegidas);
 }
 
