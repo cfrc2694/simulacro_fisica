@@ -943,5 +943,15 @@
     "nodo": "2.1.4",
     "titulo": "Distribuciones planas divididas en anillos",
     "texto": "Una distribución plana con simetría de rotación se divide en anillos de radio $r$ y espesor $dr$, con carga $dq = \\sigma\\,2\\pi r\\,dr$. Sobre el eje, cada anillo da un campo a lo largo del eje, y basta con integrar esa componente entre los radios que ocupa la carga. Revisa el resultado con un límite: lejos, la distribución finita debe verse como una carga puntual."
+  },
+  "flujo-direccion-campo": {
+    "nodo": "2.1.3",
+    "titulo": "Flujo según la dirección del campo",
+    "texto": "El flujo por un elemento de superficie es $\\vec E\\cdot d\\vec A = E\\,dA\\cos\\phi$: donde el campo es tangente a la superficie no hay flujo. Antes de integrar, revisa en qué partes el campo es paralelo o perpendicular a la superficie. Si la superficie es abierta, a veces conviene cerrarla con una tapa simple y usar la ley de Gauss para el conjunto."
+  },
+  "potencial-cargas-puntuales": {
+    "nodo": "2.1.2",
+    "titulo": "Potencial de varias cargas puntuales",
+    "texto": "El potencial de un conjunto de cargas puntuales es la suma escalar $V = K_e\\sum q_i/r_i$, cada carga con su signo y su distancia al punto. Agrupa las cargas que están a la misma distancia y suma primero sus valores. A diferencia del campo, el potencial no tiene dirección, así que no hay componentes que se cancelen."
   }
 }

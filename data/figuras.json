@@ -579,5 +579,54 @@
     "ancho": 280,
     "pie": null,
     "alt": "Placa plana, en azul claro, con densidad de carga sigma, vista en perspectiva en el plano yz. Sobre ella se resalta un anillo de radio r y espesor dr centrado en el origen. El eje x sale perpendicular a la placa desde su centro; en él está el punto P, con una flecha roja dE que apunta en el sentido de x positivo."
+  },
+  "fig-cono-vertice": {
+    "archivo": "figures/fig-cono-vertice.svg",
+    "fuente": "tikz/fig-cono-vertice.tex",
+    "ancho": 160,
+    "pie": null,
+    "alt": "Cono circular recto, en azul claro, con el vértice arriba y la base circular abajo. En el vértice hay una carga puntual Q, en rojo. Una línea punteada baja del vértice al centro de la base, y el ángulo theta está marcado entre esa línea y el borde lateral del cono."
+  },
+  "fig-hemisferio-campo": {
+    "archivo": "figures/fig-hemisferio-campo.svg",
+    "fuente": "tikz/fig-hemisferio-campo.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Hemisferio de radio R, en azul claro, con la parte curva hacia arriba y el borde circular abajo, sin base. Varias flechas rojas verticales y paralelas representan un campo uniforme E que apunta hacia arriba, a lo largo del eje del hemisferio."
+  },
+  "fig-superficie-conductor": {
+    "archivo": "figures/fig-superficie-conductor.svg",
+    "fuente": "tikz/fig-superficie-conductor.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Una esfera conductora C, en gris, y una superficie cerrada S, dibujada como un círculo punteado azul a la izquierda, que se superponen: S encierra el lado izquierdo de la esfera. A la derecha de la esfera, fuera de las dos, está el punto P, en rojo."
+  },
+  "fig-graficas-er": {
+    "archivo": "figures/fig-graficas-er.svg",
+    "fuente": "tikz/fig-graficas-er.tex",
+    "ancho": 420,
+    "pie": null,
+    "alt": "Cinco gráficas de E_r contra r, todas en el mismo color azul, con marcas en R y 2R. (1): sube en línea recta hasta R y después decrece como 1 sobre r al cuadrado sin anularse. (2): vale cero hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después. (3): sube en línea recta hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después de 2R. (4): igual que la (3) hasta 2R, y después de 2R es negativa y su magnitud decrece como 1 sobre r al cuadrado. (5): constante hasta R, decrece como 1 sobre r al cuadrado entre R y 2R y vale cero después."
+  },
+  "fig-rectangulo-seis-cargas": {
+    "archivo": "figures/fig-rectangulo-seis-cargas.svg",
+    "fuente": "tikz/fig-rectangulo-seis-cargas.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Rectángulo de lados 2d (horizontal) y d (vertical) con seis cargas: arriba, de izquierda a derecha, +4q, −2q en el punto medio y +6q; abajo, de izquierda a derecha, −3q, +4q en el punto medio y +5q. Las cargas positivas tienen borde rojo y las negativas, azul. El punto P está en el centro del rectángulo."
+  },
+  "fig-potencial-regiones": {
+    "archivo": "figures/fig-potencial-regiones.svg",
+    "fuente": "tikz/fig-potencial-regiones.tex",
+    "ancho": 360,
+    "pie": null,
+    "alt": "Gráfica de V en voltios contra x en metros, en azul, con cinco regiones numeradas separadas por líneas punteadas en x = 3, 5, 6 y 8 m. V sube en línea recta de 0 a 3 V entre x = 0 y 3 m, se mantiene en 3 V hasta 5 m, baja en línea recta a −3 V en 6 m, se mantiene en −3 V hasta 8 m y sube en línea recta a 1 V en 10 m."
+  },
+  "fig-alambres-angulo-recto": {
+    "archivo": "figures/fig-alambres-angulo-recto.svg",
+    "fuente": "tikz/fig-alambres-angulo-recto.tex",
+    "ancho": 240,
+    "pie": null,
+    "alt": "Dos alambres de longitud L forman una L con la esquina arriba a la izquierda: uno horizontal, en rojo, con carga +Q, y uno vertical que baja desde la esquina, en azul, con carga −Q. El punto P está a una distancia a por debajo del alambre horizontal y a una distancia a a la derecha del vertical, frente a los puntos medios de ambos."
   }
 }
