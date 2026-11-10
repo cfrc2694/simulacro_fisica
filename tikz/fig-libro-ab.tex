@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \fill[pattern=north east lines] (-0.4,-0.2) rectangle (4.4,0);
+  \draw[thick] (-0.4,0) -- (4.4,0);
+  \foreach \x/\l/\v in {0.4/A/v_A, 3.2/B/v_B} {
+    \filldraw[draw=morado, fill=morado!20, thick] (\x-0.35,0) rectangle (\x+0.35,0.3);
+    \node[below] at (\x,-0.2) {$\l$};
+    \draw[->, thick, azul] (\x-0.3,0.55) -- (\x+0.5,0.55) node[right, text=black]{$\v$};
+  }
+\end{tikzpicture}
+\end{document}

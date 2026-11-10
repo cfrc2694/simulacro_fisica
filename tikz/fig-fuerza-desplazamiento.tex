@@ -1,0 +1,11 @@
+\documentclass[border=4pt]{standalone}
+\input{preambulo}
+\begin{document}
+\begin{tikzpicture}[scale=1.0]
+  \draw[eje] (-2.0,0) -- (1.6,0) node[right]{$x$};
+  \draw[eje] (0,-2.0) -- (0,1.4) node[above]{$y$};
+  \draw[->, very thick, azul] (0,0) -- (235:2.0) node[left, text=black]{$\vec s$};
+  \draw[->, very thick, rojo] (0,0) -- (-1.56,0.9) node[above, text=black]{$\vec F$};
+  \draw (0.45,0) arc (0:235:0.45); \node at (35:0.8) {$\theta$};
+\end{tikzpicture}
+\end{document}

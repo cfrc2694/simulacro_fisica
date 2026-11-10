@@ -536,6 +536,34 @@
     "fuente": "tikz/fig-techo-caja.tex",
     "ancho": 260,
     "pie": null,
-    "alt": "Techo inclinado un ángulo theta sobre la horizontal, que baja hacia la derecha. Cerca de la parte alta hay una caja, en rojo. Una cota paralela al techo marca la distancia L entre la caja y el borde inferior."
+    "alt": "Plano inclinado un ángulo theta sobre la horizontal, que baja hacia la derecha. Cerca de la parte alta hay un cuerpo, en rojo. Una cota paralela al plano marca la distancia L que recorre el cuerpo hacia abajo."
+  },
+  "fig-escalera-pared": {
+    "archivo": "figures/fig-escalera-pared.svg",
+    "fuente": "tikz/fig-escalera-pared.tex",
+    "ancho": 200,
+    "pie": null,
+    "alt": "Escalera de longitud L, en naranja oscuro, apoyada en el piso y en una pared vertical a la derecha; forma un ángulo beta con la pared. Sobre la escalera hay una persona, representada por un círculo azul, con su peso m g dibujado como una flecha roja vertical hacia abajo."
+  },
+  "fig-vectores-producto": {
+    "archivo": "figures/fig-vectores-producto.svg",
+    "fuente": "tikz/fig-vectores-producto.tex",
+    "ancho": 280,
+    "pie": null,
+    "alt": "Ejes x e y con tres vectores que salen del origen. A, en azul, apunta hacia y negativo. B, en rojo, está en el primer cuadrante y forma 40.0 grados con el eje y positivo. C, en verde, está en el tercer cuadrante y forma 20.0 grados por debajo del eje x negativo."
+  },
+  "fig-libro-ab": {
+    "archivo": "figures/fig-libro-ab.svg",
+    "fuente": "tikz/fig-libro-ab.tex",
+    "ancho": 260,
+    "pie": null,
+    "alt": "Un libro, en morado, se desliza hacia la derecha sobre una superficie horizontal. Aparece en dos posiciones: en el punto A, con velocidad v_A, y más a la derecha, en el punto B, con velocidad v_B; las dos velocidades son flechas azules hacia la derecha."
+  },
+  "fig-fuerza-desplazamiento": {
+    "archivo": "figures/fig-fuerza-desplazamiento.svg",
+    "fuente": "tikz/fig-fuerza-desplazamiento.tex",
+    "ancho": 220,
+    "pie": null,
+    "alt": "Ejes x e y. El desplazamiento s, en azul, sale del origen hacia el tercer cuadrante, a un ángulo theta medido en sentido antihorario desde el eje x positivo. La fuerza F, en rojo, sale del origen hacia el segundo cuadrante, arriba a la izquierda."
   }
 }
