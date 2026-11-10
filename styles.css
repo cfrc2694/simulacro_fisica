@@ -34,6 +34,9 @@ kbd{font-family:var(--sans);font-size:.75rem;border:1px solid var(--regla);borde
 .segmentado{display:flex;flex-wrap:wrap;gap:.4rem}
 .segmentado button{border:1.5px solid var(--regla);background:var(--hoja);border-radius:999px;padding:.4rem .9rem;cursor:pointer;font-size:.92rem}
 .segmentado button[aria-pressed="true"]{border-color:var(--tinta);background:var(--tinta);color:#fff}
+.deslizador{display:block;width:100%;max-width:26rem;accent-color:var(--tinta);margin:.2rem 0 0}
+.marcas{display:flex;justify-content:space-between;max-width:26rem;font-size:.78rem;color:var(--gris)}
+.etiqueta strong{color:var(--tinta);font-weight:600}
 .descargo{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--regla);color:var(--gris);font-size:.82rem;max-width:66ch}
 
 /* mapa de preguntas */
