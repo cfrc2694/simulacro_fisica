@@ -494,7 +494,7 @@
     "fuente": "tikz/fig-rampa-esquiador.tex",
     "ancho": 300,
     "pie": null,
-    "alt": "Rampa recta que sube hacia la derecha, inclinada un ángulo alfa de 35 grados sobre el suelo. En la base hay una caja, en rojo, con una flecha azul v0 paralela a la rampa y hacia arriba. En la parte superior, a una altura vertical h de 2.80 m sobre la base, hay un círculo verde que representa a la esquiadora."
+    "alt": "Rampa recta que sube hacia la derecha, inclinada un ángulo alfa sobre el suelo. En la base hay una caja, en rojo, con una flecha azul v0 paralela a la rampa y hacia arriba. En la parte superior, a una altura vertical h sobre la base, hay un círculo verde que representa a la esquiadora."
   },
   "fig-bloque-mesa-polea": {
     "archivo": "figures/fig-bloque-mesa-polea.svg",
@@ -550,7 +550,7 @@
     "fuente": "tikz/fig-vectores-producto.tex",
     "ancho": 280,
     "pie": null,
-    "alt": "Ejes x e y con tres vectores que salen del origen. A, en azul, apunta hacia y negativo. B, en rojo, está en el primer cuadrante y forma 40.0 grados con el eje y positivo. C, en verde, está en el tercer cuadrante y forma 20.0 grados por debajo del eje x negativo."
+    "alt": "Ejes x e y con tres vectores que salen del origen. A, en azul, apunta hacia y negativo. B, en rojo, está en el primer cuadrante y forma 30 grados con el eje y positivo. C, en verde, está en el tercer cuadrante y forma 30 grados por debajo del eje x negativo."
   },
   "fig-libro-ab": {
     "archivo": "figures/fig-libro-ab.svg",

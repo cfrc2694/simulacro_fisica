@@ -3989,13 +3989,13 @@
     "subtemas": ["1.3.4", "1.1.1"],
     "dificultad": "media",
     "figuras": ["fig-rampa-esquiador"],
-    "enunciado": "Desde la base de una rampa recta, inclinada $\\alpha = 35.0^\\circ$ sobre la horizontal, se lanza una caja de suministros hacia arriba por la rampa. Debe llegar con rapidez cero a la parte superior, a una altura vertical $h = 2.80$ m sobre la base, donde la espera una esquiadora. El coeficiente de fricción cinética entre la caja y la rampa es $\\mu_k = 0.200$. ¿Con qué rapidez debe salir la caja de la base? ($g = 9.80$ m/s²)",
-    "opciones": ["$8.40$ m/s", "$5.94$ m/s", "$7.41$ m/s", "$6.36$ m/s", "$8.12$ m/s"],
+    "enunciado": "Desde la base de una rampa recta, inclinada un ángulo $\\alpha$ sobre la horizontal, se lanza una caja de suministros hacia arriba por la rampa. Debe llegar con rapidez cero a la parte superior, a una altura vertical $h$ sobre la base, donde la espera una esquiadora. El coeficiente de fricción cinética entre la caja y la rampa es $\\mu_k$. ¿Con qué rapidez debe salir la caja de la base?",
+    "opciones": ["$\\sqrt{2gh\\left(1 + \\dfrac{\\mu_k}{\\tan\\alpha}\\right)}$", "$\\sqrt{gh\\left(1 + \\dfrac{\\mu_k}{\\tan\\alpha}\\right)}$", "$\\sqrt{2gh}$", "$\\sqrt{2gh\\,(\\sin\\alpha + \\mu_k\\cos\\alpha)}$", "$\\sqrt{2gh\\,(1 + \\mu_k)}$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["trabajo-energia-rampa"],
-    "explicacion": "La caja recorre $s = h/\\sin\\alpha = 4.88$ m sobre la rampa y la normal es $n = mg\\cos\\alpha$, así que la fricción hace $W_f = -\\mu_k mg\\cos\\alpha\\, s = -\\mu_k mgh/\\tan\\alpha$ y el peso, $W_g = -mgh$. Con el teorema trabajo–energía, $0 - \\tfrac12 mv_0^2 = -mgh\\,(1 + \\mu_k/\\tan\\alpha)$, de donde $v_0 = \\sqrt{2gh\\,(1 + \\mu_k/\\tan\\alpha)} = \\sqrt{2(9.80)(2.80)(1.286)} = 8.40$ m/s. Ignorar la fricción da $\\sqrt{2gh} = 7.41$ m/s, que es el límite $\\mu_k \\to 0$. Olvidar el factor 2 al despejar da $5.94$ m/s. Tomar $h$ como la distancia recorrida sobre la rampa da $\\sqrt{2gh(\\sin\\alpha + \\mu_k\\cos\\alpha)} = 6.36$ m/s, y tomar la normal como $mg\\sin\\alpha$ da $\\sqrt{2gh(1+\\mu_k)} = 8.12$ m/s."
+    "explicacion": "La caja recorre $s = h/\\sin\\alpha$ sobre la rampa y la normal es $n = mg\\cos\\alpha$, así que la fricción hace $W_f = -\\mu_k mg\\cos\\alpha\\, s = -\\mu_k mgh/\\tan\\alpha$ y el peso, $W_g = -mgh$. Con el teorema trabajo–energía, $0 - \\tfrac12 mv_0^2 = -mgh\\,(1 + \\mu_k/\\tan\\alpha)$, de donde sale la primera expresión. Con $\\mu_k = 0$ se reduce a $\\sqrt{2gh}$, que es la opción que ignora la fricción. Olvidar el factor 2 al despejar da la segunda. Tomar $h$ como la distancia recorrida sobre la rampa da $\\sqrt{2gh(\\sin\\alpha + \\mu_k\\cos\\alpha)}$, y tomar la normal como $mg\\sin\\alpha$ da $\\sqrt{2gh(1 + \\mu_k)}$."
   },
   {
     "id": "q246",
@@ -4005,13 +4005,13 @@
     "subtemas": ["1.1.2", "1.3.4"],
     "dificultad": "media",
     "figuras": ["fig-bloque-mesa-polea"],
-    "enunciado": "Un bloque de peso $w_A = 40.0$ N descansa sobre una mesa horizontal sin fricción. Una cuerda ligera, que pasa por una polea ideal en el borde de la mesa, lo une a un bloque de peso $w_B = 24.0$ N que cuelga. El sistema se suelta desde el reposo y el bloque colgante desciende $d = 1.20$ m. Use $g = 9.80$ m/s². ¿Cuál es la tensión de la cuerda y cuánto trabajo total se hace sobre el bloque de la mesa durante ese descenso?",
-    "opciones": ["$15.0$ N y $18.0$ J", "$24.0$ N y $28.8$ J", "$9.00$ N y $10.8$ J", "$15.0$ N y $0$ J", "$15.0$ N y $28.8$ J"],
+    "enunciado": "Un bloque de peso $w_A = 30$ N descansa sobre una mesa horizontal sin fricción. Una cuerda ligera, que pasa por una polea ideal en el borde de la mesa, lo une a un bloque de peso $w_B = 20$ N que cuelga. El sistema se suelta desde el reposo y el bloque colgante desciende $d = 2.0$ m. ¿Cuál es la tensión de la cuerda y cuánto trabajo total se hace sobre el bloque de la mesa durante ese descenso?",
+    "opciones": ["$12$ N y $24$ J", "$20$ N y $40$ J", "$8$ N y $16$ J", "$12$ N y $0$ J", "$12$ N y $40$ J"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["sistema-cuerda-polea"],
-    "explicacion": "Los dos bloques tienen la misma aceleración: $a = \\dfrac{w_B}{m_A + m_B} = g\\,\\dfrac{w_B}{w_A + w_B} = 3.68$ m/s². La segunda ley para el bloque de la mesa da $T = m_A a = \\dfrac{w_A w_B}{w_A + w_B} = 15.0$ N. Sobre ese bloque solo trabaja la tensión, porque el peso y la normal son perpendiculares al desplazamiento: $W = Td = (15.0)(1.20) = 18.0$ J. Comprobación: con $v^2 = 2ad$, $\\tfrac12 m_A v^2 = 18.0$ J. Suponer que la tensión es igual al peso colgante, $24.0$ N, solo vale si el sistema no acelera. $9.00$ N es la fuerza neta sobre el bloque colgante, $w_B - T$, no la tensión. Un trabajo total de $0$ J olvida que la tensión trabaja sobre el bloque, y $28.8$ J es el trabajo del peso colgante, $w_B d$, que actúa sobre el otro bloque."
+    "explicacion": "Los dos bloques tienen la misma aceleración, $a = g\\,\\dfrac{w_B}{w_A + w_B}$. La segunda ley para el bloque de la mesa da $T = m_A a = \\dfrac{w_A w_B}{w_A + w_B} = \\dfrac{(30)(20)}{50} = 12$ N. Sobre ese bloque solo trabaja la tensión, porque el peso y la normal son perpendiculares al desplazamiento: $W = Td = (12)(2.0) = 24$ J. Suponer que la tensión es igual al peso colgante, $20$ N, solo vale si el sistema no acelera. $8$ N es la fuerza neta sobre el bloque colgante, $w_B - T$, no la tensión. Un trabajo total de $0$ J olvida que la tensión trabaja sobre el bloque, y $40$ J es el trabajo del peso colgante, $w_B d$, que actúa sobre el otro bloque."
   },
   {
     "id": "q247",
@@ -4021,13 +4021,13 @@
     "subtemas": ["1.3.4", "1.1.2"],
     "dificultad": "media",
     "figuras": ["fig-bloque-mesa-polea"],
-    "enunciado": "Un bloque de peso $w_A = 40.0$ N descansa sobre una mesa horizontal sin fricción. Una cuerda ligera, que pasa por una polea ideal en el borde de la mesa, lo une a un bloque de peso $w_B = 24.0$ N que cuelga. El sistema se suelta desde el reposo y el bloque colgante desciende $d = 1.20$ m. Use $g = 9.80$ m/s². ¿Con qué rapidez se mueve el bloque colgante cuando ha descendido esa distancia?",
-    "opciones": ["$2.97$ m/s", "$3.76$ m/s", "$4.85$ m/s", "$2.10$ m/s", "$2.35$ m/s"],
+    "enunciado": "Un bloque de peso $w_A$ descansa sobre una mesa horizontal sin fricción. Una cuerda ligera, que pasa por una polea ideal en el borde de la mesa, lo une a un bloque de peso $w_B$ que cuelga. El sistema se suelta desde el reposo. ¿Con qué rapidez se mueve el bloque colgante cuando ha descendido una distancia $d$?",
+    "opciones": ["$\\sqrt{\\dfrac{2gd\\,w_B}{w_A + w_B}}$", "$\\sqrt{\\dfrac{2gd\\,w_B}{w_A}}$", "$\\sqrt{2gd}$", "$\\sqrt{\\dfrac{gd\\,w_B}{w_A + w_B}}$", "$\\sqrt{\\dfrac{2gd\\,w_A w_B}{(w_A + w_B)^2}}$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["sistema-cuerda-polea"],
-    "explicacion": "Para el sistema de los dos bloques, el trabajo de la tensión se cancela, y la normal y el peso del bloque de la mesa no trabajan. Solo trabaja el peso colgante: $W = w_B d = (24.0)(1.20) = 28.8$ J $= \\tfrac12 (m_A + m_B) v^2$, con $m_A + m_B = 64.0/9.80 = 6.53$ kg, así que $v = 2.97$ m/s. Coincide con $v = \\sqrt{2ad}$ para $a = 3.68$ m/s². Usar solo la masa del bloque de la mesa da $3.76$ m/s. La caída libre, $\\sqrt{2gd} = 4.85$ m/s, ignora que el bloque de la mesa también se acelera. Olvidar el factor 2 da $2.10$ m/s, y usar el trabajo de la tensión, $Td = 18.0$ J, en vez del peso colgante da $2.35$ m/s."
+    "explicacion": "Para el sistema de los dos bloques, el trabajo de la tensión se cancela, y la normal y el peso del bloque de la mesa no trabajan. Solo trabaja el peso colgante: $w_B d = \\tfrac12\\,\\dfrac{w_A + w_B}{g}\\,v^2$, de donde sale la primera expresión. Coincide con $v = \\sqrt{2ad}$ para $a = g\\,w_B/(w_A + w_B)$, y con $w_A = 0$ se reduce a la caída libre. Usar solo la masa del bloque de la mesa da la segunda. La caída libre, $\\sqrt{2gd}$, ignora que el bloque de la mesa también se acelera. Olvidar el factor 2 da la cuarta, y usar el trabajo de la tensión, $Td$ con $T = w_A w_B/(w_A + w_B)$, en vez del peso colgante da la última."
   },
   {
     "id": "q248",
@@ -4037,13 +4037,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "media",
     "figuras": ["fig-fuerza-posicion"],
-    "enunciado": "Un carrito de juguete de $1.50$ kg parte del reposo en $x = 0$. La fuerza neta sobre él es horizontal, y su componente $F_x$ varía con la posición como muestra la figura. ¿Cuál es su rapidez en $x = 8.0$ m?",
-    "opciones": ["$3.16$ m/s", "$4.00$ m/s", "$2.24$ m/s", "$4.69$ m/s", "$3.06$ m/s"],
+    "enunciado": "Un carrito de juguete de $0.60$ kg parte del reposo en $x = 0$. La fuerza neta sobre él es horizontal, y su componente $F_x$ varía con la posición como muestra la figura. ¿Cuál es su rapidez en $x = 8.0$ m?",
+    "opciones": ["$5.0$ m/s", "$2\\sqrt{10}$ m/s", "$\\dfrac{5}{\\sqrt2}$ m/s", "$\\sqrt{55}$ m/s", "$\\sqrt{10}$ m/s"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["trabajo-area-grafica"],
-    "explicacion": "El trabajo es el área bajo la curva, con signo. De $0$ a $2.0$ m: $\\tfrac12(2.0)(4.0) = 4.0$ J; de $2.0$ a $4.0$ m: $(2.0)(4.0) = 8.0$ J; de $4.0$ a $5.0$ m: $0$; de $5.0$ a $8.0$ m: $-\\tfrac12(3.0)(3.0) = -4.5$ J. En total $W = 7.5$ J $= \\tfrac12(1.50)v^2$, así que $v = 3.16$ m/s. Ignorar el área negativa da $W = 12$ J y $4.00$ m/s, y sumar las áreas en valor absoluto da $16.5$ J y $4.69$ m/s. Olvidar el 2 en $v = \\sqrt{2W/m}$ da $2.24$ m/s. Calcular los triángulos sin el factor $\\tfrac12$ da $W = 7.0$ J y $3.06$ m/s. La energía cinética nunca se hace negativa en el recorrido: vale $12$ J en $x = 5.0$ m y baja a $7.5$ J."
+    "explicacion": "El trabajo es el área bajo la curva, con signo. De $0$ a $2.0$ m: $\\tfrac12(2.0)(4.0) = 4.0$ J; de $2.0$ a $4.0$ m: $(2.0)(4.0) = 8.0$ J; de $4.0$ a $5.0$ m: $0$; de $5.0$ a $8.0$ m: $-\\tfrac12(3.0)(3.0) = -4.5$ J. En total $W = 7.5$ J $= \\tfrac12(0.60)v^2$, así que $v^2 = 25$ y $v = 5.0$ m/s. Ignorar el área negativa da $W = 12$ J y $v^2 = 40$. Olvidar el 2 en $v = \\sqrt{2W/m}$ da $v^2 = 12.5$. Sumar las áreas en valor absoluto da $16.5$ J y $v^2 = 55$. Calcular el triángulo negativo sin el $\\tfrac12$ da $W = 3.0$ J y $v^2 = 10$. La energía cinética nunca se hace negativa en el recorrido: vale $12$ J en $x = 5.0$ m y baja a $7.5$ J."
   },
   {
     "id": "q249",
@@ -4054,12 +4054,12 @@
     "dificultad": "facil",
     "figuras": ["fig-bloque-hacia-resorte"],
     "enunciado": "Un bloque de $5.00$ kg se desliza a $3.00$ m/s por un piso horizontal sin fricción y choca contra un resorte ligero y horizontal de constante $k = 20.0$ N/cm, fijo a una pared. ¿Cuánto se comprime el resorte como máximo?",
-    "opciones": ["$15.0$ cm", "$10.6$ cm", "$1.50$ m", "$21.2$ cm", "$1.50$ cm"],
+    "opciones": ["$15.0$ cm", "$\\dfrac{15}{\\sqrt2}$ cm", "$1.50$ m", "$15\\sqrt2$ cm", "$1.50$ cm"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["compresion-resorte"],
-    "explicacion": "En unidades SI, $k = 2000$ N/m. En la compresión máxima el bloque se detiene y toda su energía cinética queda en el resorte: $\\tfrac12 mv^2 = \\tfrac12 kx^2$, así que $x = v\\sqrt{m/k} = 3.00\\sqrt{5.00/2000} = 0.150$ m $= 15.0$ cm. Olvidar el $\\tfrac12$ de la energía del resorte da $10.6$ cm, y olvidar el de la energía cinética, $21.2$ cm. Usar $k = 20.0$ N/m, sin convertir, da $1.50$ m, y leer ese mismo número como centímetros da $1.50$ cm."
+    "explicacion": "En unidades SI, $k = 2000$ N/m. En la compresión máxima el bloque se detiene y toda su energía cinética queda en el resorte: $\\tfrac12 mv^2 = \\tfrac12 kx^2$, así que $x = v\\sqrt{m/k} = 3.00\\sqrt{5/2000} = 3.00\\sqrt{1/400} = 0.150$ m $= 15.0$ cm. Olvidar el $\\tfrac12$ de la energía del resorte divide el resultado por $\\sqrt2$, y olvidar el de la energía cinética lo multiplica por $\\sqrt2$. Usar $k = 20.0$ N/m, sin convertir, da $1.50$ m, y leer ese mismo número como centímetros da $1.50$ cm."
   },
   {
     "id": "q250",
@@ -4085,13 +4085,13 @@
     "subtemas": ["1.3.2"],
     "dificultad": "facil",
     "figuras": ["fig-tiro-azotea"],
-    "enunciado": "Desde la azotea de un edificio de $h = 18.0$ m de altura se lanza una pelota con rapidez inicial de $15.0$ m/s, a $\\theta = 40.0^\\circ$ sobre la horizontal. Si se desprecia la resistencia del aire, ¿con qué rapidez llega la pelota al suelo? ($g = 9.80$ m/s²)",
-    "opciones": ["$24.0$ m/s", "$20.0$ m/s", "$33.8$ m/s", "$18.8$ m/s", "$21.1$ m/s"],
+    "enunciado": "Desde la azotea de un edificio de $h = 20$ m de altura se lanza una pelota con rapidez inicial de $15$ m/s, a $\\theta = 53^\\circ$ sobre la horizontal ($\\sin 53^\\circ = 0.8$, $\\cos 53^\\circ = 0.6$). Si se desprecia la resistencia del aire, ¿con qué rapidez llega la pelota al suelo? ($g = 10$ m/s²)",
+    "opciones": ["$25$ m/s", "$5\\sqrt{17}$ m/s", "$35$ m/s", "$20$ m/s", "$4\\sqrt{34}$ m/s"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "Solo trabaja la gravedad, así que $\\tfrac12 mv_0^2 + mgh = \\tfrac12 mv^2$ y $v = \\sqrt{v_0^2 + 2gh} = \\sqrt{225 + 352.8} = 24.0$ m/s. El ángulo no importa, porque la energía es escalar. Olvidar el 2 de $2gh$ da $20.0$ m/s. Sumar las rapideces, $v_0 + \\sqrt{2gh}$, da $33.8$ m/s. Ignorar la rapidez inicial, como en una caída desde el reposo, da $18.8$ m/s, y usar solo la componente vertical de la velocidad inicial, $v_0\\sin\\theta$, da $21.1$ m/s. Comprobación: con $h = 0$ la pelota vuelve al nivel de lanzamiento con la misma rapidez, $15.0$ m/s."
+    "explicacion": "Solo trabaja la gravedad, así que $\\tfrac12 mv_0^2 + mgh = \\tfrac12 mv^2$ y $v = \\sqrt{v_0^2 + 2gh} = \\sqrt{225 + 400} = 25$ m/s. El ángulo no importa, porque la energía es escalar. Olvidar el 2 de $2gh$ da $\\sqrt{425} = 5\\sqrt{17}$ m/s. Sumar las rapideces, $v_0 + \\sqrt{2gh} = 15 + 20$, da $35$ m/s. Ignorar la rapidez inicial, como en una caída desde el reposo, da $20$ m/s, y usar solo la componente vertical de la velocidad inicial, $v_0\\sin\\theta = 12$ m/s, da $\\sqrt{544} = 4\\sqrt{34}$ m/s. Comprobación: con $h = 0$ la pelota vuelve al nivel de lanzamiento con la misma rapidez, $15$ m/s."
   },
   {
     "id": "q252",
@@ -4101,13 +4101,13 @@
     "subtemas": ["1.3.2", "1.2.1"],
     "dificultad": "media",
     "figuras": ["fig-rizo-ab"],
-    "enunciado": "El carrito de una montaña rusa, de $150$ kg, recorre un rizo vertical circular de radio $R = 10.0$ m; sus ruedas están sujetas al riel, así que no puede despegarse. En el punto más bajo del rizo, $A$, su rapidez es $22.0$ m/s, y en el más alto, $B$, es $7.00$ m/s. ¿Cuánto trabajo hace la fricción sobre el carrito entre $A$ y $B$? ($g = 9.80$ m/s²)",
-    "opciones": ["$-3.23\\times10^{3}$ J", "$-1.79\\times10^{4}$ J", "$+3.23\\times10^{3}$ J", "$-3.26\\times10^{4}$ J", "$+1.36\\times10^{4}$ J"],
+    "enunciado": "El carrito de una montaña rusa, de $100$ kg, recorre un rizo vertical circular de radio $R = 10$ m; sus ruedas están sujetas al riel, así que no puede despegarse. En el punto más bajo del rizo, $A$, su rapidez es $25$ m/s, y en el más alto, $B$, es $10$ m/s. ¿Cuánto trabajo hace la fricción sobre el carrito entre $A$ y $B$? ($g = 10$ m/s²)",
+    "opciones": ["$-6250$ J", "$-16\\,250$ J", "$+6250$ J", "$-26\\,250$ J", "$(10\\,000\\pi - 26\\,250)$ J"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "Con $E_B = E_A + W_f$ y $B$ a una altura $2R = 20.0$ m sobre $A$: $W_f = \\tfrac12(150)(7.00^2 - 22.0^2) + (150)(9.80)(20.0) = -32\\,625 + 29\\,400 = -3.23\\times10^{3}$ J. Tomar $R$ como la altura de $B$ da $-1.79\\times10^{4}$ J. El signo positivo no puede ser: la fricción disipa energía. Ignorar el cambio de energía potencial da $-3.26\\times10^{4}$ J. Usar como altura la longitud de la media vuelta, $\\pi R$, da $+1.36\\times10^{4}$ J, que también tiene el signo imposible."
+    "explicacion": "Con $E_B = E_A + W_f$ y $B$ a una altura $2R = 20$ m sobre $A$: $W_f = \\tfrac12(100)(10^2 - 25^2) + (100)(10)(20) = -26\\,250 + 20\\,000 = -6250$ J. Tomar $R$ como la altura de $B$ da $-16\\,250$ J. El signo positivo no puede ser: la fricción disipa energía. Ignorar el cambio de energía potencial da $-26\\,250$ J. Usar como altura la longitud de la media vuelta, $\\pi R$, da $10\\,000\\pi - 26\\,250 \\approx +5200$ J, que también tiene el signo imposible."
   },
   {
     "id": "q253",
@@ -4117,13 +4117,13 @@
     "subtemas": ["1.3.2"],
     "dificultad": "media",
     "figuras": ["fig-bloque-resorte-comprimido"],
-    "enunciado": "Un bloque de $2.00$ kg está sobre un piso horizontal, unido a un resorte horizontal de constante $k = 900$ N/m cuyo otro extremo está fijo a una pared. Al principio el resorte está comprimido $4.00$ cm y el bloque está en reposo; al soltarlo, el bloque empieza a moverse. El coeficiente de fricción cinética entre el bloque y el piso es $\\mu_k = 0.300$. ¿Cuál es la rapidez del bloque cuando ha recorrido $2.50$ cm? ($g = 9.80$ m/s²)",
-    "opciones": ["$0.687$ m/s", "$0.787$ m/s", "$0.486$ m/s", "$0.875$ m/s", "$0.757$ m/s"],
+    "enunciado": "Un bloque de $2.0$ kg está sobre un piso horizontal, unido a un resorte horizontal de constante $k = 400$ N/m cuyo otro extremo está fijo a una pared. Al principio el resorte está comprimido $10$ cm y el bloque está en reposo; al soltarlo, el bloque empieza a moverse. El coeficiente de fricción cinética entre el bloque y el piso es $\\mu_k = 0.50$. ¿Cuál es la rapidez del bloque cuando ha recorrido $5.0$ cm? ($g = 10$ m/s²)",
+    "opciones": ["$1.0$ m/s", "$\\sqrt{1.5}$ m/s", "$\\dfrac{1}{\\sqrt2}$ m/s", "$\\sqrt2$ m/s", "$0$: el bloque se detiene justo ahí"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "Después de recorrer $2.50$ cm el resorte sigue comprimido $1.50$ cm. La energía elástica liberada es $\\tfrac12 k(x_0^2 - x_1^2) = 450\\,(0.0400^2 - 0.0150^2) = 0.619$ J, y la fricción hace $W_f = -\\mu_k mgd = -(0.300)(2.00)(9.80)(0.0250) = -0.147$ J. Queda $\\tfrac12 mv^2 = 0.472$ J, así que $v = 0.687$ m/s. Ignorar la fricción da $0.787$ m/s, y darle signo positivo, $0.875$ m/s. Olvidar el $\\tfrac12$ de la energía cinética da $0.486$ m/s. Suponer que el resorte ya se descomprimió del todo, con $\\tfrac12 kx_0^2$, da $0.757$ m/s. El bloque sigue acelerando en ese tramo: la fuerza del resorte, $k(x_0 - s)$, supera la fricción, $5.88$ N, hasta $s = 3.35$ cm."
+    "explicacion": "Después de recorrer $5.0$ cm el resorte sigue comprimido $5.0$ cm. La energía elástica liberada es $\\tfrac12 k(x_0^2 - x_1^2) = 200\\,(0.010 - 0.0025) = 1.5$ J, y la fricción hace $W_f = -\\mu_k mgd = -(0.50)(2.0)(10)(0.050) = -0.50$ J. Queda $\\tfrac12 mv^2 = 1.0$ J, así que $v^2 = 1.0$ y $v = 1.0$ m/s. Ignorar la fricción da $v^2 = 1.5$, y darle signo positivo, $v^2 = 2.0$. Olvidar el $\\tfrac12$ de la energía cinética da $v^2 = 0.50$. Tomar como energía liberada $\\tfrac12 kd^2 = 0.50$ J, con el recorrido en vez de las compresiones, deja $0$ J después de la fricción. El bloque sigue acelerando en ese tramo: la fuerza del resorte, $k(x_0 - s)$, supera la fricción, $10$ N, hasta $s = 7.5$ cm."
   },
   {
     "id": "q254",
@@ -4133,13 +4133,13 @@
     "subtemas": ["1.3.2", "1.1.1"],
     "dificultad": "media",
     "figuras": ["fig-techo-caja"],
-    "enunciado": "Una caja de herramientas que pesa $60.0$ N empieza a deslizarse desde el reposo por un techo inclinado $\\theta = 30.0^\\circ$ sobre la horizontal. Parte a $L = 5.00$ m del borde inferior, medidos a lo largo del techo, y la fuerza de fricción cinética sobre ella vale $15.0$ N. ¿Con qué rapidez llega al borde? ($g = 9.80$ m/s²)",
-    "opciones": ["$4.95$ m/s", "$7.00$ m/s", "$8.57$ m/s", "$1.58$ m/s", "$7.77$ m/s"],
+    "enunciado": "Una caja de herramientas que pesa $60$ N empieza a deslizarse desde el reposo por un techo inclinado $\\theta = 30^\\circ$ sobre la horizontal. Parte a $L = 5.0$ m del borde inferior, medidos a lo largo del techo, y la fuerza de fricción cinética sobre ella vale $15$ N. ¿Con qué rapidez llega al borde? ($g = 10$ m/s²)",
+    "opciones": ["$5.0$ m/s", "$5\\sqrt2$ m/s", "$5\\sqrt3$ m/s", "$\\sqrt{2.5}$ m/s", "$\\dfrac{5}{\\sqrt2}$ m/s"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "La masa es $m = w/g = 6.12$ kg y la caja baja $L\\sin\\theta = 2.50$ m. Entonces $wL\\sin\\theta - fL = \\tfrac12 mv^2$: $150 - 75.0 = 75.0$ J, y $v = \\sqrt{2(75.0)/6.12} = 4.95$ m/s. Ignorar la fricción da $7.00$ m/s, y darle signo positivo, $8.57$ m/s. Usar el peso, $60.0$ N, como si fuera la masa da $1.58$ m/s. Calcular la altura con $L\\cos\\theta$ en vez de $L\\sin\\theta$ da $7.77$ m/s."
+    "explicacion": "La masa es $m = w/g = 6.0$ kg y la caja baja $L\\sin\\theta = 2.5$ m. Entonces $wL\\sin\\theta - fL = \\tfrac12 mv^2$: $150 - 75 = 75$ J $= 3.0\\,v^2$, así que $v^2 = 25$ y $v = 5.0$ m/s. Ignorar la fricción da $v^2 = 50$, y darle signo positivo, $v^2 = 75$. Usar el peso, $60$ N, como si fuera la masa da $v^2 = 2.5$. Olvidar el $\\tfrac12$ de la energía cinética da $v^2 = 12.5$."
   },
   {
     "id": "q255",
@@ -4149,13 +4149,13 @@
     "subtemas": ["1.3.1"],
     "dificultad": "media",
     "figuras": [],
-    "enunciado": "Un disco pequeño de $0.0500$ kg se mueve en el plano $xy$. La fuerza neta sobre él es conservativa, con energía potencial $U(x,y) = (4.00\\ \\text{J/m}^2)\\,x^2 - (2.00\\ \\text{J/m}^3)\\,y^3$. En el punto $(0.500\\ \\text{m},\\ 1.00\\ \\text{m})$, ¿cuál es la magnitud de su aceleración y qué ángulo forma, medido en sentido antihorario desde el eje $+x$?",
-    "opciones": ["$144$ m/s², $124^\\circ$", "$144$ m/s², $304^\\circ$", "$144$ m/s², $236^\\circ$", "$89.4$ m/s², $153^\\circ$", "$7.21$ m/s², $124^\\circ$"],
+    "enunciado": "Un disco pequeño de $0.050$ kg se mueve en el plano $xy$. La fuerza neta sobre él es conservativa, con energía potencial $U(x,y) = (4.0\\ \\text{J/m}^2)\\,x^2 - (2.0\\ \\text{J/m}^3)\\,y^3$. ¿Cuál es su aceleración en el punto $(1.0\\ \\text{m},\\ 1.0\\ \\text{m})$?",
+    "opciones": ["$(-160\\,\\hat\\imath + 120\\,\\hat\\jmath)$ m/s²", "$(160\\,\\hat\\imath - 120\\,\\hat\\jmath)$ m/s²", "$(-160\\,\\hat\\imath - 120\\,\\hat\\jmath)$ m/s²", "$(-80\\,\\hat\\imath + 40\\,\\hat\\jmath)$ m/s²", "$(-8.0\\,\\hat\\imath + 6.0\\,\\hat\\jmath)$ m/s²"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["fuerza-gradiente", "fuerza-desde-potencial"],
-    "explicacion": "$F_x = -\\partial U/\\partial x = -2(4.00)(0.500) = -4.00$ N y $F_y = -\\partial U/\\partial y = +3(2.00)(1.00)^2 = +6.00$ N. Entonces $|\\vec F| = 7.21$ N y $a = 7.21/0.0500 = 144$ m/s². Como $F_x < 0$ y $F_y > 0$, la aceleración está en el segundo cuadrante: $180^\\circ - \\arctan(6.00/4.00) = 124^\\circ$. Usar $\\vec F = +\\nabla U$ invierte el vector y da $304^\\circ$. Equivocar el signo de $\\partial U/\\partial y$ da $236^\\circ$. Derivar sin bajar los exponentes da $F_x = -4.00$ N y $F_y = 2.00$ N, que dan $89.4$ m/s² a $153^\\circ$. $7.21$ m/s² es la magnitud de la fuerza en newtons, sin dividir por la masa."
+    "explicacion": "$F_x = -\\partial U/\\partial x = -2(4.0)(1.0) = -8.0$ N y $F_y = -\\partial U/\\partial y = +3(2.0)(1.0)^2 = +6.0$ N. Dividiendo por la masa, $\\vec a = (-160\\,\\hat\\imath + 120\\,\\hat\\jmath)$ m/s², de magnitud $200$ m/s², en el segundo cuadrante. Usar $\\vec F = +\\nabla U$ invierte el vector. Equivocar el signo de $\\partial U/\\partial y$ da la componente $y$ negativa. Derivar sin bajar los exponentes da $F_x = -4.0$ N y $F_y = 2.0$ N. $(-8.0, 6.0)$ es la fuerza en newtons, sin dividir por la masa."
   },
   {
     "id": "q256",
@@ -4165,13 +4165,13 @@
     "subtemas": ["1.3.1", "1.3.2"],
     "dificultad": "facil",
     "figuras": [],
-    "enunciado": "Una resortera lanza verticalmente hacia arriba una piedra de $15.0$ g, que sube $18.0$ m sobre el punto de lanzamiento. Sin resistencia del aire y suponiendo que toda la energía elástica de la banda pasa a la piedra, ¿cuánta energía tenía almacenada la banda y qué altura alcanzaría una piedra de $40.0$ g lanzada con la misma energía? ($g = 9.80$ m/s²)",
-    "opciones": ["$2.65$ J y $6.75$ m", "$2.65$ J y $48.0$ m", "$7.06$ J y $6.75$ m", "$2.65$ J y $18.0$ m", "$2.65$ J y $2.53$ m"],
+    "enunciado": "Una resortera lanza verticalmente hacia arriba una piedra de $10$ g, que sube $20$ m sobre el punto de lanzamiento. Sin resistencia del aire y suponiendo que toda la energía elástica de la banda pasa a la piedra, ¿cuánta energía tenía almacenada la banda y qué altura alcanzaría una piedra de $40$ g lanzada con la misma energía? ($g = 10$ m/s²)",
+    "opciones": ["$2.0$ J y $5.0$ m", "$2.0$ J y $80$ m", "$8.0$ J y $5.0$ m", "$2.0$ J y $20$ m", "$2.0$ J y $1.25$ m"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "Toda la energía elástica se convierte en energía potencial gravitatoria en el punto más alto: $U_{\\text{el}} = m_1 gh_1 = (0.0150)(9.80)(18.0) = 2.65$ J. Con la misma energía, $h_2 = U_{\\text{el}}/(m_2 g) = h_1\\, m_1/m_2 = 6.75$ m. Invertir la proporción da $48.0$ m, pero una piedra más pesada sube menos. $7.06$ J es la energía calculada con la masa de la segunda piedra. $18.0$ m supone que la altura no depende de la masa, lo que valdría con la misma rapidez de salida, no con la misma energía. $2.53$ m supone el mismo momento lineal, que hace $h \\propto (m_1/m_2)^2$."
+    "explicacion": "Toda la energía elástica se convierte en energía potencial gravitatoria en el punto más alto: $U_{\\text{el}} = m_1 gh_1 = (0.010)(10)(20) = 2.0$ J. Con la misma energía, $h_2 = U_{\\text{el}}/(m_2 g) = h_1\\, m_1/m_2 = 5.0$ m. Invertir la proporción da $80$ m, pero una piedra más pesada sube menos. $8.0$ J es la energía calculada con la masa de la segunda piedra. $20$ m supone que la altura no depende de la masa, lo que valdría con la misma rapidez de salida, no con la misma energía. $1.25$ m supone el mismo momento lineal, que hace $h \\propto (m_1/m_2)^2$."
   },
   {
     "id": "q257",
@@ -4181,13 +4181,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "facil",
     "figuras": [],
-    "enunciado": "En tres situaciones, una fuerza constante $\\vec F$ (en N) actúa sobre un cuerpo que se desplaza $\\vec s$ (en m): (i) $\\vec F = -1.00\\,\\hat\\imath + 5.00\\,\\hat\\jmath$ y $\\vec s = 3.00\\,\\hat\\imath - 4.00\\,\\hat\\jmath$; (ii) $\\vec F = 4.00\\,\\hat\\imath + 2.00\\,\\hat\\jmath$ y $\\vec s = 6.00\\,\\hat\\imath + 9.00\\,\\hat\\jmath$; (iii) $\\vec F = -5.00\\,\\hat\\imath + 3.00\\,\\hat\\jmath$ y $\\vec s = 6.00\\,\\hat\\imath + 10.0\\,\\hat\\jmath$. ¿Qué ángulo forman la fuerza y el desplazamiento en cada caso?",
-    "opciones": ["$154^\\circ$, $29.7^\\circ$ y $90.0^\\circ$", "$25.6^\\circ$, $29.7^\\circ$ y $90.0^\\circ$", "$64.4^\\circ$, $60.3^\\circ$ y $0^\\circ$", "$154^\\circ$, $29.7^\\circ$ y $0^\\circ$", "$154^\\circ$, $29.7^\\circ$ y $180^\\circ$"],
+    "enunciado": "En tres situaciones, una fuerza constante $\\vec F$ (en N) actúa sobre un cuerpo que se desplaza $\\vec s$ (en m): (i) $\\vec F = 2\\,\\hat\\imath + 2\\,\\hat\\jmath$ y $\\vec s = -3\\,\\hat\\imath$; (ii) $\\vec F = \\hat\\imath + \\hat\\jmath$ y $\\vec s = 5\\,\\hat\\jmath$; (iii) $\\vec F = 2\\,\\hat\\imath - \\hat\\jmath$ y $\\vec s = \\hat\\imath + 2\\,\\hat\\jmath$. ¿Qué ángulo forman la fuerza y el desplazamiento en cada caso?",
+    "opciones": ["$135^\\circ$, $45^\\circ$ y $90^\\circ$", "$45^\\circ$, $45^\\circ$ y $90^\\circ$", "$45^\\circ$, $45^\\circ$ y $0^\\circ$", "$135^\\circ$, $45^\\circ$ y $0^\\circ$", "$135^\\circ$, $45^\\circ$ y $180^\\circ$"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["producto-escalar"],
-    "explicacion": "Con $\\cos\\phi = \\vec F\\cdot\\vec s/(Fs)$: (i) $\\vec F\\cdot\\vec s = -3.00 - 20.0 = -23.0$, $F = \\sqrt{26}$, $s = 5.00$, así que $\\cos\\phi = -0.902$ y $\\phi = 154^\\circ$; el producto negativo obliga a un ángulo obtuso. (ii) $\\vec F\\cdot\\vec s = 42.0$, $F = \\sqrt{20}$, $s = \\sqrt{117}$: $\\phi = 29.7^\\circ$. (iii) $\\vec F\\cdot\\vec s = -30.0 + 30.0 = 0$: $\\phi = 90.0^\\circ$, y la fuerza no hace trabajo. Tomar el valor absoluto del coseno da $25.6^\\circ$ en (i). Usar $\\arcsin$ en vez de $\\arccos$ da $64.4^\\circ$, $60.3^\\circ$ y $0^\\circ$. Leer un producto escalar nulo como vectores paralelos da $0^\\circ$ en (iii), y como vectores opuestos, $180^\\circ$; en ambos casos el producto sería $\\pm Fs \\ne 0$."
+    "explicacion": "Con $\\cos\\phi = \\vec F\\cdot\\vec s/(Fs)$: (i) $\\vec F\\cdot\\vec s = -6$, $F = 2\\sqrt2$ y $s = 3$, así que $\\cos\\phi = -1/\\sqrt2$ y $\\phi = 135^\\circ$; el producto negativo obliga a un ángulo obtuso. (ii) $\\vec F\\cdot\\vec s = 5$, $F = \\sqrt2$ y $s = 5$: $\\cos\\phi = 1/\\sqrt2$ y $\\phi = 45^\\circ$. (iii) $\\vec F\\cdot\\vec s = 2 - 2 = 0$: $\\phi = 90^\\circ$, y la fuerza no hace trabajo. Tomar el valor absoluto del coseno da $45^\\circ$ en (i). Usar $\\arcsin$ en vez de $\\arccos$ da $45^\\circ$, $45^\\circ$ y $0^\\circ$. Leer un producto escalar nulo como vectores paralelos da $0^\\circ$ en (iii), y como vectores opuestos, $180^\\circ$; en ambos casos el producto sería $\\pm Fs \\ne 0$."
   },
   {
     "id": "q258",
@@ -4197,13 +4197,13 @@
     "subtemas": ["1.3.4", "1.1.1"],
     "dificultad": "media",
     "figuras": ["fig-techo-caja"],
-    "enunciado": "Un paquete de $6.00$ kg se desliza $L = 2.50$ m hacia abajo por una rampa inclinada $\\theta = 50.0^\\circ$ sobre la horizontal. El coeficiente de fricción cinética es $\\mu_k = 0.350$. ¿Cuál es el trabajo neto sobre el paquete en ese tramo? ($g = 9.80$ m/s²)",
-    "opciones": ["$+79.5$ J", "$+55.1$ J", "$+61.2$ J", "$+146$ J", "$+113$ J"],
+    "enunciado": "Un paquete de $5.0$ kg se desliza $L = 2.0$ m hacia abajo por una rampa inclinada $\\theta = 37^\\circ$ sobre la horizontal ($\\sin 37^\\circ = 0.6$, $\\cos 37^\\circ = 0.8$). El coeficiente de fricción cinética es $\\mu_k = 0.25$. ¿Cuál es el trabajo neto sobre el paquete en ese tramo? ($g = 10$ m/s²)",
+    "opciones": ["$+40$ J", "$+65$ J", "$+35$ J", "$+80$ J", "$+60$ J"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["trabajo-fuerza-constante"],
-    "explicacion": "La normal es $n = mg\\cos\\theta = 37.8$ N y no trabaja, porque es perpendicular al desplazamiento. La fricción, $\\mu_k n = 13.2$ N, se opone al movimiento: $W_f = -(13.2)(2.50) = -33.1$ J. El peso tiene una componente $mg\\sin\\theta$ a lo largo de la rampa: $W_g = (58.8)(2.50)\\sin 50.0^\\circ = +113$ J. El trabajo neto es $113 - 33.1 = +79.5$ J. Intercambiar seno y coseno da $+55.1$ J. Tomar $n = mg$ da $+61.2$ J. Darle signo positivo a la fricción da $+146$ J, e ignorarla da $+113$ J, que es solo el trabajo del peso."
+    "explicacion": "La normal es $n = mg\\cos\\theta = 40$ N y no trabaja, porque es perpendicular al desplazamiento. La fricción, $\\mu_k n = 10$ N, se opone al movimiento: $W_f = -(10)(2.0) = -20$ J. El peso tiene una componente $mg\\sin\\theta = 30$ N a lo largo de la rampa: $W_g = (30)(2.0) = +60$ J. El trabajo neto es $60 - 20 = +40$ J. Intercambiar seno y coseno da $+65$ J. Tomar $n = mg$ da $+35$ J. Darle signo positivo a la fricción da $+80$ J, e ignorarla da $+60$ J, que es solo el trabajo del peso."
   },
   {
     "id": "q259",
@@ -4213,13 +4213,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "media",
     "figuras": ["fig-escalera-pared"],
-    "enunciado": "Una pintora de $70.0$ kg sube por una escalera de $L = 3.00$ m apoyada en una pared vertical. La escalera forma un ángulo $\\beta = 25.0^\\circ$ con la pared. ¿Cuánto trabajo hace la gravedad sobre la pintora entre la base y el extremo superior de la escalera? ($g = 9.80$ m/s²)",
-    "opciones": ["$-1.87\\times10^{3}$ J, sin importar si sube con rapidez constante o acelerando", "$-8.70\\times10^{2}$ J, sin importar si sube con rapidez constante o acelerando", "$+1.87\\times10^{3}$ J, porque la pintora avanza en el sentido de su esfuerzo", "$-1.87\\times10^{3}$ J solo si sube con rapidez constante; si acelera, el trabajo es mayor", "$-2.06\\times10^{3}$ J, sin importar si sube con rapidez constante o acelerando"],
+    "enunciado": "Una pintora de $60$ kg sube por una escalera de $L = 3.0$ m apoyada en una pared vertical. La escalera forma un ángulo $\\beta = 37^\\circ$ con la pared ($\\sin 37^\\circ = 0.6$, $\\cos 37^\\circ = 0.8$). ¿Cuánto trabajo hace la gravedad sobre la pintora entre la base y el extremo superior de la escalera? ($g = 10$ m/s²)",
+    "opciones": ["$-1440$ J, sin importar si sube con rapidez constante o acelerando", "$-1080$ J, sin importar si sube con rapidez constante o acelerando", "$+1440$ J, porque la pintora avanza en el sentido de su esfuerzo", "$-1440$ J solo si sube con rapidez constante; si acelera, el trabajo es mayor", "$-1800$ J, sin importar si sube con rapidez constante o acelerando"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["trabajo-fuerza-constante"],
-    "explicacion": "El desplazamiento forma $25.0^\\circ$ con la vertical, así que forma $180^\\circ - 25.0^\\circ = 155^\\circ$ con el peso, que apunta hacia abajo: $W_g = (686\\ \\text{N})(3.00\\ \\text{m})\\cos 155^\\circ = -1.87\\times10^{3}$ J. Es lo mismo que $-mg\\,\\Delta y$ con $\\Delta y = L\\cos\\beta = 2.72$ m. $-8.70\\times10^{2}$ J toma $25.0^\\circ$ como el ángulo con el piso. El trabajo positivo es el que hace la pintora, no la gravedad. El trabajo de la gravedad solo depende del peso y del desplazamiento, no de cómo se mueva. $-2.06\\times10^{3}$ J toma toda la escalera como si fuera vertical."
+    "explicacion": "El desplazamiento forma $37^\\circ$ con la vertical, así que la pintora sube $\\Delta y = L\\cos\\beta = 2.4$ m y $W_g = -mg\\,\\Delta y = -(600)(2.4) = -1440$ J. Es lo mismo que $Fs\\cos\\phi$ con $\\phi = 180^\\circ - 37^\\circ$ entre el peso y el desplazamiento. $-1080$ J toma $37^\\circ$ como el ángulo con el piso. El trabajo positivo es el que hace la pintora, no la gravedad. El trabajo de la gravedad solo depende del peso y del desplazamiento, no de cómo se mueva. $-1800$ J toma toda la escalera como si fuera vertical."
   },
   {
     "id": "q260",
@@ -4229,13 +4229,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "media",
     "figuras": ["fig-vectores-producto"],
-    "enunciado": "Los vectores de la figura tienen magnitudes $A = 6.00$ m, $B = 14.0$ m y $C = 10.0$ m. $\\vec A$ apunta hacia $-y$, $\\vec B$ forma $40.0^\\circ$ con el eje $+y$, en el primer cuadrante, y $\\vec C$ forma $20.0^\\circ$ por debajo del eje $-x$, en el tercer cuadrante. ¿Cuánto valen $\\vec A\\cdot\\vec B$, $\\vec B\\cdot\\vec C$ y $\\vec A\\cdot\\vec C$, en ese orden?",
-    "opciones": ["$-64.3$ m², $-121$ m² y $+20.5$ m²", "$+64.3$ m², $+121$ m² y $+20.5$ m²", "$+54.0$ m², $+70.0$ m² y $+56.4$ m²", "$-64.3$ m², $+121$ m² y $-20.5$ m²", "$-54.0$ m², $-132$ m² y $+20.5$ m²"],
+    "enunciado": "Los vectores de la figura tienen magnitudes $A = 4$ m, $B = 6$ m y $C = 5$ m. $\\vec A$ apunta hacia $-y$, $\\vec B$ forma $30^\\circ$ con el eje $+y$, en el primer cuadrante, y $\\vec C$ forma $30^\\circ$ por debajo del eje $-x$, en el tercer cuadrante. ¿Cuánto valen $\\vec A\\cdot\\vec B$, $\\vec B\\cdot\\vec C$ y $\\vec A\\cdot\\vec C$, en ese orden?",
+    "opciones": ["$-12\\sqrt3$ m², $-15\\sqrt3$ m² y $+10$ m²", "$+12\\sqrt3$ m², $+15\\sqrt3$ m² y $+10$ m²", "$+12$ m², $+15$ m² y $+10\\sqrt3$ m²", "$-12\\sqrt3$ m², $+15\\sqrt3$ m² y $-10$ m²", "$-12$ m², $-30$ m² y $+10$ m²"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["producto-escalar"],
-    "explicacion": "Medidos desde $+x$ en sentido antihorario, $\\vec A$ apunta a $270^\\circ$, $\\vec B$ a $50.0^\\circ$ y $\\vec C$ a $200^\\circ$. Los ángulos entre ellos, colocados cola con cola, son $\\phi_{AB} = 140^\\circ$, $\\phi_{BC} = 150^\\circ$ y $\\phi_{AC} = 70.0^\\circ$. Entonces $\\vec A\\cdot\\vec B = (6.00)(14.0)\\cos 140^\\circ = -64.3$ m², $\\vec B\\cdot\\vec C = (14.0)(10.0)\\cos 150^\\circ = -121$ m² y $\\vec A\\cdot\\vec C = (6.00)(10.0)\\cos 70.0^\\circ = +20.5$ m². Con componentes: $\\vec A = (0, -6.00)$ y $\\vec B = (9.00, 10.7)$ m, así que $\\vec A\\cdot\\vec B = -64.3$ m². Usar los ángulos agudos entre las rectas ($40^\\circ$, $30^\\circ$ y $70^\\circ$) da los tres positivos. Usar $\\sin\\phi$, que corresponde a la magnitud del producto vectorial, da $54.0$, $70.0$ y $56.4$ m². Medir el ángulo de $\\vec B$ desde $+x$ en vez de desde $+y$ da $-54.0$, $-132$ y $+20.5$ m²."
+    "explicacion": "Medidos desde $+x$ en sentido antihorario, $\\vec A$ apunta a $270^\\circ$, $\\vec B$ a $60^\\circ$ y $\\vec C$ a $210^\\circ$. Los ángulos entre ellos, colocados cola con cola, son $\\phi_{AB} = 150^\\circ$, $\\phi_{BC} = 150^\\circ$ y $\\phi_{AC} = 60^\\circ$. Entonces $\\vec A\\cdot\\vec B = (4)(6)\\cos 150^\\circ = -12\\sqrt3$ m², $\\vec B\\cdot\\vec C = (6)(5)\\cos 150^\\circ = -15\\sqrt3$ m² y $\\vec A\\cdot\\vec C = (4)(5)\\cos 60^\\circ = +10$ m². Con componentes: $\\vec A = (0, -4)$ y $\\vec B = (3, 3\\sqrt3)$ m, así que $\\vec A\\cdot\\vec B = -12\\sqrt3$ m². Usar los ángulos agudos entre las rectas ($30^\\circ$, $30^\\circ$ y $60^\\circ$) da los tres positivos. Usar $\\sin\\phi$, que corresponde a la magnitud del producto vectorial, da $12$, $15$ y $10\\sqrt3$ m². Medir el ángulo de $\\vec B$ desde $+x$ en vez de desde $+y$ da $-12$, $-30$ y $+10$ m²."
   },
   {
     "id": "q261",
@@ -4245,13 +4245,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "facil",
     "figuras": ["fig-libro-ab"],
-    "enunciado": "Un libro de $2.00$ kg se desliza sobre una mesa horizontal áspera. En el punto $A$ se mueve a $v_A = 3.50$ m/s y, más adelante, en el punto $B$, a $v_B = 1.40$ m/s. ¿Cuánto trabajo total se hizo sobre el libro entre $A$ y $B$?",
-    "opciones": ["$-10.3$ J", "$+10.3$ J", "$-4.41$ J", "$-20.6$ J", "$-12.3$ J"],
+    "enunciado": "Un libro de $2.0$ kg se desliza sobre una mesa horizontal áspera. En el punto $A$ se mueve a $v_A = 4.0$ m/s y, más adelante, en el punto $B$, a $v_B = 2.0$ m/s. ¿Cuánto trabajo total se hizo sobre el libro entre $A$ y $B$?",
+    "opciones": ["$-12$ J", "$+12$ J", "$-4.0$ J", "$-24$ J", "$-16$ J"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["teorema-trabajo-energia"],
-    "explicacion": "Por el teorema trabajo–energía, $W_{AB} = \\tfrac12 m(v_B^2 - v_A^2) = (1.00)(1.96 - 12.25) = -10.3$ J. Es negativo porque el libro se frena. El signo positivo contradice que pierda rapidez. $-4.41$ J usa $\\tfrac12 m(\\Delta v)^2$ en vez de $\\Delta(\\tfrac12 mv^2)$. $-20.6$ J olvida el $\\tfrac12$, y $-12.3$ J es la energía cinética en $A$, como si el libro se detuviera en $B$."
+    "explicacion": "Por el teorema trabajo–energía, $W_{AB} = \\tfrac12 m(v_B^2 - v_A^2) = (1.0)(4.0 - 16) = -12$ J. Es negativo porque el libro se frena. El signo positivo contradice que pierda rapidez. $-4.0$ J usa $\\tfrac12 m(\\Delta v)^2$ en vez de $\\Delta(\\tfrac12 mv^2)$. $-24$ J olvida el $\\tfrac12$, y $-16$ J es la energía cinética en $A$, como si el libro se detuviera en $B$."
   },
   {
     "id": "q262",
@@ -4261,13 +4261,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "media",
     "figuras": ["fig-fuerza-desplazamiento"],
-    "enunciado": "Una persona aplica una fuerza constante $\\vec F = (-52.0\\ \\text{N})\\,\\hat\\imath + (30.0\\ \\text{N})\\,\\hat\\jmath$ a un automóvil de $420$ kg mientras este avanza $40.0$ m en una dirección que forma $\\theta = 235^\\circ$ con el eje $+x$, medido en sentido antihorario. ¿Cuánto trabajo hace la fuerza de la persona?",
-    "opciones": ["$+210$ J", "$-2.18\\times10^{3}$ J", "$+1.02\\times10^{3}$ J", "$+2.40\\times10^{3}$ J", "$+2.18\\times10^{3}$ J"],
+    "enunciado": "Una persona aplica una fuerza constante $\\vec F = (-40\\ \\text{N})\\,\\hat\\imath + (20\\ \\text{N})\\,\\hat\\jmath$ a un automóvil de $400$ kg mientras este avanza $50$ m en una dirección que forma un ángulo $\\theta$ con el eje $+x$, medido en sentido antihorario, con $\\cos\\theta = -0.6$ y $\\sin\\theta = -0.8$. ¿Cuánto trabajo hace la fuerza de la persona?",
+    "opciones": ["$+400$ J", "$-2000$ J", "$+1000$ J", "$+1000\\sqrt5$ J", "$+2000$ J"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["producto-escalar", "trabajo-fuerza-constante"],
-    "explicacion": "El desplazamiento es $\\vec s = 40.0(\\cos 235^\\circ, \\sin 235^\\circ) = (-22.9, -32.8)$ m. Entonces $W = F_x s_x + F_y s_y = (-52.0)(-22.9) + (30.0)(-32.8) = 1193 - 983 = +210$ J. La masa no se usa: el trabajo solo depende de $\\vec F$ y de $\\vec s$. Tomar $F_x = +52.0$ N da $-2.18\\times10^{3}$ J. Intercambiar seno y coseno en $\\vec s$ da $+1.02\\times10^{3}$ J. Multiplicar las magnitudes, $Fs$, da $+2.40\\times10^{3}$ J, que solo valdría si la fuerza fuera paralela al desplazamiento. Medir los $235^\\circ$ en sentido horario da $\\vec s = (-22.9, +32.8)$ m y $+2.18\\times10^{3}$ J."
+    "explicacion": "El desplazamiento es $\\vec s = 50(\\cos\\theta, \\sin\\theta) = (-30, -40)$ m. Entonces $W = F_x s_x + F_y s_y = (-40)(-30) + (20)(-40) = 1200 - 800 = +400$ J. La masa no se usa: el trabajo solo depende de $\\vec F$ y de $\\vec s$. Tomar $F_x = +40$ N da $-2000$ J. Intercambiar seno y coseno en $\\vec s$ da $(-40, -30)$ m y $+1000$ J. Multiplicar las magnitudes, $Fs = (20\\sqrt5)(50)$, da $1000\\sqrt5$ J, que solo valdría si la fuerza fuera paralela al desplazamiento. Medir el ángulo en sentido horario cambia el signo de $s_y$ y da $+2000$ J."
   },
   {
     "id": "q263",
@@ -4277,13 +4277,13 @@
     "subtemas": ["1.3.2"],
     "dificultad": "facil",
     "figuras": ["fig-techo-caja"],
-    "enunciado": "Un bloque de hielo de $1.50$ kg parte del reposo y se desliza $L = 0.800$ m hacia abajo por un plano inclinado $\\theta = 40.0^\\circ$ sobre la horizontal, sin fricción. ¿Cuál es su rapidez al final de ese tramo? ($g = 9.80$ m/s²)",
-    "opciones": ["$3.17$ m/s", "$3.47$ m/s", "$3.96$ m/s", "$4.49$ m/s", "$2.24$ m/s"],
+    "enunciado": "Un bloque de hielo de $1.5$ kg parte del reposo y se desliza $L = 1.0$ m hacia abajo por un plano inclinado $\\theta = 53^\\circ$ sobre la horizontal ($\\sin 53^\\circ = 0.8$, $\\cos 53^\\circ = 0.6$), sin fricción. ¿Cuál es su rapidez al final de ese tramo? ($g = 10$ m/s²)",
+    "opciones": ["$4.0$ m/s", "$2\\sqrt3$ m/s", "$2\\sqrt5$ m/s", "$4\\sqrt2$ m/s", "$2\\sqrt2$ m/s"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["energia-no-conservativas"],
-    "explicacion": "Solo trabaja la gravedad, porque la normal es perpendicular al desplazamiento. El bloque baja $h = L\\sin\\theta = 0.514$ m y $\\tfrac12 mv^2 = mgh$, así que $v = \\sqrt{2gh} = 3.17$ m/s, igual que en una caída libre de esa altura; la masa se cancela. Usar $\\cos\\theta$ da $3.47$ m/s. Tomar toda la longitud $L$ como altura da $3.96$ m/s. Olvidar el $\\tfrac12$ de la energía cinética da $\\sqrt{4gh} = 4.49$ m/s, y olvidar el 2 al despejar da $\\sqrt{gh} = 2.24$ m/s."
+    "explicacion": "Solo trabaja la gravedad, porque la normal es perpendicular al desplazamiento. El bloque baja $h = L\\sin\\theta = 0.80$ m y $\\tfrac12 mv^2 = mgh$, así que $v = \\sqrt{2gh} = \\sqrt{16} = 4.0$ m/s, igual que en una caída libre de esa altura; la masa se cancela. Usar $\\cos\\theta$ da $\\sqrt{12} = 2\\sqrt3$ m/s. Tomar toda la longitud $L$ como altura da $\\sqrt{20} = 2\\sqrt5$ m/s. Olvidar el $\\tfrac12$ de la energía cinética da $\\sqrt{4gh} = 4\\sqrt2$ m/s, y olvidar el 2 al despejar da $\\sqrt{gh} = 2\\sqrt2$ m/s."
   },
   {
     "id": "q264",
@@ -4325,13 +4325,13 @@
     "subtemas": ["1.3.4"],
     "dificultad": "facil",
     "figuras": [],
-    "enunciado": "Una piedra de $15.0$ N se lanza verticalmente hacia arriba desde el suelo. Cuando está a $12.0$ m sobre el suelo, todavía sube a $20.0$ m/s. Sin resistencia del aire, ¿con qué rapidez se lanzó y qué altura máxima alcanza, medida desde el suelo? ($g = 9.80$ m/s²)",
-    "opciones": ["$25.2$ m/s y $32.4$ m", "$12.8$ m/s y $8.41$ m", "$25.2$ m/s y $20.4$ m", "$25.2$ m/s y $64.8$ m", "$35.3$ m/s y $63.7$ m"],
+    "enunciado": "Una piedra de $15$ N se lanza verticalmente hacia arriba desde el suelo. Cuando está a $15$ m sobre el suelo, todavía sube a $10$ m/s. Sin resistencia del aire, ¿con qué rapidez se lanzó y qué altura máxima alcanza, medida desde el suelo? ($g = 10$ m/s²)",
+    "opciones": ["$20$ m/s y $20$ m", "$20$ m/s y $5.0$ m", "$20$ m/s y $40$ m", "$5\\sqrt{10}$ m/s y $12.5$ m", "$20$ m/s y $35$ m"],
     "respuesta": 0,
     "respuesta_verificada": false,
     "barajar": true,
     "pistas": ["teorema-trabajo-energia"],
-    "explicacion": "Entre el suelo y los $12.0$ m solo trabaja el peso: $-mgh = \\tfrac12 mv^2 - \\tfrac12 mv_0^2$, así que $v_0 = \\sqrt{v^2 + 2gh} = \\sqrt{400 + 235} = 25.2$ m/s. En la altura máxima $v = 0$: $H = v_0^2/(2g) = 32.4$ m, que es lo mismo que $12.0 + 20.0^2/19.6$. La masa se cancela, así que el peso de $15.0$ N no se usa. Restar $2gh$ da $12.8$ m/s y $8.41$ m, por debajo de los $12.0$ m que la piedra ya superó. $20.4$ m mide la altura desde los $12.0$ m. $64.8$ m olvida el factor 2, $H = v_0^2/g$, y $35.3$ m/s suma las rapideces, $v + \\sqrt{2gh}$."
+    "explicacion": "Entre el suelo y los $15$ m solo trabaja el peso: $-mgh = \\tfrac12 mv^2 - \\tfrac12 mv_0^2$, así que $v_0 = \\sqrt{v^2 + 2gh} = \\sqrt{100 + 300} = 20$ m/s. En la altura máxima $v = 0$: $H = v_0^2/(2g) = 400/20 = 20$ m, que es lo mismo que $15 + 10^2/20$. La masa se cancela, así que el peso de $15$ N no se usa. $5.0$ m es lo que sube por encima de los $15$ m, no la altura desde el suelo. $40$ m olvida el factor 2, $H = v_0^2/g$. Olvidar el 2 de $2gh$ da $v_0 = \\sqrt{250} = 5\\sqrt{10}$ m/s y $H = 12.5$ m, por debajo de los $15$ m que la piedra ya superó. $35$ m suma los $15$ m a la altura máxima ya medida desde el suelo."
   },
   {
     "id": "q267",

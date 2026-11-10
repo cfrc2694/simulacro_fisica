@@ -21,6 +21,7 @@ Reglas para escribir preguntas, pistas y explicaciones en este banco. Si vas a a
 
 - **Cada pregunta es independiente.** Nada de "en la situación del problema anterior" ni de grupos que comparten un enunciado. Si la fuente era una pregunta con partes (a), (b), (c), se convierte en varias preguntas completas, cada una con todo el contexto que necesita.
 - **Siempre cinco opciones y una sola correcta.** Nada de "todas las anteriores" ni de respuestas defendibles a medias.
+- **Se resuelven sin calculadora.** Los datos se eligen para que las cuentas salgan a mano: $g = 10$ m/s², ángulos de $30^\circ$, $37^\circ$, $45^\circ$, $53^\circ$ o $60^\circ$ con sus senos y cosenos en el enunciado cuando no son evidentes, cuadrados perfectos y potencias de diez. Si los números no se dejan simplificar, la pregunta se plantea en forma simbólica. Los distractores también deben poder calcularse a mano: enteros, fracciones, radicales sencillos o expresiones.
 - Los distractores corresponden a errores reales: olvidar un factor, confundir campo con potencial, perder un signo, usar la fórmula de otra geometría, quedarse a medio camino. Al menos uno debería poder descartarse por unidades o por un caso límite.
 - `barajar: true` por defecto. Se pone en `false` cuando el orden importa: opciones que nombran curvas o elementos de una figura, o series ordenadas donde mezclar confunde.
 - La explicación resuelve la pregunta, dice por qué fallan al menos dos distractores e incluye una comprobación (unidades, caso límite, simetría) cuando aplique.
